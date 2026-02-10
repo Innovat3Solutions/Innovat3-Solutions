@@ -4793,18 +4793,19 @@ textarea.form-input {
     .mobile-toggle {
         display: flex;
         flex-direction: column;
-        gap: 5px;
+        gap: 6px;
         cursor: pointer;
-        padding: 8px;
+        padding: 10px;
         background: none;
         border: none;
+        z-index: 1001;
     }
 
     .mobile-toggle span {
         display: block;
-        width: 25px;
-        height: 2px;
-        background: #64748b;
+        width: 28px;
+        height: 3px;
+        background: #1e293b;
         transition: all 0.3s ease;
         border-radius: 2px;
     }
