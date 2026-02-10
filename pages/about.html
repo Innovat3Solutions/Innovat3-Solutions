@@ -10,7 +10,9 @@
     <link rel="icon" type="image/png" href="../images/Innovat3-logos/innovate-favicon.png">
     <link rel="stylesheet" href="../css/variables.css">
     <link rel="stylesheet" href="../css/components/tech-stats.css">
+    <link rel="stylesheet" href="../css/components/animated-list.css">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/components/story-timeline.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -309,21 +311,105 @@
         </div>
     </section>
 
-    <!-- Our Story -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="text-content">
-                <h2 class="text-center" style="margin-bottom: 40px;">Our Story</h2>
-                <p>INNOVAT3 Solutions began with a simple realization:</p>
-                <p class="highlight-text"
-                    style="font-size: 1.5rem; margin: 20px 0; border-left: 4px solid var(--primary-color); padding-left: 20px;">
-                    Small businesses often outwork enterprise companies—but they don’t always have the systems to
-                    support that effort.</p>
-                <p>Since launching in 2023, INNOVAT3 Solutions has grown experience delivering enterprise-level
-                    solutions and automations that have generated 7-figure+ results, helping businesses increase
-                    efficiency, streamline operations, and unlock scalable growth.</p>
-                <p style="margin-top: 20px;">What started as solving operational problems evolved into building systems
-                    that fundamentally change how businesses run.</p>
+    <!-- Our Story Timeline -->
+    <section class="story-timeline-section" id="story-section">
+        <div class="story-container">
+            <div class="story-header text-center">
+                <span class="subtitle">Our Journey</span>
+                <h2 class="story-title">How We Got Here</h2>
+                <p style="max-width: 600px; margin: 0 auto; color: #64748b;">From a simple realization to
+                    enterprise-grade automation.</p>
+            </div>
+
+            <div class="timeline-viewport">
+                <!-- Navigation -->
+                <button class="timeline-nav-btn prev" id="timeline-prev" style="display: none;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                    Prev
+                </button>
+                <button class="timeline-nav-btn next" id="timeline-next">
+                    Next
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </button>
+
+                <!-- Mountain Geomtery Background -->
+                <div class="mountain-background">
+                    <img src="../images/about/story-background.png" alt="Mountain Landscape Line Art"
+                        class="mountain-img">
+                </div>
+
+                <!-- Slides -->
+
+                <!-- 2023: The Foundation -->
+                <div class="timeline-slide active slide-2023" data-year="2023">
+                    <div class="timeline-content-wrapper">
+                        <div class="timeline-year-marker">
+                            <div class="timeline-dot"></div>
+                            <span class="timeline-year">2023</span>
+                        </div>
+                        <div class="timeline-connector"></div>
+                        <div class="timeline-details">
+                            <h3>The Foundation</h3>
+                            <p>INNOVAT3 Solutions was founded with a clear mission: to bridge the gap between small
+                                businesses and enterprise-grade technology. We realized that hard work wasn't
+                                enough—businesses needed smarter systems.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2024: The Accelerator -->
+                <div class="timeline-slide slide-2024" data-year="2024">
+                    <div class="timeline-content-wrapper">
+                        <div class="timeline-year-marker">
+                            <div class="timeline-dot"></div>
+                            <span class="timeline-year">2024</span>
+                        </div>
+                        <div class="timeline-connector"></div>
+                        <div class="timeline-details">
+                            <h3>The Accelerator</h3>
+                            <p>We expanded our services to include Voice AI and advanced workflow automations. Our
+                                clients began seeing 7-figure results, validating our "Systems First" approach to
+                                growth.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2025: The Standard -->
+                <div class="timeline-slide slide-2025" data-year="2025">
+                    <div class="timeline-content-wrapper">
+                        <div class="timeline-year-marker">
+                            <div class="timeline-dot"></div>
+                            <span class="timeline-year">2025</span>
+                        </div>
+                        <div class="timeline-connector"></div>
+                        <div class="timeline-details">
+                            <h3>The Standard</h3>
+                            <p>INNOVAT3 became the go-to partner for Miami's fastest-growing service businesses. We
+                                launched our proprietary Lead Database and Review Automation platforms.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2026: Future Vision -->
+                <div class="timeline-slide slide-2026" data-year="2026">
+                    <div class="timeline-content-wrapper">
+                        <div class="timeline-year-marker">
+                            <div class="timeline-dot"></div>
+                            <span class="timeline-year">2026</span>
+                        </div>
+                        <div class="timeline-connector"></div>
+                        <div class="timeline-details">
+                            <h3>Future Vision</h3>
+                            <p>We continue to push boundaries with Private AI Infrastructure and custom app development,
+                                ensuring our clients always stay ahead of the technology curve.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -361,28 +447,28 @@
                 <span class="subtitle">Our Core Values</span>
                 <h2>What Drives Us</h2>
             </div>
-            <div class="values-grid">
-                <div class="value-card"
+            <div class="values-grid animated-list-container">
+                <div class="value-card animated-item"
                     style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
                     <i data-lucide="zap" style="color: var(--primary-color); margin-bottom: 20px;" size="32"></i>
                     <h3>Innovation</h3>
                     <p style="color: #cbd5e1; margin-top: 10px;">We stay ahead of technology so our clients stay ahead
                         of the market.</p>
                 </div>
-                <div class="value-card"
+                <div class="value-card animated-item"
                     style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
                     <i data-lucide="clock" style="color: var(--primary-color); margin-bottom: 20px;" size="32"></i>
                     <h3>Efficiency</h3>
                     <p style="color: #cbd5e1; margin-top: 10px;">We eliminate wasted time, effort, and resources.</p>
                 </div>
-                <div class="value-card"
+                <div class="value-card animated-item"
                     style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
                     <i data-lucide="trending-up" style="color: var(--primary-color); margin-bottom: 20px;"
                         size="32"></i>
                     <h3>Scalability</h3>
                     <p style="color: #cbd5e1; margin-top: 10px;">Every system is built to grow with your business.</p>
                 </div>
-                <div class="value-card"
+                <div class="value-card animated-item"
                     style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
                     <i data-lucide="shield-check" style="color: var(--primary-color); margin-bottom: 20px;"
                         size="32"></i>
@@ -390,7 +476,7 @@
                     <p style="color: #cbd5e1; margin-top: 10px;">Your systems should work consistently, not
                         occasionally.</p>
                 </div>
-                <div class="value-card"
+                <div class="value-card animated-item"
                     style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
                     <i data-lucide="target" style="color: var(--primary-color); margin-bottom: 20px;" size="32"></i>
                     <h3>Results</h3>
@@ -502,6 +588,8 @@
 
     <script src="../js/main.js"></script>
     <script src="../js/components/tech-stats.js"></script>
+    <script src="../js/components/story-timeline.js"></script>
+    <script src="../js/components/animated-list.js"></script>
     <script>
         lucide.createIcons();
     </script>
