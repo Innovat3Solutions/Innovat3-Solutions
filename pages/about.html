@@ -477,6 +477,204 @@
                 font-size: 2.5rem;
             }
         }
+
+        /* Who We Are Section - Modern Layout */
+        .who-we-are-section {
+            padding: 100px 0;
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .who-we-are-section::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            left: -15%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(132, 204, 22, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .who-we-are-section::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .who-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .who-content {
+            position: relative;
+        }
+
+        .who-content .subtitle {
+            color: var(--color-primary);
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+
+        .who-title {
+            font-size: 2.75rem;
+            font-weight: 800;
+            color: #0f172a;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+
+        .who-title .highlight {
+            color: var(--color-primary);
+            position: relative;
+        }
+
+        .who-lead {
+            font-size: 1.2rem;
+            color: #475569;
+            line-height: 1.7;
+            margin-bottom: 24px;
+            font-weight: 500;
+        }
+
+        .who-text {
+            font-size: 1.05rem;
+            color: #64748b;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .who-quote {
+            font-size: 1.15rem;
+            color: #0f172a;
+            font-weight: 600;
+            padding-left: 20px;
+            border-left: 3px solid var(--color-primary);
+            margin-top: 32px;
+            font-style: italic;
+        }
+
+        /* Highlight Cards */
+        .who-highlights {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .highlight-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 24px 28px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--card-accent, var(--color-primary));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .highlight-card:hover {
+            transform: translateX(8px);
+            border-color: var(--card-accent, var(--color-primary));
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight-card:hover::before {
+            opacity: 1;
+        }
+
+        .highlight-icon {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            border-radius: 12px;
+            background: var(--card-bg, rgba(132, 204, 22, 0.1));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--card-accent, var(--color-primary));
+            transition: all 0.3s ease;
+        }
+
+        .highlight-card:hover .highlight-icon {
+            background: var(--card-accent, var(--color-primary));
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .highlight-text h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 4px;
+        }
+
+        .highlight-text p {
+            font-size: 0.95rem;
+            color: #64748b;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        @media (max-width: 1024px) {
+            .who-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .who-title {
+                font-size: 2.25rem;
+            }
+
+            .who-highlights {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .who-we-are-section {
+                padding: 60px 0;
+            }
+
+            .who-title {
+                font-size: 1.875rem;
+            }
+
+            .who-highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .highlight-card {
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 
@@ -582,7 +780,7 @@
                 <span class="font-bold-sans">Business Systems</span>
             </h1>
             <p class="header-subtitle">
-                We help small and growing businesses access enterprise-level technology and automation. Our focus is
+                We help small and growing businesses access enterprise level technology and automation. Our focus is
                 on eliminating inefficiencies, streamlining operations, and implementing systems that scale, allowing
                 you to focus on growth.
                 We proudly serve businesses across Miami, Broward, and Palm Beach.
@@ -596,16 +794,49 @@
     </header>
 
     <!-- Who We Are -->
-    <section class="section-padding">
-        <div class="container text-content text-center">
-            <span class="subtitle">Who We Are</span>
-            <h2 style="margin-bottom: 30px;">Professional Grade Systems for Growing Businesses</h2>
-            <p>INNOVAT3 Solutions exists to give local brands access to enterprise-level technology and
-                automation without the complexity or cost traditionally required to get there.</p>
-            <p style="margin-top: 20px;">Founded in 2023 by Juan De Los Santos, INNOVAT3 Solutions was built to bridge
-                the gap between South Florida businesses and powerful, scalable systems that drive real growth.</p>
-            <p style="margin-top: 20px; font-weight: 600;">We believe technology should work for your business, not slow
-                it down.</p>
+    <section class="who-we-are-section">
+        <div class="container">
+            <div class="who-grid">
+                <!-- Left: Content -->
+                <div class="who-content">
+                    <span class="subtitle">Who We Are</span>
+                    <h2 class="who-title">Professional Grade Systems for <span class="highlight">Growing Businesses</span></h2>
+                    <p class="who-lead">INNOVAT3 Solutions exists to give local brands access to enterprise-level technology and automation without the complexity or cost traditionally required to get there.</p>
+                    <p class="who-text">Founded in 2023 by Juan De Los Santos, INNOVAT3 Solutions was built to bridge the gap between South Florida businesses and powerful, scalable systems that drive real growth.</p>
+                    <p class="who-quote">We believe technology should work for your business, not slow it down.</p>
+                </div>
+
+                <!-- Right: Highlight Cards -->
+                <div class="who-highlights">
+                    <div class="highlight-card" style="--card-accent: #3b82f6; --card-bg: rgba(59, 130, 246, 0.1);">
+                        <div class="highlight-icon">
+                            <i data-lucide="building-2" size="24"></i>
+                        </div>
+                        <div class="highlight-text">
+                            <h4>Enterprise-Level Solutions</h4>
+                            <p>The same powerful systems used by large corporations, tailored for growing businesses.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-card" style="--card-accent: #8b5cf6; --card-bg: rgba(139, 92, 246, 0.1);">
+                        <div class="highlight-icon">
+                            <i data-lucide="map-pin" size="24"></i>
+                        </div>
+                        <div class="highlight-text">
+                            <h4>South Florida Focused</h4>
+                            <p>Proudly serving Miami, Broward, and Palm Beach businesses since 2023.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-card" style="--card-accent: #10b981; --card-bg: rgba(16, 185, 129, 0.1);">
+                        <div class="highlight-icon">
+                            <i data-lucide="trending-up" size="24"></i>
+                        </div>
+                        <div class="highlight-text">
+                            <h4>Built to Scale</h4>
+                            <p>Every system we implement grows with your business, not against it.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -643,7 +874,7 @@
                             <h3>The Foundation</h3>
                             <p>INNOVAT3 Solutions was founded with a clear mission to bridge the gap between Miami's
                                 small
-                                businesses and enterprise-level technology.</p>
+                                businesses and enterprise level technology.</p>
                         </div>
                     </div>
 
@@ -677,7 +908,7 @@
                                 <i data-lucide="award" size="20"></i>
                             </div>
                             <h3>The Standard</h3>
-                            <p>Became Miami's partner of choice for fast-growing service businesses. Launched our Lead
+                            <p>Became Miami's partner of choice for fast growing service businesses. Launched our Lead
                                 Database and Review Automation platforms.</p>
                         </div>
                     </div>
@@ -723,9 +954,9 @@
                         </div>
                         <div class="mv-label">Our Mission</div>
                         <h3>Bridging the Gap</h3>
-                        <p>Our mission is to make enterprise-level solutions accessible to small businesses.</p>
+                        <p>Our mission is to make enterprise level solutions accessible to small businesses.</p>
                         <p>We help eliminate inefficiencies, replace manual processes, and implement systems that
-                            support long-term scaling. This allows business owners in Miami and beyond to focus on
+                            support long term scaling. This allows business owners in Miami and beyond to focus on
                             growth, not operations.</p>
                         <div class="mv-decoration">
                             <svg viewBox="0 0 100 100" fill="none">
@@ -858,7 +1089,7 @@
                     <p style="margin-bottom: 20px; line-height: 1.7;">Juan launched Innovat3 in 2023 with a clear goal:
                         to give small businesses access to the same level of systems and infrastructure used by
                         enterprise organizations without unnecessary complexity or cost.</p>
-                    <p style="line-height: 1.7;">With hands-on experience delivering enterprise-level solutions that
+                    <p style="line-height: 1.7;">With hands on experience delivering enterprise level solutions that
                         have produced seven figure outcomes, Juan leads INNOVAT3 Solutions with a results driven,
                         systems first mindset.</p>
                 </div>
