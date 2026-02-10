@@ -87,8 +87,8 @@
 
         /* Hero CTA Button */
         .hero-btn {
-            background-color: #3b82f6;
-            /* Bright Blue */
+            background-color: var(--color-primary);
+            /* Brand Green */
             color: white;
             padding: 16px 32px;
             border-radius: 50px;
@@ -128,24 +128,146 @@
             font-weight: 600;
         }
 
-        .values-grid {
+        /* Values Section - Light Theme */
+        .values-section {
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .values-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .values-section::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .values-grid-modern {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            position: relative;
+            z-index: 1;
         }
 
-        .value-card {
+        .value-card-modern {
             background: #ffffff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            padding: 28px 32px;
+            border-radius: 16px;
             border: 1px solid #e2e8f0;
-            transition: transform 0.3s ease;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
         }
 
-        .value-card:hover {
-            transform: translateY(-5px);
+        .value-card-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-color);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .value-card-modern:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.1);
+            border-color: var(--accent-color);
+        }
+
+        .value-card-modern:hover::before {
+            opacity: 1;
+        }
+
+        .value-icon-wrapper {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            border-radius: 12px;
+            background: var(--accent-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-color);
+            transition: all 0.3s ease;
+        }
+
+        .value-card-modern:hover .value-icon-wrapper {
+            background: var(--accent-color);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .value-content {
+            flex: 1;
+        }
+
+        .value-content h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 6px;
+        }
+
+        .value-content p {
+            font-size: 0.95rem;
+            color: #64748b;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .value-number {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent-light);
+            line-height: 1;
+            transition: color 0.3s ease;
+        }
+
+        .value-card-modern:hover .value-number {
+            color: var(--accent-color);
+            opacity: 0.2;
+        }
+
+        @media (max-width: 768px) {
+            .values-grid-modern {
+                grid-template-columns: 1fr;
+            }
+
+            .value-card-modern {
+                padding: 24px;
+            }
+
+            .value-number {
+                font-size: 2rem;
+            }
         }
 
         .founder-section {
@@ -405,95 +527,48 @@
                     enterprise-grade automation.</p>
             </div>
 
-            <div class="timeline-viewport">
-                <!-- Navigation -->
-                <button class="timeline-nav-btn prev" id="timeline-prev" style="display: none;">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M19 12H5M12 19l-7-7 7-7" />
-                    </svg>
-                    Prev
-                </button>
-                <button class="timeline-nav-btn next" id="timeline-next">
-                    Next
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                </button>
-
-                <!-- Mountain Geomtery Background -->
-                <div class="mountain-background">
-                    <img src="../images/about/story-background.png" alt="Mountain Landscape Line Art"
-                        class="mountain-img">
-                </div>
-
-                <!-- Slides -->
-
-                <!-- 2023: The Foundation -->
-                <div class="timeline-slide active slide-2023" data-year="2023">
-                    <div class="timeline-content-wrapper">
-                        <div class="timeline-year-marker">
-                            <div class="timeline-dot"></div>
-                            <span class="timeline-year">2023</span>
-                        </div>
-                        <div class="timeline-connector"></div>
-                        <div class="timeline-details">
-                            <h3>The Foundation</h3>
-                            <p>INNOVAT3 Solutions was founded with a clear mission: to bridge the gap between small
-                                businesses and enterprise-grade technology. We realized that hard work wasn't
-                                enough—businesses needed smarter systems.</p>
-                        </div>
+            <div class="timeline-container">
+                <!-- 2023 -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023</span>
+                        <h3>The Foundation</h3>
+                        <p>INNOVAT3 Solutions was founded with a clear mission: to bridge the gap between small
+                            businesses and enterprise-grade technology. We realized that hard work wasn't
+                            enough—businesses needed smarter systems.</p>
                     </div>
                 </div>
 
-                <!-- 2024: The Accelerator -->
-                <div class="timeline-slide slide-2024" data-year="2024">
-                    <div class="timeline-content-wrapper">
-                        <div class="timeline-year-marker">
-                            <div class="timeline-dot"></div>
-                            <span class="timeline-year">2024</span>
-                        </div>
-                        <div class="timeline-connector"></div>
-                        <div class="timeline-details">
-                            <h3>The Accelerator</h3>
-                            <p>We expanded our services to include Voice AI and advanced workflow automations. Our
-                                clients began seeing 7-figure results, validating our "Systems First" approach to
-                                growth.</p>
-                        </div>
+                <!-- 2024 -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024</span>
+                        <h3>The Accelerator</h3>
+                        <p>We expanded our services to include Voice AI and advanced workflow automations. Our
+                            clients began seeing 7-figure results, validating our "Systems First" approach to
+                            growth.</p>
                     </div>
                 </div>
 
-                <!-- 2025: The Standard -->
-                <div class="timeline-slide slide-2025" data-year="2025">
-                    <div class="timeline-content-wrapper">
-                        <div class="timeline-year-marker">
-                            <div class="timeline-dot"></div>
-                            <span class="timeline-year">2025</span>
-                        </div>
-                        <div class="timeline-connector"></div>
-                        <div class="timeline-details">
-                            <h3>The Standard</h3>
-                            <p>INNOVAT3 became the go-to partner for Miami's fastest-growing service businesses. We
-                                launched our proprietary Lead Database and Review Automation platforms.</p>
-                        </div>
+                <!-- 2025 -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2025</span>
+                        <h3>The Standard</h3>
+                        <p>INNOVAT3 became the go-to partner for Miami's fastest-growing service businesses. We
+                            launched our proprietary Lead Database and Review Automation platforms.</p>
                     </div>
                 </div>
 
-                <!-- 2026: Future Vision -->
-                <div class="timeline-slide slide-2026" data-year="2026">
-                    <div class="timeline-content-wrapper">
-                        <div class="timeline-year-marker">
-                            <div class="timeline-dot"></div>
-                            <span class="timeline-year">2026</span>
-                        </div>
-                        <div class="timeline-connector"></div>
-                        <div class="timeline-details">
-                            <h3>Future Vision</h3>
-                            <p>We continue to push boundaries with Private AI Infrastructure and custom app development,
-                                ensuring our clients always stay ahead of the technology curve.</p>
-                        </div>
+                <!-- 2026 -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="timeline-date">Future Vision</span>
+                        <h3>Building Smarter</h3>
+                        <p>We continue to push boundaries with Private AI Infrastructure and custom app development,
+                            ensuring our clients always stay ahead of the technology curve.</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -525,46 +600,64 @@
     </section>
 
     <!-- Core Values -->
-    <section class="section-padding" style="background-color: #0f172a; color: white;">
+    <section class="section-padding values-section">
         <div class="container">
             <div class="text-center" style="margin-bottom: 60px;">
                 <span class="subtitle">Our Core Values</span>
-                <h2>What Drives Us</h2>
+                <h2 style="color: #0f172a;">What Drives Us</h2>
+                <p style="max-width: 600px; margin: 15px auto 0; color: #64748b;">The principles that guide every
+                    solution we build.</p>
             </div>
-            <div class="values-grid animated-list-container">
-                <div class="value-card animated-item"
-                    style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
-                    <i data-lucide="zap" style="color: var(--primary-color); margin-bottom: 20px;" size="32"></i>
-                    <h3>Innovation</h3>
-                    <p style="color: #cbd5e1; margin-top: 10px;">We stay ahead of technology so our clients stay ahead
-                        of the market.</p>
+            <div class="values-grid-modern animated-list-container">
+                <div class="value-card-modern animated-item" style="--accent-color: #3b82f6; --accent-light: #dbeafe;">
+                    <div class="value-icon-wrapper">
+                        <i data-lucide="zap" size="24"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>Innovation</h3>
+                        <p>We stay ahead of technology so our clients stay ahead of the market.</p>
+                    </div>
+                    <div class="value-number">01</div>
                 </div>
-                <div class="value-card animated-item"
-                    style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
-                    <i data-lucide="clock" style="color: var(--primary-color); margin-bottom: 20px;" size="32"></i>
-                    <h3>Efficiency</h3>
-                    <p style="color: #cbd5e1; margin-top: 10px;">We eliminate wasted time, effort, and resources.</p>
+                <div class="value-card-modern animated-item" style="--accent-color: #8b5cf6; --accent-light: #ede9fe;">
+                    <div class="value-icon-wrapper">
+                        <i data-lucide="clock" size="24"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>Efficiency</h3>
+                        <p>We eliminate wasted time, effort, and resources.</p>
+                    </div>
+                    <div class="value-number">02</div>
                 </div>
-                <div class="value-card animated-item"
-                    style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
-                    <i data-lucide="trending-up" style="color: var(--primary-color); margin-bottom: 20px;"
-                        size="32"></i>
-                    <h3>Scalability</h3>
-                    <p style="color: #cbd5e1; margin-top: 10px;">Every system is built to grow with your business.</p>
+                <div class="value-card-modern animated-item" style="--accent-color: #10b981; --accent-light: #d1fae5;">
+                    <div class="value-icon-wrapper">
+                        <i data-lucide="trending-up" size="24"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>Scalability</h3>
+                        <p>Every system is built to grow with your business.</p>
+                    </div>
+                    <div class="value-number">03</div>
                 </div>
-                <div class="value-card animated-item"
-                    style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
-                    <i data-lucide="shield-check" style="color: var(--primary-color); margin-bottom: 20px;"
-                        size="32"></i>
-                    <h3>Reliability</h3>
-                    <p style="color: #cbd5e1; margin-top: 10px;">Your systems should work consistently, not
-                        occasionally.</p>
+                <div class="value-card-modern animated-item" style="--accent-color: #f59e0b; --accent-light: #fef3c7;">
+                    <div class="value-icon-wrapper">
+                        <i data-lucide="shield-check" size="24"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>Reliability</h3>
+                        <p>Your systems should work consistently, not occasionally.</p>
+                    </div>
+                    <div class="value-number">04</div>
                 </div>
-                <div class="value-card animated-item"
-                    style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
-                    <i data-lucide="target" style="color: var(--primary-color); margin-bottom: 20px;" size="32"></i>
-                    <h3>Results</h3>
-                    <p style="color: #cbd5e1; margin-top: 10px;">If it doesn’t move the needle, it doesn’t belong.</p>
+                <div class="value-card-modern animated-item" style="--accent-color: #ef4444; --accent-light: #fee2e2;">
+                    <div class="value-icon-wrapper">
+                        <i data-lucide="target" size="24"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>Results</h3>
+                        <p>If it doesn't move the needle, it doesn't belong.</p>
+                    </div>
+                    <div class="value-number">05</div>
                 </div>
             </div>
         </div>
@@ -575,8 +668,9 @@
         <div class="container">
             <div class="founder-grid">
                 <div>
-                    <img src="../images/about/juan-de-los-santos.jpg" alt="Juan De Los Santos - Founder of INNOVAT3 Solutions"
-                        class="founder-img" style="object-fit: cover; object-position: center top;">
+                    <img src="../images/about/juan-de-los-santos.jpg"
+                        alt="Juan De Los Santos - Founder of INNOVAT3 Solutions" class="founder-img"
+                        style="object-fit: cover; object-position: center top;">
                 </div>
                 <div>
                     <span class="subtitle">Meet the Founder</span>
