@@ -4836,13 +4836,13 @@ textarea.form-input {
     }
 
     .hero h1 {
-        font-size: 2.5rem;
-        line-height: 1.2;
+        font-size: 3rem;
+        line-height: 1.15;
         margin-bottom: var(--spacing-md);
     }
 
     .hero-sub {
-        font-size: 1rem;
+        font-size: 1.05rem;
         margin-bottom: var(--spacing-md);
         max-width: 100%;
     }
@@ -5927,7 +5927,7 @@ textarea.form-input {
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .hero-visual {
@@ -5948,11 +5948,12 @@ textarea.form-input {
     }
 
     .hero h1 {
-        font-size: 1.75rem;
+        font-size: 2.25rem;
+        line-height: 1.15;
     }
 
     .hero-sub {
-        font-size: 0.95rem;
+        font-size: 1rem;
     }
 
     .hero {
