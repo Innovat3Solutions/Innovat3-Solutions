@@ -1,268 +1,279 @@
-/* Story Timeline Component */
+/* Horizontal Story Timeline - Animated */
 .story-timeline-section {
+    padding: 100px 0;
+    background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
     position: relative;
-    padding: 80px 0;
     overflow: hidden;
-    background-color: #f8fafc;
-    /* Light background to match design */
 }
 
-.story-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    min-height: 600px;
-    /* Ensure enough height for the mountains and content */
-    display: flex;
-    flex-direction: column;
+/* Decorative background elements */
+.story-timeline-section::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(132, 204, 22, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
 }
 
-/* Header */
+.story-timeline-section::after {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    right: -5%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.06) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
 .story-header {
-    margin-bottom: 40px;
-    padding: 0 20px;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 1;
+}
+
+.story-header .subtitle {
+    color: var(--color-primary);
 }
 
 .story-title {
     font-size: 3rem;
-    font-weight: 700;
-    color: #0f172a;
-    margin-bottom: 10px;
-}
-
-/* Timeline Content Wrapper */
-.timeline-viewport {
-    position: relative;
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    /* Vertically center content if needed, though design has it specific */
-    justify-content: center;
-}
-
-/* Mountain Background */
-.mountain-background {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    max-height: 50%;
-    /* Adjust based on image aspect ratio and desired look */
-    z-index: 1;
-    pointer-events: none;
-    /* Let clicks pass through */
-}
-
-.mountain-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    object-position: bottom;
-    opacity: 0.8;
-}
-
-/* Timeline Slide (Active Year) */
-.timeline-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
-    z-index: 2;
-}
-
-.timeline-slide.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Content Positioning - mimicking the design where content is connected to a peak */
-.timeline-content-wrapper {
-    position: absolute;
-    /* Default position, will be overridden by inline styles or specifc classes for each year if we want exact peak matching */
-    top: 20%;
-    right: 15%;
-    /* Default to right side roughly */
-    max-width: 400px;
-    text-align: left;
-}
-
-.timeline-year-marker {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+    font-weight: 800;
+    color: #ffffff;
     margin-bottom: 15px;
 }
 
-.timeline-dot {
-    width: 12px;
-    height: 12px;
-    background-color: #f97316;
-    /* Orange accent */
+.story-header p {
+    color: #94a3b8 !important;
+}
+
+/* Horizontal Timeline Container */
+.timeline-horizontal {
+    position: relative;
+    padding: 60px 0 40px;
+}
+
+/* Track (background line) */
+.timeline-track {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    z-index: 0;
+}
+
+/* Animated progress line */
+.timeline-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, var(--color-primary), #22d3ee);
+    border-radius: 2px;
+    transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 20px rgba(132, 204, 22, 0.4);
+}
+
+.timeline-progress.animated {
+    width: 100%;
+}
+
+/* Timeline Items Container */
+.timeline-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Individual Node */
+.timeline-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-node.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Marker (dot on the line) */
+.node-marker {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 16px;
+}
+
+.node-dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background: #1e293b;
+    border: 3px solid var(--color-primary);
     border-radius: 50%;
-    display: inline-block;
+    z-index: 2;
+    transition: all 0.3s ease;
 }
 
-.timeline-year {
-    font-size: 2.5rem;
+.timeline-node:hover .node-dot {
+    background: var(--color-primary);
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.node-pulse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    opacity: 0;
+}
+
+.timeline-node.visible .node-pulse {
+    animation: pulse-ring 2s ease-out infinite;
+}
+
+@keyframes pulse-ring {
+    0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 0;
+    }
+}
+
+/* Year Label */
+.node-year {
+    font-size: 0.875rem;
     font-weight: 700;
-    color: #0f172a;
-    line-height: 1;
+    color: var(--color-primary);
+    background: rgba(132, 204, 22, 0.1);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
 }
 
-.timeline-details h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #1e293b;
+/* Content Card */
+.node-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    height: 100%;
 }
 
-.timeline-details p {
-    font-size: 1rem;
-    color: #64748b;
-    line-height: 1.6;
+.node-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(132, 204, 22, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.4);
 }
 
-/* Vertical Line Connector (The line dropping to the mountain) */
-.timeline-connector {
-    position: absolute;
-    top: 45px;
-    /* Just below the year/dot */
-    left: 5px;
-    /* Align with the dot center */
-    width: 2px;
-    height: 200px;
-    /* Adjust dynamically or fixed */
-    background: linear-gradient(to bottom, #f97316 0%, rgba(249, 115, 22, 0) 100%);
-    transform-origin: top;
-    animation: growLine 0.8s ease-out forwards;
-}
-
-@keyframes growLine {
-    from {
-        transform: scaleY(0);
-    }
-
-    to {
-        transform: scaleY(1);
-    }
-}
-
-/* Navigation Buttons */
-.timeline-nav-btn {
-    position: absolute;
-    z-index: 10;
-    background-color: #f97316;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    padding: 10px 20px;
-    font-weight: 600;
-    cursor: pointer;
+.node-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 16px;
+    background: linear-gradient(135deg, var(--color-primary), #22d3ee);
+    border-radius: 12px;
     display: flex;
     align-items: center;
-    gap: 8px;
-    transition: transform 0.2s ease, background-color 0.2s ease;
-    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+    justify-content: center;
+    color: #0f172a;
+    transition: transform 0.3s ease;
 }
 
-.timeline-nav-btn:hover {
-    background-color: #ea580c;
-    transform: translateY(-2px);
+.node-card:hover .node-icon {
+    transform: scale(1.1) rotate(5deg);
 }
 
-.timeline-nav-btn.prev {
-    bottom: 30%;
-    /* Align roughly with mountains/content */
-    left: 5%;
+.node-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
 }
 
-.timeline-nav-btn.next {
-    top: 50%;
-    right: 5%;
+.node-card p {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin: 0;
 }
 
-/* Specific positioning for years to match "peaks" somewhat */
-/* Note: Since we have one static image, we simulate different positions by moving the content wrapper */
-
-/* 2023 (Launch) */
-.slide-2023 .timeline-content-wrapper {
-    top: 30%;
-    left: 10%;
-    right: auto;
-}
-
-/* 2024 (Growth) */
-.slide-2024 .timeline-content-wrapper {
-    top: 15%;
-    left: 40%;
-    right: auto;
-}
-
-/* 2025 (Scale) */
-.slide-2025 .timeline-content-wrapper {
-    top: 25%;
-    right: 10%;
-    left: auto;
-}
-
-/* 2026 (Future) */
-.slide-2026 .timeline-content-wrapper {
-    top: 10%;
-    right: 25%;
-    left: auto;
-}
-
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .story-container {
-        min-height: auto;
-        padding-bottom: 200px;
-        /* Space for mountains */
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .timeline-items {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 24px;
     }
 
-    .timeline-viewport {
-        flex-direction: column;
-    }
-
-    .timeline-content-wrapper {
-        position: relative;
-        top: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        margin: 0 auto 40px;
-        padding: 20px;
-        text-align: center;
-    }
-
-    .timeline-year-marker {
-        justify-content: center;
-    }
-
-    .timeline-connector {
+    .timeline-track {
         display: none;
-        /* Hide connector on mobile as alignment is tricky */
     }
 
-    .timeline-nav-btn.prev {
-        bottom: 20px;
-        left: 20px;
+    .timeline-node {
+        padding-top: 0;
     }
 
-    .timeline-nav-btn.next {
-        bottom: 20px;
-        right: 20px;
-        top: auto;
+    .node-marker {
+        margin-bottom: 12px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .story-timeline-section {
+        padding: 60px 0;
     }
 
-    .mountain-background {
-        height: 200px;
-        object-fit: cover;
+    .story-header {
+        margin-bottom: 50px;
+    }
+
+    .story-title {
+        font-size: 2rem;
+    }
+
+    .timeline-items {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .timeline-horizontal {
+        padding: 20px 0;
+    }
+
+    .node-card {
+        padding: 20px;
+    }
+
+    .node-card h3 {
+        font-size: 1.125rem;
     }
 }

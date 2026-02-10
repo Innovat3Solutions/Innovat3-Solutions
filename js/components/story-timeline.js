@@ -1,61 +1,49 @@
-/* Story Timeline Component Logic */
+/**
+ * Story Timeline Animation
+ * Horizontal animated timeline with staggered reveal
+ */
 
 document.addEventListener('DOMContentLoaded', () => {
-    const slides = document.querySelectorAll('.timeline-slide');
-    const prevBtn = document.getElementById('timeline-prev');
-    const nextBtn = document.getElementById('timeline-next');
+    const timelineSection = document.querySelector('.story-timeline-section');
+    const timelineProgress = document.querySelector('.timeline-progress');
+    const timelineNodes = document.querySelectorAll('.timeline-node');
 
-    if (!slides.length) return;
+    if (!timelineSection) return;
 
-    let currentIndex = 0;
-    const totalSlides = slides.length;
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -100px 0px',
+        threshold: 0.2
+    };
 
-    function updateSlide(index) {
-        // Remove active class from all slides
-        slides.forEach(slide => {
-            slide.classList.remove('active');
+    const animateTimeline = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Animate progress line
+                if (timelineProgress) {
+                    setTimeout(() => {
+                        timelineProgress.classList.add('animated');
+                    }, 200);
+                }
+
+                // Stagger animate each node
+                timelineNodes.forEach((node, index) => {
+                    setTimeout(() => {
+                        node.classList.add('visible');
+                    }, 400 + (index * 200)); // 200ms delay between each node
+                });
+
+                // Stop observing after animation triggered
+                observer.unobserve(entry.target);
+            }
         });
+    };
 
-        // Add active class to current slide
-        slides[index].classList.add('active');
+    const observer = new IntersectionObserver(animateTimeline, observerOptions);
+    observer.observe(timelineSection);
 
-        // Update buttons text/visibility if needed (optional)
-        // For now, we'll loop or just clamp. Let's clamp for a timeline feel.
-
-        // Update Next Button Text
-        if (index < totalSlides - 1) {
-            const nextYear = slides[index + 1].getAttribute('data-year');
-            nextBtn.innerHTML = `${nextYear} <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>`;
-            nextBtn.style.display = 'flex';
-        } else {
-            nextBtn.style.display = 'none';
-        }
-
-        // Update Prev Button Text
-        if (index > 0) {
-            const prevYear = slides[index - 1].getAttribute('data-year');
-            prevBtn.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> ${prevYear}`;
-            prevBtn.style.display = 'flex';
-        } else {
-            prevBtn.style.display = 'none';
-        }
+    // Re-initialize Lucide icons for dynamically loaded content
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
     }
-
-    // Initialize
-    updateSlide(currentIndex);
-
-    // Event Listeners
-    nextBtn.addEventListener('click', () => {
-        if (currentIndex < totalSlides - 1) {
-            currentIndex++;
-            updateSlide(currentIndex);
-        }
-    });
-
-    prevBtn.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateSlide(currentIndex);
-        }
-    });
 });
