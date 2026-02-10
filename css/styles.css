@@ -4670,6 +4670,33 @@ textarea.form-input {
         width: 100%;
     }
 
+    .dropdown-trigger {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 16px 20px !important;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #0f172a;
+        background: #ffffff;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .dropdown-trigger .dropdown-arrow {
+        font-size: 12px;
+        transition: transform 0.3s ease;
+    }
+
+    .dropdown-trigger.expanded {
+        background: #f1f5f9;
+        color: var(--color-primary);
+    }
+
+    .dropdown-trigger.expanded .dropdown-arrow {
+        transform: rotate(180deg);
+    }
+
     .dropdown-menu {
         position: static;
         transform: none;
@@ -4683,8 +4710,8 @@ textarea.form-input {
         background: #f8fafc;
         margin-top: var(--spacing-xs);
         display: none;
-        max-height: 400px;
-        overflow-y: auto;
+        max-height: none;
+        overflow-y: visible;
     }
 
     .dropdown-menu.active {
@@ -4692,26 +4719,73 @@ textarea.form-input {
     }
 
     .dropdown-menu a {
-        padding: var(--spacing-sm) var(--spacing-lg);
+        padding: 14px 20px;
         border-bottom: 1px solid #e2e8f0;
+        font-size: 0.95rem;
+        color: #334155;
+        display: block;
+    }
+
+    .dropdown-menu a:hover,
+    .dropdown-menu a:active {
+        background: #e2e8f0;
+        color: var(--color-primary);
     }
 
     /* Niche Dropdown Grid - Stack on Mobile */
+    .niche-dropdown-menu {
+        position: static !important;
+        transform: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background: #f8fafc !important;
+    }
+
+    .niche-dropdown-menu.active {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
     .niche-dropdown-grid {
         display: flex;
         flex-direction: column;
-        gap: var(--spacing-md);
+        gap: 0;
+        padding: 0;
     }
 
     .niche-col {
         width: 100%;
+        border-bottom: 1px solid #e2e8f0;
+        padding: 0;
+    }
+
+    .niche-col:last-child {
+        border-bottom: none;
     }
 
     .niche-col h4 {
-        font-size: 0.9rem;
-        margin-bottom: var(--spacing-xs);
-        color: var(--color-dark);
-        font-weight: 600;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin: 0;
+        padding: 14px 20px 8px;
+        color: var(--color-primary);
+        font-weight: 700;
+        background: #f1f5f9;
+    }
+
+    .niche-col a {
+        padding: 12px 20px 12px 32px !important;
+        font-size: 0.9rem !important;
+        border-bottom: 1px solid #f1f5f9 !important;
+    }
+
+    .niche-col a:last-child {
+        border-bottom: none !important;
     }
 
     .mobile-toggle {

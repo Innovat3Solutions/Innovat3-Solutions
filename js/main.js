@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // 0. Scroll to Top on Page Load (for navigation between pages)
+    if (window.location.hash === '' || !window.location.hash) {
+        window.scrollTo(0, 0);
+    }
+
     // 1. Navbar Scroll Effect
     const navbar = document.getElementById('navbar');
 
@@ -42,14 +47,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     e.preventDefault();
                     const dropdown = trigger.nextElementSibling;
                     if (dropdown && dropdown.classList.contains('dropdown-menu')) {
-                        dropdown.classList.toggle('active');
+                        const isActive = dropdown.classList.contains('active');
 
-                        // Close other dropdowns
+                        // Close all dropdowns and remove active from triggers
                         navLinks.querySelectorAll('.dropdown-menu').forEach(menu => {
-                            if (menu !== dropdown) {
-                                menu.classList.remove('active');
-                            }
+                            menu.classList.remove('active');
                         });
+                        navLinks.querySelectorAll('.dropdown-trigger').forEach(t => {
+                            t.classList.remove('expanded');
+                        });
+
+                        // Toggle current dropdown if it wasn't active
+                        if (!isActive) {
+                            dropdown.classList.add('active');
+                            trigger.classList.add('expanded');
+                        }
                     }
                 }
             });
