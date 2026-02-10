@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Innovat3 Solutions | Building Smarter Business Systems</title>
+
+    <!-- Base styles and Favicon -->
+    <link rel="icon" type="image/png" href="../images/Innovat3-logos/innovate-favicon.png">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* About Page Specific Styles */
+        .header-bg {
+            background-color: #0f172a;
+            color: #f8fafc;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .header-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #ffffff, #94a3b8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .text-content {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 1.125rem;
+        }
+
+        .highlight-text {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .value-card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .founder-section {
+            background-color: #f8fafc;
+            padding: 80px 0;
+        }
+
+        .founder-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .founder-img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .founder-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header-title {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                <img src="../images/Innovat3-logos/innovate-logo-black-transparent.png" alt="Innovate Solutions"
+                    class="logo-full">
+            </a>
+
+            <div class="nav-links">
+                <div class="nav-item dropdown">
+                    <a href="../index.html#services" class="dropdown-trigger">Services <span
+                            class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="services/voice-ai.html">Voice AI Agents</a>
+                        <a href="services/custom-apps.html">Custom Apps</a>
+                        <a href="services/review-automation.html">Review Management</a>
+                        <a href="services/private-ai-infra.html">Private AI</a>
+                        <a href="services/lead-database.html">Lead Capture</a>
+                        <a href="services/data-intelligence.html">Data Intelligence</a>
+                        <a href="services/workflow-automation.html">Workflow Automations</a>
+                        <a href="services/consulting.html">Growth Consulting</a>
+                        <a href="services/web-development.html">Web Development</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="../index.html#niches" class="dropdown-trigger">Industries <span
+                            class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu niche-dropdown-menu">
+                        <div class="niche-dropdown-grid">
+                            <!-- Column 1: Home Services -->
+                            <div class="niche-col">
+                                <h4>Home & Property</h4>
+                                <a href="niches/pool-cleaners-and-maintenance.html">Pool Cleaners</a>
+                                <a href="niches/pool-contractors-and-construction.html">Pool Construction</a>
+                                <a href="niches/landscaping-and-lawn-care.html">Landscaping</a>
+                                <a href="niches/hvac-services.html">HVAC Services</a>
+                                <a href="niches/general-contractors.html">General Contractors</a>
+                                <a href="niches/window-installers.html">Window Installers</a>
+                                <a href="niches/plumbers.html">Plumbers</a>
+                                <a href="niches/painters.html">Painters</a>
+                                <a href="niches/electricians.html">Electricians</a>
+                                <a href="niches/property-management.html">Property Management</a>
+                            </div>
+
+                            <!-- Column 2: Health & Beauty -->
+                            <div class="niche-col">
+                                <h4>Health & Medical</h4>
+                                <a href="niches/dentists-and-orthodontists.html">Dentists</a>
+                                <a href="niches/family-practice-doctors.html">Family Practice</a>
+                                <a href="niches/veterinarians.html">Veterinarians</a>
+                                <a href="niches/med-spas-and-laser-facilities.html">Med Spas</a>
+
+                                <h4 class="mt-sm">Beauty & Care</h4>
+                                <a href="niches/hair-salons-and-stylists.html">Hair Salons</a>
+                                <a href="niches/barbershops.html">Barbershops</a>
+                                <a href="niches/nail-salons.html">Nail Salons</a>
+                                <a href="niches/pet-groomers.html">Pet Groomers</a>
+                            </div>
+
+                            <!-- Column 3: Professional & Other -->
+                            <div class="niche-col">
+                                <h4>Professional Services</h4>
+                                <a href="niches/attorneys-and-law-firms.html">Attorneys</a>
+                                <a href="niches/accountants-and-cpas.html">Accountants & CPAs</a>
+                                <a href="niches/financial-managers-and-advisors.html">Financial Advisors</a>
+                                <a href="niches/real-estate-brokers.html">Real Estate Brokers</a>
+
+                                <h4 class="mt-sm">Retail & Auto</h4>
+                                <a href="niches/auto-mechanics-and-repair-shops.html">Auto Mechanics</a>
+                                <a href="niches/window-tinting-and-auto-detail.html">Auto Detail/Tint</a>
+                                <a href="niches/restaurants.html">Restaurants</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="blog.html">Blog</a>
+                <a href="../index.html#process">Process</a>
+                <a href="about.html" class="active">About</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="../index.html#contact" class="btn btn-primary shiny-button">Get Started</a>
+            </div>
+
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header-bg">
+        <div class="container">
+            <h1 class="header-title">About Innovat3 Solutions</h1>
+            <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto; color: #cbd5e1;">Briding the gap between
+                business and technology.</p>
+        </div>
+    </header>
+
+    <!-- Who We Are -->
+    <section class="section-padding">
+        <div class="container text-content text-center">
+            <span class="subtitle">Who We Are</span>
+            <h2 style="margin-bottom: 30px;">Professional Grade Systems for Growing Businesses</h2>
+            <p>Innovat3 Solutions exists to give small and growing businesses access to enterprise-level technology and
+                automation—without the complexity or cost traditionally required to get there.</p>
+            <p style="margin-top: 20px;">Founded in 2023 by Juan De Los Santos, Innovat3 Solutions was built to bridge
+                the gap between small businesses and powerful, scalable systems that drive real growth.</p>
+            <p style="margin-top: 20px; font-weight: 600;">We believe technology should work for your business, not slow
+                it down.</p>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="section-padding" style="background-color: #f8fafc;">
+        <div class="container">
+            <div class="text-content">
+                <h2 class="text-center" style="margin-bottom: 40px;">Our Story</h2>
+                <p>Innovat3 Solutions began with a simple realization:</p>
+                <p class="highlight-text"
+                    style="font-size: 1.5rem; margin: 20px 0; border-left: 4px solid var(--primary-color); padding-left: 20px;">
+                    Small businesses often outwork enterprise companies—but they don’t always have the systems to
+                    support that effort.</p>
+                <p>Since launching in 2023, Innovat3 Solutions has grown experience delivering enterprise-grade
+                    solutions and automations that have generated 7-figure+ results, helping businesses increase
+                    efficiency, streamline operations, and unlock scalable growth.</p>
+                <p style="margin-top: 20px;">What started as solving operational problems evolved into building systems
+                    that fundamentally change how businesses run.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="founder-grid">
+                <div>
+                    <span class="subtitle">Our Mission</span>
+                    <h3>Bridging the Gap</h3>
+                    <p style="margin-top: 20px; font-size: 1.1rem; line-height: 1.6;">Our mission is to make
+                        enterprise-level solutions accessible to small businesses.</p>
+                    <p style="margin-top: 20px; font-size: 1.1rem; line-height: 1.6;">We help eliminate inefficiencies,
+                        replace manual processes, and implement systems that support long-term scaling—so business
+                        owners can focus on growth, not operations.</p>
+                </div>
+                <div>
+                    <span class="subtitle">Our Vision</span>
+                    <h3>Smarter Systems</h3>
+                    <p style="margin-top: 20px; font-size: 1.1rem; line-height: 1.6;">We envision a future where small
+                        businesses operate with the same efficiency, intelligence, and scalability as large enterprises.
+                    </p>
+                    <p style="margin-top: 20px; font-size: 1.1rem; line-height: 1.6;">Not by working harder—but by
+                        building smarter systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="section-padding" style="background-color: #0f172a; color: white;">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 60px;">
+                <span class="subtitle">Our Core Values</span>
+                <h2>What Drives Us</h2>
+            </div>
+            <div class="values-grid">
+                <div class="value-card"
+                    style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
+                    <i data-lucide="zap" style="color: var(--primary-color); margin-bottom: 20px;" size="32"></i>
+                    <h3>Innovation</h3>
+                    <p style="color: #cbd5e1; margin-top: 10px;">We stay ahead of technology so our clients stay ahead
+                        of the market.</p>
+                </div>
+                <div class="value-card"
+                    style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
+                    <i data-lucide="clock" style="color: var(--primary-color); margin-bottom: 20px;" size="32"></i>
+                    <h3>Efficiency</h3>
+                    <p style="color: #cbd5e1; margin-top: 10px;">We eliminate wasted time, effort, and resources.</p>
+                </div>
+                <div class="value-card"
+                    style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
+                    <i data-lucide="trending-up" style="color: var(--primary-color); margin-bottom: 20px;"
+                        size="32"></i>
+                    <h3>Scalability</h3>
+                    <p style="color: #cbd5e1; margin-top: 10px;">Every system is built to grow with your business.</p>
+                </div>
+                <div class="value-card"
+                    style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
+                    <i data-lucide="shield-check" style="color: var(--primary-color); margin-bottom: 20px;"
+                        size="32"></i>
+                    <h3>Reliability</h3>
+                    <p style="color: #cbd5e1; margin-top: 10px;">Your systems should work consistently, not
+                        occasionally.</p>
+                </div>
+                <div class="value-card"
+                    style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
+                    <i data-lucide="target" style="color: var(--primary-color); margin-bottom: 20px;" size="32"></i>
+                    <h3>Results</h3>
+                    <p style="color: #cbd5e1; margin-top: 10px;">If it doesn’t move the needle, it doesn’t belong.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="founder-grid">
+                <div>
+                    <!-- Placeholder image -->
+                    <div
+                        style="width: 100%; aspect-ratio: 1/1; background-color: #e2e8f0; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #64748b; font-weight: 600;">
+                        Juan De Los Santos
+                    </div>
+                </div>
+                <div>
+                    <span class="subtitle">Meet the Founder</span>
+                    <h2>Juan De Los Santos</h2>
+                    <p style="font-size: 1.1rem; color: #64748b; margin-bottom: 20px;">Founder & Owner</p>
+                    <p style="margin-bottom: 20px; line-height: 1.7;">Innovat3 Solutions was founded by Juan De Los
+                        Santos, a systems strategist and business builder focused on helping companies scale through
+                        technology and automation.</p>
+                    <p style="margin-bottom: 20px; line-height: 1.7;">Juan launched Innovat3 in 2023 with a clear goal:
+                        to give small businesses access to the same level of systems and infrastructure used by
+                        enterprise organizations—without unnecessary complexity or cost.</p>
+                    <p style="line-height: 1.7;">With hands-on experience delivering enterprise-level solutions that
+                        have produced 7-figure outcomes, Juan leads Innovat3 Solutions with a results-driven,
+                        systems-first mindset.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding" style="background-color: var(--primary-color); color: #000; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Ready to Innovat3?</h2>
+            <p style="font-size: 1.25rem; max-width: 700px; margin: 0 auto 40px; opacity: 0.9;">If you’re ready to
+                streamline operations, automate intelligently, and build systems that scale, we’re ready to work with
+                you.</p>
+            <a href="../index.html#contact" class="btn"
+                style="background: #000; color: white; border: none; padding: 16px 32px; font-weight: 600; font-size: 1.1rem;">Let’s
+                Build Smarter</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="../index.html" class="footer-logo">Innovat3</a>
+                    <p>Modernizing Miami one automated workflow at a time.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="../index.html#process">Process</a>
+                    <a href="about.html">About</a>
+                    <a href="../index.html#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Innovate Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
