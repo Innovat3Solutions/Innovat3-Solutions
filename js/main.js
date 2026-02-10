@@ -1,7 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 0. Scroll to Top on Page Load (for navigation between pages)
+    // Disable browser's automatic scroll restoration
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+
+    // Force scroll to top unless there's a specific hash target
     if (window.location.hash === '' || !window.location.hash) {
         window.scrollTo(0, 0);
+        // Also run after a short delay to override any browser behavior
+        setTimeout(() => window.scrollTo(0, 0), 0);
     }
 
     // 1. Navbar Scroll Effect
