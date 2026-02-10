@@ -26,44 +26,13 @@
     <style>
         /* Niche Page Specific Overrides based on Design Spec */
         :root {
-            --color-primary: {
-                    {
-                    ACCENT_COLOR
-                }
-            }
-
-            ;
-
-            --niche-hero-bg: {
-                    {
-                    HERO_BG_COLOR
-                }
-            }
-
-            ;
-
-            /* Dynamic Hero BG */
-            --niche-accent: {
-                    {
-                    ACCENT_COLOR
-                }
-            }
-
-            ;
-
-            /* Dynamic Accent */
+            --color-primary: #84CC16;
+            --niche-hero-bg: #ffffff;
+            --niche-accent: #84CC16;
             --niche-text: var(--color-text);
             --niche-card-bg: #ffffff;
             --niche-card-text: #1e293b;
-
-            --niche-secondary-bg: {
-                    {
-                    LIGHT_BG_COLOR
-                }
-            }
-
-            ;
-            /* Dynamic Light BG for sections */
+            --niche-secondary-bg: #f8fafc;
         }
 
         body {
@@ -592,59 +561,47 @@
     </nav>
 
     <!-- 1. DYNAMIC HERO SECTION -->
-    
-    <header class="niche-hero hero-alva" style="background: #fafafa; padding-top: 140px;">
+    <header class="niche-hero">
         <div class="container niche-hero-content">
             <div class="hero-text">
-                <div class="badge-pill" style="background: #18181b; color: white; border: none;">
-                    <span style="background: white; color: black; border-radius: 4px; padding: 2px 6px; font-size: 0.7rem; font-weight: 700; margin-right: 8px;">NEW</span>
-                    Multi-channel automation
-                </div>
-                <h1 class="hero-h1-alva">
-                    Automate Tax Season Inquiries
+                <h1 class="font-primary">
+                    Scale Your Practice Without the Chaos
                 </h1>
-                <p class="sub-headline" style="font-size: 1.1rem; color: #52525b; margin-bottom: 2rem; max-width: 480px;">
-                     End the tax season chase. Secure client portals and automated follow-ups collect documents faster, smoothing out your workflow. Keep your business needs safely organized under one roof.
+                <p class="sub-headline">
+                    Tax season doesn't have to mean burnout. Automate client onboarding, document collection, and follow-ups so you can focus on billable work.
                 </p>
-                <div class="cta-group" style="display: flex; gap: 1rem;">
-                    <a href="#contact" class="btn btn-primary shiny-button" style="background: #18181b; color: white; border-radius: 99px; padding: 14px 28px;">Try for Free</a>
-                    <a href="#process" class="btn btn-outline" style="border-radius: 99px; padding: 14px 28px; display: flex; align-items: center; gap: 8px;">
-                        See Preview <i data-lucide="play-circle" size="16"></i>
-                    </a>
+                
+                <div class="hero-cta-group">
+                    <input type="email" placeholder="Enter work email" class="hero-input">
+                    <button class="hero-btn">Book a demo</button>
                 </div>
                 
-                <div style="margin-top: 3rem; opacity: 0.4; filter: grayscale(1);">
-                     <div style="font-size: 0.8rem; font-weight: 600; margin-bottom: 1rem;">TRUSTED BY TEAMS AT</div>
-                     <div style="display: flex; gap: 2rem; align-items: center;">
-                         <!-- Logo Placeholders -->
-                        <div style="font-weight: 800; letter-spacing: -1px; font-size: 1.2rem;">slack</div>
-                        <div style="font-weight: 800; letter-spacing: -1px; font-size: 1.2rem;">zoom</div>
-                        <div style="font-weight: 800; letter-spacing: -1px; font-size: 1.2rem;">airbnb</div>
-                     </div>
+                <!-- Trust / Stats Row -->
+                <div style="display: flex; align-items: center; gap: 3rem; border-top: 1px solid #e2e8f0; padding-top: 2rem; margin-top: 2rem;">
+                    <div>
+                        <div style="font-size: 2rem; font-weight: 700; color: #0f172a; line-height: 1;">40% Less Admin Time</div>
+                        <div style="font-size: 0.875rem; color: #64748b; font-weight: 500; margin-top: 4px;">Automated workflows handle the busywork so you can serve more clients.</div>
+                    </div>
+                    <!-- Star Rating -->
+                    <div style="display: flex; flex-direction: column; gap: 4px;">
+                        <div style="display: flex; gap: 2px;">
+                            <i data-lucide="star" style="fill: #0f172a; color: #0f172a; width: 16px;"></i>
+                            <i data-lucide="star" style="fill: #0f172a; color: #0f172a; width: 16px;"></i>
+                            <i data-lucide="star" style="fill: #0f172a; color: #0f172a; width: 16px;"></i>
+                            <i data-lucide="star" style="fill: #0f172a; color: #0f172a; width: 16px;"></i>
+                            <i data-lucide="star" style="fill: #0f172a; color: #0f172a; width: 16px;"></i>
+                        </div>
+                        <span style="font-size: 0.875rem; font-weight: 600; color: #0f172a;">4.9/5 Average Rating</span>
+                    </div>
                 </div>
             </div>
             
-            <div class="hero-image-wrapper" style="background: #f4f4f5; padding: 2rem; border-radius: 24px;">
-                 <img src="../../images/niche_graphics/accountants-and-cpas.png" alt="Accountants & CPAs" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
-                 
-                 <!-- Stat Overlay -->
-                 <div style="background: white; padding: 1.5rem; border-radius: 12px; margin-top: -40px; margin-left: 20px; position: relative; z-index: 2; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); width: 80%;">
-                      <div style="font-size: 0.9rem; color: #71717a;">Total Revenue</div>
-                      <div style="font-size: 2.5rem; font-weight: 700; letter-spacing: -0.05em; margin: 4px 0;">$48,403</div>
-                      <div style="display: flex; gap: 1rem; align-items: flex-end; height: 40px;">
-                          <div style="background: #e4e4e7; width: 20%; height: 60%; border-radius: 4px;"></div>
-                          <div style="background: #e4e4e7; width: 20%; height: 80%; border-radius: 4px;"></div>
-                          <div style="background: #18181b; width: 20%; height: 100%; border-radius: 4px; position: relative;">
-                               <div style="position: absolute; top: -30px; left: 50%; transform: translateX(-50%); background: #18181b; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.7rem;">$30k</div>
-                          </div>
-                      </div>
-                 </div>
+            <div class="hero-image-wrapper">
+                 <img src="../../images/niche_graphics/accountants-and-cpas.png" alt="Accountants & CPAs">
             </div>
         </div>
     </header>
     
-
-
     <!-- 2. STRATEGIC PILLARS (The Method) -->
     <section class="pillars-section">
         <div class="container">

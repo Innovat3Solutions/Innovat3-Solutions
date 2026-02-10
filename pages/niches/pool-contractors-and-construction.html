@@ -26,44 +26,13 @@
     <style>
         /* Niche Page Specific Overrides based on Design Spec */
         :root {
-            --color-primary: {
-                    {
-                    ACCENT_COLOR
-                }
-            }
-
-            ;
-
-            --niche-hero-bg: {
-                    {
-                    HERO_BG_COLOR
-                }
-            }
-
-            ;
-
-            /* Dynamic Hero BG */
-            --niche-accent: {
-                    {
-                    ACCENT_COLOR
-                }
-            }
-
-            ;
-
-            /* Dynamic Accent */
+            --color-primary: #84CC16;
+            --niche-hero-bg: #ffffff;
+            --niche-accent: #84CC16;
             --niche-text: var(--color-text);
             --niche-card-bg: #ffffff;
             --niche-card-text: #1e293b;
-
-            --niche-secondary-bg: {
-                    {
-                    LIGHT_BG_COLOR
-                }
-            }
-
-            ;
-            /* Dynamic Light BG for sections */
+            --niche-secondary-bg: #f8fafc;
         }
 
         body {
@@ -592,37 +561,47 @@
     </nav>
 
     <!-- 1. DYNAMIC HERO SECTION -->
-    
-    <header class="niche-hero hero-immersive" style="background: var(--niche-hero-bg); color: white; padding-top: 160px; text-align: center; position: relative; overflow: hidden;">
-        <!-- Background Glow -->
-        <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%; pointer-events: none; background: radial-gradient(circle at 50% 10%, rgba(255,255,255,0.05), transparent 70%);"></div>
-        
-        <div class="container niche-hero-content" style="grid-template-columns: 1fr; max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
-             <!-- Badge -->
-             <div class="badge-pill" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); color: #e2e8f0; margin: 0 auto 1.5rem; backdrop-filter: blur(4px);">
-                <span style="width: 8px; height: 8px; background: var(--niche-accent); border-radius: 50%; display: inline-block; margin-right: 8px;"></span>
-                Pool Contractors & Construction Growth Engine
-             </div>
-             <h1 class="hero-h1-immersive" style="font-size: 4rem; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 1.5rem; font-weight: 800;">
-                Capture Every High-Value Install Lead
-             </h1>
-             <p class="sub-headline" style="color: #94a3b8; font-size: 1.25rem; max-width: 650px; margin: 0 auto 2.5rem; line-height: 1.6;">
-                Filter out the tire-kickers from the high-ticket buyers instantly. Our Lead Capture systems qualify prospects before you ever spend time on a site visit.
-             </p>
-             <div class="cta-group" style="justify-content: center; gap: 1rem;">
-                 <a href="#contact" class="btn btn-primary shiny-button" style="background: var(--niche-accent); color: black; border: none; font-weight: 700; padding: 16px 32px; font-size: 1.1rem;">Start Growing</a>
-                 <a href="#process" class="btn btn-outline" style="border-color: rgba(255,255,255,0.2); color: white; backdrop-filter: blur(4px);">View Strategy</a>
-             </div>
-             
-             <!-- Visual Element -->
-             <div class="hero-image-wrapper" style="margin-top: 4rem; width: 100%; border-radius: 20px; box-shadow: 0 -20px 40px -10px rgba(var(--niche-accent-rgb), 0.1), 0 0 0 1px rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); padding: 12px;">
-                <img src="../../images/niche_graphics/pool-contractors-and-construction.png" alt="Pool Contractors & Construction" style="border-radius: 12px; width: 100%; display: block;">
-             </div>
+    <header class="niche-hero">
+        <div class="container niche-hero-content">
+            <div class="hero-text">
+                <h1 class="font-primary">
+                    Capture Every High-Value Install Lead
+                </h1>
+                <p class="sub-headline">
+                    Filter out the tire-kickers from the high-ticket buyers instantly. Our Lead Capture systems qualify prospects before you ever spend time on a site visit.
+                </p>
+                
+                <div class="hero-cta-group">
+                    <input type="email" placeholder="Enter work email" class="hero-input">
+                    <button class="hero-btn">Book a demo</button>
+                </div>
+                
+                <!-- Trust / Stats Row -->
+                <div style="display: flex; align-items: center; gap: 3rem; border-top: 1px solid #e2e8f0; padding-top: 2rem; margin-top: 2rem;">
+                    <div>
+                        <div style="font-size: 2rem; font-weight: 700; color: #0f172a; line-height: 1;">$50K+ Avg Project Value</div>
+                        <div style="font-size: 0.875rem; color: #64748b; font-weight: 500; margin-top: 4px;">Qualify leads before site visits with automated questionnaires and AI scoring.</div>
+                    </div>
+                    <!-- Star Rating -->
+                    <div style="display: flex; flex-direction: column; gap: 4px;">
+                        <div style="display: flex; gap: 2px;">
+                            <i data-lucide="star" style="fill: #0f172a; color: #0f172a; width: 16px;"></i>
+                            <i data-lucide="star" style="fill: #0f172a; color: #0f172a; width: 16px;"></i>
+                            <i data-lucide="star" style="fill: #0f172a; color: #0f172a; width: 16px;"></i>
+                            <i data-lucide="star" style="fill: #0f172a; color: #0f172a; width: 16px;"></i>
+                            <i data-lucide="star" style="fill: #0f172a; color: #0f172a; width: 16px;"></i>
+                        </div>
+                        <span style="font-size: 0.875rem; font-weight: 600; color: #0f172a;">4.9/5 Average Rating</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image-wrapper">
+                 <img src="../../images/niche_graphics/pool-contractors-and-construction.png" alt="Pool Contractors & Construction">
+            </div>
         </div>
     </header>
     
-
-
     <!-- 2. STRATEGIC PILLARS (The Method) -->
     <section class="pillars-section">
         <div class="container">
