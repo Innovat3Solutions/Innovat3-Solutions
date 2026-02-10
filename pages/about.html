@@ -23,20 +23,93 @@
     <style>
         /* About Page Specific Styles */
         .header-bg {
-            background-color: #0f172a;
-            color: #f8fafc;
-            padding: 120px 0 80px;
+            background-color: #f8fafc;
+            /* Light background */
+            color: #1e293b;
+            /* Dark text */
+            padding: 160px 0 100px;
+            /* More padding for hero feel */
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Subtle glow effect behind text */
+        .header-bg::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+            border-radius: 50%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
         }
 
         .header-title {
-            font-size: 3.5rem;
+            font-size: 4rem;
+            /* Larger */
+            margin-bottom: 24px;
+            line-height: 1.1;
+            color: #0f172a;
+        }
+
+        /* Typography Mix */
+        .font-serif-italic {
+            font-family: 'Merriweather', serif;
+            font-style: italic;
+            font-weight: 300;
+            color: #60a5fa;
+            /* Light Blue */
+        }
+
+        .font-bold-sans {
+            font-family: 'Inter', sans-serif;
             font-weight: 700;
-            margin-bottom: 20px;
-            background: linear-gradient(to right, #ffffff, #94a3b8);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #0f172a;
+        }
+
+        .header-subtitle {
+            font-size: 1.125rem;
+            color: #64748b;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+
+        /* Hero CTA Button */
+        .hero-btn {
+            background-color: #3b82f6;
+            /* Bright Blue */
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            /* Pill shape */
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.4);
+            /* Glow shadow */
+            transition: all 0.3s ease;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.5);
+            background-color: #2563eb;
         }
 
         .section-padding {
@@ -201,10 +274,21 @@
 
     <!-- Header Section -->
     <header class="header-bg">
-        <div class="container">
-            <h1 class="header-title">About INNOVAT3 Solutions</h1>
-            <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto; color: #cbd5e1;">Bridging the gap between
-                business and technology.</p>
+        <div class="container header-content">
+            <h1 class="header-title">
+                <span class="font-serif-italic">Empowering</span> <span class="font-bold-sans">Businesses</span><br>
+                <span class="font-bold-sans">with Clarity & Confidence</span>
+            </h1>
+            <p class="header-subtitle">
+                We are a business coaching and consulting firm committed to helping founders, executives, and growing
+                teams move forward with clarity and confidence. Our focus is on practical strategy, strong
+                decision-making, and consistent execution that drives measurable business growth.
+            </p>
+
+            <a href="#contact" class="hero-btn">
+                <i data-lucide="phone"></i>
+                Book a 20-min Strategy Call
+            </a>
         </div>
     </header>
 
