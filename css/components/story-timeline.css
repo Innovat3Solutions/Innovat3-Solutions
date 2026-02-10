@@ -1,7 +1,7 @@
-/* Horizontal Story Timeline - Animated */
+/* Horizontal Story Timeline - Light Theme */
 .story-timeline-section {
     padding: 100px 0;
-    background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
     position: relative;
     overflow: hidden;
 }
@@ -14,7 +14,7 @@
     left: -10%;
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(132, 204, 22, 0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(132, 204, 22, 0.06) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
 }
@@ -26,7 +26,7 @@
     right: -5%;
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, rgba(59, 130, 246, 0.06) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
 }
@@ -44,12 +44,12 @@
 .story-title {
     font-size: 3rem;
     font-weight: 800;
-    color: #ffffff;
+    color: #0f172a;
     margin-bottom: 15px;
 }
 
 .story-header p {
-    color: #94a3b8 !important;
+    color: #64748b !important;
 }
 
 /* Horizontal Timeline Container */
@@ -65,7 +65,7 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: rgba(255, 255, 255, 0.1);
+    background: #e2e8f0;
     border-radius: 2px;
     z-index: 0;
 }
@@ -80,7 +80,7 @@
     background: linear-gradient(90deg, var(--color-primary), #22d3ee);
     border-radius: 2px;
     transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 0 20px rgba(132, 204, 22, 0.4);
+    box-shadow: 0 0 15px rgba(132, 204, 22, 0.3);
 }
 
 .timeline-progress.animated {
@@ -126,11 +126,12 @@
     transform: translate(-50%, -50%);
     width: 16px;
     height: 16px;
-    background: #1e293b;
+    background: #ffffff;
     border: 3px solid var(--color-primary);
     border-radius: 50%;
     z-index: 2;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .timeline-node:hover .node-dot {
@@ -157,7 +158,7 @@
 @keyframes pulse-ring {
     0% {
         transform: translate(-50%, -50%) scale(0.8);
-        opacity: 0.6;
+        opacity: 0.5;
     }
     100% {
         transform: translate(-50%, -50%) scale(2);
@@ -179,21 +180,20 @@
 
 /* Content Card */
 .node-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
     border-radius: 16px;
     padding: 24px;
     text-align: center;
     transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
     height: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .node-card:hover {
-    background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(132, 204, 22, 0.3);
+    border-color: var(--color-primary);
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.1);
 }
 
 .node-icon {
@@ -205,7 +205,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #0f172a;
+    color: #ffffff;
     transition: transform 0.3s ease;
 }
 
@@ -216,13 +216,13 @@
 .node-card h3 {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #0f172a;
     margin-bottom: 12px;
 }
 
 .node-card p {
     font-size: 0.95rem;
-    color: #94a3b8;
+    color: #64748b;
     line-height: 1.6;
     margin: 0;
 }
