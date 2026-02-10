@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{NICHE_NAME}} Strategy & Automation | Innovat3 Solutions</title>
+    <meta name="description"
+        content="Transform your {{NICHE_NAME}} business with AI automation, custom apps, and growth strategies. Innovat3 Solutions helps you scale.">
+
+    <!-- Base styles and Favicon -->
+    <link rel="icon" type="image/png" href="../../images/Innovat3-logos/innovate-favicon.png">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/faq-carousel.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Niche Page Specific Overrides based on Design Spec */
+        :root {
+            --color-primary: {
+                    {
+                    ACCENT_COLOR
+                }
+            }
+
+            ;
+
+            --niche-hero-bg: {
+                    {
+                    HERO_BG_COLOR
+                }
+            }
+
+            ;
+
+            /* Dynamic Hero BG */
+            --niche-accent: {
+                    {
+                    ACCENT_COLOR
+                }
+            }
+
+            ;
+
+            /* Dynamic Accent */
+            --niche-text: var(--color-text);
+            --niche-card-bg: #ffffff;
+            --niche-card-text: #1e293b;
+
+            --niche-secondary-bg: {
+                    {
+                    LIGHT_BG_COLOR
+                }
+            }
+
+            ;
+            /* Dynamic Light BG for sections */
+        }
+
+        body {
+            background-color: var(--niche-hero-bg);
+            color: var(--niche-text);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .serif-title {
+            font-family: 'Merriweather', serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+
+
+        /* HERO SECTION - MONOTREE STYLE */
+        .niche-hero {
+            position: relative;
+            padding: 180px 0 100px;
+            background-color: #ffffff;
+            /* Clean White BG */
+            color: #0f172a;
+            /* Dark Slate Text */
+            overflow: hidden;
+        }
+
+        .niche-hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            /* Large Headline */
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: #0f172a;
+            /* Force Dark Color */
+            font-weight: 700;
+            /* Bold per Monotree spec */
+            letter-spacing: -0.02em;
+        }
+
+        .hero-text .sub-headline {
+            font-size: 1.125rem;
+            color: #334155;
+            /* Slate 700 */
+            margin-bottom: 2.5rem;
+            max-width: 500px;
+            line-height: 1.6;
+        }
+
+        /* Monotree Input Group */
+        .hero-cta-group {
+            display: flex;
+            gap: 12px;
+            width: 100%;
+            max-width: 450px;
+            margin-bottom: 40px;
+        }
+
+        .hero-input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            background: #f8fafc;
+            color: #0f172a;
+            font-size: 1rem;
+        }
+
+        .hero-input:focus {
+            outline: none;
+            border-color: #84CC16;
+            background: #fff;
+        }
+
+        .hero-btn {
+            background-color: #84CC16;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .hero-btn:hover {
+            background-color: #65a30d;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image-wrapper img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            /* Monotree Isometric Look */
+            transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+            border-radius: 20px;
+            box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            background: white;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-image-wrapper img:hover {
+            transform: perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(-10px);
+        }
+
+        /* METHODOLOGY / PILLARS SECTION */
+        .pillars-section {
+            padding: 100px 0;
+            background: var(--niche-secondary-bg);
+            /* Using Dynamic Light BG */
+            color: var(--niche-card-text);
+            position: relative;
+        }
+
+        .pillars-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            position: relative;
+        }
+
+        /* Connecting Line (Desktop) */
+        .pillars-grid::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 15%;
+            right: 15%;
+            height: 2px;
+            background: #cbd5e1;
+            z-index: 0;
+        }
+
+        .pillar-card {
+            background: #ffffff;
+            padding: 2.5rem 2rem;
+            border-radius: 1.5rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            background-clip: padding-box;
+            /* To ensure line goes behind */
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            border-color: var(--niche-accent);
+        }
+
+        .step-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            background: white;
+            border: 2px solid var(--niche-accent);
+            border-radius: 50%;
+            margin-bottom: 2rem;
+            color: var(--niche-accent);
+            font-weight: 800;
+            font-size: 1.5rem;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .pillar-icon-wrapper {
+            display: none;
+            /* Replaced by step badge for cleaner flow */
+        }
+
+        .pillar-title {
+            font-family: 'Merriweather', serif;
+            font-size: 1.35rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        /* STATS SECTION */
+        .stats-section {
+            padding: 100px 0;
+            background: #ffffff;
+            border-top: 1px solid #f1f5f9;
+            color: var(--niche-card-text);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-icon-wrapper {
+            width: 60px;
+            height: 60px;
+            background: #f1f5f9;
+            color: var(--niche-card-text);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover .stat-icon-wrapper {
+            background: var(--niche-accent);
+            color: #1e293b;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--niche-card-text);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #1e293b;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .stat-desc {
+            font-size: 0.9rem;
+            color: #64748b;
+            line-height: 1.6;
+            max-width: 250px;
+            margin: 0 auto;
+        }
+
+        /* SERVICES SECTION */
+        .services-section {
+            padding: 100px 0;
+            background: #ffffff;
+            color: var(--niche-card-text);
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+
+
+        /* CASE STUDIES */
+        .case-section {
+            padding: 100px 0;
+            background: #f1f5f9;
+            color: var(--niche-card-text);
+        }
+
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .case-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .case-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .case-img {
+            height: 200px;
+            background: #cbd5e1;
+            /* Placeholder grey */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .case-tag {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(15, 23, 42, 0.8);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            backdrop-filter: blur(4px);
+        }
+
+        .case-content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .case-meta {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .case-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        /* CTA SECTION */
+        .final-cta {
+            padding: 120px 0;
+            /* background handled inline dynamically */
+            background-size: cover;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .niche-hero-content,
+            .pillars-grid,
+            .stats-grid,
+            .expert-wrapper,
+            .services-grid,
+            .case-grid {
+                grid-template-columns: 1fr;
+                flex-direction: column;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Nav -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="../../index.html" class="logo">
+                <img src="../../images/Innovat3-logos/innovate-logo-black-transparent.png" alt="Innovate Solutions"
+                    class="logo-full">
+            </a>
+
+            <div class="nav-links">
+                <div class="nav-item dropdown">
+                    <a href="../../index.html#services" class="dropdown-trigger">Services <span
+                            class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="../services/voice-ai.html">Voice AI Agents</a>
+                        <a href="../services/custom-apps.html">Custom Apps</a>
+                        <a href="../services/review-automation.html">Review Management</a>
+                        <a href="../services/private-ai-infra.html">Private AI</a>
+                        <a href="../services/lead-database.html">Lead Capture</a>
+                        <a href="../services/data-intelligence.html">Data Intelligence</a>
+                        <a href="../services/workflow-automation.html">Workflow Automations</a>
+                        <a href="../services/consulting.html">Growth Consulting</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="../../index.html#niches" class="dropdown-trigger">Industries <span
+                            class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu niche-dropdown-menu">
+                        <div class="niche-dropdown-grid">
+                            <!-- Column 1: Home Services -->
+                            <div class="niche-col">
+                                <h4>Home & Property</h4>
+                                <a href="../niches/pool-cleaners-and-maintenance.html">Pool Cleaners</a>
+                                <a href="../niches/pool-contractors-and-construction.html">Pool Construction</a>
+                                <a href="../niches/landscaping-and-lawn-care.html">Landscaping</a>
+                                <a href="../niches/hvac-services.html">HVAC Services</a>
+                                <a href="../niches/general-contractors.html">General Contractors</a>
+                                <a href="../niches/window-installers.html">Window Installers</a>
+                                <a href="../niches/plumbers.html">Plumbers</a>
+                                <a href="../niches/painters.html">Painters</a>
+                                <a href="../niches/electricians.html">Electricians</a>
+                                <a href="../niches/property-management.html">Property Management</a>
+                            </div>
+
+                            <!-- Column 2: Health & Beauty -->
+                            <div class="niche-col">
+                                <h4>Health & Medical</h4>
+                                <a href="../niches/dentists-and-orthodontists.html">Dentists</a>
+                                <a href="../niches/family-practice-doctors.html">Family Practice</a>
+                                <a href="../niches/veterinarians.html">Veterinarians</a>
+                                <a href="../niches/med-spas-and-laser-facilities.html">Med Spas</a>
+
+                                <h4 class="mt-sm">Beauty & Care</h4>
+                                <a href="../niches/hair-salons-and-stylists.html">Hair Salons</a>
+                                <a href="../niches/barbershops.html">Barbershops</a>
+                                <a href="../niches/nail-salons.html">Nail Salons</a>
+                                <a href="../niches/pet-groomers.html">Pet Groomers</a>
+                            </div>
+
+                            <!-- Column 3: Professional & Other -->
+                            <div class="niche-col">
+                                <h4>Professional Services</h4>
+                                <a href="../niches/attorneys-and-law-firms.html">Attorneys</a>
+                                <a href="../niches/accountants-and-cpas.html">Accountants & CPAs</a>
+                                <a href="../niches/financial-managers-and-advisors.html">Financial Advisors</a>
+                                <a href="../niches/real-estate-brokers.html">Real Estate Brokers</a>
+
+                                <h4 class="mt-sm">Retail & Auto</h4>
+                                <a href="../niches/auto-mechanics-and-repair-shops.html">Auto Mechanics</a>
+                                <a href="../niches/window-tinting-and-auto-detail.html">Auto Detail/Tint</a>
+                                <a href="../niches/restaurants.html">Restaurants</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="../../index.html#process">Process</a>
+                <a href="../../index.html#about">About</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="../../index.html#contact" class="btn btn-primary shiny-button">Get Started</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 1. DYNAMIC HERO SECTION -->
+    {{HERO_SECTION}}
+
+
+    <!-- 2. STRATEGIC PILLARS (The Method) -->
+    <section class="pillars-section">
+        <div class="container">
+            <div class="pillars-header">
+                <span style="text-transform: uppercase; letter-spacing: 0.1em; color: #64748b; font-size: 0.875rem;">The
+                    Methodology</span>
+                <h2 style="font-size: 2.5rem; margin-top: 0.5rem;">The Blueprint to Market Dominance</h2>
+                <p style="max-width: 600px; margin: 1rem auto; color: #64748b;">A systematic approach to solving the
+                    biggest bottlenecks in the {{NICHE_NAME}} industry.</p>
+            </div>
+
+            <div class="pillars-grid">
+                <!-- Pillar 1: The Bottleneck -->
+                <div class="pillar-card">
+                    <div class="step-badge">01</div>
+                    <h3 class="pillar-title">The Bottleneck</h3>
+                    <p style="font-size: 0.95rem; line-height: 1.6;">{{PAIN_POINT}}</p>
+                </div>
+
+                <!-- Pillar 2: The Impact -->
+                <div class="pillar-card">
+                    <div class="step-badge">02</div>
+                    <h3 class="pillar-title">The Reality</h3>
+                    <p style="font-size: 0.95rem; line-height: 1.6;">{{STAT_TEXT}}</p>
+                </div>
+
+                <!-- Pillar 3: The Solution -->
+                <div class="pillar-card" style="border-color: var(--niche-accent); background: #fcfffe;">
+                    <div class="step-badge" style="background: var(--niche-accent); color: #1e293b;">03</div>
+                    <h3 class="pillar-title">The Solution</h3>
+                    <p style="font-size: 0.95rem; line-height: 1.6;">{{OPPORTUNITY}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SERVICES SECTION -->
+    <section class="services-section" style="background: white;">
+        <div class="container">
+            <div class="services-header">
+                <span style="text-transform: uppercase; letter-spacing: 0.1em; color: #64748b; font-size: 0.875rem;">Our
+                    Capabilities</span>
+                <h2 class="serif-title" style="font-size: 2.5rem; margin-top: 0.5rem;">Built for the {{NICHE_NAME}}
+                    Industry</h2>
+                <p style="max-width: 600px; margin: 1rem auto; color: #64748b;">Comprehensive tools and strategies
+                    designed to help you scale.</p>
+            </div>
+
+            <div class="services-grid">
+                {{SERVICES_SECTION}}
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. STATS -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <!-- Stat 1 -->
+                <div class="stat-item">
+                    <div class="stat-icon-wrapper">
+                        <i data-lucide="users" size="32"></i>
+                    </div>
+                    <div class="stat-number count-up" data-target="95" data-suffix="%">0%</div>
+                    <div class="stat-label">Client Retention</div>
+                    <div class="stat-desc">
+                        Our automated follow-up systems ensure no client floats away, building long-term loyalty without
+                        manual effort.
+                    </div>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="stat-item">
+                    <div class="stat-icon-wrapper">
+                        <i data-lucide="clock" size="32"></i>
+                    </div>
+                    <div class="stat-number count-up" data-target="24" data-suffix="/7">0/0</div>
+                    <div class="stat-label">Availability</div>
+                    <div class="stat-desc">
+                        Voice & Chat agents work while you sleep, capturing leads and scheduling appointments around the
+                        clock.
+                    </div>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="stat-item">
+                    <div class="stat-icon-wrapper">
+                        <i data-lucide="layers" size="32"></i>
+                    </div>
+                    <div class="stat-number count-up" data-target="100" data-suffix="%">0%</div>
+                    <div class="stat-label">Tailored Strategy</div>
+                    <div class="stat-desc">
+                        We don't rush. We map every step of your specific workflow to ensure a perfect, custom-fit
+                        automation infrastructure.
+                    </div>
+                </div>
+
+                <!-- Stat 4 -->
+                <div class="stat-item">
+                    <div class="stat-icon-wrapper">
+                        <i data-lucide="trending-up" size="32"></i>
+                    </div>
+                    <div class="stat-number count-up" data-target="10" data-suffix="x">0x</div>
+                    <div class="stat-label">ROI Average</div>
+                    <div class="stat-desc">
+                        By eliminating admin waste and capturing more leads, our clients typically see a 10x return on
+                        their technology investment.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CASE STUDIES (Ecosystem) -->
+    <section class="case-section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <span
+                    style="text-transform: uppercase; letter-spacing: 0.1em; color: #64748b; font-size: 0.875rem;">Success
+                    Stories</span>
+                <h2 class="serif-title" style="font-size: 2.5rem;">Results Across the Ecosystem</h2>
+            </div>
+
+            <div class="case-grid">
+                {{CASE_STUDIES}}
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    {{FAQ_SECTION}}
+
+
+    <!-- 6. FINAL CTA (Consultation Section) -->
+    <section id="contact" class="consultation-section">
+
+        <!-- Background Elements -->
+        <svg aria-hidden="true"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; opacity: 0.1;"
+            xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M0 40L40 0H20L0 20M40 40V20L20 40" stroke="white" stroke-width="1" fill="none" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid-pattern)" />
+        </svg>
+
+        <div class="container consultation-grid">
+
+            <!-- Left: Value Proposition -->
+            <div class="consult-content">
+                <div class="badge"
+                    style="background: rgba(132, 204, 22, 0.2); color: var(--color-primary); border: 1px solid var(--color-primary); margin-bottom: 1.5rem;">
+                    Free Strategy Session</div>
+                <h2>Ready to dominate your market?</h2>
+                <p class="sub-head">
+                    Join the top {{NICHE_NAME}} businesses leveraging INNOVAT3 SOLUTIONS to scale faster.
+                </p>
+
+                <div class="value-props">
+                    <div class="prop-item">
+                        <div class="prop-icon"><i data-lucide="bar-chart-2"></i></div>
+                        <div class="prop-text">Free Market Analysis & ROI Audit</div>
+                    </div>
+                    <div class="prop-item">
+                        <div class="prop-icon"><i data-lucide="map"></i></div>
+                        <div class="prop-text">Customized AI Implementation Roadmap</div>
+                    </div>
+                    <div class="prop-item">
+                        <div class="prop-icon"><i data-lucide="unlock"></i></div>
+                        <div class="prop-text">No Commitment, Just Value</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Lead Capture Form -->
+            <!-- Right: Lead Capture Form -->
+            <div class="glass-form-wrapper" id="multiStepForm">
+                <div class="glass-form-header">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                        <div>
+                            <h3>Get Your Free Consultation</h3>
+                            <p style="font-size: 0.85rem; opacity: 0.8;">Takes less than 3 minutes.</p>
+                        </div>
+                        <div class="step-indicator" id="stepIndicator">1/3</div>
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progressBar" style="width: 33%;"></div>
+                    </div>
+                </div>
+
+                <form id="consultationForm" action="#" method="POST">
+
+                    <!-- Step 1: Intro -->
+                    <div class="form-step active" id="step1">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" class="form-input" id="firstName" placeholder="Jane" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Company Name</label>
+                            <input type="text" class="form-input" id="companyName" placeholder="Acme Inc." required>
+                        </div>
+                        <button type="button" class="submit-btn shiny-button next-btn">Next <i data-lucide="arrow-right"
+                                size="16" style="margin-left:8px;"></i></button>
+                    </div>
+
+                    <!-- Step 2: Contact -->
+                    <div class="form-step" id="step2">
+                        <div class="form-group">
+                            <label>Work Email</label>
+                            <input type="email" class="form-input" id="email" placeholder="jane@company.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" class="form-input" id="phone" placeholder="(555) 123-4567" required>
+                        </div>
+                        <div class="button-group">
+                            <button type="button" class="btn-secondary prev-btn">Back</button>
+                            <button type="button" class="submit-btn shiny-button next-btn">Next <i
+                                    data-lucide="arrow-right" size="16" style="margin-left:8px;"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Details -->
+                    <div class="form-step" id="step3">
+                        <div class="form-group">
+                            <label>How can we help?</label>
+                            <textarea class="form-input" id="message"
+                                placeholder="Tell us about your current challenges..."
+                                style="min-height: 100px;"></textarea>
+                        </div>
+                        <div class="button-group">
+                            <button type="button" class="btn-secondary prev-btn">Back</button>
+                            <button type="submit" class="submit-btn shiny-button">Book Strategy Call</button>
+                        </div>
+                    </div>
+
+                    <div class="form-footer">
+                        <p>We respect your privacy. <a href="#">Read our policy</a>.</p>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 7. RELEVANT FAQs -->
+    <section class="faq-section" style="padding: 80px 0; background: #f1f5f9; color: var(--niche-card-text);">
+        <div class="container">
+            <h2 class="serif-title" style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Common Questions
+                for {{NICHE_NAME}}</h2>
+            <div class="faq-grid" style="max-width: 800px; margin: 0 auto; display: grid; gap: 1.5rem;">
+                <!-- FAQ Items will be injected here -->
+                {{FAQ_SECTION}}
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Brand -->
+                <div class="footer-col" style="flex: 2;">
+                    <a href="../../index.html" class="footer-logo">
+                        <img src="../../images/Innovat3-logos/innovate-logo-white-transparent.png"
+                            alt="Innovate Solutions" class="logo-full" style="height: 30px;">
+                    </a>
+                    <p>Modernizing Miami one automated workflow at a time.</p>
+                </div>
+
+                <!-- Column 2: Services -->
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="../services/voice-ai.html">Voice AI Agents</a>
+                    <a href="../services/custom-apps.html">Custom Apps</a>
+                    <a href="../services/review-automation.html">Review Management</a>
+                    <a href="../services/private-ai-infra.html">Private AI</a>
+                    <a href="../services/lead-database.html">Lead Capture</a>
+                    <a href="../services/data-intelligence.html">Data Intelligence</a>
+                    <a href="../services/workflow-automation.html">Workflow Automation</a>
+                    <a href="../services/consulting.html">Growth Consulting</a>
+                </div>
+
+                <!-- Column 3: Industries -->
+                <div class="footer-col">
+                    <h4>Industries</h4>
+                    <a href="../niches/general-contractors.html">Home Services</a>
+                    <a href="../niches/family-practice-doctors.html">Medical & Health</a>
+                    <a href="../niches/attorneys-and-law-firms.html">Legal & Prof.</a>
+                    <a href="../niches/hair-salons-and-stylists.html">Beauty & Wellness</a>
+                    <a href="../niches/restaurants.html">Retail & Hospitality</a>
+                    <a href="../niches/auto-mechanics-and-repair-shops.html">Automotive</a>
+                    <a href="../niches/real-estate-brokers.html">Real Estate</a>
+                    <a href="../../index.html#niches"
+                        style="color: var(--primary-color); font-weight: 600; margin-top: 8px;">View All Industries
+                        &rarr;</a>
+                </div>
+
+                <!-- Column 4: Resources -->
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="../../index.html#process">Process</a>
+                    <a href="../../index.html#about">About</a>
+                    <a href="../../index.html#contact">Contact</a>
+                    <a href="mailto:hello@innovat3solutions.com">hello@innovat3solutions.com</a>
+                    <p style="margin-top: 10px; opacity: 0.6;">Miami, FL</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Innovate Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/count-up.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="../../js/faq-carousel.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel Test</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mobile-optimizations.css">
+    <style>
+        /* Simulating the inline styles from industry pages */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+        .test-card {
+            background: white;
+            padding: 2rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 1rem;
+            min-height: 200px;
+        }
+        body {
+            padding: 2rem;
+            background: #f8fafc;
+        }
+        h2 {
+            margin: 2rem 0 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mobile Carousel Test (Resize to &lt;767px)</h1>
+    
+    <h2>Services Grid Carousel</h2>
+    <div class="services-section">
+        <div class="services-grid">
+            <div class="service-card test-card">Card 1</div>
+            <div class="service-card test-card">Card 2</div>
+            <div class="service-card test-card">Card 3</div>
+            <div class="service-card test-card">Card 4</div>
+        </div>
+    </div>
+    
+    <h2>Pillars Grid Carousel</h2>
+    <div class="pillars-section">
+        <div class="pillars-grid">
+            <div class="pillar-card test-card">Pillar 1</div>
+            <div class="pillar-card test-card">Pillar 2</div>
+            <div class="pillar-card test-card">Pillar 3</div>
+        </div>
+    </div>
+    
+    <p style="margin-top: 2rem; color: #64748b;">
+        <strong>Instructions:</strong> Resize browser to mobile width (&lt;767px) or use DevTools device emulation. 
+        The grids should become horizontal scrolling carousels with snap behavior.
+    </p>
+</body>
+</html>

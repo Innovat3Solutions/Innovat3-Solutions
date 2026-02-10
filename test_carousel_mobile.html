@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel Test - Mobile View</title>
+    <link rel="stylesheet" href="css/mobile-optimizations.css">
+    <style>
+        /* Simulate the inline styles from industry pages */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+
+        /* Basic card styling */
+        .service-card, .pillar-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 2rem;
+            min-height: 200px;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            padding: 20px;
+            background: #f8fafc;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            margin-bottom: 1.5rem;
+            color: #0f172a;
+        }
+
+        .test-info {
+            background: #fef3c7;
+            border: 2px solid #fbbf24;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .test-info strong {
+            color: #92400e;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-info">
+        <strong>📱 MOBILE TEST</strong><br>
+        Resize your browser to &lt; 767px width to see carousel behavior.<br>
+        Expected: Horizontal scrolling with snap-to-card behavior.
+    </div>
+
+    <!-- Test Section 1: Services Grid (Our Capabilities) -->
+    <div class="section services-section">
+        <h2>Our Capabilities (Services Grid)</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Service 1</h3>
+                <p>This should scroll horizontally on mobile (< 767px)</p>
+            </div>
+            <div class="service-card">
+                <h3>Service 2</h3>
+                <p>Cards should be 85% width with peek effect</p>
+            </div>
+            <div class="service-card">
+                <h3>Service 3</h3>
+                <p>Smooth snap-to-card scrolling</p>
+            </div>
+            <div class="service-card">
+                <h3>Service 4</h3>
+                <p>No grid layout on mobile</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Test Section 2: Pillars Grid (Blueprint) -->
+    <div class="section pillars-section">
+        <h2>Blueprint to Market Dominance (Pillars Grid)</h2>
+        <div class="pillars-grid">
+            <div class="pillar-card">
+                <h3>Step 1</h3>
+                <p>This should also scroll horizontally on mobile</p>
+            </div>
+            <div class="pillar-card">
+                <h3>Step 2</h3>
+                <p>Cards should be 90% width with peek effect</p>
+            </div>
+            <div class="pillar-card">
+                <h3>Step 3</h3>
+                <p>Smooth snap-to-card behavior</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="test-info">
+        <strong>✅ Test Checklist:</strong><br>
+        □ Services grid shows horizontal carousel on mobile<br>
+        □ Pillars grid shows horizontal carousel on mobile<br>
+        □ Peek effect visible (partial next card)<br>
+        □ Snap-to-card behavior works smoothly<br>
+        □ No horizontal page scroll (only carousel scroll)<br>
+        □ Scrollbar hidden for clean appearance
+    </div>
+
+    <script>
+        // Display current viewport width for debugging
+        const displayWidth = () => {
+            const width = window.innerWidth;
+            const status = width < 767 ? '📱 MOBILE MODE' : '🖥️ DESKTOP MODE';
+            document.title = `Carousel Test - ${width}px - ${status}`;
+        };
+
+        displayWidth();
+        window.addEventListener('resize', displayWidth);
+
+        // Log carousel detection
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const servicesGrid = document.querySelector('.services-grid');
+                const pillarsGrid = document.querySelector('.pillars-grid');
+
+                console.log('Services Grid computed display:',
+                    window.getComputedStyle(servicesGrid).display);
+                console.log('Services Grid overflow-x:',
+                    window.getComputedStyle(servicesGrid).overflowX);
+                console.log('Services Grid grid-template-columns:',
+                    window.getComputedStyle(servicesGrid).gridTemplateColumns);
+
+                console.log('Pillars Grid computed display:',
+                    window.getComputedStyle(pillarsGrid).display);
+                console.log('Pillars Grid overflow-x:',
+                    window.getComputedStyle(pillarsGrid).overflowX);
+                console.log('Pillars Grid grid-template-columns:',
+                    window.getComputedStyle(pillarsGrid).gridTemplateColumns);
+            }, 100);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,388 @@
+/* Orbiting Circles Component - Magic UI Port */
+
+.orbit-wrapper {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    /* Allow orbits to extend if needed */
+    margin: -50px auto 0;
+    /* Adjust positioning in hero */
+}
+
+/* Central Logo */
+.orbit-center {
+    position: absolute;
+    z-index: 10;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.orbit-center img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 20px rgba(132, 204, 22, 0.4));
+}
+
+/* Orbit Rings (Visual Borders) */
+/* Can add SVG rings if desired, or just use border-radius on rotating containers */
+.orbit-path {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+.orbit-path.inner {
+    width: 240px;
+    height: 240px;
+}
+
+.orbit-path.outer {
+    width: 440px;
+    height: 440px;
+}
+
+/* Rotating Containers */
+.orbit-ring {
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.orbit-ring.inner {
+    width: 240px;
+    height: 240px;
+    animation: orbit-rotate 30s linear infinite;
+}
+
+.orbit-ring.outer {
+    width: 440px;
+    height: 440px;
+    animation: orbit-rotate 40s linear infinite reverse;
+}
+
+/* Orbit Items */
+.orbit-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.orbit-item img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15));
+}
+
+/* Counter-rotate the image to keep it upright while the ring spins */
+.orbit-item {
+    animation: orbit-counter-rotate linear infinite;
+}
+
+.orbit-ring.inner .orbit-item {
+    animation-duration: 30s;
+}
+
+.orbit-ring.outer .orbit-item {
+    animation-duration: 40s;
+    animation-direction: normal;
+    /* Parent is reverse, so this should be normal to counteract? No, parent reverse = -360. Child needs +360. */
+    /* Let's double check. */
+    /* Parent: 0 -> -360 (reverse). Child needs 0 -> 360 to stay upright. */
+}
+
+/* Inner Ring Items Positions (Radius 120px) */
+/* We place them using transform on the WRAPPER. But wait, if we use the .orbit-ring container which rotates, the children are fixed to it. */
+/* So we position them at Top, Bottom-Right, Bottom-Left etc */
+
+/* Helper for positioning */
+/* 
+angle 0: translate(120px, 0)
+angle 120: ...
+*/
+/* 
+Actually, standard efficient way: 
+Parent Ring rotates.
+Children are absolute positioned at specific transforms.
+Child *inner content* counter rotates.
+*/
+
+.orbit-item-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    margin-top: -40px;
+    margin-left: -40px;
+}
+
+/* Inner Ring items (3 items) */
+.orbit-ring.inner .orbit-item-wrapper:nth-child(1) {
+    transform: rotate(0deg) translate(120px) rotate(0deg);
+}
+
+.orbit-ring.inner .orbit-item-wrapper:nth-child(2) {
+    transform: rotate(120deg) translate(120px) rotate(-120deg);
+}
+
+.orbit-ring.inner .orbit-item-wrapper:nth-child(3) {
+    transform: rotate(240deg) translate(120px) rotate(-240deg);
+}
+
+/* Outer Ring items (5 items) */
+.orbit-ring.outer .orbit-item-wrapper:nth-child(1) {
+    transform: rotate(0deg) translate(220px) rotate(0deg);
+}
+
+.orbit-ring.outer .orbit-item-wrapper:nth-child(2) {
+    transform: rotate(72deg) translate(220px) rotate(-72deg);
+}
+
+.orbit-ring.outer .orbit-item-wrapper:nth-child(3) {
+    transform: rotate(144deg) translate(220px) rotate(-144deg);
+}
+
+.orbit-ring.outer .orbit-item-wrapper:nth-child(4) {
+    transform: rotate(216deg) translate(220px) rotate(-216deg);
+}
+
+.orbit-ring.outer .orbit-item-wrapper:nth-child(5) {
+    transform: rotate(288deg) translate(220px) rotate(-288deg);
+}
+
+
+/* Keyframes */
+@keyframes orbit-rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes orbit-counter-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+/* If parent is reversing (0 -> -360), counter needs to go 0 -> 360 */
+@keyframes orbit-counter-rotate-reverse {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.orbit-ring.inner .orbit-item-wrapper .orbit-item {
+    animation: orbit-counter-rotate 30s linear infinite;
+}
+
+/* Outer ring rotates REVERSE, so items must rotate NORMAL */
+.orbit-ring.outer .orbit-item-wrapper .orbit-item {
+    animation: orbit-counter-rotate-reverse 40s linear infinite;
+}
+
+/* =========================================
+   RESPONSIVE ORBITING CIRCLES
+   ========================================= */
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+    .orbit-wrapper {
+        width: 400px;
+        height: 400px;
+        margin: 0 auto;
+    }
+
+    .orbit-center {
+        width: 70px;
+        height: 70px;
+    }
+
+    .orbit-center img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .orbit-path.inner {
+        width: 180px;
+        height: 180px;
+    }
+
+    .orbit-path.outer {
+        width: 320px;
+        height: 320px;
+    }
+
+    .orbit-ring.inner {
+        width: 180px;
+        height: 180px;
+    }
+
+    .orbit-ring.outer {
+        width: 320px;
+        height: 320px;
+    }
+
+    .orbit-item-wrapper {
+        width: 60px;
+        height: 60px;
+        margin-top: -30px;
+        margin-left: -30px;
+    }
+
+    .orbit-item img {
+        width: 48px;
+        height: 48px;
+    }
+
+    /* Adjust translation distances for smaller circles */
+    .orbit-ring.inner .orbit-item-wrapper:nth-child(1) {
+        transform: rotate(0deg) translate(90px) rotate(0deg);
+    }
+
+    .orbit-ring.inner .orbit-item-wrapper:nth-child(2) {
+        transform: rotate(120deg) translate(90px) rotate(-120deg);
+    }
+
+    .orbit-ring.inner .orbit-item-wrapper:nth-child(3) {
+        transform: rotate(240deg) translate(90px) rotate(-240deg);
+    }
+
+    .orbit-ring.outer .orbit-item-wrapper:nth-child(1) {
+        transform: rotate(0deg) translate(160px) rotate(0deg);
+    }
+
+    .orbit-ring.outer .orbit-item-wrapper:nth-child(2) {
+        transform: rotate(72deg) translate(160px) rotate(-72deg);
+    }
+
+    .orbit-ring.outer .orbit-item-wrapper:nth-child(3) {
+        transform: rotate(144deg) translate(160px) rotate(-144deg);
+    }
+
+    .orbit-ring.outer .orbit-item-wrapper:nth-child(4) {
+        transform: rotate(216deg) translate(160px) rotate(-216deg);
+    }
+
+    .orbit-ring.outer .orbit-item-wrapper:nth-child(5) {
+        transform: rotate(288deg) translate(160px) rotate(-288deg);
+    }
+}
+
+/* Mobile (320px - 767px) - Hide completely or show simplified version */
+@media (max-width: 767px) {
+    .orbit-wrapper {
+        display: none;
+        /* Hide on mobile for performance and layout simplicity */
+    }
+
+    /* Alternative: Show simplified static version */
+    .orbit-wrapper.simple-mobile {
+        display: flex;
+        width: 280px;
+        height: 280px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        padding: 20px;
+    }
+
+    .orbit-wrapper.simple-mobile .orbit-center {
+        position: static;
+        width: 60px;
+        height: 60px;
+    }
+
+    .orbit-wrapper.simple-mobile .orbit-center img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .orbit-wrapper.simple-mobile .orbit-path,
+    .orbit-wrapper.simple-mobile .orbit-ring {
+        display: none;
+    }
+
+    .orbit-wrapper.simple-mobile .orbit-item-wrapper {
+        position: static;
+        width: 40px;
+        height: 40px;
+        margin: 0;
+        animation: none;
+    }
+
+    .orbit-wrapper.simple-mobile .orbit-item {
+        width: 40px;
+        height: 40px;
+        animation: none;
+    }
+
+    .orbit-wrapper.simple-mobile .orbit-item img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Small Mobile (320px - 480px) */
+@media (max-width: 480px) {
+    .orbit-wrapper.simple-mobile {
+        width: 240px;
+        height: 240px;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .orbit-wrapper.simple-mobile .orbit-center {
+        width: 50px;
+        height: 50px;
+    }
+
+    .orbit-wrapper.simple-mobile .orbit-center img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .orbit-wrapper.simple-mobile .orbit-item-wrapper {
+        width: 36px;
+        height: 36px;
+    }
+
+    .orbit-wrapper.simple-mobile .orbit-item {
+        width: 36px;
+        height: 36px;
+    }
+
+    .orbit-wrapper.simple-mobile .orbit-item img {
+        width: 36px;
+        height: 36px;
+    }
+}

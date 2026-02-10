@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Voice AI Agents & Automation in Miami | Innovat3 Solutions</title>
+    <meta name="description" content="Helping South Florida businesses scale with Voice AI, Automation, and Custom Apps. Stop missing leads and start automating your workflow today.">
+    <meta name="keywords" content="AI Automation Miami, Voice AI Agents, Business Automation South Florida, Tech Consulting Miami, Custom App Development">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Innovat3 Solutions",
+      "image": "https://storage.googleapis.com/msgsndr/1VKsWhjzYeGOHMwxwbBN/media/67ffb093c38e3ea5a71bd11f.png",
+      "description": "Helping Miami and South Florida businesses scale with Voice AI, Automation, and Custom Apps.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Miami",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      },
+      "url": "https://innovat3solutions.com"
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"></span>
+                Innovat<span class="text-primary">3</span> Solutions
+            </a>
+            
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#niches">Industries</a>
+                <a href="#process">Process</a>
+                <a href="#about">About</a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-primary">Get Started</a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="badge">South Florida's Premier AI Consultancy</div>
+                <h1>Turn Chaos into Efficiency with <span class="text-gradient">Innovat3</span></h1>
+                <p class="hero-sub">
+                    Stop losing 30% of your revenue to missed calls and manual admin. 
+                    We build assets that automate your business 24/7.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <strong>25+</strong>
+                        <span>Niches</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <strong>24/7</strong>
+                        <span>Availability</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <strong>100%</strong>
+                        <span>Privacy</span>
+                    </div>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary btn-lg">
+                        Book Consultation 
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#video" class="btn btn-text">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="text-primary"><path d="M8 5v14l11-7z"/></svg> 
+                        Watch How It Works
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <!-- Abstract Dashboard Composition (CSS Only) -->
+                <div class="mockup-card card-main">
+                    <div class="card-header">
+                        <div class="dot red"></div>
+                        <div class="dot yellow"></div>
+                        <div class="dot green"></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-area">
+                            <div class="bar" style="height: 40%"></div>
+                            <div class="bar" style="height: 60%"></div>
+                            <div class="bar" style="height: 35%"></div>
+                            <div class="bar" style="height: 85%"></div>
+                            <div class="bar active" style="height: 100%"></div>
+                        </div>
+                        <div class="card-stat">
+                            <span>Monthly Calls Handled</span>
+                            <h3>12,450</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mockup-card card-float-1">
+                    <div class="icon-circle">📞</div>
+                    <div>
+                        <strong>New Lead</strong>
+                        <span class="text-muted">Auto-Capture</span>
+                    </div>
+                </div>
+                
+                <div class="mockup-card card-float-2">
+                    <div class="status-badge">Completed</div>
+                    <strong>Revenue Saved</strong>
+                    <h3>$4,200</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid (Tools That Work For You) -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="subtitle">Our Ecosystem</span>
+                <h2>Tools That Work For You, Not Against You</h2>
+                <p>Comprehensive automation infrastructure for the modern business.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Card 1 -->
+                <div class="service-card">
+                    <div class="service-icon">🎙️</div>
+                    <h3>Voice AI Agents</h3>
+                    <p>Handle dispatch and emergency booking overflow 24/7.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Custom Apps</h3>
+                    <p>Branded apps for direct ordering and tenant requests.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="service-card">
+                    <div class="service-icon">⭐</div>
+                    <h3>Review Mgmt</h3>
+                    <p>Automate 5-star review collection to boost SEO.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="service-card">
+                    <div class="service-icon">🔒</div>
+                    <h3>Private AI</h3>
+                    <p>Secure infrastructure for Law, Finance, and Medical data.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Lead Capture</h3>
+                    <p>Speed-to-lead automation texts leads within 30 seconds.</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Data Intelligence</h3>
+                    <p>Own your customer data and bypass 3rd party commissions.</p>
+                </div>
+                <!-- Card 7 -->
+                <div class="service-card">
+                    <div class="service-icon">🔗</div>
+                    <h3>Workflow Auto</h3>
+                    <p>Eliminate repetitive admin and manual data entry.</p>
+                </div>
+                <!-- Card 8 -->
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3>Growth Consulting</h3>
+                    <p>Silicon Valley strategies for South Florida businesses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bento Grid Section (Value Prop) -->
+    <section class="section bento-section" id="process">
+        <div class="container">
+            <div class="bento-header">
+                <h2>Maximize Margins, Minimize Chaos</h2>
+                <p>We don't just solve pain points; we build permanent assets.</p>
+            </div>
+            
+            <div class="bento-grid">
+                <!-- Large Feature -->
+                <div class="bento-card span-2">
+                    <div class="bento-content">
+                        <div class="tag">Problem</div>
+                        <h3>The "Splash & Dash"</h3>
+                        <p>Technicians in the field miss 27-30% of calls. 85% hang up on voicemail.</p>
+                        <div class="bento-visual graph-visual">
+                            <!-- CSS Graph representing missed calls vs revenue -->
+                            <div class="graph-line red"></div>
+                            <div class="graph-line green"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tall Feature -->
+                <div class="bento-card row-span-2">
+                    <div class="bento-content center">
+                        <div class="circle-chart">
+                            <svg viewBox="0 0 36 36" class="circular-chart primary">
+                                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <path class="circle" stroke-dasharray="99, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            </svg>
+                            <div class="percentage">99%</div>
+                        </div>
+                        <h3>Retention</h3>
+                        <p>Top practices hit 99% retention with our automated recalls.</p>
+                    </div>
+                </div>
+                
+                <!-- Medium Feature -->
+                <div class="bento-card">
+                    <div class="bento-content">
+                        <div class="tag">Solution</div>
+                        <h3>Instant Response</h3>
+                        <p>Responding in 5 mins increases conversion by 21x.</p>
+                    </div>
+                </div>
+                
+                <!-- Medium Feature -->
+                <div class="bento-card">
+                    <div class="bento-content">
+                        <div class="tag">Result</div>
+                        <h3>Local Authority</h3>
+                        <p>Dominate "Near Me" searches with automated signals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries / Niches Section -->
+    <section class="section niches" id="niches">
+        <div class="container">
+            <div class="section-header">
+                <h2>Specialized for Your Industry</h2>
+                <p>We've analyzed the pain points for 25+ distinct business niches.</p>
+            </div>
+            
+            <div class="niche-tabs">
+                <button class="tab active">Home Services</button>
+                <button class="tab">Medical</button>
+                <button class="tab">Professional</button>
+                <button class="tab">Retail</button>
+            </div>
+            
+            <div class="niche-showcase">
+                <!-- Example Niche: Home Services -->
+                <div class="niche-card featured">
+                    <div class="niche-image">🏠</div>
+                    <div class="niche-info">
+                        <h3>General Contractors</h3>
+                        <div class="pain-point">
+                            <strong>Pain:</strong> Leads from HomeAdvisor are sold to 5 people at once.
+                        </div>
+                        <div class="stat-highlight">
+                            78% of business goes to the first responder.
+                        </div>
+                        <a href="#" class="link-arrow">See Solution &rarr;</a>
+                    </div>
+                </div>
+                
+                <div class="niche-card">
+                    <h3>HVAC Services</h3>
+                    <p>Seasonal tsunamis call overflow management.</p>
+                </div>
+                <div class="niche-card">
+                    <h3>Pool Cleaners</h3>
+                    <p>Stop the "Splash & Dash" missed calls.</p>
+                </div>
+                <div class="niche-card">
+                    <h3>Landscaping</h3>
+                    <p>Automate recurring invoicing chaos.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-lg">
+                <a href="#" class="btn btn-secondary">View All 25 Niches</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats & Trust -->
+    <section class="section stats-dark">
+        <div class="container">
+            <div class="stats-row">
+                <div class="stat-big">
+                    <span class="number">35%</span>
+                    <span class="label">Productivity Increase</span>
+                </div>
+                <div class="stat-big">
+                    <span class="number">50+</span>
+                    <span class="label">Local Integrations</span>
+                </div>
+                <div class="stat-big">
+                    <span class="number">10K</span>
+                    <span class="label">Hours Saved</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="cta-box">
+                <div class="cta-content">
+                    <h2>Ready to turn chaos into calm?</h2>
+                    <p>Join the South Florida businesses upgrading to Private AI infrastructure.</p>
+                    <form class="cta-form">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-primary">Get Consultation</button>
+                    </form>
+                    <p class="cta-small">No spam. Unsubscribe anytime.</p>
+                </div>
+                <div class="cta-image">
+                    <!-- Image of person working relaxed -->
+                    <div class="avatar-stack">
+                        <!-- CSS Avatars -->
+                        <div class="avatar"></div><div class="avatar"></div><div class="avatar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <strong class="footer-logo">Innovat3</strong>
+                    <p>Modernizing Miami, one automated workflow at a time.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <a href="#">Voice AI</a>
+                    <a href="#">Custom Apps</a>
+                    <a href="#">Private AI</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="#">Blog</a>
+                    <a href="#">Case Studies</a>
+                    <a href="#">ROI Calculator</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <a href="#">hello@innovat3solutions.com</a>
+                    <p>Miami, FL</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Innovate Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

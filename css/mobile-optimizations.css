@@ -1,0 +1,573 @@
+/* ========================================================
+   MOBILE UX OPTIMIZATIONS (max-width: 767px)
+   Comprehensive mobile improvements for service & industry pages
+   ======================================================== */
+
+@media (max-width: 767px) {
+
+    /* ============================
+       0. GLOBAL MOBILE FIXES
+       ============================ */
+
+    /* Prevent horizontal scrolling */
+    body {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+    }
+
+    .container,
+    .niche-hero-content,
+    .hero-content {
+        max-width: 100% !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        overflow-x: hidden !important;
+    }
+
+    /* Logo - Centered and Properly Sized */
+    .logo,
+    .navbar .logo {
+        display: flex !important;
+        justify-content: center !important;
+        margin: 0 auto !important;
+        max-width: 200px !important;
+    }
+
+    .logo img,
+    .logo-full {
+        max-width: 180px !important;
+        height: auto !important;
+        width: auto !important;
+    }
+
+    /* ============================
+       1. HERO SECTIONS
+       ============================ */
+
+    /* Service Pages - Hide hero images completely */
+    .service-page-wrapper .hero-image-wrapper,
+    .service-page-wrapper .niche-hero .hero-image-wrapper,
+    .hero-image,
+    .hero-image-wrapper,
+    .service-hero .hero-visual,
+    .niche-hero .hero-image-wrapper {
+        display: none !important;
+    }
+
+    /* Hero Section Spacing */
+    .niche-hero,
+    header.niche-hero {
+        padding: 120px 1rem 60px !important;
+        margin: 0 !important;
+    }
+
+    /* Industry Pages - Reduce hero image height to 150px max */
+    .niche-hero .hero-image-wrapper {
+        max-height: 150px;
+        overflow: hidden;
+    }
+
+    .niche-hero .hero-image-wrapper img {
+        max-height: 150px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    /* Ensure hero content is mobile-friendly */
+    .niche-hero {
+        padding: 100px 0 60px !important;
+    }
+
+    .niche-hero-content {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    .hero-text {
+        text-align: center !important;
+        max-width: 100% !important;
+        padding: 0 1rem !important;
+    }
+
+    .hero-text h1 {
+        font-size: 1.75rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 1rem !important;
+        text-align: center !important;
+        word-wrap: break-word !important;
+    }
+
+    .hero-text .sub-headline,
+    .hero-text p {
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 1.5rem !important;
+        text-align: center !important;
+        max-width: 100% !important;
+    }
+
+    /* Hero form - keep horizontal (email + button side-by-side) */
+    .hero-cta-group {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 8px !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 0 1.5rem 0 1rem !important;
+        margin: 0 0 2rem 0 !important;
+    }
+
+    .hero-input,
+    input.hero-input {
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+        max-width: 70% !important;
+        width: auto !important;
+        box-sizing: border-box !important;
+        padding: 12px 14px !important;
+        font-size: 16px !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 8px !important;
+    }
+
+    .hero-btn,
+    button.hero-btn {
+        flex: 0 0 auto !important;
+        max-width: 30% !important;
+        white-space: nowrap !important;
+        padding: 10px 10px !important;
+        font-size: 12px !important;
+        min-width: auto !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    /* Hero stats row - center and keep horizontal */
+    .hero-text > div[style*="display: flex"],
+    .hero-text > div[style*="display:flex"] {
+        justify-content: center !important;
+        text-align: center !important;
+        flex-direction: row !important;
+        gap: 1.5rem !important;
+        margin: 1.5rem 0 !important;
+        padding: 0 1rem !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .hero-stats,
+    .stats-row {
+        justify-content: center !important;
+        text-align: center !important;
+        display: flex !important;
+        gap: 1.5rem !important;
+        flex-wrap: wrap !important;
+    }
+
+    /* Individual stat items */
+    .hero-text > div > div {
+        flex: 0 1 auto !important;
+        min-width: 0 !important;
+    }
+
+    /* ============================
+       2. HORIZONTAL CAROUSELS
+       ============================ */
+
+    /* Services/Features Grid → Carousel */
+    .services-section .services-grid,
+    section .services-grid,
+    .container .services-grid,
+    .services-grid,
+    .features-grid,
+    .feature-card-grid {
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        scroll-snap-type: x mandatory !important;
+        gap: 1rem !important;
+        padding: 1rem !important;
+        margin: 0 -1rem !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none !important;
+        -ms-overflow-style: none !important;
+        grid-template-columns: none !important;
+        grid-template-rows: none !important;
+    }
+
+    .services-grid::-webkit-scrollbar,
+    .features-grid::-webkit-scrollbar,
+    .feature-card-grid::-webkit-scrollbar {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+    }
+
+    /* Service cards - show 1.15 cards (peek effect) */
+    .services-grid > .service-card,
+    .services-grid > *,
+    .features-grid > * {
+        flex: 0 0 85% !important;
+        min-width: 85% !important;
+        max-width: 85% !important;
+        scroll-snap-align: start !important;
+        scroll-snap-stop: always !important;
+    }
+
+    .feature-card-grid .feature-card {
+        flex: 0 0 85% !important;
+        min-width: 85% !important;
+        max-width: 85% !important;
+        scroll-snap-align: start !important;
+        scroll-snap-stop: always !important;
+    }
+
+    /* ============================
+       3. PILLARS/METHODOLOGY → CAROUSEL
+       ============================ */
+
+    .pillars-section .pillars-grid,
+    section .pillars-grid,
+    .container .pillars-grid,
+    .pillars-grid {
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        scroll-snap-type: x mandatory !important;
+        gap: 1rem !important;
+        padding: 1rem !important;
+        margin: 0 -1rem !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none !important;
+        -ms-overflow-style: none !important;
+        grid-template-columns: none !important;
+        grid-template-rows: none !important;
+    }
+
+    .pillars-grid::-webkit-scrollbar {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+    }
+
+    .pillars-grid > .pillar-card,
+    .pillars-grid > *,
+    .pillars-grid .pillar-card {
+        flex: 0 0 90% !important;
+        min-width: 90% !important;
+        max-width: 90% !important;
+        scroll-snap-align: start !important;
+        scroll-snap-stop: always !important;
+    }
+
+    /* Hide connecting line on mobile */
+    .pillars-grid::before {
+        display: none !important;
+    }
+
+    /* ============================
+       4. CASE STUDIES → CAROUSEL
+       ============================ */
+
+    .case-grid,
+    .work-grid {
+        display: flex !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        gap: 1rem !important;
+        padding: 1rem !important;
+        margin: 0 -1rem !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none !important;
+        grid-template-columns: none !important;
+    }
+
+    .case-grid::-webkit-scrollbar,
+    .work-grid::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    .case-grid > *,
+    .work-grid > * {
+        flex: 0 0 90% !important;
+        min-width: 90% !important;
+        scroll-snap-align: start !important;
+    }
+
+    /* ============================
+       5. STATS SECTIONS → 2-COLUMN GRID
+       ============================ */
+
+    .stats-grid,
+    .stats-bento-grid,
+    .roi-stats-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+    }
+
+    .stat-item,
+    .stats-bento-card,
+    .roi-stat-card {
+        padding: 1.5rem 1rem !important;
+    }
+
+    .stat-number,
+    .bento-stat-content .stat-number {
+        font-size: 2rem !important;
+    }
+
+    /* Arc Stats Section / Benefits Cards - 2x2 Grid */
+    .arc-container,
+    .benefits-grid,
+    .roi-grid,
+    .feature-cards-grid,
+    .stats-cards-grid,
+    .pain-point-grid,
+    .feature-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+        padding: 1rem !important;
+        overflow-x: visible !important;
+        scroll-snap-type: none !important;
+    }
+
+    .stat-card,
+    .benefits-grid > *,
+    .roi-grid > *,
+    .feature-cards-grid > *,
+    .pain-point-grid > *,
+    .feature-grid > * {
+        position: relative !important;
+        transform: none !important;
+        margin: 0 !important;
+        flex: none !important;
+        width: auto !important;
+        min-width: auto !important;
+    }
+
+    /* ============================
+       6. SPLIT LAYOUT SECTIONS
+       ============================ */
+
+    .split-layout-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    .visual-display-wrapper {
+        position: relative !important;
+        top: 0 !important;
+        height: 350px !important;
+    }
+
+    /* ============================
+       7. THREE-COLUMN SECTIONS
+       ============================ */
+
+    /* Any 3-column layout should become carousel */
+    [style*="grid-template-columns: repeat(3"] {
+        display: flex !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        gap: 1rem !important;
+    }
+
+    /* ============================
+       8. TESTIMONIALS CAROUSEL
+       ============================ */
+
+    .testimonials-grid,
+    .testimonial-scroll {
+        display: flex !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        gap: 1rem !important;
+        padding: 1rem !important;
+        margin: 0 -1rem !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none !important;
+        grid-template-columns: none !important;
+    }
+
+    .testimonials-grid::-webkit-scrollbar,
+    .testimonial-scroll::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    .testimonial-card,
+    .testimonials-grid > * {
+        flex: 0 0 90% !important;
+        min-width: 90% !important;
+        scroll-snap-align: start !important;
+    }
+
+    /* ============================
+       9. FAQ SECTION
+       ============================ */
+
+    /* FAQ already has carousel functionality - ensure proper spacing */
+    .faq-carousel-wrapper {
+        margin: 0 !important;
+        padding: 0 1rem !important;
+    }
+
+    .faq-card {
+        min-width: 85% !important;
+    }
+
+    /* ============================
+       10. GENERAL MOBILE IMPROVEMENTS
+       ============================ */
+
+    /* Container padding */
+    .container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    /* Section spacing */
+    .section,
+    .pillars-section,
+    .services-section,
+    .stats-section,
+    .case-section {
+        padding: 60px 0 !important;
+    }
+
+    /* Heading sizes */
+    h2 {
+        font-size: 1.75rem !important;
+    }
+
+    h3 {
+        font-size: 1.25rem !important;
+    }
+
+    /* Button sizes */
+    .btn {
+        padding: 12px 20px !important;
+        font-size: 0.9rem !important;
+    }
+
+    /* Hide desktop-only navigation arrows if present */
+    .nav-arrow,
+    .carousel-nav {
+        display: none !important;
+    }
+
+    /* Ensure no horizontal page scroll */
+    body {
+        overflow-x: hidden !important;
+    }
+
+    /* ============================
+       11. SERVICE CARD STYLES
+       ============================ */
+
+    .service-card {
+        min-height: 280px !important;
+    }
+
+    .service-title {
+        font-size: 1.1rem !important;
+    }
+
+    .service-desc {
+        font-size: 0.9rem !important;
+    }
+
+    /* ============================
+       12. WORK/CASE CARD ADJUSTMENTS
+       ============================ */
+
+    .work-card,
+    .case-card {
+        min-height: 300px !important;
+    }
+
+    /* ============================
+       13. CONTACT FORM SECTION
+       ============================ */
+
+    .unified-contact-container {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    .contact-left-content {
+        padding: 2rem !important;
+    }
+
+    /* Contact features - 2x2 grid */
+    .contact-features,
+    .contact-icons-grid,
+    .contact-feature-boxes,
+    .unified-contact-features {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+    }
+
+    .contact-feature-item,
+    .feature-box,
+    .contact-feature {
+        width: 100% !important;
+    }
+
+    /* ============================
+       14. FOOTER ADJUSTMENTS
+       ============================ */
+
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    /* ============================
+       15. ROI/STATS SPECIFIC
+       ============================ */
+
+    .section-stats-arc {
+        padding: 60px 0 !important;
+    }
+
+    .roi-number {
+        font-size: 2.5rem !important;
+    }
+
+    /* ============================
+       16. ENSURE TOUCH TARGETS
+       ============================ */
+
+    a, button, .clickable {
+        min-height: 44px !important;
+        min-width: 44px !important;
+    }
+
+    /* ============================
+       17. IMAGE OPTIMIZATION
+       ============================ */
+
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* ============================
+       18. PREVENT ZOOM ON INPUT FOCUS
+       ============================ */
+
+    input, select, textarea {
+        font-size: 16px !important;
+    }
+}
+
+/* ========================================================
+   END MOBILE OPTIMIZATIONS
+   ======================================================== */

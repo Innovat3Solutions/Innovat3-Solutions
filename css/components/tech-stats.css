@@ -1,0 +1,203 @@
+/* Tech Stats Component */
+.tech-stats-section {
+    background-color: #0f172a;
+    /* Slate 900 */
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+/* Background Grid Effect */
+.tech-stats-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        linear-gradient(rgba(132, 204, 22, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(132, 204, 22, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    position: relative;
+    z-index: 2;
+}
+
+.stat-card {
+    background: rgba(30, 41, 59, 0.5);
+    /* Slate 800/50 */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 32px 24px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(132, 204, 22, 0.5);
+    box-shadow: 0 10px 30px -10px rgba(132, 204, 22, 0.2);
+}
+
+.stat-visual {
+    height: 120px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.stat-info h3 {
+    font-size: 18px;
+    color: #94a3b8;
+    font-weight: 500;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-info .stat-value {
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+/* 1. Retention (Circular Progress) */
+.circle-chart {
+    width: 100px;
+    height: 100px;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.1);
+    stroke-width: 3.8;
+}
+
+.circle {
+    fill: none;
+    stroke: var(--color-primary);
+    /* Lime */
+    stroke-width: 3.8;
+    stroke-linecap: round;
+    stroke-dasharray: 0, 100;
+    /* Initial state */
+    transition: stroke-dasharray 2s ease-out;
+}
+
+.percentage {
+    fill: #fff;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 0.5em;
+    text-anchor: middle;
+}
+
+/* 2. Active (Pulse) */
+.pulse-container {
+    width: 80px;
+    height: 80px;
+    background: rgba(132, 204, 22, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.pulse-dot {
+    width: 20px;
+    height: 20px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(132, 204, 22, 0.7);
+    animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(132, 204, 22, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 20px rgba(132, 204, 22, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(132, 204, 22, 0);
+    }
+}
+
+/* 3. Rapid Launch (Bar Chart) */
+.launch-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    height: 80px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.bar {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px 4px 0 0;
+    transition: height 1s ease-out;
+    position: relative;
+}
+
+.bar.active {
+    background: var(--color-primary);
+    box-shadow: 0 0 15px rgba(132, 204, 22, 0.5);
+}
+
+/* 4. ROI (Counter) */
+.roi-container {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--color-primary);
+    display: flex;
+    align-items: baseline;
+}
+
+.roi-container span {
+    font-size: 24px;
+    margin-left: 4px;
+    color: #94a3b8;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tech-stats-section {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}

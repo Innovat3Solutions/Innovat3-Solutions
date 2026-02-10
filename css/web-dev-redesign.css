@@ -1,0 +1,134 @@
+/* Split Hero Redesign for Web Development Page */
+.hero-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    /* Vertically center */
+    padding: 180px 0 100px;
+    /* Adjusted padding for fixed nav */
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-media-container {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    /* Strong shadow */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: #fff;
+    line-height: 0;
+    /* Remove image gap */
+}
+
+/* Placeholder for video/image */
+.hero-media-placeholder {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    font-weight: 700;
+    /* Bold per inspiration */
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.03em;
+    color: var(--color-dark);
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+/* New Button Style for Outline */
+.btn-outline {
+    background: transparent;
+    border: 1px solid #e2e8f0;
+    color: var(--color-dark);
+}
+
+.btn-outline:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+/* Feature List (Checkmarks) */
+.hero-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.hero-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.check-icon {
+    color: var(--color-primary);
+    /* Lime green */
+    width: 18px;
+    height: 18px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+    .hero-split {
+        grid-template-columns: 1fr;
+        padding-top: 140px;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .hero-content {
+        align-items: center;
+        /* Center flex items */
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-media-container {
+        order: -1;
+        /* Show media on top if desired, or remove to show below */
+    }
+}

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance & Support | Innovat3 Solutions</title>
+    <!-- Base styles and Favicon -->
+    <link rel="icon" type="image/png" href="../../images/Innovat3-logos/innovate-favicon.png">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <!-- Service Page Specific Layout -->
+    <link rel="stylesheet" href="../../css/services-layout.css">
+    <link rel="stylesheet" href="../../css/mobile-optimizations.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Specific page overrides */
+        .page-header {
+            padding: 180px 0 80px;
+            background: radial-gradient(circle at top right, #f8fafc, #ffffff);
+            text-align: center;
+        }
+
+        .pain-point-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .pain-card {
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid #f1f5f9;
+            background: white;
+            transition: transform 0.2s;
+        }
+
+        .pain-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .solution-section {
+            background: var(--color-dark);
+            color: white;
+            padding: 80px 0;
+        }
+    </style>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+        <!-- Nav -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="../../index.html" class="logo">
+                <img src="../../images/Innovat3-logos/innovate-logo-black-transparent.png" alt="Innovate Solutions"
+                    class="logo-full">
+            </a>
+
+            <div class="nav-links">
+                <div class="nav-item dropdown">
+                    <a href="#services" class="dropdown-trigger">Services <span
+                            class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="../services/voice-ai.html">Voice AI Agents</a>
+                        <a href="../services/custom-apps.html">Custom Apps</a>
+                        <a href="../services/review-automation.html">Review Management</a>
+                        <a href="../services/private-ai-infra.html">Private AI</a>
+                        <a href="../services/lead-database.html">Lead Capture</a>
+                        <a href="../services/data-intelligence.html">Data Intelligence</a>
+                        <a href="../services/workflow-automation.html">Workflow Automations</a>
+                        <a href="../services/web-development.html">Web Development</a>
+                        <a href="../services/consulting.html">Growth Consulting</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#niches" class="dropdown-trigger">Industries <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu niche-dropdown-menu">
+                        <div class="niche-dropdown-grid">
+                            <!-- Column 1: Home Services -->
+                            <div class="niche-col">
+                                <h4>Home & Property</h4>
+                                <a href="../niches/pool-cleaners-and-maintenance.html">Pool Cleaners</a>
+                                <a href="../niches/pool-contractors-and-construction.html">Pool Construction</a>
+                                <a href="../niches/landscaping-and-lawn-care.html">Landscaping</a>
+                                <a href="../niches/hvac-services.html">HVAC Services</a>
+                                <a href="../niches/general-contractors.html">General Contractors</a>
+                                <a href="../niches/window-installers.html">Window Installers</a>
+                                <a href="../niches/plumbers.html">Plumbers</a>
+                                <a href="../niches/painters.html">Painters</a>
+                                <a href="../niches/electricians.html">Electricians</a>
+                                <a href="../niches/property-management.html">Property Management</a>
+                            </div>
+
+                            <!-- Column 2: Health & Beauty -->
+                            <div class="niche-col">
+                                <h4>Health & Medical</h4>
+                                <a href="../niches/dentists-and-orthodontists.html">Dentists</a>
+                                <a href="../niches/family-practice-doctors.html">Family Practice</a>
+                                <a href="../niches/veterinarians.html">Veterinarians</a>
+                                <a href="../niches/med-spas-and-laser-facilities.html">Med Spas</a>
+
+                                <h4 class="mt-sm">Beauty & Care</h4>
+                                <a href="../niches/hair-salons-and-stylists.html">Hair Salons</a>
+                                <a href="../niches/barbershops.html">Barbershops</a>
+                                <a href="../niches/nail-salons.html">Nail Salons</a>
+                                <a href="../niches/pet-groomers.html">Pet Groomers</a>
+                            </div>
+
+                            <!-- Column 3: Professional & Other -->
+                            <div class="niche-col">
+                                <h4>Professional Services</h4>
+                                <a href="../niches/attorneys-and-law-firms.html">Attorneys</a>
+                                <a href="../niches/accountants-and-cpas.html">Accountants & CPAs</a>
+                                <a href="../niches/financial-managers-and-advisors.html">Financial Advisors</a>
+                                <a href="../niches/real-estate-brokers.html">Real Estate Brokers</a>
+
+                                <h4 class="mt-sm">Retail & Auto</h4>
+                                <a href="../niches/auto-mechanics-and-repair-shops.html">Auto Mechanics</a>
+                                <a href="../niches/window-tinting-and-auto-detail.html">Auto Detail/Tint</a>
+                                <a href="../niches/restaurants.html">Restaurants</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="../blog.html">Blog</a>
+                <a href="../../index.html#process">Process</a>
+                <a href="../../index.html#about">About</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="../../index.html#contact" class="btn btn-primary shiny-button">Get Started</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <!-- MONOTREE HERO SECTION -->
+    <header class="niche-hero" id="hero-grid-container" style="background: #ffffff; padding: 120px 0 80px;">
+        <div class="container niche-hero-content">
+            <div class="hero-text">
+                <h1 class="font-primary" style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; font-weight: 300;">
+                    Put <span style="position: relative; display: inline-block;">
+                        reliability
+                        <svg class="brush-underline" viewBox="0 0 200 9" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="position: absolute; width: 100%; height: 12px; bottom: -8px; left: 0;"><path d="M2.00025 6.99997C29.6108 8.01955 106.392 -2.18029 198 3.50001" stroke="#84CC16" stroke-width="3" stroke-linecap="round" fill="none" /></svg>
+                    </span> first
+                </h1>
+                <p class="sub-headline" style="font-size: 1.125rem; color: #64748b; line-height: 1.6; margin-bottom: 2.5rem; max-width: 480px;">
+                    Sleep soundly knowing your digital infrastructure is monitored, secure, and updated 24/7. Prevent downtime before it happens.
+                </p>
+
+                <div class="hero-cta-group" style="display: flex; gap: 12px; margin-bottom: 3rem;">
+                    <input type="email" placeholder="Enter work email" class="hero-input" style="flex: 1; max-width: 280px; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 8px; background: #ffffff; font-size: 1rem;">
+                    <button class="hero-btn" style="background: #84CC16; color: #000; font-weight: 600; padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer; white-space: nowrap;">Book a demo</button>
+                </div>
+
+                <!-- Stats Row - Monotree Style -->
+                <div style="display: flex; gap: 4rem; align-items: flex-start; margin-bottom: 2rem;">
+                    <div>
+                        <div class="count-up" data-target="99.9" data-suffix="%"
+                            style="font-size: 3rem; font-weight: 300; line-height: 1; color: #0f172a; margin-bottom: 0.5rem;">0</div>
+                        <div style="font-size: 0.875rem; color: #64748b;">Uptime SLA</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 3rem; font-weight: 300; line-height: 1; color: #0f172a; margin-bottom: 0.5rem;">24/7</div>
+                        <div style="font-size: 0.875rem; color: #64748b;">Monitoring</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image-wrapper" style="display: flex; align-items: center; justify-content: center; background: transparent;">
+                <img src="../../images/services/service_support_hero_1770147338597.png" alt="Maintenance & Support Dashboard" style="width: 100%; max-width: 600px; height: auto; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1));">
+            </div>
+        </div>
+    </header>
+
+    <!-- Problem Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">The "Set It and Forget It" Myth</h2>
+            <div class="pain-point-grid">
+                <div class="pain-card">
+                    <h3>The Silent Crash</h3>
+                    <p><strong>Scenario:</strong> Your website goes down at 2 AM on a Saturday. You don't realize it
+                        until Monday morning.</p>
+                    <p><strong>Outcome:</strong> You lost 48 hours of traffic and potential leads because nobody was
+                        watching.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>The Security Gap</h3>
+                    <p><strong>Scenario:</strong> You haven't updated your plugins or server security patches in 6
+                        months.</p>
+                    <p><strong>Outcome:</strong> Hackers exploit a known vulnerability, stealing customer data and
+                        ransoming your site.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>The Feature Rot</h3>
+                    <p><strong>Scenario:</strong> Your business evolves, but your software doesn't. Your "new" app from
+                        2 years ago is now slowing you down.</p>
+                    <p><strong>Outcome:</strong> Innovation stalls because your tools are frozen in time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution / Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="text-center" style="max-width: 700px; margin: 0 auto;">
+                <div class="google-review-badge">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google"
+                        class="g-icon">
+                    <div class="stars">★★★★★</div>
+                    <span class="review-score">5.0</span>
+                    <span class="review-count">(Always Online)</span>
+                </div>
+                <h2>Your Digital Insurance Policy</h2>
+                <p class="text-muted">Downtime costs $5,600/minute on average. We make sure you never find out what that
+                    feels like.</p>
+            </div>
+
+            <div class="feature-grid">
+                <!-- Card 1 -->
+                <div class="feature-card shine-border">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3>24/7 Security Patrol</h3>
+                    <p>We monitor your site every 60 seconds. If a plugin breaks or a hacker attempts access, we block
+                        it instantly.</p>
+                    <div class="feature-visual">
+                        <div style="font-size:11px; text-align:center;">
+                            <span
+                                style="display:inline-block; width:8px; height:8px; background:#22c55e; border-radius:50%;"></span>
+                            System Status: <strong>Operational</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="feature-card shine-border">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                            <polyline points="7 3 7 8 15 8"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Daily Offsite Backups</h3>
+                    <p>We store encrypted copies of your site on separate servers. If catastrophe strikes, we restore
+                        you to yesterday's version in minutes.</p>
+                    <div class="feature-visual">
+                        <div style="font-size:10px; color:#64748b; text-align:center;">
+                            Last Backup: <span style="color:#1e293b;">Today 3:00 AM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="feature-card shine-border">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.05 12.05 0 0 0 .57 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.05 12.05 0 0 0 2.81.57A2 2 0 0 1 22 16.92z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3>VIP Priority Support</h3>
+                    <p>Skip the ticket queue. Text our dedicated engineer line and get a human response within 15
+                        minutes, guaranteed.</p>
+                    <div class="feature-visual">
+                        <div class="demo-chat-bubble ai" style="width:100%; font-size:11px;">
+                            "I'm on it! Fixing that link now."
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 60px; text-align: center;">
+                <a href="#contact" class="btn btn-primary shiny-button btn-lg">Protect My Business</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="section">
+        <div class="container text-center">
+            <h2>Industries That Use This</h2>
+            <p style="margin-bottom: 40px;">Reliability is non-negotiable for:</p>
+
+            <div class="pain-point-grid" style="margin-bottom: 60px;">
+                <a href="../niches/med-spas-and-laser-facilities.html" style="text-decoration: none; color: inherit;">
+                    <div class="pain-card" style="text-align: center; border-color: var(--color-primary);">
+                        <h4>Medical Facilities</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-slate);">Patient data access must be 100%.</p>
+                    </div>
+                </a>
+                <a href="../niches/restaurants.html" style="text-decoration: none; color: inherit;">
+                    <div class="pain-card" style="text-align: center; border-color: var(--color-primary);">
+                        <h4>Restaurants</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-slate);">Ordering systems cannot fail during
+                            rush.</p>
+                    </div>
+                </a>
+                <a href="../niches/financial-managers-and-advisors.html" style="text-decoration: none; color: inherit;">
+                    <div class="pain-card" style="text-align: center; border-color: var(--color-primary);">
+                        <h4>Financial Firms</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-slate);">Security compliance is mandatory.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div style="background: #f8fafc; padding: 40px; border-radius: 16px;">
+                <h3>Don't see your industry?</h3>
+                <p>We keep businesses running in 25+ niches.</p>
+                <a href="../industries.html" class="btn btn-primary shiny-button"
+                    style="margin-top: 20px; display: inline-block;">View All Industries</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+        <!-- Unified Contact Section -->
+        <!-- Unified Contact Section -->
+    <section class="unified-contact-section" id="contact">
+        <div class="unified-contact-container">
+            <!-- Left Content -->
+            <div class="contact-left-content">
+                <div class="contact-progress-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot empty"></span>
+                    <span class="dot empty"></span>
+                    <span class="dot empty"></span>
+                </div>
+
+                <h2>Ready to transform your business?</h2>
+                <p>Let's discuss how our solutions can help you automate workflows, boost efficiency, and drive growth for your business.</p>
+
+                <a href="#" class="contact-learn-btn">Learn More</a>
+
+                <!-- Features -->
+                <div class="contact-features">
+                    <div class="contact-feature">
+                        <div class="contact-feature-icon">
+                            <i data-lucide="history" size="24"></i>
+                        </div>
+                        <h4>Customer History</h4>
+                        <p>Analyze customer behavior across product lines</p>
+                    </div>
+
+                    <div class="contact-feature">
+                        <div class="contact-feature-icon">
+                            <i data-lucide="bar-chart-3" size="24"></i>
+                        </div>
+                        <h4>Actionable Insights</h4>
+                        <p>Employ predictive analytics to optimize sales pipelines</p>
+                    </div>
+
+                    <div class="contact-feature">
+                        <div class="contact-feature-icon">
+                            <i data-lucide="layers" size="24"></i>
+                        </div>
+                        <h4>Identify Patterns</h4>
+                        <p>Utilize live data to improve conversion rates</p>
+                    </div>
+
+                    <div class="contact-feature">
+                        <div class="contact-feature-icon">
+                            <i data-lucide="target" size="24"></i>
+                        </div>
+                        <h4>Predictive Analysis</h4>
+                        <p>Employ real-time data to refine marketing strategies</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Form -->
+            <div class="contact-form-wrapper">
+                <form id="unified-contact-form" action="#" method="POST">
+                    <div class="contact-form-row">
+                        <div class="contact-form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="James..." required>
+                        </div>
+
+                        <div class="contact-form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Smith..." required>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-row">
+                        <div class="contact-form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="robertapouros@gmail.com" required>
+                        </div>
+
+                        <div class="contact-form-group">
+                            <label for="country">Country</label>
+                            <select id="country" name="country" required>
+                                <option value="USA">🇺🇸 USA</option>
+                                <option value="Canada">🇨🇦 Canada</option>
+                                <option value="UK">🇬🇧 United Kingdom</option>
+                                <option value="Australia">🇦🇺 Australia</option>
+                                <option value="Other">🌍 Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-group full-width">
+                        <label for="role">Your Role</label>
+                        <select id="role" name="role" required>
+                            <option value="">Select your role</option>
+                            <option value="Business Owner">Business Owner</option>
+                            <option value="Manager">Manager</option>
+                            <option value="Director">Director</option>
+                            <option value="C-Level">C-Level Executive</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="contact-form-group full-width">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Enter message..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="contact-submit-btn">Contact Us</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Column 1: Brand -->
+            <div class="footer-col" style="flex: 2;">
+                <a href="../../index.html" class="footer-logo">
+                    <img src="../../images/Innovat3-logos/innovate-logo-white-transparent.png" alt="Innovate Solutions" class="logo-full" style="height: 30px;">
+                </a>
+                <p>Modernizing Miami one automated workflow at a time.</p>
+            </div>
+
+            <!-- Column 2: Services -->
+            <div class="footer-col">
+                <h4>Services</h4>
+                <a href="../services/voice-ai.html">Voice AI Agents</a>
+                <a href="../services/custom-apps.html">Custom Apps</a>
+                <a href="../services/review-automation.html">Review Management</a>
+                <a href="../services/private-ai-infra.html">Private AI</a>
+                <a href="../services/lead-database.html">Lead Capture</a>
+                <a href="../services/data-intelligence.html">Data Intelligence</a>
+                <a href="../services/workflow-automation.html">Workflow Automation</a>
+                <a href="../services/consulting.html">Growth Consulting</a>
+            </div>
+
+            <!-- Column 3: Industries -->
+            <div class="footer-col">
+                <h4>Industries</h4>
+                <a href="../niches/general-contractors.html">Home Services</a>
+                <a href="../niches/family-practice-doctors.html">Medical & Health</a>
+                <a href="../niches/attorneys-and-law-firms.html">Legal & Prof.</a>
+                <a href="../niches/hair-salons-and-stylists.html">Beauty & Wellness</a>
+                <a href="../niches/restaurants.html">Retail & Hospitality</a>
+                <a href="../niches/auto-mechanics-and-repair-shops.html">Automotive</a>
+                <a href="../niches/real-estate-brokers.html">Real Estate</a>
+                <a href="../../index.html#niches" style="color: var(--primary-color); font-weight: 600; margin-top: 8px;">View All Industries &rarr;</a>
+            </div>
+
+            <!-- Column 4: Resources -->
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="../blog.html">Blog</a>
+                <a href="../../index.html#process">Process</a>
+                <a href="../../index.html#about">About</a>
+                <a href="../../index.html#contact">Contact</a>
+                <a href="mailto:hello@innovat3solutions.com">hello@innovat3solutions.com</a>
+                <p style="margin-top: 10px; opacity: 0.6;">Miami, FL</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Innovate Solutions. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/count-up.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

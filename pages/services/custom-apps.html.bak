@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom App Development | Innovat3 Solutions</title>
+    <!-- Base styles and Favicon -->
+    <link rel="icon" type="image/png" href="../../images/Innovat3-logos/innovate-favicon.png">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Specific page overrides */
+        .page-header {
+            padding: 180px 0 80px;
+            background: radial-gradient(circle at top right, #f8fafc, #ffffff);
+            text-align: center;
+        }
+
+        .pain-point-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .pain-card {
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid #f1f5f9;
+            background: white;
+            transition: transform 0.2s;
+        }
+
+        .pain-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .solution-section {
+            background: var(--color-dark);
+            color: white;
+            padding: 80px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Nav -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="../../index.html" class="logo">
+                <img src="../../images/Innovat3-logos/innovate-logo-black-transparent.png" alt="Innovate Solutions"
+                    class="logo-full">
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html#services">Services</a>
+                <a href="../../pages/industries.html">Industries</a>
+            </div>
+            <div class="nav-actions">
+                <a href="../../index.html#contact" class="btn btn-primary shiny-button">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <div class="badge">Service Spotlight</div>
+            <h1>Custom App Development</h1>
+            <p class="hero-sub">Own your audience and eliminate 3rd party commission fees with a branded mobile app.</p>
+            <div style="margin-top: 2rem;">
+                <p style="max-width: 600px; margin: 0 auto; color: var(--color-slate);">
+                    We are experts in building high-performance iOS and Android applications that put your brand
+                    directly in your customer's pocket.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Problem Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Stop Renting Your Customers</h2>
+            <div class="pain-point-grid">
+                <div class="pain-card">
+                    <h3>The Commission Tax</h3>
+                    <p><strong>Scenario:</strong> You own a busy restaurant. You fulfill hundreds of orders via
+                        DoorDash/UberEats, but you pay 30% on every ticket.</p>
+                    <p><strong>Outcome:</strong> You are working harder for less margin, and you don't even own the
+                        customer data to retarget them later.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>The Communication Loop</h3>
+                    <p><strong>Scenario:</strong> As a property manager, your phone rings 24/7 with "my toilet is
+                        running" or "package delivery" questions.</p>
+                    <p><strong>Outcome:</strong> You spend 60% of your time on low-level coordination instead of growing
+                        your portfolio or closing leases.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>The Loyalty Gap</h3>
+                    <p><strong>Scenario:</strong> You have a loyal following, but no way to push notifications, offers,
+                        or updates directly to them without social media algorithms hiding your posts.</p>
+                    <p><strong>Outcome:</strong> You lose touch with your best customers because you don't have a direct
+                        line of communication.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution / Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="text-center" style="max-width: 700px; margin: 0 auto;">
+                <div class="google-review-badge">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google"
+                        class="g-icon">
+                    <div class="stars">★★★★★</div>
+                    <span class="review-score">5.0</span>
+                    <span class="review-count">(Local Business Favorites)</span>
+                </div>
+                <h2>Your Brand, Their Pocket</h2>
+                <p class="text-muted">Create a sticky ecosystem that keeps your customers coming back without paying
+                    rent to 3rd party platforms.</p>
+            </div>
+
+            <div class="feature-grid">
+                <!-- Card 1 -->
+                <div class="feature-card shine-border">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                        </svg>
+                    </div>
+                    <h3>Zero Commission Orders</h3>
+                    <p>Stop paying 30% to delivery apps. Process orders through your own app and keep the margin. Best
+                        for restaurants and retail.</p>
+                    <div class="feature-visual">
+                        <div style="font-size:11px; text-align:center;">
+                            <span
+                                style="display:block; margin-bottom:4px; color:#ef4444; text-decoration:line-through;">UberEats
+                                Fee: $4.50</span>
+                            <span style="display:block; color:#22c55e; font-weight:bold;">Your App Fee: $0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="feature-card shine-border">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
+                    </div>
+                    <h3>Push Notification Marketing</h3>
+                    <p>Directly message your customers with offers. 90% open rates compared to 20% for email. The
+                        ultimate retention tool.</p>
+                    <div class="feature-visual">
+                        <div class="demo-chat-bubble" style="background:#0f172a; color:white; width:100%;">
+                            🔔 <strong>Flash Deal:</strong> 20% off today only!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="feature-card shine-border">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <h3>Client Portals</h3>
+                    <p>Give clients a secure place to view documents, pay invoices, and approve quotes. Perfect for
+                        agencies and contractors.</p>
+                    <div class="feature-visual">
+                        <div style="font-size:11px; color:#64748b; text-align:center;">
+                            Login Securely • View Invoices • Pay Now
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 60px; text-align: center;">
+                <a href="#contact" class="btn btn-primary shiny-button btn-lg">Start Your App Build</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Visualization Section -->
+    <section class="section" style="background-color: #f8fafc;">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 40px;">Own The Home Screen</h2>
+            <div
+                style="max-width: 800px; margin: 0 auto; box-shadow: 0 20px 40px -10px rgba(0,0,0,0.15); border-radius: 20px; overflow: hidden; background: white;">
+                <img src="../../images/services/custom-app-mockup.png" alt="Custom Branded Mobile App Showcase"
+                    style="width: 100%; display: block;" loading="lazy">
+            </div>
+            <p class="text-center text-muted" style="margin-top: 20px; font-size: 0.9rem;">
+                Beautiful, native iOS and Android experiences built specifically for your business logic.
+            </p>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="section">
+        <div class="container text-center">
+            <h2>Industries That Use This</h2>
+            <p style="margin-bottom: 40px;">See how Custom Apps solve specific problems for:</p>
+
+            <div class="pain-point-grid" style="margin-bottom: 60px;">
+                <a href="../niches/restaurants.html" style="text-decoration: none; color: inherit;">
+                    <div class="pain-card" style="text-align: center; border-color: var(--color-primary);">
+                        <h4>Restaurants</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-slate);">Commission-free delivery & loyalty.</p>
+                    </div>
+                </a>
+                <a href="../niches/property-management.html" style="text-decoration: none; color: inherit;">
+                    <div class="pain-card" style="text-align: center; border-color: var(--color-primary);">
+                        <h4>Property Management</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-slate);">Tenant requests & automation.</p>
+                    </div>
+                </a>
+                <a href="../niches/barbershops.html" style="text-decoration: none; color: inherit;">
+                    <div class="pain-card" style="text-align: center; border-color: var(--color-primary);">
+                        <h4>Barbers & Salons</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-slate);">Booking apps & membership retention.
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+            <div style="background: #f8fafc; padding: 40px; border-radius: 16px;">
+                <h3>Don't see your industry?</h3>
+                <p>We have specialized solutions for 25+ business niches.</p>
+                <a href="../industries.html" class="btn btn-primary shiny-button"
+                    style="margin-top: 20px; display: inline-block;">View All Industries</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: FAQ Section -->
+    <section class="section">
+        <div class="container" style="max-width: 800px;">
+            <h2 class="text-center">Frequently Asked Questions</h2>
+            <div class="faq-accordion" style="margin-top: 40px;">
+                <details
+                    style="padding: 20px; background: white; border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 16px; cursor: pointer;">
+                    <summary
+                        style="font-weight: 600; font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        How long does it take to build?
+                        <span style="color: var(--color-primary); font-size: 1.5rem;">+</span>
+                    </summary>
+                    <p style="margin-top: 12px; color: var(--color-slate);">For most standard business apps (booking,
+                        loyalty, ordering), we can launch in 4-6 weeks. Custom enterprise tools may take 3+ months.</p>
+                </details>
+
+                <details
+                    style="padding: 20px; background: white; border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 16px; cursor: pointer;">
+                    <summary
+                        style="font-weight: 600; font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        Do I own the code?
+                        <span style="color: var(--color-primary); font-size: 1.5rem;">+</span>
+                    </summary>
+                    <p style="margin-top: 12px; color: var(--color-slate);">Yes. Unlike "app builders" that rent you the
+                        software, with us, once the project is paid for, you own 100% of the Intellectual Property.</p>
+                </details>
+
+                <details
+                    style="padding: 20px; background: white; border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 16px; cursor: pointer;">
+                    <summary
+                        style="font-weight: 600; font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        Does it work on iPhone and Android?
+                        <span style="color: var(--color-primary); font-size: 1.5rem;">+</span>
+                    </summary>
+                    <p style="margin-top: 12px; color: var(--color-slate);">Yes. We use cross-platform technologies
+                        (like Flutter or React Native) to deploy to both the Apple App Store and Google Play Store
+                        simultaneously.</p>
+                </details>
+
+                <details
+                    style="padding: 20px; background: white; border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 16px; cursor: pointer;">
+                    <summary
+                        style="font-weight: 600; font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        Can I send push notifications?
+                        <span style="color: var(--color-primary); font-size: 1.5rem;">+</span>
+                    </summary>
+                    <p style="margin-top: 12px; color: var(--color-slate);">Absolutely. That is the #1 reason to have an
+                        app. You can send unlimited offers directly to your customers' pockets.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Enhanced CTA Section -->
+    <section
+        style="padding: 80px 0; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Ready to build your asset?</h2>
+            <p
+                style="font-size: 1.2rem; color: #cbd5e1; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Stop renting access to your own customers. Start building your own ecosystem.
+            </p>
+            <a href="../../index.html#contact" class="btn btn-primary shiny-button btn-lg"
+                style="background: var(--color-primary); color: #0f172a; font-weight: 800; border: none;">
+                Start My App Project
+            </a>
+            <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">Free consultation and quote.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2026 Innovate Solutions</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

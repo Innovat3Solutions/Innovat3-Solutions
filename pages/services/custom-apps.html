@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom App Development | Innovat3 Solutions</title>
+    <!-- Base styles and Favicon -->
+    <link rel="icon" type="image/png" href="../../images/Innovat3-logos/innovate-favicon.png">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <!-- Service Page Specific Layout -->
+    <link rel="stylesheet" href="../../css/services-layout.css">
+    <link rel="stylesheet" href="../../css/faq-carousel.css">
+    <link rel="stylesheet" href="../../css/mobile-optimizations.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="service-page-wrapper">
+
+    <!-- Nav -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="../../index.html" class="logo">
+                <img src="../../images/Innovat3-logos/innovate-logo-black-transparent.png" alt="Innovate Solutions"
+                    class="logo-full">
+            </a>
+
+            <div class="nav-links">
+                <div class="nav-item dropdown">
+                    <a href="#services" class="dropdown-trigger">Services <span
+                            class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="../services/voice-ai.html">Voice AI Agents</a>
+                        <a href="../services/custom-apps.html">Custom Apps</a>
+                        <a href="../services/review-automation.html">Review Management</a>
+                        <a href="../services/private-ai-infra.html">Private AI</a>
+                        <a href="../services/lead-database.html">Lead Capture</a>
+                        <a href="../services/data-intelligence.html">Data Intelligence</a>
+                        <a href="../services/workflow-automation.html">Workflow Automations</a>
+                        <a href="../services/web-development.html">Web Development</a>
+                        <a href="../services/consulting.html">Growth Consulting</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#niches" class="dropdown-trigger">Industries <span
+                            class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu niche-dropdown-menu">
+                        <div class="niche-dropdown-grid">
+                            <!-- Column 1: Home Services -->
+                            <div class="niche-col">
+                                <h4>Home & Property</h4>
+                                <a href="../niches/pool-cleaners-and-maintenance.html">Pool Cleaners</a>
+                                <a href="../niches/pool-contractors-and-construction.html">Pool Construction</a>
+                                <a href="../niches/landscaping-and-lawn-care.html">Landscaping</a>
+                                <a href="../niches/hvac-services.html">HVAC Services</a>
+                                <a href="../niches/general-contractors.html">General Contractors</a>
+                                <a href="../niches/window-installers.html">Window Installers</a>
+                                <a href="../niches/plumbers.html">Plumbers</a>
+                                <a href="../niches/painters.html">Painters</a>
+                                <a href="../niches/electricians.html">Electricians</a>
+                                <a href="../niches/property-management.html">Property Management</a>
+                            </div>
+
+                            <!-- Column 2: Health & Beauty -->
+                            <div class="niche-col">
+                                <h4>Health & Medical</h4>
+                                <a href="../niches/dentists-and-orthodontists.html">Dentists</a>
+                                <a href="../niches/family-practice-doctors.html">Family Practice</a>
+                                <a href="../niches/veterinarians.html">Veterinarians</a>
+                                <a href="../niches/med-spas-and-laser-facilities.html">Med Spas</a>
+
+                                <h4 class="mt-sm">Beauty & Care</h4>
+                                <a href="../niches/hair-salons-and-stylists.html">Hair Salons</a>
+                                <a href="../niches/barbershops.html">Barbershops</a>
+                                <a href="../niches/nail-salons.html">Nail Salons</a>
+                                <a href="../niches/pet-groomers.html">Pet Groomers</a>
+                            </div>
+
+                            <!-- Column 3: Professional & Other -->
+                            <div class="niche-col">
+                                <h4>Professional Services</h4>
+                                <a href="../niches/attorneys-and-law-firms.html">Attorneys</a>
+                                <a href="../niches/accountants-and-cpas.html">Accountants & CPAs</a>
+                                <a href="../niches/financial-managers-and-advisors.html">Financial Advisors</a>
+                                <a href="../niches/real-estate-brokers.html">Real Estate Brokers</a>
+
+                                <h4 class="mt-sm">Retail & Auto</h4>
+                                <a href="../niches/auto-mechanics-and-repair-shops.html">Auto Mechanics</a>
+                                <a href="../niches/window-tinting-and-auto-detail.html">Auto Detail/Tint</a>
+                                <a href="../niches/restaurants.html">Restaurants</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="../blog.html">Blog</a>
+                <a href="../../index.html#process">Process</a>
+                <a href="../../index.html#about">About</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="../../index.html#contact" class="btn btn-primary shiny-button">Get Started</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MONOTREE HERO SECTION -->
+    <header class="niche-hero" style="background: #ffffff; padding: 120px 0 80px;">
+        <div class="container niche-hero-content">
+            <div class="hero-text">
+                <h1 class="font-primary"
+                    style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; font-weight: 300;">
+                    <em style="color: #84CC16; font-style: italic;">Custom</em> <span style="position: relative; display: inline-block;">
+                        Mobile Apps
+                        <svg class="brush-underline" viewBox="0 0 200 9" xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="none"
+                            style="position: absolute; width: 100%; height: 12px; bottom: -8px; left: 0;">
+                            <path d="M2.00025 6.99997C29.6108 8.01955 106.392 -2.18029 198 3.50001" stroke="#84CC16"
+                                stroke-width="3" stroke-linecap="round" fill="none" />
+                        </svg>
+                    </span> & Client Portals
+                </h1>
+                <p class="sub-headline"
+                    style="font-size: 1.125rem; color: #64748b; line-height: 1.6; margin-bottom: 2.5rem; max-width: 480px;">
+                    Own your audience and eliminate 3rd party commission fees with a branded mobile app that keeps
+                    customers coming back.
+                </p>
+
+                <div class="hero-cta-group" style="display: flex; gap: 12px; margin-bottom: 3rem;">
+                    <input type="email" placeholder="Enter work email" class="hero-input"
+                        style="flex: 1; max-width: 280px; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 8px; background: #ffffff; font-size: 1rem;">
+                    <button class="hero-btn"
+                        style="background: #84CC16; color: #000; font-weight: 600; padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer; white-space: nowrap;">Book
+                        a demo</button>
+                </div>
+
+                <!-- Stats Row - Monotree Style -->
+                <div style="display: flex; gap: 4rem; align-items: flex-start; margin-bottom: 2rem;">
+                    <div>
+                        <div class="count-up" data-target="85" data-suffix="%"
+                            style="font-size: 3rem; font-weight: 300; line-height: 1; color: #0f172a; margin-bottom: 0.5rem;">
+                            0</div>
+                        <div style="font-size: 0.875rem; color: #64748b;">Daily active users</div>
+                    </div>
+                    <div>
+                        <div class="count-up" data-target="15" data-prefix="~" data-suffix="k"
+                            style="font-size: 3rem; font-weight: 300; line-height: 1; color: #0f172a; margin-bottom: 0.5rem;">
+                            0</div>
+                        <div style="font-size: 0.875rem; color: #64748b;">Monthly users</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image-wrapper"
+                style="display: flex; align-items: center; justify-content: center; background: transparent;">
+                <img src="../../images/services/service_custom_apps_hero_1770147201922.png"
+                    alt="Custom Mobile App Example"
+                    style="width: 100%; max-width: 600px; height: auto; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1));">
+            </div>
+        </div>
+    </header>
+
+    <!-- Problem Section (Cards adapted for Light Theme) -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center" style="font-weight: 300;">Stop <span class="highlight-merriweather">Renting</span>
+                Your Customers</h2>
+            <div class="feature-card-grid">
+                <div class="feature-card">
+                    <h3>The Commission Tax</h3>
+                    <div class="problem-flow">
+                        <div class="flow-step">
+                            <span class="step-label">Scenario</span>
+                            <p>You own a busy restaurant. You fulfill hundreds of orders via DoorDash/UberEats, but you
+                                pay 30% on every ticket.</p>
+                        </div>
+                        <div class="flow-step outcome">
+                            <span class="step-label">Outcome</span>
+                            <p>You are working harder for less margin, and you don't even own the customer data to
+                                retarget them later.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <h3>The Communication Loop</h3>
+                    <div class="problem-flow">
+                        <div class="flow-step">
+                            <span class="step-label">Scenario</span>
+                            <p>As a property manager, your phone rings 24/7 with "my toilet is running" or "package
+                                delivery" questions.</p>
+                        </div>
+                        <div class="flow-step outcome">
+                            <span class="step-label">Outcome</span>
+                            <p>You spend 60% of your time on low-level coordination instead of growing your portfolio or
+                                closing leases.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <h3>The Loyalty Gap</h3>
+                    <div class="problem-flow">
+                        <div class="flow-step">
+                            <span class="step-label">Scenario</span>
+                            <p>You have a loyal following, but no way to push notifications, offers, or updates directly
+                                to them without social media algorithms hiding your posts.</p>
+                        </div>
+                        <div class="flow-step outcome">
+                            <span class="step-label">Outcome</span>
+                            <p>You lose touch with your best customers because you don't have a direct line of
+                                communication.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution / Split Layout Section -->
+    <section class="split-layout-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Your <em style="color: #84CC16; font-style: italic;">Brand</em>, Their Pocket</h2>
+                <p class="text-muted">Create a sticky ecosystem that keeps your customers coming back without paying
+                    rent to 3rd party platforms.</p>
+            </div>
+
+            <div class="split-layout-grid">
+                <!-- Left: Feature List -->
+                <div class="feature-list">
+                    <div class="feature-item active" onmouseenter="showSlide(0)">
+                        <h3>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                style="color: var(--service-accent);">
+                                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                            </svg>
+                            Zero Commission Orders
+                        </h3>
+                        <p>Stop paying 30% to delivery apps. Process orders through your own app and keep the margin.
+                            Best for restaurants and retail.</p>
+                    </div>
+
+                    <div class="feature-item" onmouseenter="showSlide(1)">
+                        <h3>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                style="color: var(--service-accent);">
+                                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                            </svg>
+                            Push Notification Marketing
+                        </h3>
+                        <p>Directly message your customers with offers. 90% open rates compared to 20% for email. The
+                            ultimate retention tool.</p>
+                    </div>
+
+                    <div class="feature-item" onmouseenter="showSlide(2)">
+                        <h3>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                style="color: var(--service-accent);">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            Client Portals
+                        </h3>
+                        <p>Give clients a secure place to view documents, pay invoices, and approve quotes. Perfect for
+                            agencies and contractors.</p>
+                    </div>
+                </div>
+
+                <!-- Right: Sticky Visuals -->
+                <div class="visual-display-wrapper">
+                    <div class="visual-content">
+                        <!-- Slide 0: Commission Zero -->
+                        <div class="visual-slide active" id="slide-0">
+                            <div
+                                style="display: flex; flex-direction: column; gap: 20px; width: 100%; max-width: 300px;">
+                                <!-- Comparison -->
+                                <div
+                                    style="display: flex; justify-content: space-between; align-items: center; background: #fff; padding: 15px 20px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); opacity: 0.6;">
+                                    <span style="color: #64748b; font-size: 0.9rem;">UberEats Fee</span>
+                                    <span
+                                        style="color: #ef4444; font-weight: 500; text-decoration: line-through;">$4.50</span>
+                                </div>
+                                <div
+                                    style="display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, #0f172a, #334155); color: white; padding: 20px; border-radius: 12px; box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.15); transform: scale(1.05);">
+                                    <span style="font-weight: 600;">Your App Fee</span>
+                                    <span style="color: #22c55e; font-weight: 800; font-size: 1.2rem;">$0.00</span>
+                                </div>
+
+                                <!-- Savings Tag -->
+                                <div
+                                    style="align-self: center; background: #dcfce7; color: #166534; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-top: 10px; display: flex; align-items: center; gap: 6px;">
+                                    <span>💰</span> Savings per order: $4.50
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 1: Push Notifications -->
+                        <div class="visual-slide" id="slide-1">
+                            <div style="width: 100%; max-width: 320px;">
+                                <!-- Phone Header Hint -->
+                                <div
+                                    style="width: 100px; height: 5px; background: #e2e8f0; border-radius: 3px; margin: 0 auto 20px auto;">
+                                </div>
+
+                                <!-- Notification -->
+                                <div
+                                    style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); padding: 15px; border-radius: 16px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0,0,0,0.05);">
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                        <div style="display: flex; align-items: center; gap: 6px;">
+                                            <div
+                                                style="width: 20px; height: 20px; background: linear-gradient(135deg, #3b82f6, #2563eb); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white; font-size: 10px;">
+                                                ⚡</div>
+                                            <span style="font-size: 0.75rem; font-weight: 600; color: #475569;">YOUR
+                                                APP</span>
+                                        </div>
+                                        <span style="font-size: 0.75rem; color: #94a3b8;">now</span>
+                                    </div>
+                                    <div
+                                        style="font-weight: 600; font-size: 0.95rem; color: #0f172a; margin-bottom: 4px;">
+                                        Flash Offer: 50% Off! 🍔</div>
+                                    <div style="font-size: 0.85rem; color: #334155; line-height: 1.4;">Order within the
+                                        next hour and get half off all appetizers. Tap to redeem!</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2: Client Portal -->
+                        <div class="visual-slide" id="slide-2">
+                            <div
+                                style="width: 100%; max-width: 300px; display: flex; flex-direction: column; gap: 15px;">
+                                <!-- Card 1: Invoice -->
+                                <div
+                                    style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); border-left: 4px solid #3b82f6;">
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+                                        <div>
+                                            <div
+                                                style="font-size: 0.75rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px;">
+                                                Invoice #AC-1024</div>
+                                            <div
+                                                style="font-weight: 300; font-size: 1.1rem; color: #0f172a; margin-top: 2px;">
+                                                $2,450.00</div>
+                                        </div>
+                                        <div
+                                            style="background: #e0f2fe; color: #0284c7; padding: 4px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; height: fit-content;">
+                                            PENDING</div>
+                                    </div>
+                                    <div
+                                        style="width: 100%; border: 1px solid #3b82f6; color: #3b82f6; text-align: center; padding: 8px; border-radius: 6px; font-weight: 600; font-size: 0.85rem; cursor: pointer;">
+                                        Pay Securely
+                                    </div>
+                                </div>
+
+                                <!-- Card 2: Document (Stacked behind) -->
+                                <div
+                                    style="background: white; padding: 15px 20px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); margin: 0 10px; opacity: 0.7; border-left: 4px solid #64748b; display: flex; align-items: center; justify-content: space-between;">
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                        <div style="font-size: 1.2rem;">📄</div>
+                                        <div style="font-size: 0.9rem; font-weight: 500;">Project_Scope.pdf</div>
+                                    </div>
+                                    <div style="font-size: 0.8rem; color: #22c55e; font-weight: 600;">Signed</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Section -->
+    <!-- ROI Section (Arc Fan) -->
+    <section class="section-stats-arc">
+        <div class="container arc-container">
+            <!-- Card 1 -->
+            <div class="stat-card arc-1">
+                <div class="stat-card-number">90%</div>
+                <div class="stat-card-desc">Push Notification Open Rate</div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="stat-card arc-2">
+                <div class="stat-card-number">100%</div>
+                <div class="stat-card-desc">Data Ownership & Control</div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="stat-card arc-3">
+                <div class="stat-card-number">0%</div>
+                <div class="stat-card-desc">Commission Fees Paid</div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="stat-card arc-4">
+                <div class="stat-card-number">4-6 Wks</div>
+                <div class="stat-card-desc">Rapid Launch Timeline</div>
+            </div>
+        </div>
+
+        <div class="text-center mt-lg">
+            <span class="subtitle">The ROI of Ownership &rarr;</span>
+            <h2 style="max-width: 800px; margin: 0 auto 2rem;">Build an asset that pays dividends forever</h2>
+            <a href="#contact" class="btn btn-primary shiny-button">Start My App Project</a>
+        </div>
+    </section>
+
+    <!-- NEW: Featured Work Section (Niche Graphics) -->
+    <section class="featured-work-section">
+        <div class="container">
+            <h2 class="text-center">Featured Work</h2>
+            <p class="text-center text-muted" style="max-width: 600px; margin: 0 auto;">
+                See how we build specific apps for specific industries.
+            </p>
+
+            <div class="work-grid">
+                <!-- Restaurant Card -->
+                <div class="work-card">
+                    <img src="../../assets/niche_images/25_restaurant_branded_app_1769473934365.png" alt="Restaurants"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="work-overlay">
+                        <h3>Restaurants</h3>
+                        <p style="font-size: 0.9rem; opacity: 0.8;">Commission-free ordering apps.</p>
+                    </div>
+                    <a href="../niches/restaurants.html" style="position: absolute; inset: 0;"></a>
+                </div>
+
+                <!-- Property Management Card -->
+                <div class="work-card">
+                    <img src="../../assets/niche_images/10_property_manager_portal_1769473683458.png"
+                        alt="Property Management" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="work-overlay">
+                        <h3>Property Managers</h3>
+                        <p style="font-size: 0.9rem; opacity: 0.8;">Tenant portals for rent & repairs.</p>
+                    </div>
+                    <a href="../niches/property-management.html" style="position: absolute; inset: 0;"></a>
+                </div>
+
+                <!-- Barber Card -->
+                <div class="work-card">
+                    <img src="../../assets/niche_images/16_barber_membership_revenue_1769473789137.png"
+                        alt="Barbershops" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="work-overlay">
+                        <h3>Barbershops</h3>
+                        <p style="font-size: 0.9rem; opacity: 0.8;">Client loyalty apps.</p>
+                    </div>
+                    <a href="../niches/barbershops.html" style="position: absolute; inset: 0;"></a>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="../industries.html" class="btn btn-secondary">View All Industries</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Carousel Section -->
+    <section class="faq-carousel-section">
+        <div class="faq-header-container">
+            <div>
+                <span class="subtitle">Support</span>
+                <h2 style="font-weight: 300;">Frequently<br><span class="highlight-merriweather">Asked Questions</span>
+                </h2>
+            </div>
+
+            <div class="faq-nav-group">
+                <button class="faq-nav-btn prev" aria-label="Previous">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 12H5" />
+                        <path d="M12 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button class="faq-nav-btn next" aria-label="Next">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14" />
+                        <path d="M12 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="faq-carousel-wrapper">
+            <div class="faq-track">
+                <div class="faq-card">
+                    <h3 class="faq-question">What types of custom apps can you build?</h3>
+                    <div class="faq-answer">
+                        <p>We build web apps, mobile apps (iOS/Android), internal tools, customer portals, booking systems, CRMs, and automation dashboards tailored to your specific business processes.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h3 class="faq-question">How long does custom app development take?</h3>
+                    <div class="faq-answer">
+                        <p>Project timelines vary by complexity. Simple tools take 4-6 weeks, while complex multi-platform apps take 3-6 months. We provide detailed timelines during discovery.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h3 class="faq-question">Do you use templates or build from scratch?</h3>
+                    <div class="faq-answer">
+                        <p>We build custom solutions from scratch using modern frameworks. While we leverage proven code patterns for efficiency, every app is designed specifically for your unique requirements.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h3 class="faq-question">Can the app integrate with my existing software?</h3>
+                    <div class="faq-answer">
+                        <p>Yes. We integrate with most business software including CRMs, payment processors, accounting systems, calendars, and proprietary databases via APIs and custom connectors.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h3 class="faq-question">Will I own the code and intellectual property?</h3>
+                    <div class="faq-answer">
+                        <p>Absolutely. You own 100% of the code, designs, and IP. We provide full source code access and documentation so you're never locked into our services.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h3 class="faq-question">What happens after the app launches?</h3>
+                    <div class="faq-answer">
+                        <p>We provide training, documentation, and ongoing support. We also offer maintenance packages for updates, bug fixes, feature additions, and infrastructure management.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h3 class="faq-question">Can you scale the app as my business grows?</h3>
+                    <div class="faq-answer">
+                        <p>Yes. We build apps with scalability in mind, using cloud infrastructure that grows with your user base and transaction volume without performance degradation.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h3 class="faq-question">How much does custom app development cost?</h3>
+                    <div class="faq-answer">
+                        <p>Projects typically range from $15k for simple tools to $100k+ for complex enterprise systems. We provide detailed quotes after understanding your requirements and goals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="service-cta">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Ready to build your asset?</h2>
+            <p
+                style="font-size: 1.2rem; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; opacity: 0.9;">
+                Stop renting access to your own customers. Start building your own ecosystem.
+            </p>
+            <a href="../../index.html#contact" class="btn btn-primary shiny-button btn-lg"
+                style="background: var(--service-accent); color: #000; font-weight: 800; border: none;">
+                Start My App Project
+            </a>
+            <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.6;">Free consultation and quote.</p>
+        </div>
+    </section>
+
+    <!-- Footer link -->
+        <!-- Unified Contact Section -->
+        <!-- Unified Contact Section -->
+    <section class="unified-contact-section" id="contact">
+        <div class="unified-contact-container">
+            <!-- Left Content -->
+            <div class="contact-left-content">
+                <div class="contact-progress-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot empty"></span>
+                    <span class="dot empty"></span>
+                    <span class="dot empty"></span>
+                </div>
+
+                <h2>Ready to transform your business?</h2>
+                <p>Let's discuss how our solutions can help you automate workflows, boost efficiency, and drive growth for your business.</p>
+
+                <a href="#" class="contact-learn-btn">Learn More</a>
+
+                <!-- Features -->
+                <div class="contact-features">
+                    <div class="contact-feature">
+                        <div class="contact-feature-icon">
+                            <i data-lucide="history" size="24"></i>
+                        </div>
+                        <h4>Customer History</h4>
+                        <p>Analyze customer behavior across product lines</p>
+                    </div>
+
+                    <div class="contact-feature">
+                        <div class="contact-feature-icon">
+                            <i data-lucide="bar-chart-3" size="24"></i>
+                        </div>
+                        <h4>Actionable Insights</h4>
+                        <p>Employ predictive analytics to optimize sales pipelines</p>
+                    </div>
+
+                    <div class="contact-feature">
+                        <div class="contact-feature-icon">
+                            <i data-lucide="layers" size="24"></i>
+                        </div>
+                        <h4>Identify Patterns</h4>
+                        <p>Utilize live data to improve conversion rates</p>
+                    </div>
+
+                    <div class="contact-feature">
+                        <div class="contact-feature-icon">
+                            <i data-lucide="target" size="24"></i>
+                        </div>
+                        <h4>Predictive Analysis</h4>
+                        <p>Employ real-time data to refine marketing strategies</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Form -->
+            <div class="contact-form-wrapper">
+                <form id="unified-contact-form" action="#" method="POST">
+                    <div class="contact-form-row">
+                        <div class="contact-form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="James..." required>
+                        </div>
+
+                        <div class="contact-form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Smith..." required>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-row">
+                        <div class="contact-form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="robertapouros@gmail.com" required>
+                        </div>
+
+                        <div class="contact-form-group">
+                            <label for="country">Country</label>
+                            <select id="country" name="country" required>
+                                <option value="USA">🇺🇸 USA</option>
+                                <option value="Canada">🇨🇦 Canada</option>
+                                <option value="UK">🇬🇧 United Kingdom</option>
+                                <option value="Australia">🇦🇺 Australia</option>
+                                <option value="Other">🌍 Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-group full-width">
+                        <label for="role">Your Role</label>
+                        <select id="role" name="role" required>
+                            <option value="">Select your role</option>
+                            <option value="Business Owner">Business Owner</option>
+                            <option value="Manager">Manager</option>
+                            <option value="Director">Director</option>
+                            <option value="C-Level">C-Level Executive</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="contact-form-group full-width">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Enter message..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="contact-submit-btn">Contact Us</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Brand -->
+                <div class="footer-col" style="flex: 2;">
+                    <a href="../../index.html" class="footer-logo">
+                        <img src="../../images/Innovat3-logos/innovate-logo-white-transparent.png"
+                            alt="Innovate Solutions" class="logo-full" style="height: 30px;">
+                    </a>
+                    <p>Modernizing Miami one automated workflow at a time.</p>
+                </div>
+
+                <!-- Column 2: Services -->
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="../services/voice-ai.html">Voice AI Agents</a>
+                    <a href="../services/custom-apps.html">Custom Apps</a>
+                    <a href="../services/review-automation.html">Review Management</a>
+                    <a href="../services/private-ai-infra.html">Private AI</a>
+                    <a href="../services/lead-database.html">Lead Capture</a>
+                    <a href="../services/data-intelligence.html">Data Intelligence</a>
+                    <a href="../services/workflow-automation.html">Workflow Automation</a>
+                    <a href="../services/consulting.html">Growth Consulting</a>
+                </div>
+
+                <!-- Column 3: Industries -->
+                <div class="footer-col">
+                    <h4>Industries</h4>
+                    <a href="../niches/general-contractors.html">Home Services</a>
+                    <a href="../niches/family-practice-doctors.html">Medical & Health</a>
+                    <a href="../niches/attorneys-and-law-firms.html">Legal & Prof.</a>
+                    <a href="../niches/hair-salons-and-stylists.html">Beauty & Wellness</a>
+                    <a href="../niches/restaurants.html">Retail & Hospitality</a>
+                    <a href="../niches/auto-mechanics-and-repair-shops.html">Automotive</a>
+                    <a href="../niches/real-estate-brokers.html">Real Estate</a>
+                    <a href="../../index.html#niches"
+                        style="color: var(--primary-color); font-weight: 600; margin-top: 8px;">View All Industries
+                        &rarr;</a>
+                </div>
+
+                <!-- Column 4: Resources -->
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="../blog.html">Blog</a>
+                <a href="../../index.html#process">Process</a>
+                    <a href="../../index.html#about">About</a>
+                    <a href="../../index.html#contact">Contact</a>
+                    <a href="mailto:hello@innovat3solutions.com">hello@innovat3solutions.com</a>
+                    <p style="margin-top: 10px; opacity: 0.6;">Miami, FL</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Innovate Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/count-up.js"></script>
+    <script src="../../js/faq-carousel.js"></script>
+    <script>
+        function showSlide(index) {
+            // Remove active class from all slides and items
+            document.querySelectorAll('.visual-slide').forEach(slide => slide.classList.remove('active'));
+            document.querySelectorAll('.feature-item').forEach(item => item.classList.remove('active'));
+
+            // Add active class to target
+            document.getElementById('slide-' + index).classList.add('active');
+            document.querySelectorAll('.feature-item')[index].classList.add('active');
+        }
+
+        function scrollTestimonials(direction) {
+            const container = document.getElementById('testimonial-scroll');
+            const cardWidth = 350 + 30; // card min-width + gap
+            container.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+        }
+    </script>
+
+    <!-- Animated Grid Script -->
+    <script src="../../js/animated-grid.js"></script>
+    <script src="../../js/count-up.js"></script>
+    <script>
+        // Init Grid Background
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof initAnimatedGrid === 'function') {
+                initAnimatedGrid('hero-grid-container', {
+                    width: 40,
+                    height: 40,
+                    x: -1,
+                    y: -1,
+                    numSquares: 20, // Keep it subtle
+                    maxOpacity: 0.1, // Very subtle
+                    duration: 4
+                });
+            }
+        });
+    </script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

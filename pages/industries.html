@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industries & Niches | Innovat3 Solutions</title>
+    <!-- Base styles and Favicon -->
+    <link rel="icon" type="image/png" href="../images/Innovat3-logos/innovate-favicon.png">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .page-header {
+            padding: 160px 0 80px;
+            text-align: center;
+            background: radial-gradient(circle at top, rgba(132, 204, 22, 0.05), transparent 70%);
+        }
+
+        .industry-section {
+            padding: 60px 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .industry-category {
+            margin-bottom: 40px;
+        }
+
+        .industry-category h2 {
+            font-size: 32px;
+            margin-bottom: 16px;
+            color: var(--color-primary);
+        }
+
+        .niche-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .niche-link-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .niche-link-card:hover {
+            border-color: var(--color-primary);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+            color: var(--color-primary);
+        }
+
+        .niche-link-card span {
+            font-weight: 600;
+        }
+
+        .arrow-icon {
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.2s;
+        }
+
+        .niche-link-card:hover .arrow-icon {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                <img src="../images/Innovat3-logos/innovate-logo-black-transparent.png" alt="Innovate Solutions"
+                    class="logo-full">
+            </a>
+
+            <div class="nav-links">
+                <a href="../index.html#services">Services</a>
+                <a href="industries.html" class="active">Industries</a>
+                <a href="../index.html#process">Process</a>
+                <a href="../index.html#about">About</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="../index.html#contact" class="btn btn-primary shiny-button">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <div class="badge">Ecosystem</div>
+            <h1>Industries We Transform</h1>
+            <p class="hero-sub" style="margin: 20px auto;">We have analyzed specific pain points and built assets for
+                25+ business niches.</p>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- Home Services -->
+        <section class="industry-section">
+            <div class="industry-category">
+                <h2>Home & Property Services</h2>
+                <div class="niche-grid">
+                    <a href="niches/pool-cleaners-and-maintenance.html" class="niche-link-card"><span>Pool
+                            Cleaners</span> <span class="arrow-icon">→</span></a>
+                    <a href="niches/pool-contractors-and-construction.html" class="niche-link-card"><span>Pool
+                            Construction</span> <span class="arrow-icon">→</span></a>
+                    <a href="niches/landscaping-and-lawn-care.html" class="niche-link-card"><span>Landscaping</span>
+                        <span class="arrow-icon">→</span></a>
+                    <a href="niches/hvac-services.html" class="niche-link-card"><span>HVAC Services</span> <span
+                            class="arrow-icon">→</span></a>
+                    <a href="niches/general-contractors.html" class="niche-link-card"><span>General Contractors</span>
+                        <span class="arrow-icon">→</span></a>
+                    <a href="niches/window-installers.html" class="niche-link-card"><span>Window Installers</span> <span
+                            class="arrow-icon">→</span></a>
+                    <a href="niches/plumbers.html" class="niche-link-card"><span>Plumbers</span> <span
+                            class="arrow-icon">→</span></a>
+                    <a href="niches/painters.html" class="niche-link-card"><span>Painters</span> <span
+                            class="arrow-icon">→</span></a>
+                    <a href="niches/electricians.html" class="niche-link-card"><span>Electricians</span> <span
+                            class="arrow-icon">→</span></a>
+                    <a href="niches/property-management.html" class="niche-link-card"><span>Property Management</span>
+                        <span class="arrow-icon">→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Health -->
+        <section class="industry-section">
+            <div class="industry-category">
+                <h2>Health & Medical</h2>
+                <div class="niche-grid">
+                    <a href="niches/dentists-and-orthodontists.html" class="niche-link-card"><span>Dentists</span> <span
+                            class="arrow-icon">→</span></a>
+                    <a href="niches/family-practice-doctors.html" class="niche-link-card"><span>Family Practice</span>
+                        <span class="arrow-icon">→</span></a>
+                    <a href="niches/veterinarians.html" class="niche-link-card"><span>Veterinarians</span> <span
+                            class="arrow-icon">→</span></a>
+                    <a href="niches/med-spas-and-laser-facilities.html" class="niche-link-card"><span>Med Spas</span>
+                        <span class="arrow-icon">→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beauty -->
+        <section class="industry-section">
+            <div class="industry-category">
+                <h2>Beauty & Personal Care</h2>
+                <div class="niche-grid">
+                    <a href="niches/hair-salons-and-stylists.html" class="niche-link-card"><span>Hair Salons</span>
+                        <span class="arrow-icon">→</span></a>
+                    <a href="niches/barbershops.html" class="niche-link-card"><span>Barbershops</span> <span
+                            class="arrow-icon">→</span></a>
+                    <a href="niches/nail-salons.html" class="niche-link-card"><span>Nail Salons</span> <span
+                            class="arrow-icon">→</span></a>
+                    <a href="niches/pet-groomers.html" class="niche-link-card"><span>Pet Groomers</span> <span
+                            class="arrow-icon">→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional -->
+        <section class="industry-section">
+            <div class="industry-category">
+                <h2>Professional Services</h2>
+                <div class="niche-grid">
+                    <a href="niches/attorneys-and-law-firms.html" class="niche-link-card"><span>Attorneys (Law)</span>
+                        <span class="arrow-icon">→</span></a>
+                    <a href="niches/accountants-and-cpas.html" class="niche-link-card"><span>Accountants (CPA)</span>
+                        <span class="arrow-icon">→</span></a>
+                    <a href="niches/financial-managers-and-advisors.html" class="niche-link-card"><span>Financial
+                            Advisors</span> <span class="arrow-icon">→</span></a>
+                    <a href="niches/real-estate-brokers.html" class="niche-link-card"><span>Real Estate Brokers</span>
+                        <span class="arrow-icon">→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Auto/Retail -->
+        <section class="industry-section">
+            <div class="industry-category">
+                <h2>Automotive & Retail</h2>
+                <div class="niche-grid">
+                    <a href="niches/auto-mechanics-and-repair-shops.html" class="niche-link-card"><span>Auto
+                            Mechanics</span> <span class="arrow-icon">→</span></a>
+                    <a href="niches/window-tinting-and-auto-detail.html" class="niche-link-card"><span>Auto
+                            Detail/Tint</span> <span class="arrow-icon">→</span></a>
+                    <a href="niches/restaurants.html" class="niche-link-card"><span>Restaurants</span> <span
+                            class="arrow-icon">→</span></a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <div class="footer-col" style="margin-bottom: 20px;">
+                <a href="#" class="footer-logo" style="display:inline-block">
+                    <img src="../images/Innovat3-logos/innovate-logo-black-transparent.png" alt="Innovate Solutions"
+                        class="logo-full" style="height: 30px;">
+                </a>
+            </div>
+            <p>&copy; 2026 Innovate Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

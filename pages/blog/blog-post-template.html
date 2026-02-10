@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Template - Innovat3 Solutions</title>
+
+    <!-- Base styles and Favicon -->
+    <link rel="icon" type="image/png" href="../../images/Innovat3-logos/innovate-favicon.png">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="../../index.html" class="logo">
+                <img src="../../images/Innovat3-logos/innovate-logo-black-transparent.png" alt="Innovate Solutions"
+                    class="logo-full">
+            </a>
+
+            <div class="nav-links">
+                <div class="nav-item dropdown">
+                    <a href="../../index.html#services" class="dropdown-trigger">Services <span
+                            class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="../services/voice-ai.html">Voice AI Agents</a>
+                        <a href="../services/custom-apps.html">Custom Apps</a>
+                        <a href="../services/review-automation.html">Review Management</a>
+                        <a href="../services/private-ai-infra.html">Private AI</a>
+                        <a href="../services/lead-database.html">Lead Capture</a>
+                        <a href="../services/data-intelligence.html">Data Intelligence</a>
+                        <a href="../services/workflow-automation.html">Workflow Automations</a>
+                        <a href="../services/consulting.html">Growth Consulting</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="../../index.html#niches" class="dropdown-trigger">Industries <span
+                            class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu niche-dropdown-menu">
+                        <div class="niche-dropdown-grid">
+                            <!-- Column 1: Home Services -->
+                            <div class="niche-col">
+                                <h4>Home & Property</h4>
+                                <a href="../niches/pool-cleaners-and-maintenance.html">Pool Cleaners</a>
+                                <a href="../niches/pool-contractors-and-construction.html">Pool Construction</a>
+                                <a href="../niches/landscaping-and-lawn-care.html">Landscaping</a>
+                                <a href="../niches/hvac-services.html">HVAC Services</a>
+                                <a href="../niches/general-contractors.html">General Contractors</a>
+                                <a href="../niches/window-installers.html">Window Installers</a>
+                                <a href="../niches/plumbers.html">Plumbers</a>
+                                <a href="../niches/painters.html">Painters</a>
+                                <a href="../niches/electricians.html">Electricians</a>
+                                <a href="../niches/property-management.html">Property Management</a>
+                            </div>
+
+                            <!-- Column 2: Health & Beauty -->
+                            <div class="niche-col">
+                                <h4>Health & Medical</h4>
+                                <a href="../niches/dentists-and-orthodontists.html">Dentists</a>
+                                <a href="../niches/family-practice-doctors.html">Family Practice</a>
+                                <a href="../niches/veterinarians.html">Veterinarians</a>
+                                <a href="../niches/med-spas-and-laser-facilities.html">Med Spas</a>
+
+                                <h4 class="mt-sm">Beauty & Care</h4>
+                                <a href="../niches/hair-salons-and-stylists.html">Hair Salons</a>
+                                <a href="../niches/barbershops.html">Barbershops</a>
+                                <a href="../niches/nail-salons.html">Nail Salons</a>
+                                <a href="../niches/pet-groomers.html">Pet Groomers</a>
+                            </div>
+
+                            <!-- Column 3: Professional & Other -->
+                            <div class="niche-col">
+                                <h4>Professional Services</h4>
+                                <a href="../niches/attorneys-and-law-firms.html">Attorneys</a>
+                                <a href="../niches/accountants-and-cpas.html">Accountants & CPAs</a>
+                                <a href="../niches/financial-managers-and-advisors.html">Financial Advisors</a>
+                                <a href="../niches/real-estate-brokers.html">Real Estate Brokers</a>
+
+                                <h4 class="mt-sm">Retail & Auto</h4>
+                                <a href="../niches/auto-mechanics-and-repair-shops.html">Auto Mechanics</a>
+                                <a href="../niches/window-tinting-and-auto-detail.html">Auto Detail/Tint</a>
+                                <a href="../niches/restaurants.html">Restaurants</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="../blog.html" class="active">Blog</a>
+                <a href="../../index.html#process">Process</a>
+                <a href="../../index.html#about">About</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="../../index.html#contact" class="btn btn-primary shiny-button">Get Started</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="blog-page-container">
+
+        <!-- Header -->
+        <header class="blog-header">
+            <h1 class="blog-title">Blog Template</h1>
+            <div class="blog-meta">
+                <span>2025-09-16</span>
+                <span>by dillionverma</span>
+            </div>
+            <p class="blog-description">A minimal blog template built using Next.js.</p>
+        </header>
+
+        <div class="blog-content-wrapper">
+
+            <!-- Video -->
+            <video class="blog-video" autoplay loop muted playsinline src="../../assets/blog-demo.mp4"
+                poster="../../images/backgrounds/video-poster.jpg">
+                <!-- Fallback if video isn't present, using placeholder styling is handled by CSS -->
+            </video>
+
+            <!-- Actions -->
+            <div class="blog-actions">
+                <a href="https://github.com/magicuidesign/blog-template" target="_blank" class="template-btn secondary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                        </path>
+                    </svg>
+                    Template Open
+                </a>
+                <a href="https://blog-magicui.vercel.app/" target="_blank" class="template-btn primary">
+                    Live Preview
+                </a>
+            </div>
+
+            <!-- Content Prose -->
+            <div class="blog-prose">
+                <p>A minimal changelog template to showcase your product updates, releases, and improvements in a
+                    beautiful timeline format. Built with Next.js, TailwindCSS, and Fumadocs for easy content
+                    management.</p>
+
+                <h3>Dependencies</h3>
+                <ul>
+                    <li>Next.js 15</li>
+                    <li>React 19</li>
+                    <li>TypeScript 5</li>
+                    <li>TailwindCSS 4</li>
+                    <li>Fumadocs UI</li>
+                    <li>next-themes</li>
+                    <li>radix-ui</li>
+                    <li>shadcn/ui</li>
+                </ul>
+
+                <h3>Tech Stack</h3>
+                <div class="tech-stack-container">
+                    <div class="tech-stack-grid">
+                        <div class="tech-icon">Next.js</div>
+                        <div class="tech-icon">React</div>
+                        <div class="tech-icon">TypeScript</div>
+                        <div class="tech-icon">TailwindCSS</div>
+                        <div class="tech-icon">Shadcn</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <div class="footer-col" style="margin-bottom: 20px;">
+                <a href="#" class="footer-logo" style="display:inline-block">
+                    <img src="../../images/Innovat3-logos/innovate-logo-black-transparent.png" alt="Innovate Solutions"
+                        class="logo-full" style="height: 30px;">
+                </a>
+            </div>
+            <p>&copy; 2026 Innovate Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

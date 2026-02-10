@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice AI Agents | Innovat3 Solutions</title>
+    <!-- Base styles and Favicon -->
+    <link rel="icon" type="image/png" href="../../images/Innovat3-logos/innovate-favicon.png">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Specific page overrides */
+        .page-header {
+            padding: 180px 0 80px;
+            background: radial-gradient(circle at top right, #f8fafc, #ffffff);
+        }
+
+        .pain-point-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .pain-card {
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid #f1f5f9;
+            background: white;
+        }
+
+        .solution-section {
+            background: var(--color-dark);
+            color: white;
+            padding: 80px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Nav (Duplicate for now, ideally JS injected) -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="../../index.html" class="logo">
+                <img src="../../images/Innovat3-logos/innovate-logo-black-transparent.png" alt="Innovate Solutions"
+                    class="logo-full">
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html#services">Services</a>
+                <a href="../../index.html#niches">Industries</a>
+            </div>
+            <div class="nav-actions">
+                <a href="../../index.html#contact" class="btn btn-primary shiny-button">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <div class="badge">Service Spotlight</div>
+            <h1>Voice AI Agents</h1>
+            <p class="hero-sub">Eliminate missed calls and automate 24/7 lead capture without hiring more staff.</p>
+            <div style="margin-top: 2rem;">
+                <p style="max-width: 600px; margin: 0 auto; color: var(--color-slate);">
+                    We are experts in deploying conversational AI that sounds human, understands context, and integrates
+                    directly with your CRM.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Problem Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">The "Missed Call" Epidemic</h2>
+            <div class="pain-point-grid">
+                <div class="pain-card">
+                    <h3>The "Splash & Dash"</h3>
+                    <p><strong>Scenario:</strong> You are a pool technician or contractor in the field. Your hands are
+                        wet or full of tools. The phone rings—it's a new lead worth $1,200/year.</p>
+                    <p><strong>Outcome:</strong> You miss the call, and they call your competitor. You lose revenue
+                        simply because you were working.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>The Service Advisor Choke</h3>
+                    <p><strong>Scenario:</strong> It's 8:30 AM at the auto shop. Your service advisor is explaining a
+                        transmission repair to a customer. Three lines are ringing.</p>
+                    <p><strong>Outcome:</strong> Existing customers feel neglected, and new appointments are lost to
+                        voicemail. This costs average shops over $100k/year.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>The Seasonal Tsunami</h3>
+                    <p><strong>Scenario:</strong> A heatwave hits. Your HVAC business gets 50 calls an hour. Your
+                        dispatch team is overwhelmed.</p>
+                    <p><strong>Outcome:</strong> 62% of calls go unanswered. You burn out your staff and leave thousands
+                        of dollars on the table during your peak season.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution / Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="text-center" style="max-width: 700px; margin: 0 auto;">
+                <div class="google-review-badge">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google"
+                        class="g-icon">
+                    <div class="stars">★★★★★</div>
+                    <span class="review-score">5.0</span>
+                    <span class="review-count">(120+ Reviews)</span>
+                </div>
+                <h2>Not Just An Answering Machine</h2>
+                <p class="text-muted">Our Voice AI agents are fully integrated employees that live on your servers.</p>
+            </div>
+
+            <div class="feature-grid">
+                <!-- Card 1 -->
+                <div class="feature-card shine-border">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.05 12.05 0 0 0 .57 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.05 12.05 0 0 0 2.81.57A2 2 0 0 1 22 16.92z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3>Infinite Capacity</h3>
+                    <p>Handle 1 call or 1,000 calls simultaneously. Never give a customer a busy signal again, even
+                        during peak season.</p>
+                    <div class="feature-visual">
+                        <div class="demo-chat-container">
+                            <div class="demo-chat-bubble" style="font-size: 11px;">Incoming Call #42...</div>
+                            <div class="demo-chat-bubble ai" style="font-size: 11px;">Agent Connected instantly.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="feature-card shine-border">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3>Contextual Intelligence</h3>
+                    <p>The AI remembers returning clients, checks stock levels in real-time, and can reschedule
+                        appointments autonomously.</p>
+                    <div class="feature-visual">
+                        <!-- Replaced text snippet with simplified icon or spacer since we have the large graphic below now -->
+                        <div class="demo-chat-container">
+                            <div class="demo-chat-bubble" style="font-size: 11px;">Checking Availability...</div>
+                            <div class="demo-chat-bubble ai" style="font-size: 11px;">"I found a 3-3 nearby."</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="feature-card shine-border">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3>CRM Sync</h3>
+                    <p>Transcripts, audio recordings, and lead data are pushed to your CRM (Salesforce, HubSpot,
+                        GoHighLevel) instantly.</p>
+                    <div class="feature-visual">
+                        <div style="font-size:11px; color:#64748b; text-align:center;">
+                            Syncing to HubSpot... <span style="color:#22c55e;">Done</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Process Flow -->
+            <div style="margin-top: 80px; margin-bottom: 60px;">
+                <h3 class="text-center" style="margin-bottom: 40px;">How It Works</h3>
+                <div class="process-steps"
+                    style="display: flex; justify-content: space-between; gap: 20px; text-align: center; flex-wrap: wrap;">
+                    <div class="step" style="flex: 1; min-width: 200px;">
+                        <div class="step-num"
+                            style="background: var(--color-primary); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-weight: bold;">
+                            1</div>
+                        <h4>Connect</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-slate);">We integrate with your existing phone
+                            line. No new number needed.</p>
+                    </div>
+                    <div class="step" style="flex: 1; min-width: 200px;">
+                        <div class="step-num"
+                            style="background: var(--color-primary); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-weight: bold;">
+                            2</div>
+                        <h4>Train</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-slate);">We upload your FAQs, calendar, and
+                            pricing into the AI's knowledge base.</p>
+                    </div>
+                    <div class="step" style="flex: 1; min-width: 200px;">
+                        <div class="step-num"
+                            style="background: var(--color-primary); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-weight: bold;">
+                            3</div>
+                        <h4>Deploy</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-slate);">The AI starts answering calls 24/7,
+                            booking appointments instantly.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROI Section -->
+            <div style="background: #1e293b; color: white; border-radius: 20px; padding: 40px; text-align: center;">
+                <h3 style="color: white; margin-bottom: 20px;">The ROI of "Always On"</h3>
+                <div class="roi-grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;">
+                    <div>
+                        <div style="font-size: 2.5rem; font-weight: 800; color: var(--color-primary);">35%</div>
+                        <div style="font-size: 0.9rem; opacity: 0.8;">Increase in Booked Appointments</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2.5rem; font-weight: 800; color: var(--color-primary);">0</div>
+                        <div style="font-size: 0.9rem; opacity: 0.8;">Missed Revenue Opportunities</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2.5rem; font-weight: 800; color: var(--color-primary);">$4k+</div>
+                        <div style="font-size: 0.9rem; opacity: 0.8;">Monthly Labor Savings vs. Receptionist</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- NEW: Visualization Section (Tabbed Demos) -->
+    <section class="section" style="background-color: #f8fafc;">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 20px;">See It In Action</h2>
+            <p class="text-center text-muted" style="max-width: 600px; margin: 0 auto 40px auto;">
+                Select an industry to hear how our Voice AI handles real-world scenarios specific to your business.
+            </p>
+
+            <!-- Industry Tabs -->
+            <div class="industry-tabs"
+                style="display: flex; justify-content: center; gap: 10px; margin-bottom: 30px; flex-wrap: wrap;">
+                <button onclick="switchTab('pm')" class="tab-btn active" id="btn-pm">Property Management</button>
+                <button onclick="switchTab('hvac')" class="tab-btn" id="btn-hvac">HVAC Services</button>
+                <button onclick="switchTab('auto')" class="tab-btn" id="btn-auto">Auto Mechanics</button>
+            </div>
+
+            <!-- Demo Container -->
+            <div class="demo-display-container">
+
+                <!-- Property Management Scenario -->
+                <div id="demo-pm" class="demo-scenario active">
+                    <div class="chat-interface">
+                        <div class="chat-header">
+                            <div class="agent-avatar">AI</div>
+                            <div class="agent-info">
+                                <span class="name">Property Manager Assistant</span>
+                                <span class="status">● Online</span>
+                            </div>
+                        </div>
+                        <div class="chat-body">
+                            <div class="msg ai">
+                                <div class="bubble">Thanks for calling Sunnyside Properties. Are you a current tenant or
+                                    looking to rent?</div>
+                            </div>
+                            <div class="msg user">
+                                <div class="bubble">Current tenant. My AC stopped working and it's 85 degrees in here.
+                                </div>
+                            </div>
+                            <div class="msg ai">
+                                <div class="bubble">I'm sorry to hear that. Since this is an emergency maintenance
+                                    issue, I'm going to dispatch our on-call HVAC partner immediately. Can I confirm you
+                                    are at 123 Palm Ave, Unit 4?</div>
+                            </div>
+                            <div class="msg user">
+                                <div class="bubble">Yes that's me.</div>
+                            </div>
+                            <div class="msg ai">
+                                <div class="bubble">Okay, I've sent the request. A technician from CoolAir Pros will
+                                    contact you within 15 minutes. Is there anything else?</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="demo-context">
+                        <h3>Property Application</h3>
+                        <p>The AI handles maintenance triage 24/7, categorizing emergencies vs. routine requests, and
+                            dispatching vendors automatically without waking up your property manager.</p>
+                        <a href="../niches/property-management.html" class="btn btn-outline"
+                            style="margin-top: 20px;">View Property Management Page →</a>
+                    </div>
+                </div>
+
+                <!-- HVAC Scenario -->
+                <div id="demo-hvac" class="demo-scenario">
+                    <div class="chat-interface">
+                        <div class="chat-header">
+                            <div class="agent-avatar">AI</div>
+                            <div class="agent-info">
+                                <span class="name">HVAC Scheduler</span>
+                                <span class="status">● Online</span>
+                            </div>
+                        </div>
+                        <div class="chat-body">
+                            <div class="msg user">
+                                <div class="bubble">Hey, I wanted to reschedule my appointment. I'm not going to be
+                                    home.</div>
+                            </div>
+                            <div class="msg ai">
+                                <div class="bubble">No problem. I see you have a tune-up scheduled for tomorrow at 2 PM.
+                                    I can see that today is fully booked. How does next week Monday sound?</div>
+                            </div>
+                            <div class="msg user">
+                                <div class="bubble">Monday works. Or any day between Monday and Thursday.</div>
+                            </div>
+                            <div class="msg ai">
+                                <div class="bubble">Great. I have Monday at 10 AM or Wednesday at 1 PM available.</div>
+                            </div>
+                            <div class="msg user">
+                                <div class="bubble">Let's do Wednesday.</div>
+                            </div>
+                            <div class="msg ai">
+                                <div class="bubble">All set for Wednesday at 1 PM. If you need emergency service after
+                                    hours, just let me know.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="demo-context">
+                        <h3>HVAC Services</h3>
+                        <p>Reduce "no-shows" and gaps in your schedule. The AI negotiates times based on your real-time
+                            ServiceTitan or Housecall Pro calendar availability.</p>
+                        <a href="../niches/hvac-services.html" class="btn btn-outline" style="margin-top: 20px;">View
+                            HVAC Page →</a>
+                    </div>
+                </div>
+
+                <!-- Auto Mechanic Scenario -->
+                <div id="demo-auto" class="demo-scenario">
+                    <div class="chat-interface">
+                        <div class="chat-header">
+                            <div class="agent-avatar">AI</div>
+                            <div class="agent-info">
+                                <span class="name">Shop Advisor</span>
+                                <span class="status">● Online</span>
+                            </div>
+                        </div>
+                        <div class="chat-body">
+                            <div class="msg user">
+                                <div class="bubble">Hey, I have a flat tire. Can I get a tow truck and get my tires
+                                    rotated too?</div>
+                            </div>
+                            <div class="msg ai">
+                                <div class="bubble">I can help with that. I can arrange a tow to our shop and schedule
+                                    the rotation. What is your current location?</div>
+                            </div>
+                            <div class="msg user">
+                                <div class="bubble">I'm at the corner of Main and 5th.</div>
+                            </div>
+                            <div class="msg ai">
+                                <div class="bubble">Got it. Our towing partner is about 20 minutes out. While they bring
+                                    your car in, would you like me to check stock for a replacement tire just in case
+                                    the flat can't be patched?</div>
+                            </div>
+                            <div class="msg user">
+                                <div class="bubble">Yes please, it's a Ford F-150.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="demo-context">
+                        <h3>Auto Shops</h3>
+                        <p>Capture blocked calls during the morning rush. The AI handles tow coordination and service
+                            booking so your service advisors can focus on the customers at the counter.</p>
+                        <a href="../niches/auto-mechanics-and-repair-shops.html" class="btn btn-outline"
+                            style="margin-top: 20px;">View Auto Repair Page →</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Enhanced Tab Styles */
+        .tab-btn {
+            padding: 12px 24px;
+            border: 1px solid #e2e8f0;
+            background: white;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--color-slate);
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn:hover {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+        }
+
+        .tab-btn.active {
+            background: var(--color-primary);
+            color: white;
+            border-color: var(--color-primary);
+            box-shadow: 0 4px 12px rgba(132, 204, 22, 0.3);
+        }
+
+        .demo-display-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            min-height: 500px;
+        }
+
+        .demo-scenario {
+            display: none;
+            width: 100%;
+            display: none;
+            /* Changed from flex to allow ID toggling */
+        }
+
+        .demo-scenario.active {
+            display: flex;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @media (max-width: 768px) {
+            .demo-scenario.active {
+                flex-direction: column;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .chat-interface {
+            flex: 1;
+            background: #f1f5f9;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        .chat-header {
+            padding: 20px;
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .agent-avatar {
+            width: 40px;
+            height: 40px;
+            background: var(--color-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .agent-info .name {
+            display: block;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .agent-info .status {
+            font-size: 0.8rem;
+            color: #22c55e;
+        }
+
+        .chat-body {
+            padding: 20px;
+            overflow-y: auto;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .msg {
+            display: flex;
+            max-width: 85%;
+        }
+
+        .msg.ai {
+            align-self: flex-start;
+        }
+
+        .msg.user {
+            align-self: flex-end;
+        }
+
+        .msg .bubble {
+            padding: 12px 18px;
+            border-radius: 18px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .msg.ai .bubble {
+            background: white;
+            border-top-left-radius: 4px;
+            color: #334155;
+        }
+
+        .msg.user .bubble {
+            background: var(--color-primary);
+            color: white;
+            border-top-right-radius: 4px;
+        }
+
+        .demo-context {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: white;
+        }
+
+        .demo-context h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #0f172a;
+        }
+
+        .demo-context p {
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #0f172a;
+            font-weight: 600;
+            transition: all 0.2s;
+            text-align: center;
+            width: fit-content;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--color-primary);
+            background: #f0fdf4;
+            color: var(--color-primary);
+        }
+    </style>
+
+    <script>
+        function switchTab(id) {
+            // Remove active class from all buttons and contents
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.demo-scenario').forEach(content => content.classList.remove('active'));
+
+            // Add active class to selected
+            document.getElementById('btn-' + id).classList.add('active');
+            document.getElementById('demo-' + id).classList.add('active');
+        }
+    </script>
+
+    <!-- Industries Section -->
+    <section class="section">
+        <div class="container text-center">
+            <h2>Industries That Use This</h2>
+            <p style="margin-bottom: 40px;">See how our Voice AI solves specific problems for:</p>
+
+            <div class="pain-point-grid" style="margin-bottom: 60px;">
+                <a href="../niches/pool-cleaners-and-maintenance.html" style="text-decoration: none; color: inherit;">
+                    <div class="pain-card" style="text-align: center; border-color: var(--color-primary);">
+                        <h4>Pool Maintenance</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-slate);">Stop missing calls while in the field.
+                        </p>
+                    </div>
+                </a>
+                <a href="../niches/hvac-services.html" style="text-decoration: none; color: inherit;">
+                    <div class="pain-card" style="text-align: center; border-color: var(--color-primary);">
+                        <h4>HVAC Services</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-slate);">Handle seasonal call spikes
+                            automatically.</p>
+                    </div>
+                </a>
+                <a href="../niches/auto-mechanics-and-repair-shops.html" style="text-decoration: none; color: inherit;">
+                    <div class="pain-card" style="text-align: center; border-color: var(--color-primary);">
+                        <h4>Auto Mechanics</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-slate);">Let advisors sell, let AI book.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div style="background: #f8fafc; padding: 40px; border-radius: 16px;">
+                <h3>Don't see your industry?</h3>
+                <p>We have specialized solutions for 25+ business niches.</p>
+                <a href="../industries.html" class="btn btn-primary shiny-button"
+                    style="margin-top: 20px; display: inline-block;">View All Industries</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: FAQ Section -->
+    <section class="section">
+        <div class="container" style="max-width: 800px;">
+            <h2 class="text-center">Frequently Asked Questions</h2>
+            <div class="faq-accordion" style="margin-top: 40px;">
+                <details
+                    style="padding: 20px; background: white; border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 16px; cursor: pointer;">
+                    <summary
+                        style="font-weight: 600; font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        Does the AI sound robotic?
+                        <span style="color: var(--color-primary); font-size: 1.5rem;">+</span>
+                    </summary>
+                    <p style="margin-top: 12px; color: var(--color-slate);">Not at all. We use advanced voice synthesis
+                        with natural pauses, "umms," and intonation. Most callers cannot distinguish our AI from a human
+                        receptionist.</p>
+                </details>
+
+                <details
+                    style="padding: 20px; background: white; border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 16px; cursor: pointer;">
+                    <summary
+                        style="font-weight: 600; font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        Can it schedule appointments directly?
+                        <span style="color: var(--color-primary); font-size: 1.5rem;">+</span>
+                    </summary>
+                    <p style="margin-top: 12px; color: var(--color-slate);">Yes. The AI connects to your calendar
+                        (Google Calendar, Calendly, ServiceTitan, etc.) to check real-time availability and book slots
+                        instantly.</p>
+                </details>
+
+                <details
+                    style="padding: 20px; background: white; border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 16px; cursor: pointer;">
+                    <summary
+                        style="font-weight: 600; font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        What happens if the AI doesn't know the answer?
+                        <span style="color: var(--color-primary); font-size: 1.5rem;">+</span>
+                    </summary>
+                    <p style="margin-top: 12px; color: var(--color-slate);">We program "graceful handoffs." If a query
+                        is too complex, the AI will take a message, flag it as urgent, and alert a human staff member
+                        via SMS/Email immediately.</p>
+                </details>
+
+                <details
+                    style="padding: 20px; background: white; border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 16px; cursor: pointer;">
+                    <summary
+                        style="font-weight: 600; font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        Is it HIPAA compliant?
+                        <span style="color: var(--color-primary); font-size: 1.5rem;">+</span>
+                    </summary>
+                    <p style="margin-top: 12px; color: var(--color-slate);">Yes, we have specialized infrastructure for
+                        healthcare clients that is fully HIPAA compliant, ensuring patient data is secure and encrypted.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Enhanced CTA Section -->
+    <section
+        style="padding: 80px 0; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Ready to stop missing revenue?</h2>
+            <p
+                style="font-size: 1.2rem; color: #cbd5e1; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Deploy your 24/7 Voice AI agent today and capture every lead, day or night.
+            </p>
+            <a href="../../index.html#contact" class="btn btn-primary shiny-button btn-lg"
+                style="background: var(--color-primary); color: #0f172a; font-weight: 800; border: none;">
+                Get My A.I. Agent
+            </a>
+            <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">No credit card required for demo.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2026 Innovate Solutions</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

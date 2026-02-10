@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Installers Strategy & Automation | Innovat3 Solutions</title>
+    <meta name="description"
+        content="Transform your Window Installers business with AI automation, custom apps, and growth strategies. Innovat3 Solutions helps you scale.">
+
+    <!-- Base styles and Favicon -->
+    <link rel="icon" type="image/png" href="../../images/Innovat3-logos/innovate-favicon.png">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/faq-carousel.css">
+    <link rel="stylesheet" href="../../css/mobile-optimizations.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+        <style>
+        /* Niche Page Specific Variables */
+        :root {
+            --color-primary: #84CC16;
+            --niche-hero-bg: #ffffff;
+            --niche-accent: #84CC16;
+            --niche-text: var(--color-text);
+            --niche-card-bg: #ffffff;
+            --niche-card-text: #1e293b;
+            --niche-secondary-bg: #f8fafc;
+        }
+            }
+
+            ;
+            /* Dynamic Light BG for sections */
+        }
+
+        body {
+            background-color: var(--niche-hero-bg);
+            color: var(--niche-text);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .serif-title {
+            font-family: 'Merriweather', serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+
+
+        /* HERO SECTION - MONOTREE STYLE */
+        .niche-hero {
+            position: relative;
+            padding: 180px 0 100px;
+            background-color: #ffffff;
+            /* Clean White BG */
+            color: #0f172a;
+            /* Dark Slate Text */
+            overflow: hidden;
+        }
+
+        .niche-hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            /* Large Headline */
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: #0f172a;
+            /* Force Dark Color */
+            font-weight: 300;
+            /* Bold per Monotree spec */
+            letter-spacing: -0.02em;
+        }
+
+        .hero-text .sub-headline {
+            font-size: 1.125rem;
+            color: #334155;
+            /* Slate 700 */
+            margin-bottom: 2.5rem;
+            max-width: 500px;
+            line-height: 1.6;
+        }
+
+        /* Monotree Input Group */
+        .hero-cta-group {
+            display: flex;
+            gap: 12px;
+            width: 100%;
+            max-width: 450px;
+            margin-bottom: 40px;
+        }
+
+        .hero-input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            background: #f8fafc;
+            color: #0f172a;
+            font-size: 1rem;
+        }
+
+        .hero-input:focus {
+            outline: none;
+            border-color: #84CC16;
+            background: #fff;
+        }
+
+        .hero-btn {
+            background-color: #84CC16;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .hero-btn:hover {
+            background-color: #65a30d;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image-wrapper img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            /* Monotree Isometric Look */
+            transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+            border-radius: 20px;
+            box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            background: white;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-image-wrapper img:hover {
+            transform: perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(-10px);
+        }
+
+        /* METHODOLOGY / PILLARS SECTION */
+        .pillars-section {
+            padding: 100px 0;
+            background: var(--niche-secondary-bg);
+            /* Using Dynamic Light BG */
+            color: var(--niche-card-text);
+            position: relative;
+        }
+
+        .pillars-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            position: relative;
+        }
+
+        /* Connecting Line (Desktop) */
+        .pillars-grid::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 15%;
+            right: 15%;
+            height: 2px;
+            background: #cbd5e1;
+            z-index: 0;
+        }
+
+        .pillar-card {
+            background: #ffffff;
+            padding: 2.5rem 2rem;
+            border-radius: 1.5rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            background-clip: padding-box;
+            /* To ensure line goes behind */
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            border-color: var(--niche-accent);
+        }
+
+        .step-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            background: white;
+            border: 2px solid var(--niche-accent);
+            border-radius: 50%;
+            margin-bottom: 2rem;
+            color: var(--niche-accent);
+            font-weight: 800;
+            font-size: 1.5rem;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .pillar-icon-wrapper {
+            display: none;
+            /* Replaced by step badge for cleaner flow */
+        }
+
+        .pillar-title {
+            font-family: 'Merriweather', serif;
+            font-size: 1.35rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        /* STATS SECTION */
+        .stats-section {
+            padding: 100px 0;
+            background: #ffffff;
+            border-top: 1px solid #f1f5f9;
+            color: var(--niche-card-text);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-icon-wrapper {
+            width: 60px;
+            height: 60px;
+            background: #f1f5f9;
+            color: var(--niche-card-text);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover .stat-icon-wrapper {
+            background: var(--niche-accent);
+            color: #1e293b;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 300;
+            color: var(--niche-card-text);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #1e293b;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+
+        .stat-desc {
+            font-size: 0.9rem;
+            color: #64748b;
+            line-height: 1.6;
+            max-width: 250px;
+            margin: 0 auto;
+        }
+
+        /* SERVICES SECTION */
+        .services-section {
+            padding: 100px 0;
+            background: #ffffff;
+            color: var(--niche-card-text);
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+
+
+        /* CASE STUDIES */
+        .case-section {
+            padding: 100px 0;
+            background: #f1f5f9;
+            color: var(--niche-card-text);
+        }
+
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .case-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .case-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .case-img {
+            height: 200px;
+            background: #cbd5e1;
+            /* Placeholder grey */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .case-tag {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(15, 23, 42, 0.8);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            backdrop-filter: blur(4px);
+        }
+
+        .case-content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .case-meta {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .case-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        /* CTA SECTION */
+        .final-cta {
+            padding: 120px 0;
+            /* background handled inline dynamically */
+            background-size: cover;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .niche-hero-content,
+            .pillars-grid,
+            .stats-grid,
+            .expert-wrapper,
+            .services-grid,
+            .case-grid {
+                grid-template-columns: 1fr;
+                flex-direction: column;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Nav -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="../../index.html" class="logo">
+                <img src="../../images/Innovat3-logos/innovate-logo-black-transparent.png" alt="Innovate Solutions"
+                    class="logo-full">
+            </a>
+
+            <div class="nav-links">
+                <div class="nav-item dropdown">
+                    <a href="../../index.html#services" class="dropdown-trigger">Services <span
+                            class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="../services/voice-ai.html">Voice AI Agents</a>
+                        <a href="../services/custom-apps.html">Custom Apps</a>
+                        <a href="../services/review-automation.html">Review Management</a>
+                        <a href="../services/private-ai-infra.html">Private AI</a>
+                        <a href="../services/lead-database.html">Lead Capture</a>
+                        <a href="../services/data-intelligence.html">Data Intelligence</a>
+                        <a href="../services/workflow-automation.html">Workflow Automations</a>
+                        <a href="../services/web-development.html">Web Development</a>
+                        <a href="../services/consulting.html">Growth Consulting</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="../../index.html#niches" class="dropdown-trigger">Industries <span
+                            class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu niche-dropdown-menu">
+                        <div class="niche-dropdown-grid">
+                            <!-- Column 1: Home Services -->
+                            <div class="niche-col">
+                                <h4>Home & Property</h4>
+                                <a href="../niches/pool-cleaners-and-maintenance.html">Pool Cleaners</a>
+                                <a href="../niches/pool-contractors-and-construction.html">Pool Construction</a>
+                                <a href="../niches/landscaping-and-lawn-care.html">Landscaping</a>
+                                <a href="../niches/hvac-services.html">HVAC Services</a>
+                                <a href="../niches/general-contractors.html">General Contractors</a>
+                                <a href="../niches/window-installers.html">Window Installers</a>
+                                <a href="../niches/plumbers.html">Plumbers</a>
+                                <a href="../niches/painters.html">Painters</a>
+                                <a href="../niches/electricians.html">Electricians</a>
+                                <a href="../niches/property-management.html">Property Management</a>
+                            </div>
+
+                            <!-- Column 2: Health & Beauty -->
+                            <div class="niche-col">
+                                <h4>Health & Medical</h4>
+                                <a href="../niches/dentists-and-orthodontists.html">Dentists</a>
+                                <a href="../niches/family-practice-doctors.html">Family Practice</a>
+                                <a href="../niches/veterinarians.html">Veterinarians</a>
+                                <a href="../niches/med-spas-and-laser-facilities.html">Med Spas</a>
+
+                                <h4 class="mt-sm">Beauty & Care</h4>
+                                <a href="../niches/hair-salons-and-stylists.html">Hair Salons</a>
+                                <a href="../niches/barbershops.html">Barbershops</a>
+                                <a href="../niches/nail-salons.html">Nail Salons</a>
+                                <a href="../niches/pet-groomers.html">Pet Groomers</a>
+                            </div>
+
+                            <!-- Column 3: Professional & Other -->
+                            <div class="niche-col">
+                                <h4>Professional Services</h4>
+                                <a href="../niches/attorneys-and-law-firms.html">Attorneys</a>
+                                <a href="../niches/accountants-and-cpas.html">Accountants & CPAs</a>
+                                <a href="../niches/financial-managers-and-advisors.html">Financial Advisors</a>
+                                <a href="../niches/real-estate-brokers.html">Real Estate Brokers</a>
+
+                                <h4 class="mt-sm">Retail & Auto</h4>
+                                <a href="../niches/auto-mechanics-and-repair-shops.html">Auto Mechanics</a>
+                                <a href="../niches/window-tinting-and-auto-detail.html">Auto Detail/Tint</a>
+                                <a href="../niches/restaurants.html">Restaurants</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="../blog.html">Blog</a>
+                <a href="../../index.html#process">Process</a>
+                <a href="../../index.html#about">About</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="../../index.html#contact" class="btn btn-primary shiny-button">Get Started</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 1. DYNAMIC HERO SECTION -->
+    
+    <header class="niche-hero">
+        <div class="container niche-hero-content">
+            <div class="hero-text">
+                <h1 class="font-primary">
+                    Qualify Leads Before You Drive Out
+                    <!-- SVG Scribble Underline -->
+                    <svg style="position: absolute; width: 250px; height: 12px; bottom: -12px; left: 0; color: var(--niche-accent); opacity: 0.6;" viewBox="0 0 100 10" preserveAspectRatio="none">
+                        <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="3" fill="none" />
+                    </svg>
+                </h1>
+                <p class="sub-headline">
+                    Stop driving across town for tire-kickers. Qualify homeowners automatically with virtual estimate tools and AI chatbots. Stop wasting time giving free estimates that don't close.
+                </p>
+
+                <div class="hero-cta-group">
+                    <input type="email" placeholder="Enter work email" class="hero-input">
+                    <button class="hero-btn">Book a demo</button>
+                </div>
+
+                <!-- Trust / Stats Row -->
+                <div style="display: flex; align-items: center; gap: 3rem; border-top: 1px solid #e2e8f0; padding-top: 2rem; margin-top: 2rem;">
+                    <div>
+                        <div style="font-size: 2rem; font-weight: 300; color: #0f172a; line-height: 1;">68% Leads Go Cold</div>
+                        <div style="font-size: 0.875rem; color: #64748b; font-weight: 500; margin-top: 4px;">Time spent driving to give free estimates that don't close. (Solved)</div>
+                    </div>
+                    <!-- Star Rating -->
+                    <div style="display: flex; flex-direction: column; gap: 4px;">
+                        <div style="display: flex; gap: 2px;">
+                            <i data-lucide="star" style="fill: #0f172a; color: #0f172a; width: 16px;"></i>
+                            <i data-lucide="star" style="fill: #0f172a; color: #0f172a; width: 16px;"></i>
+                            <i data-lucide="star" style="fill: #0f172a; color: #0f172a; width: 16px;"></i>
+                            <i data-lucide="star" style="fill: #0f172a; color: #0f172a; width: 16px;"></i>
+                            <i data-lucide="star" style="fill: #0f172a; color: #0f172a; width: 16px;"></i>
+                        </div>
+                        <span style="font-size: 0.875rem; font-weight: 600; color: #0f172a;">4.9/5 Average Rating</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image-wrapper">
+                 <img src="../../images/niche_graphics/window-installers.png" alt="Window Installers">
+            </div>
+        </div>
+    </header>
+    
+
+
+    <!-- 2. STRATEGIC PILLARS (The Method) -->
+    <section class="pillars-section">
+        <div class="container">
+            <div class="pillars-header">
+                <span style="text-transform: uppercase; letter-spacing: 0.1em; color: #64748b; font-size: 0.875rem;">The
+                    Methodology</span>
+                <h2 style="font-size: 2.5rem; margin-top: 0.5rem;">The Blueprint to Market Dominance</h2>
+                <p style="max-width: 600px; margin: 1rem auto; color: #64748b;">A systematic approach to solving the
+                    biggest bottlenecks in the Window Installers industry.</p>
+            </div>
+
+            <div class="pillars-grid">
+                <!-- Pillar 1: The Bottleneck -->
+                <div class="pillar-card">
+                    <div class="step-badge">01</div>
+                    <h3 class="pillar-title">The Bottleneck</h3>
+                    <p style="font-size: 0.95rem; line-height: 1.6;">Time spent driving to give free estimates that don't close.</p>
+                </div>
+
+                <!-- Pillar 2: The Impact -->
+                <div class="pillar-card">
+                    <div class="step-badge">02</div>
+                    <h3 class="pillar-title">The Reality</h3>
+                    <p style="font-size: 0.95rem; line-height: 1.6;">68% Leads Go Cold</p>
+                </div>
+
+                <!-- Pillar 3: The Solution -->
+                <div class="pillar-card" style="border-color: var(--niche-accent); background: #fcfffe;">
+                    <div class="step-badge" style="background: var(--niche-accent); color: #1e293b;">03</div>
+                    <h3 class="pillar-title">The Solution</h3>
+                    <p style="font-size: 0.95rem; line-height: 1.6;">Automated pre-qualification forms to ensure appointments are with ready-to-buy homeowners.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SERVICES SECTION -->
+    <section class="services-section" style="background: white;">
+        <div class="container">
+            <div class="services-header">
+                <span style="text-transform: uppercase; letter-spacing: 0.1em; color: #64748b; font-size: 0.875rem;">Our
+                    Capabilities</span>
+                <h2 class="serif-title" style="font-size: 2.5rem; margin-top: 0.5rem;">Built for the Window Installers
+                    Industry</h2>
+                <p style="max-width: 600px; margin: 1rem auto; color: #64748b;">Comprehensive tools and strategies
+                    designed to help you scale.</p>
+            </div>
+
+            <div class="services-grid">
+                
+            <div class="service-card shine-border">
+                <div class="card-content-layer">
+                    <div class="service-icon-wrapper"><i data-lucide="mic"></i></div>
+                    <h3 class="service-title">Voice AI Agents</h3>
+                    <p class="service-desc">Automate 24/7 appointment booking and customer service for your Window Installers business.</p>
+                    <a href="../services/voice-ai.html" class="service-link">
+                        Learn More <i data-lucide="arrow-right" size="16"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="service-card shine-border">
+                <div class="card-content-layer">
+                    <div class="service-icon-wrapper"><i data-lucide="smartphone"></i></div>
+                    <h3 class="service-title">Custom Apps</h3>
+                    <p class="service-desc">Branded mobile apps for Window Installers customers to book, order, and manage their profile.</p>
+                    <a href="../services/custom-apps.html" class="service-link">
+                        Learn More <i data-lucide="arrow-right" size="16"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="service-card shine-border">
+                <div class="card-content-layer">
+                    <div class="service-icon-wrapper"><i data-lucide="star"></i></div>
+                    <h3 class="service-title">Review Management</h3>
+                    <p class="service-desc">Automate 5-star review requests to boost your local Window Installers SEO ranking.</p>
+                    <a href="../services/review-automation.html" class="service-link">
+                        Learn More <i data-lucide="arrow-right" size="16"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="service-card shine-border">
+                <div class="card-content-layer">
+                    <div class="service-icon-wrapper"><i data-lucide="shield"></i></div>
+                    <h3 class="service-title">Private AI</h3>
+                    <p class="service-desc">Secure, private AI models trained on your specific Window Installers data and documents.</p>
+                    <a href="../services/private-ai-infra.html" class="service-link">
+                        Learn More <i data-lucide="arrow-right" size="16"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="service-card shine-border">
+                <div class="card-content-layer">
+                    <div class="service-icon-wrapper"><i data-lucide="magnet"></i></div>
+                    <h3 class="service-title">Lead Capture</h3>
+                    <p class="service-desc">Instant speed-to-lead automation to convert new Window Installers inquiries into bookings.</p>
+                    <a href="../services/lead-database.html" class="service-link">
+                        Learn More <i data-lucide="arrow-right" size="16"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="service-card shine-border">
+                <div class="card-content-layer">
+                    <div class="service-icon-wrapper"><i data-lucide="bar-chart"></i></div>
+                    <h3 class="service-title">Data Intelligence</h3>
+                    <p class="service-desc">Unified dashboards to track every Window Installers KPI and revenue metric in real-time.</p>
+                    <a href="../services/data-intelligence.html" class="service-link">
+                        Learn More <i data-lucide="arrow-right" size="16"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="service-card shine-border">
+                <div class="card-content-layer">
+                    <div class="service-icon-wrapper"><i data-lucide="zap"></i></div>
+                    <h3 class="service-title">Workflow Automation</h3>
+                    <p class="service-desc">Eliminate repetitive Window Installers admin tasks and reclaim your time.</p>
+                    <a href="../services/workflow-automation.html" class="service-link">
+                        Learn More <i data-lucide="arrow-right" size="16"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="service-card shine-border">
+                <div class="card-content-layer">
+                    <div class="service-icon-wrapper"><i data-lucide="trending-up"></i></div>
+                    <h3 class="service-title">Growth Consulting</h3>
+                    <p class="service-desc">Strategic guidance and implementation support to scale your Window Installers operations.</p>
+                    <a href="../services/consulting.html" class="service-link">
+                        Learn More <i data-lucide="arrow-right" size="16"></i>
+                    </a>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+    </section>
+
+        <!-- 4. STATS BENTO -->
+    <section class="stats-bento-section">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 60px;">
+                <span class="subtitle">By The Numbers</span>
+                <h2 style="font-weight: 300; font-size: 2.5rem;">Results That <span class="highlight-merriweather">Speak</span> for Themselves</h2>
+                <p style="max-width: 600px; margin: 1rem auto; color: #64748b;">Real metrics from real businesses using our automation solutions.</p>
+            </div>
+                        <div class="stats-bento-grid">
+                                <!-- Client Retention -->
+                <div class="stats-bento-card">
+                    <div class="bento-stat-visual">
+                        <div class="stat-icon-circle">
+                            <i data-lucide="user-check" size="36"></i>
+                        </div>
+                    </div>
+                    <div class="bento-stat-content">
+                        <div class="stat-number"><span class="counter-anim" data-target="95">0</span>%</div>
+                        <h3>Client Retention</h3>
+                        <p>Automated follow-up keeps clients engaged and coming back.</p>
+                    </div>
+                </div>
+
+                <!-- 24/7 Availability -->
+                <div class="stats-bento-card">
+                    <div class="bento-stat-visual">
+                        <div class="stat-icon-circle">
+                            <i data-lucide="clock" size="36"></i>
+                        </div>
+                    </div>
+                    <div class="bento-stat-content">
+                        <div class="stat-number">24/7</div>
+                        <h3>Always Available</h3>
+                        <p>AI agents capture leads and answer calls around the clock.</p>
+                    </div>
+                </div>
+
+                <!-- Tailored Strategy -->
+                <div class="stats-bento-card">
+                    <div class="bento-stat-visual">
+                        <div class="stat-icon-circle">
+                            <i data-lucide="target" size="36"></i>
+                        </div>
+                    </div>
+                    <div class="bento-stat-content">
+                        <div class="stat-number">100%</div>
+                        <h3>Custom Solutions</h3>
+                        <p>Tailored automation built specifically for your business.</p>
+                    </div>
+                </div>
+
+                <!-- ROI -->
+                <div class="stats-bento-card">
+                    <div class="bento-stat-visual">
+                        <div class="stat-icon-circle">
+                            <i data-lucide="trending-up" size="36"></i>
+                        </div>
+                    </div>
+                    <div class="bento-stat-content">
+                        <div class="stat-number"><span class="counter-anim" data-target="10">0</span>x</div>
+                        <h3>Average ROI</h3>
+                        <p>Typical return on investment within the first year.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CASE STUDIES (Ecosystem) -->
+    <section class="case-section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <span
+                    style="text-transform: uppercase; letter-spacing: 0.1em; color: #64748b; font-size: 0.875rem;">Success
+                    Stories</span>
+                <h2 class="serif-title" style="font-size: 2.5rem;">Results Across the Ecosystem</h2>
+            </div>
+
+            <div class="case-grid">
+
+                <a href="../../blog/case-studies/window-installers-voice-ai-case-study.html" style="text-decoration: none; color: inherit;">
+                    <div class="case-card">
+                        <div class="case-img" style="background-image: url('../../blog/images/voice-ai/hero-voice-ai-home_services.png'); background-size: cover; background-position: center;">
+                             <div class="case-tag">Voice AI</div>
+                        </div>
+                        <div class="case-content">
+                            <div class="case-meta">
+                                <i data-lucide="calendar" size="14"></i> 2025 Study
+                            </div>
+                            <h4 style="font-weight: 300; font-size: 1.1rem; margin-bottom: 0.25rem;">Contractor Doubles Leads</h4>
+                            <div style="font-weight: 800; color: #84cc16; font-size: 0.9rem; margin-bottom: 0.5rem;">280% ROI in Year 1</div>
+                            <p style="font-size: 0.95rem; color: #64748b; margin-top: auto; line-height: 1.5;">Automated lead response systems allowed a general contractor to secure jobs before competitors responded.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="../../blog/case-studies/window-installers-automation-success.html" style="text-decoration: none; color: inherit;">
+                    <div class="case-card">
+                        <div class="case-img" style="background-image: url('../../blog/images/automation/hero-automation-home_services.png'); background-size: cover; background-position: center;">
+                             <div class="case-tag">Automation</div>
+                        </div>
+                        <div class="case-content">
+                            <div class="case-meta">
+                                <i data-lucide="calendar" size="14"></i> 2025 Study
+                            </div>
+                            <h4 style="font-weight: 300; font-size: 1.1rem; margin-bottom: 0.25rem;">Major Retailer Saves $20k/Mo</h4>
+                            <div style="font-weight: 800; color: #84cc16; font-size: 0.9rem; margin-bottom: 0.5rem;">20% Increase in Conversions</div>
+                            <p style="font-size: 0.95rem; color: #64748b; margin-top: auto; line-height: 1.5;">How AI voice agents eliminated missed calls and converted 20% more inquiries into bookings.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="../../blog/case-studies/window-installers-review-management.html" style="text-decoration: none; color: inherit;">
+                    <div class="case-card">
+                        <div class="case-img" style="background-image: url('../../blog/images/review-management/hero-review-management-home_services.png'); background-size: cover; background-position: center;">
+                             <div class="case-tag">Review Management</div>
+                        </div>
+                        <div class="case-content">
+                            <div class="case-meta">
+                                <i data-lucide="calendar" size="14"></i> 2025 Study
+                            </div>
+                            <h4 style="font-weight: 300; font-size: 1.1rem; margin-bottom: 0.25rem;">Dental Practice Adds $127k</h4>
+                            <div style="font-weight: 800; color: #84cc16; font-size: 0.9rem; margin-bottom: 0.5rem;">4.3 to 4.7 Star Rating</div>
+                            <p style="font-size: 0.95rem; color: #64748b; margin-top: auto; line-height: 1.5;">Automated review requests boosted local SEO, driving 18% more new patient inquiries.</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    
+    <section class="faq-carousel-section">
+        <div class="faq-header-container">
+            <div>
+                <span class="subtitle" style="text-transform: uppercase; letter-spacing: 1px; font-size: 0.8rem; margin-bottom: 0.5rem; display: block; opacity: 0.7;">Support</span>
+                <h2 style="font-weight: 300;">Frequently<br><span class="highlight-merriweather">Asked Questions</span></h2>
+            </div>
+            
+            <div class="faq-nav-group">
+                <button class="faq-nav-btn prev" aria-label="Previous">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+                </button>
+                <button class="faq-nav-btn next" aria-label="Next">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="faq-carousel-wrapper">
+            <div class="faq-track">
+                <div class="faq-card">
+                    <h3 class="faq-question">Can customers get window replacement quotes?</h3>
+                    <div class="faq-answer">
+                        <p>Yes. The AI gathers window count, sizes, current issues, and style preferences, then schedules in-home consultations for detailed estimates.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h3 class="faq-question">Does it handle both vinyl and custom windows?</h3>
+                    <div class="faq-answer">
+                        <p>Absolutely. The AI asks about material preferences, energy efficiency goals, and budget to qualify projects appropriately.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h3 class="faq-question">Can it schedule emergency board-ups?</h3>
+                    <div class="faq-answer">
+                        <p>Yes. The AI is available 24/7 for broken window emergencies and can dispatch you or schedule temporary repairs quickly.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h3 class="faq-question">What about commercial window projects?</h3>
+                    <div class="faq-answer">
+                        <p>The AI pre-qualifies commercial jobs by building type, window count, and timeline before booking site visits.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h3 class="faq-question">Can it explain energy efficiency rebates?</h3>
+                    <div class="faq-answer">
+                        <p>Yes. The system provides general information about available rebates and tax credits for energy-efficient windows.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h3 class="faq-question">Does it coordinate installation schedules?</h3>
+                    <div class="faq-answer">
+                        <p>The AI books installation dates, sends prep instructions (like clearing window areas), and confirms appointments.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h3 class="faq-question">Can it handle warranty claims?</h3>
+                    <div class="faq-answer">
+                        <p>Yes. The system verifies warranty coverage, schedules service for covered issues, and documents all warranty work.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h3 class="faq-question">How does it follow up after installation?</h3>
+                    <div class="faq-answer">
+                        <p>The system sends post-installation surveys, requests reviews, and asks about satisfaction once windows are fully installed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+
+    <!-- Footer -->
+    <!-- Footer -->
+        <!-- Unified Contact Section -->
+        <!-- Unified Contact Section -->
+    <section class="unified-contact-section" id="contact">
+        <div class="unified-contact-container">
+            <!-- Left Content -->
+            <div class="contact-left-content">
+                <div class="contact-progress-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot empty"></span>
+                    <span class="dot empty"></span>
+                    <span class="dot empty"></span>
+                </div>
+
+                <h2>See these results in your business</h2>
+                <p>Join hundreds of businesses who've transformed their operations with automation. Let's create a custom solution for your specific needs.</p>
+
+                <a href="#" class="contact-learn-btn">Learn More</a>
+
+                <!-- Features -->
+                <div class="contact-features">
+                    <div class="contact-feature">
+                        <div class="contact-feature-icon">
+                            <i data-lucide="history" size="24"></i>
+                        </div>
+                        <h4>Customer History</h4>
+                        <p>Analyze customer behavior across product lines</p>
+                    </div>
+
+                    <div class="contact-feature">
+                        <div class="contact-feature-icon">
+                            <i data-lucide="bar-chart-3" size="24"></i>
+                        </div>
+                        <h4>Actionable Insights</h4>
+                        <p>Employ predictive analytics to optimize sales pipelines</p>
+                    </div>
+
+                    <div class="contact-feature">
+                        <div class="contact-feature-icon">
+                            <i data-lucide="layers" size="24"></i>
+                        </div>
+                        <h4>Identify Patterns</h4>
+                        <p>Utilize live data to improve conversion rates</p>
+                    </div>
+
+                    <div class="contact-feature">
+                        <div class="contact-feature-icon">
+                            <i data-lucide="target" size="24"></i>
+                        </div>
+                        <h4>Predictive Analysis</h4>
+                        <p>Employ real-time data to refine marketing strategies</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Form -->
+            <div class="contact-form-wrapper">
+                <form id="unified-contact-form" action="#" method="POST">
+                    <div class="contact-form-row">
+                        <div class="contact-form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="James..." required>
+                        </div>
+
+                        <div class="contact-form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Smith..." required>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-row">
+                        <div class="contact-form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="robertapouros@gmail.com" required>
+                        </div>
+
+                        <div class="contact-form-group">
+                            <label for="country">Country</label>
+                            <select id="country" name="country" required>
+                                <option value="USA">🇺🇸 USA</option>
+                                <option value="Canada">🇨🇦 Canada</option>
+                                <option value="UK">🇬🇧 United Kingdom</option>
+                                <option value="Australia">🇦🇺 Australia</option>
+                                <option value="Other">🌍 Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-group full-width">
+                        <label for="role">Your Role</label>
+                        <select id="role" name="role" required>
+                            <option value="">Select your role</option>
+                            <option value="Business Owner">Business Owner</option>
+                            <option value="Manager">Manager</option>
+                            <option value="Director">Director</option>
+                            <option value="C-Level">C-Level Executive</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="contact-form-group full-width">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Enter message..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="contact-submit-btn">Contact Us</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Brand -->
+                <div class="footer-col" style="flex: 2;">
+                    <a href="../../index.html" class="footer-logo">
+                        <img src="../../images/Innovat3-logos/innovate-logo-white-transparent.png"
+                            alt="Innovate Solutions" class="logo-full" style="height: 30px;">
+                    </a>
+                    <p>Modernizing Miami one automated workflow at a time.</p>
+                </div>
+
+                <!-- Column 2: Services -->
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="../services/voice-ai.html">Voice AI Agents</a>
+                    <a href="../services/custom-apps.html">Custom Apps</a>
+                    <a href="../services/review-automation.html">Review Management</a>
+                    <a href="../services/private-ai-infra.html">Private AI</a>
+                    <a href="../services/lead-database.html">Lead Capture</a>
+                    <a href="../services/data-intelligence.html">Data Intelligence</a>
+                    <a href="../services/workflow-automation.html">Workflow Automation</a>
+                    <a href="../services/consulting.html">Growth Consulting</a>
+                </div>
+
+                <!-- Column 3: Industries -->
+                <div class="footer-col">
+                    <h4>Industries</h4>
+                    <a href="../niches/general-contractors.html">Home Services</a>
+                    <a href="../niches/family-practice-doctors.html">Medical & Health</a>
+                    <a href="../niches/attorneys-and-law-firms.html">Legal & Prof.</a>
+                    <a href="../niches/hair-salons-and-stylists.html">Beauty & Wellness</a>
+                    <a href="../niches/restaurants.html">Retail & Hospitality</a>
+                    <a href="../niches/auto-mechanics-and-repair-shops.html">Automotive</a>
+                    <a href="../niches/real-estate-brokers.html">Real Estate</a>
+                    <a href="../../index.html#niches"
+                        style="color: var(--primary-color); font-weight: 600; margin-top: 8px;">View All Industries
+                        &rarr;</a>
+                </div>
+
+                <!-- Column 4: Resources -->
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="../../index.html#process">Process</a>
+                    <a href="../../index.html#about">About</a>
+                    <a href="../../index.html#contact">Contact</a>
+                    <a href="mailto:hello@innovat3solutions.com">hello@innovat3solutions.com</a>
+                    <p style="margin-top: 10px; opacity: 0.6;">Miami, FL</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Innovate Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/count-up.js"></script>
+    <script src="../../js/components/tech-stats.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="../../js/faq-carousel.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workflow Automation | Innovat3 Solutions</title>
+    <!-- Base styles and Favicon -->
+    <link rel="icon" type="image/png" href="../../images/Innovat3-logos/innovate-favicon.png">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Specific page overrides */
+        .page-header {
+            padding: 180px 0 80px;
+            background: radial-gradient(circle at top right, #f8fafc, #ffffff);
+            text-align: center;
+        }
+
+        .pain-point-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .pain-card {
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid #f1f5f9;
+            background: white;
+            transition: transform 0.2s;
+        }
+
+        .pain-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .solution-section {
+            background: var(--color-dark);
+            color: white;
+            padding: 80px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Nav -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="../../index.html" class="logo">
+                <img src="../../images/Innovat3-logos/innovate-logo-black-transparent.png" alt="Innovate Solutions"
+                    class="logo-full">
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html#services">Services</a>
+                <a href="../../pages/industries.html">Industries</a>
+            </div>
+            <div class="nav-actions">
+                <a href="../../index.html#contact" class="btn btn-primary shiny-button">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <div class="badge">Service Spotlight</div>
+            <h1>Workflow Automation</h1>
+            <p class="hero-sub">Connect your favorite apps and put your manual tasks on auto-pilot.</p>
+            <div style="margin-top: 2rem;">
+                <p style="max-width: 600px; margin: 0 auto; color: var(--color-slate);">
+                    We build invisible bridges between your software (CRM, Email, Slack, Billing) so data flows
+                    instantly without you touching a keyboard.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Problem Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">The "Human Glue" Problem</h2>
+            <div class="pain-point-grid">
+                <div class="pain-card">
+                    <h3>The Copy/Paste Trap</h3>
+                    <p><strong>Scenario:</strong> You get a new lead via email. You manually type their name into your
+                        CRM. Then into your invoice software.</p>
+                    <p><strong>Outcome:</strong> You waste 15 minutes per client and risk typos that ruin the
+                        relationship.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>The "Did you send it?" Game</h3>
+                    <p><strong>Scenario:</strong> Your sales team closes a deal. Operations doesn't know until they see
+                        the contract 3 days later.</p>
+                    <p><strong>Outcome:</strong> Onboarding is delayed, and the customer feels neglected immediately
+                        after buying.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>The Tool Silo</h3>
+                    <p><strong>Scenario:</strong> You pay for specialized tools (Calendly, QuickBooks, Docusign) but
+                        they don't talk to each other.</p>
+                    <p><strong>Outcome:</strong> You have fragmented data and can't trigger actions based on events in
+                        other systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution / Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="text-center" style="max-width: 700px; margin: 0 auto;">
+                <div class="google-review-badge">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google"
+                        class="g-icon">
+                    <div class="stars">★★★★★</div>
+                    <span class="review-score">5.0</span>
+                    <span class="review-count">(Efficiency Experts)</span>
+                </div>
+                <h2>The Invisible Workforce</h2>
+                <p class="text-muted">Connect your apps to create a self-driving business engine that works while you
+                    sleep.</p>
+            </div>
+
+            <div class="feature-grid">
+                <!-- Card 1 -->
+                <div class="feature-card shine-border">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                        </svg>
+                    </div>
+                    <h3>Instant Triggers</h3>
+                    <p>Trigger actions immediately. When a contract is signed, automatically create the project folder,
+                        invoice, and welcome email.</p>
+                    <div class="feature-visual">
+                        <div style="font-size:11px; text-align:center;">
+                            Signed PDF ⚡️ → Invoice Gen ⚡️ → Email Sent
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="feature-card shine-border">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3>Cross-Platform Sync</h3>
+                    <p>Keep your data identical across all tools. Update a phone number in Google Contacts, and it
+                        updates in your CRM and Billing software instantly.</p>
+                    <div class="feature-visual">
+                        <div style="display:flex; justify-content:center; gap:10px;">
+                            <div style="background:#f1f5f9; padding:5px 10px; border-radius:4px; font-size:10px;">CRM
+                            </div>
+                            <div style="font-size:10px;">⇄</div>
+                            <div style="background:#f1f5f9; padding:5px 10px; border-radius:4px; font-size:10px;">Email
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="feature-card shine-border">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
+                            </path>
+                            <line x1="12" y1="9" x2="12" y2="13"></line>
+                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                        </svg>
+                    </div>
+                    <h3>Error Handling</h3>
+                    <p>Our workflows include intelligent error logic. If a connection fails, we get alerted immediately
+                        so no data is ever lost.</p>
+                    <div class="feature-visual">
+                        <div class="demo-chat-bubble"
+                            style="background:#fff1f2; color:#be123c; width:100%; border:1px solid #fda4af;">
+                            ⚠️ Alert: Connection Retrying... Success!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 60px; text-align: center;">
+                <a href="#contact" class="btn btn-primary shiny-button btn-lg">Automate My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="section">
+        <div class="container text-center">
+            <h2>Industries That Use This</h2>
+            <p style="margin-bottom: 40px;">Seamless connections power high-growth sectors:</p>
+
+            <div class="pain-point-grid" style="margin-bottom: 60px;">
+                <a href="../niches/real-estate-agents.html" style="text-decoration: none; color: inherit;">
+                    <div class="pain-card" style="text-align: center; border-color: var(--color-primary);">
+                        <h4>Real Estate</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-slate);">Sync MLS leads to CRM instantly.</p>
+                    </div>
+                </a>
+                <a href="../niches/ecommerce-brands.html" style="text-decoration: none; color: inherit;">
+                    <div class="pain-card" style="text-align: center; border-color: var(--color-primary);">
+                        <h4>E-Commerce</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-slate);">Auto-add customers to email flows.</p>
+                    </div>
+                </a>
+                <a href="../niches/logistics-and-trucking.html" style="text-decoration: none; color: inherit;">
+                    <div class="pain-card" style="text-align: center; border-color: var(--color-primary);">
+                        <h4>Logistics</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-slate);">Automate dispatch notifications.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div style="background: #f8fafc; padding: 40px; border-radius: 16px;">
+                <h3>Don't see your industry?</h3>
+                <p>We connect tools for 25+ business niches.</p>
+                <a href="../industries.html" class="btn btn-primary shiny-button"
+                    style="margin-top: 20px; display: inline-block;">View All Industries</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: FAQ Section -->
+    <section class="section">
+        <div class="container" style="max-width: 800px;">
+            <h2 class="text-center">Frequently Asked Questions</h2>
+            <div class="faq-accordion" style="margin-top: 40px;">
+                <details
+                    style="padding: 20px; background: white; border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 16px; cursor: pointer;">
+                    <summary
+                        style="font-weight: 600; font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        What happens if an API breaks?
+                        <span style="color: var(--color-primary); font-size: 1.5rem;">+</span>
+                    </summary>
+                    <p style="margin-top: 12px; color: var(--color-slate);">Our workflows include robust error handling.
+                        If a connection drops, we are alerted immediately, and the system attempts to retry the action
+                        automatically.</p>
+                </details>
+
+                <details
+                    style="padding: 20px; background: white; border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 16px; cursor: pointer;">
+                    <summary
+                        style="font-weight: 600; font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        Do I need coding skills?
+                        <span style="color: var(--color-primary); font-size: 1.5rem;">+</span>
+                    </summary>
+                    <p style="margin-top: 12px; color: var(--color-slate);">No. We build, test, and deploy the
+                        automations for you. You just enjoy the time savings.</p>
+                </details>
+
+                <details
+                    style="padding: 20px; background: white; border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 16px; cursor: pointer;">
+                    <summary
+                        style="font-weight: 600; font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        Can it trigger SMS?
+                        <span style="color: var(--color-primary); font-size: 1.5rem;">+</span>
+                    </summary>
+                    <p style="margin-top: 12px; color: var(--color-slate);">Yes. We can trigger SMS, emails, Slack
+                        notifications, or even direct mail based on specific actions in your CRM or billing software.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Enhanced CTA Section -->
+    <section
+        style="padding: 80px 0; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Put Your Business on Auto-Pilot</h2>
+            <p
+                style="font-size: 1.2rem; color: #cbd5e1; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Stop being the "human glue" that holds your apps together.
+            </p>
+            <a href="../../index.html#contact" class="btn btn-primary shiny-button btn-lg"
+                style="background: var(--color-primary); color: #0f172a; font-weight: 800; border: none;">
+                Automate My Workflows
+            </a>
+            <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">Free workflow audit capability.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2026 Innovate Solutions</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

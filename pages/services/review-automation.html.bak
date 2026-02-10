@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Automation | Innovat3 Solutions</title>
+    <!-- Base styles and Favicon -->
+    <link rel="icon" type="image/png" href="../../images/Innovat3-logos/innovate-favicon.png">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Specific page overrides */
+        .page-header {
+            padding: 180px 0 80px;
+            background: radial-gradient(circle at top right, #f8fafc, #ffffff);
+            text-align: center;
+        }
+
+        .pain-point-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .pain-card {
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid #f1f5f9;
+            background: white;
+            transition: transform 0.2s;
+        }
+
+        .pain-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .solution-section {
+            background: var(--color-dark);
+            color: white;
+            padding: 80px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Nav -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="../../index.html" class="logo">
+                <img src="../../images/Innovat3-logos/innovate-logo-black-transparent.png" alt="Innovate Solutions"
+                    class="logo-full">
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html#services">Services</a>
+                <a href="../../pages/industries.html">Industries</a>
+            </div>
+            <div class="nav-actions">
+                <a href="../../index.html#contact" class="btn btn-primary shiny-button">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <div class="badge">Service Spotlight</div>
+            <h1>Review Automation</h1>
+            <p class="hero-sub">Dominate local SEO and bury negative feedback by automating 5-star review collection.
+            </p>
+            <div style="margin-top: 2rem;">
+                <p style="max-width: 600px; margin: 0 auto; color: var(--color-slate);">
+                    We are experts in reputation management systems that trigger reviewing requests at the perfect
+                    moment of customer satisfaction.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Problem Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">Your Reputation is Your Revenue</h2>
+            <div class="pain-point-grid">
+                <div class="pain-card">
+                    <h3>The Silent Majority</h3>
+                    <p><strong>Scenario:</strong> You serve 100 happy customers and 1 angry one. Only the angry one
+                        writes a review.</p>
+                    <p><strong>Outcome:</strong> Your rating drops to 3.5 stars, and you lose trust, even though 99% of
+                        people loved your service.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>The Volume Problem</h3>
+                    <p><strong>Scenario:</strong> You run a high-volume nail salon or restaurant. You physically can't
+                        ask every single person to review you.</p>
+                    <p><strong>Outcome:</strong> Bad reviews stick out because you don't have enough volume of good
+                        reviews to dilute them.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>The SEO Ghost Town</h3>
+                    <p><strong>Scenario:</strong> Your Google Business Profile hasn't had a new review in 3 months.</p>
+                    <p><strong>Outcome:</strong> Google's algorithm decides you are inactive and pushes your competitors
+                        above you in the "Map Pack" search results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution / Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="text-center" style="max-width: 700px; margin: 0 auto;">
+                <div class="google-review-badge">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google"
+                        class="g-icon">
+                    <div class="stars">★★★★★</div>
+                    <span class="review-score">5.0</span>
+                    <span class="review-count">(Reputation Masters)</span>
+                </div>
+                <h2>Turn Happy Customers Into Marketers</h2>
+                <p class="text-muted">Automate the "ask" and watch your Google Profile climb to the #1 spot in your
+                    city.</p>
+            </div>
+
+            <div class="feature-grid">
+                <!-- Card 1 -->
+                <div class="feature-card shine-border">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Smart SMS Requests</h3>
+                    <p>Emails get ignored. Texts get read. We send friendly review requests via SMS 1 hour after
+                        service, maximizing conversion.</p>
+                    <div class="feature-visual">
+                        <div class="demo-chat-bubble ai" style="width:100%; font-size:11px;">
+                            "Hi Sarah! Thanks for visiting. Would you mind tapping here to rate us?"
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="feature-card shine-border">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                            </polygon>
+                        </svg>
+                    </div>
+                    <h3>Feedback "Gatekeeper"</h3>
+                    <p>We ask for a rating *first*. 4-5 stars go to Google. 1-3 stars go to a private feedback form,
+                        keeping bad reviews offline.</p>
+                    <div class="feature-visual">
+                        <div style="display:flex; gap:5px; justify-content:center;">
+                            <span style="color:#fbbf24;">★</span><span style="color:#fbbf24;">★</span><span
+                                style="color:#fbbf24;">★</span><span style="color:#fbbf24;">★</span><span
+                                style="color:#e2e8f0;">★</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="feature-card shine-border">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3>Auto-Response AI</h3>
+                    <p>Google rewards businesses that reply. Our AI writes personalized, professional responses to every
+                        review instantly.</p>
+                    <div class="feature-visual">
+                        <div class="demo-chat-bubble" style="font-size:10px; color:#64748b;">
+                            "Thank you for the kind words! We loved helping with..."
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Process Flow -->
+            <div style="margin-top: 80px; margin-bottom: 60px;">
+                <h3 class="text-center" style="margin-bottom: 40px;">How It Works</h3>
+                <div class="process-steps"
+                    style="display: flex; justify-content: space-between; gap: 20px; text-align: center; flex-wrap: wrap;">
+                    <div class="step" style="flex: 1; min-width: 200px;">
+                        <div class="step-num"
+                            style="background: var(--color-primary); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-weight: bold;">
+                            1</div>
+                        <h4>Connect</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-slate);">We sync with your POS or CRM (Toast,
+                            Square, ServiceTitan).</p>
+                    </div>
+                    <div class="step" style="flex: 1; min-width: 200px;">
+                        <div class="step-num"
+                            style="background: var(--color-primary); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-weight: bold;">
+                            2</div>
+                        <h4>Trigger</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-slate);">The system detects a completed
+                            transaction and waits 1 hour.</p>
+                    </div>
+                    <div class="step" style="flex: 1; min-width: 200px;">
+                        <div class="step-num"
+                            style="background: var(--color-primary); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-weight: bold;">
+                            3</div>
+                        <h4>Rank</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-slate);">Happy customers post to Google. You
+                            climb the search rankings.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROI Section -->
+            <div style="background: #1e293b; color: white; border-radius: 20px; padding: 40px; text-align: center;">
+                <h3 style="color: white; margin-bottom: 20px;">The Value of Visibility</h3>
+                <div class="roi-grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;">
+                    <div>
+                        <div style="font-size: 2.5rem; font-weight: 800; color: var(--color-primary);">4.8</div>
+                        <div style="font-size: 0.9rem; opacity: 0.8;">Average Star Rating</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2.5rem; font-weight: 800; color: var(--color-primary);">+28%</div>
+                        <div style="font-size: 0.9rem; opacity: 0.8;">Organic Search Traffic</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2.5rem; font-weight: 800; color: var(--color-primary);">9%</div>
+                        <div style="font-size: 0.9rem; opacity: 0.8;">Revenue Uplift per Star</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- NEW: Visualization Section (Tabbed Demos) -->
+    <section class="section" style="background-color: #f8fafc;">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 20px;">See It In Action</h2>
+            <p class="text-center text-muted" style="max-width: 600px; margin: 0 auto 40px auto;">
+                See how we automate review collection for different business types.
+            </p>
+
+            <!-- Industry Tabs -->
+            <div class="industry-tabs"
+                style="display: flex; justify-content: center; gap: 10px; margin-bottom: 30px; flex-wrap: wrap;">
+                <button onclick="switchTab('restaurant')" class="tab-btn active" id="btn-restaurant">Restaurant</button>
+                <button onclick="switchTab('contractor')" class="tab-btn" id="btn-contractor">Home Services</button>
+                <button onclick="switchTab('medical')" class="tab-btn" id="btn-medical">Medical/Dental</button>
+            </div>
+
+            <!-- Demo Container -->
+            <div class="demo-display-container">
+
+                <!-- Restaurant Scenario -->
+                <div id="demo-restaurant" class="demo-scenario active">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <div class="sms-header">
+                                <div class="back-arrow">‹</div>
+                                <div class="contact-name">Bistro Italiano</div>
+                            </div>
+                            <div class="sms-body">
+                                <div class="sms-bubble from-me">
+                                    Hi Sarah! Thanks for dining with us tonight. We hope you loved the pasta! 🍝<br><br>
+                                    Would you mind taking 10 seconds to rate your experience?<br><br>
+                                    <span
+                                        style="color: blue; text-decoration: underline;">review.link/bistro-italiano</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="demo-context">
+                        <h3>Restaurants & Hospitality</h3>
+                        <p>Trigger texts automatically when a check is closed or a reservation finishes. Capture the
+                            positive sentiment before they leave the parking lot.</p>
+                        <a href="../niches/restaurants.html" class="btn btn-outline" style="margin-top: 20px;">View
+                            Restaurant Page →</a>
+                    </div>
+                </div>
+
+                <!-- Contractor Scenario -->
+                <div id="demo-contractor" class="demo-scenario">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <div class="sms-header">
+                                <div class="back-arrow">‹</div>
+                                <div class="contact-name">Mike's Plumbing</div>
+                            </div>
+                            <div class="sms-body">
+                                <div class="sms-bubble from-me">
+                                    Job Complete: Water Heater Install.<br><br>
+                                    "Mike did a great job today. Very clean and professional."<br><br>
+                                    Thanks for choosing us! Rate Mike here:<br>
+                                    <span
+                                        style="color: blue; text-decoration: underline;">review.link/mikes-plumbing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="demo-context">
+                        <h3>Contractors & Trades</h3>
+                        <p>Integrate with Jobber, Housecall Pro, or ServiceTitan. The moment a job is marked "Complete",
+                            the request goes out.</p>
+                        <a href="../niches/plumbers.html" class="btn btn-outline" style="margin-top: 20px;">View
+                            Plumbing Page →</a>
+                    </div>
+                </div>
+
+                <!-- Medical Scenario -->
+                <div id="demo-medical" class="demo-scenario">
+                    <div class="email-mockup"
+                        style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; width: 100%; max-width: 350px; font-size: 0.9rem;">
+                        <div style="border-bottom: 1px solid #f1f5f9; padding-bottom: 10px; margin-bottom: 10px;">
+                            <strong>From:</strong> Dr. Smith Dental<br>
+                            <strong>Subject:</strong> How was your cleaning?
+                        </div>
+                        <p>Hi John,</p>
+                        <p>It was great seeing you today! We're trying to grow our local practice and would love your
+                            feedback.</p>
+                        <div style="text-align: center; margin: 20px 0;">
+                            <span style="font-size: 1.5rem; color: #fbbf24;">★★★★★</span>
+                        </div>
+                        <p>Click the stars above to share your smile on Google!</p>
+                    </div>
+                    <div class="demo-context">
+                        <h3>Medical & Dental</h3>
+                        <p>Gentle follow-ups via email or SMS appropriate for professional settings. Build trust for
+                            high-value services.</p>
+                        <a href="../niches/dentists-and-orthodontists.html" class="btn btn-outline"
+                            style="margin-top: 20px;">View Dental Page →</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <style>
+            /* Enhanced Tab Styles */
+            .tab-btn {
+                padding: 12px 24px;
+                border: 1px solid #e2e8f0;
+                background: white;
+                border-radius: 50px;
+                cursor: pointer;
+                font-weight: 600;
+                color: var(--color-slate);
+                transition: all 0.3s ease;
+            }
+
+            .tab-btn:hover {
+                border-color: var(--color-primary);
+                color: var(--color-primary);
+            }
+
+            .tab-btn.active {
+                background: var(--color-primary);
+                color: white;
+                border-color: var(--color-primary);
+                box-shadow: 0 4px 12px rgba(132, 204, 22, 0.3);
+            }
+
+            .demo-display-container {
+                max-width: 1000px;
+                margin: 0 auto;
+                background: white;
+                border-radius: 20px;
+                box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                display: flex;
+                min-height: 400px;
+            }
+
+            .demo-scenario {
+                display: none;
+                width: 100%;
+            }
+
+            .demo-scenario.active {
+                display: flex;
+                animation: fadeIn 0.5s ease;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+            }
+
+            @media (max-width: 768px) {
+                .demo-scenario.active {
+                    flex-direction: column;
+                }
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .phone-mockup {
+                width: 300px;
+                height: 500px;
+                /* Shortened for fit */
+                background: #1e293b;
+                border-radius: 30px;
+                padding: 10px;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+                margin: 20px;
+            }
+
+            .phone-screen {
+                background: #f1f5f9;
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .sms-header {
+                background: #e2e8f0;
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-weight: bold;
+                color: #334155;
+            }
+
+            .sms-body {
+                padding: 20px;
+                flex: 1;
+            }
+
+            .sms-bubble {
+                background: #e5e5ea;
+                padding: 15px;
+                border-radius: 18px;
+                font-size: 0.9rem;
+                line-height: 1.4;
+                color: #1f2937;
+                position: relative;
+            }
+
+            .sms-bubble.from-me {
+                border-bottom-left-radius: 4px;
+            }
+
+            .demo-context {
+                flex: 1;
+                padding: 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .demo-context h3 {
+                font-size: 1.8rem;
+                margin-bottom: 15px;
+                color: #0f172a;
+            }
+
+            .demo-context p {
+                color: #64748b;
+                line-height: 1.6;
+                margin-bottom: 20px;
+            }
+
+            .btn-outline {
+                display: inline-block;
+                padding: 10px 20px;
+                border: 2px solid #e2e8f0;
+                border-radius: 8px;
+                text-decoration: none;
+                color: #0f172a;
+                font-weight: 600;
+                transition: all 0.2s;
+                text-align: center;
+                width: fit-content;
+            }
+
+            .btn-outline:hover {
+                border-color: var(--color-primary);
+                background: #f0fdf4;
+                color: var(--color-primary);
+            }
+        </style>
+        <script>
+            function switchTab(id) {
+                document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.demo-scenario').forEach(content => content.classList.remove('active'));
+                document.getElementById('btn-' + id).classList.add('active');
+                document.getElementById('demo-' + id).classList.add('active');
+            }
+        </script>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="section">
+        <div class="container text-center">
+            <h2>Industries That Use This</h2>
+            <p style="margin-bottom: 40px;">See how Review Automation solves specific problems for:</p>
+
+            <div class="pain-point-grid" style="margin-bottom: 60px;">
+                <a href="../niches/nail-salons.html" style="text-decoration: none; color: inherit;">
+                    <div class="pain-card" style="text-align: center; border-color: var(--color-primary);">
+                        <h4>Nail Salons</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-slate);">Dilute negative feedback with volume.
+                        </p>
+                    </div>
+                </a>
+                <a href="../niches/restaurants.html" style="text-decoration: none; color: inherit;">
+                    <div class="pain-card" style="text-align: center; border-color: var(--color-primary);">
+                        <h4>Restaurants</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-slate);">Boost local map pack rankings.</p>
+                    </div>
+                </a>
+                <a href="../niches/general-contractors.html" style="text-decoration: none; color: inherit;">
+                    <div class="pain-card" style="text-align: center; border-color: var(--color-primary);">
+                        <h4>Contractors</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-slate);">Build trust for high-ticket services.
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+            <div style="background: #f8fafc; padding: 40px; border-radius: 16px;">
+                <h3>Don't see your industry?</h3>
+                <p>We have specialized solutions for 25+ business niches.</p>
+                <a href="../industries.html" class="btn btn-primary shiny-button"
+                    style="margin-top: 20px; display: inline-block;">View All Industries</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: FAQ Section -->
+    <section class="section">
+        <div class="container" style="max-width: 800px;">
+            <h2 class="text-center">Frequently Asked Questions</h2>
+            <div class="faq-accordion" style="margin-top: 40px;">
+                <details
+                    style="padding: 20px; background: white; border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 16px; cursor: pointer;">
+                    <summary
+                        style="font-weight: 600; font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        Does this violate Google's policies?
+                        <span style="color: var(--color-primary); font-size: 1.5rem;">+</span>
+                    </summary>
+                    <p style="margin-top: 12px; color: var(--color-slate);">No. We simply make it easier for your happy
+                        customers to leave feedback. We do not buy reviews or use bots.</p>
+                </details>
+
+                <details
+                    style="padding: 20px; background: white; border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 16px; cursor: pointer;">
+                    <summary
+                        style="font-weight: 600; font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        Can I delete bad reviews?
+                        <span style="color: var(--color-primary); font-size: 1.5rem;">+</span>
+                    </summary>
+                    <p style="margin-top: 12px; color: var(--color-slate);">You cannot delete legitimate Google reviews,
+                        but our system helps catch unhappy customers privately <em>before</em> they post publicly.</p>
+                </details>
+
+                <details
+                    style="padding: 20px; background: white; border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 16px; cursor: pointer;">
+                    <summary
+                        style="font-weight: 600; font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        How quickly will I see results?
+                        <span style="color: var(--color-primary); font-size: 1.5rem;">+</span>
+                    </summary>
+                    <p style="margin-top: 12px; color: var(--color-slate);">Most clients see a 400% increase in review
+                        volume in the first 30 days by simply activating our SMS campaigns for past customers.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Enhanced CTA Section -->
+    <section
+        style="padding: 80px 0; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Your 5-Star Reputation Awaits</h2>
+            <p
+                style="font-size: 1.2rem; color: #cbd5e1; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Don't let one bad day define your business. Take control of your digital reputation.
+            </p>
+            <a href="../../index.html#contact" class="btn btn-primary shiny-button btn-lg"
+                style="background: var(--color-primary); color: #0f172a; font-weight: 800; border: none;">
+                Get More Reviews
+            </a>
+            <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">Free reputation audit included.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2026 Innovate Solutions</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

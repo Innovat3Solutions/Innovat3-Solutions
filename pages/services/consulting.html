@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growth Consulting | Innovat3 Solutions</title>
+    <!-- Base styles and Favicon -->
+    <link rel="icon" type="image/png" href="../../images/Innovat3-logos/innovate-favicon.png">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <!-- Service Page Specific Layout -->
+    <link rel="stylesheet" href="../../css/services-layout.css">
+    <link rel="stylesheet" href="../../css/faq-carousel.css">
+    <link rel="stylesheet" href="../../css/mobile-optimizations.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <style>
+        .sop-item {
+            transition: background-color 0.2s;
+            cursor: pointer;
+        }
+
+        .sop-item:hover {
+            background-color: #f1f5f9;
+        }
+    </style>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="service-page-wrapper">
+
+    <!-- Nav -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="../../index.html" class="logo">
+                <img src="../../images/Innovat3-logos/innovate-logo-black-transparent.png" alt="Innovate Solutions"
+                    class="logo-full">
+            </a>
+
+            <div class="nav-links">
+                <div class="nav-item dropdown">
+                    <a href="#services" class="dropdown-trigger">Services <span
+                            class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="../services/voice-ai.html">Voice AI Agents</a>
+                        <a href="../services/custom-apps.html">Custom Apps</a>
+                        <a href="../services/review-automation.html">Review Management</a>
+                        <a href="../services/private-ai-infra.html">Private AI</a>
+                        <a href="../services/lead-database.html">Lead Capture</a>
+                        <a href="../services/data-intelligence.html">Data Intelligence</a>
+                        <a href="../services/workflow-automation.html">Workflow Automations</a>
+                        <a href="../services/web-development.html">Web Development</a>
+                        <a href="../services/consulting.html">Growth Consulting</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#niches" class="dropdown-trigger">Industries <span
+                            class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu niche-dropdown-menu">
+                        <div class="niche-dropdown-grid">
+                            <!-- Column 1: Home Services -->
+                            <div class="niche-col">
+                                <h4>Home & Property</h4>
+                                <a href="../niches/pool-cleaners-and-maintenance.html">Pool Cleaners</a>
+                                <a href="../niches/pool-contractors-and-construction.html">Pool Construction</a>
+                                <a href="../niches/landscaping-and-lawn-care.html">Landscaping</a>
+                                <a href="../niches/hvac-services.html">HVAC Services</a>
+                                <a href="../niches/general-contractors.html">General Contractors</a>
+                                <a href="../niches/window-installers.html">Window Installers</a>
+                                <a href="../niches/plumbers.html">Plumbers</a>
+                                <a href="../niches/painters.html">Painters</a>
+                                <a href="../niches/electricians.html">Electricians</a>
+                                <a href="../niches/property-management.html">Property Management</a>
+                            </div>
+
+                            <!-- Column 2: Health & Beauty -->
+                            <div class="niche-col">
+                                <h4>Health & Medical</h4>
+                                <a href="../niches/dentists-and-orthodontists.html">Dentists</a>
+                                <a href="../niches/family-practice-doctors.html">Family Practice</a>
+                                <a href="../niches/veterinarians.html">Veterinarians</a>
+                                <a href="../niches/med-spas-and-laser-facilities.html">Med Spas</a>
+
+                                <h4 class="mt-sm">Beauty & Care</h4>
+                                <a href="../niches/hair-salons-and-stylists.html">Hair Salons</a>
+                                <a href="../niches/barbershops.html">Barbershops</a>
+                                <a href="../niches/nail-salons.html">Nail Salons</a>
+                                <a href="../niches/pet-groomers.html">Pet Groomers</a>
+                            </div>
+
+                            <!-- Column 3: Professional & Other -->
+                            <div class="niche-col">
+                                <h4>Professional Services</h4>
+                                <a href="../niches/attorneys-and-law-firms.html">Attorneys</a>
+                                <a href="../niches/accountants-and-cpas.html">Accountants & CPAs</a>
+                                <a href="../niches/financial-managers-and-advisors.html">Financial Advisors</a>
+                                <a href="../niches/real-estate-brokers.html">Real Estate Brokers</a>
+
+                                <h4 class="mt-sm">Retail & Auto</h4>
+                                <a href="../niches/auto-mechanics-and-repair-shops.html">Auto Mechanics</a>
+                                <a href="../niches/window-tinting-and-auto-detail.html">Auto Detail/Tint</a>
+                                <a href="../niches/restaurants.html">Restaurants</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="../blog.html">Blog</a>
+                <a href="../../index.html#process">Process</a>
+                <a href="../../index.html#about">About</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="../../index.html#contact" class="btn btn-primary shiny-button">Get Started</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MONOTREE HERO SECTION -->
+    <header class="niche-hero" style="background: #ffffff; padding: 120px 0 80px;">
+        <div class="container niche-hero-content">
+            <div class="hero-text">
+                <h1 class="font-primary"
+                    style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; font-weight: 300;">
+                    Growth <em style="color: #84CC16; font-style: italic;">Consulting</em> <span style="position: relative; display: inline-block;">
+                        & Systems
+                        <svg class="brush-underline" viewBox="0 0 200 9" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="position: absolute; width: 100%; height: 12px; bottom: -8px; left: 0;"><path d="M2.00025 6.99997C29.6108 8.01955 106.392 -2.18029 198 3.50001" stroke="#84CC16" stroke-width="3" stroke-linecap="round" fill="none" /></svg>
+                    </span> <em style="color: #84CC16; font-style: italic;">Architecture</em>
+                </h1>
+                <p class="sub-headline"
+                    style="font-size: 1.125rem; color: #64748b; line-height: 1.6; margin-bottom: 2.5rem; max-width: 480px;">
+                    Map your workflows, identify bottlenecks, and eliminate manual busywork forever. We install the
+                    digital operating system for your business.
+                </p>
+
+                <div class="hero-cta-group" style="display: flex; gap: 12px; margin-bottom: 3rem;">
+                    <input type="email" placeholder="Enter work email" class="hero-input"
+                        style="flex: 1; max-width: 280px; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 8px; background: #ffffff; font-size: 1rem;">
+                    <button class="hero-btn"
+                        style="background: #84CC16; color: #000; font-weight: 600; padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer; white-space: nowrap;">Book
+                        a demo</button>
+                </div>
+
+                <!-- Stats Row - Monotree Style -->
+                <div style="display: flex; gap: 4rem; align-items: flex-start; margin-bottom: 2rem;">
+                    <div>
+                        <div class="count-up" data-target="280" data-suffix="%"
+                            style="font-size: 3rem; font-weight: 300; line-height: 1; color: #0f172a; margin-bottom: 0.5rem;">
+                            0</div>
+                        <div style="font-size: 0.875rem; color: #64748b;">ROI increase</div>
+                    </div>
+                    <div>
+                        <div class="count-up" data-target="15" data-suffix="-20%"
+                            style="font-size: 3rem; font-weight: 300; line-height: 1; color: #0f172a; margin-bottom: 0.5rem;">
+                            0</div>
+                        <div style="font-size: 0.875rem; color: #64748b;">Profit margins</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image-wrapper"
+                style="display: flex; align-items: center; justify-content: center; background: transparent;">
+                <img src="../../images/services/service_consulting_hero_1770147189434.png"
+                    alt="Growth Consulting Dashboard"
+                    style="width: 100%; max-width: 600px; height: auto; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1));">
+            </div>
+        </div>
+    </header>
+
+    <!-- Problem Section (Cards adapted for Light Theme) -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center" style="font-weight: 300;">The <span class="highlight-merriweather">Chaos</span> Tax
+            </h2>
+            <div class="feature-card-grid">
+                <div class="feature-card">
+                    <h3>Scheduling Chaos</h3>
+                    <div class="problem-flow">
+                        <div class="flow-step">
+                            <span class="step-label">Scenario</span>
+                            <p>You run a landscaping crew. You spend Sunday night texting 50 clients to confirm cuts. It
+                                takes 4 hours.</p>
+                        </div>
+                        <div class="flow-step outcome">
+                            <span class="step-label">Outcome</span>
+                            <p>You lose your only day off to admin work that a computer could do in 3 seconds.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <h3>The Paper Trail</h3>
+                    <div class="problem-flow">
+                        <div class="flow-step">
+                            <span class="step-label">Scenario</span>
+                            <p>Your invoices are Word documents. Your receipts are in a shoebox. Your contacts are in a
+                                notebook.</p>
+                        </div>
+                        <div class="flow-step outcome">
+                            <span class="step-label">Outcome</span>
+                            <p>You have no idea what your profit is until tax season, when it's too late to fix it.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <h3>The Knowledge Trap</h3>
+                    <div class="problem-flow">
+                        <div class="flow-step">
+                            <span class="step-label">Scenario</span>
+                            <p>Only one person in the office knows how to do "that thing." If they get sick, business
+                                stops.</p>
+                        </div>
+                        <div class="flow-step outcome">
+                            <span class="step-label">Outcome</span>
+                            <p>Your business is fragile because processes aren't documented or automated.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution / Split Layout Section -->
+    <section class="split-layout-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>From <em style="color: #84CC16; font-style: italic;">Chaos</em> to <em style="color: #84CC16; font-style: italic;">Clockwork</em></h2>
+                <p class="text-muted">We don't just give advice; we install a digital operating system that runs your
+                    business for you.</p>
+            </div>
+
+            <div class="split-layout-grid">
+                <!-- Left: Feature List -->
+                <div class="feature-list">
+                    <div class="feature-item active" onmouseenter="showSlide(0)">
+                        <h3>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                style="color: var(--service-accent);">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                <polyline points="2 17 12 22 22 17"></polyline>
+                                <polyline points="2 12 12 17 22 12"></polyline>
+                            </svg>
+                            Tech Stack Audit
+                        </h3>
+                        <p>We eliminate redundant software subscriptions and consolidate your tools into one powerful,
+                            cost-effective ecosystem.</p>
+                    </div>
+
+                    <div class="feature-item" onmouseenter="showSlide(1)">
+                        <h3>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                style="color: var(--service-accent);">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
+                            Workflow Mapping
+                        </h3>
+                        <p>We map every step of your customer journey and automate the handoffs, so nothing falls
+                            through the cracks.</p>
+                    </div>
+
+                    <div class="feature-item" onmouseenter="showSlide(2)">
+                        <h3>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                style="color: var(--service-accent);">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                            SOP Documentation
+                        </h3>
+                        <p>We write clear, video-based Standard Operating Procedures (SOPs) so you can hire and train
+                            staff in half the time.</p>
+                    </div>
+                </div>
+
+                <!-- Right: Sticky Visuals -->
+                <div class="visual-display-wrapper">
+                    <div class="visual-content">
+                        <!-- Slide 0: Audit -->
+                        <div class="visual-slide active" id="slide-0">
+                            <div
+                                style="background: white; padding: 25px; border-radius: 12px; border: 1px solid #e2e8f0; width: 90%; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); text-align: center;">
+                                <div style="margin-bottom: 20px; font-weight: 600;">Monthly Software Spend</div>
+                                <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+                                    <div style="opacity: 0.5;">
+                                        <div
+                                            style="font-size: 2rem; color: #ef4444; font-weight: bold; text-decoration: line-through;">
+                                            $450</div>
+                                        <div style="font-size: 0.8rem;">Before</div>
+                                    </div>
+                                    <div style="font-size: 2rem;">→</div>
+                                    <div>
+                                        <div style="font-size: 2.5rem; color: #22c55e; font-weight: bold;">$97</div>
+                                        <div style="font-size: 0.8rem;">After</div>
+                                    </div>
+                                </div>
+                                <div
+                                    style="margin-top: 20px; font-size: 0.9rem; background: #f0fdf4; padding: 10px; border-radius: 8px; color: #166534;">
+                                    Consolidated: Slack, Trello, Mailchimp, Calendly
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 1: Mapping -->
+                        <div class="visual-slide" id="slide-1">
+                            <div
+                                style="background: white; padding: 25px; border-radius: 12px; border: 1px solid #e2e8f0; width: 90%; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);">
+                                <div style="text-align: center; font-weight: 600; margin-bottom: 15px;">Lead Intake Flow
+                                </div>
+                                <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                                    <div
+                                        style="background: #e2e8f0; padding: 8px 15px; border-radius: 6px; width: 100%; text-align: center;">
+                                        Web Form Submit</div>
+                                    <div style="color: #cbd5e1;">↓</div>
+                                    <div
+                                        style="background: #e2e8f0; padding: 8px 15px; border-radius: 6px; width: 100%; text-align: center;">
+                                        CRM Entry Created</div>
+                                    <div style="color: #cbd5e1;">↓</div>
+                                    <div style="display: flex; gap: 10px; width: 100%;">
+                                        <div
+                                            style="background: #22c55e; color: white; padding: 8px 5px; border-radius: 6px; flex: 1; text-align: center; font-size: 0.85rem;">
+                                            Notify Sales (Slack)</div>
+                                        <div
+                                            style="background: #3b82f6; color: white; padding: 8px 5px; border-radius: 6px; flex: 1; text-align: center; font-size: 0.85rem;">
+                                            Send Email (Auto)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2: SOP -->
+                        <div class="visual-slide" id="slide-2">
+                            <div
+                                style="background: white; padding: 0; border-radius: 12px; border: 1px solid #e2e8f0; width: 90%; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); overflow: hidden;">
+                                <div
+                                    style="background: #f8fafc; padding: 15px; border-bottom: 1px solid #e2e8f0; display: flex; gap: 10px; align-items: center;">
+                                    <div style="font-size: 1.5rem;">📄</div>
+                                    <div>
+                                        <div style="font-weight: 600;">Employee Handbook</div>
+                                        <div style="font-size: 0.8rem; color: var(--service-text-muted);">SOP Database
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="padding: 20px;">
+                                    <div class="sop-item"
+                                        style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; padding: 8px; border-radius: 6px;">
+                                        <div style="color: var(--service-accent);">▶</div>
+                                        <div style="font-size: 0.9rem;">How to Create an Invoice</div>
+                                    </div>
+                                    <div class="sop-item"
+                                        style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; padding: 8px; border-radius: 6px;">
+                                        <div style="color: var(--service-accent);">▶</div>
+                                        <div style="font-size: 0.9rem;">Handling Customer Refunds</div>
+                                    </div>
+                                    <div class="sop-item"
+                                        style="display: flex; align-items: center; gap: 10px; padding: 8px; border-radius: 6px;">
+                                        <div style="color: var(--service-accent);">▶</div>
+                                        <div style="font-size: 0.9rem;">End of Day Reporting</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Section -->
+    <!-- ROI Section (Arc Fan) -->
+    <section class="section-stats-arc">
+        <div class="container arc-container">
+            <!-- Card 1 -->
+            <div class="stat-card arc-1">
+                <div class="stat-card-number">20h+</div>
+                <div class="stat-card-desc">Hours Saved Weekly</div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="stat-card arc-2">
+                <div class="stat-card-number">3 Days</div>
+                <div class="stat-card-desc">Setup Turnaround</div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="stat-card arc-3">
+                <div class="stat-card-number">$16k</div>
+                <div class="stat-card-desc">Monthly Value Recaptured</div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="stat-card arc-4">
+                <div class="stat-card-number">100%</div>
+                <div class="stat-card-desc">Process Clarity</div>
+            </div>
+        </div>
+
+        <div class="text-center mt-lg">
+            <span class="subtitle">The ROI of Order &rarr;</span>
+            <h2 style="max-width: 800px; margin: 0 auto 2rem;">Stop leaking profit through inefficiency</h2>
+            <a href="#contact" class="btn btn-primary shiny-button">Audit My Operations</a>
+        </div>
+    </section>
+
+    <!-- NEW: Featured Work Section (Niche Graphics) -->
+    <section class="featured-work-section">
+        <div class="container">
+            <h2 class="text-center">Featured Work</h2>
+            <p class="text-center text-muted" style="max-width: 600px; margin: 0 auto;">
+                See how we streamline operations for these industries.
+            </p>
+
+            <div class="work-grid">
+                <!-- Electricians Card (Swapped from Landscaping) -->
+                <div class="work-card">
+                    <img src="../../assets/niche_images/09_electrician_payment_1769473670639.png" alt="Electricians"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="work-overlay">
+                        <h3>Electricians</h3>
+                        <p style="font-size: 0.9rem; opacity: 0.8;">Automate job dispatching.</p>
+                    </div>
+                    <a href="../niches/electricians.html" style="position: absolute; inset: 0;"></a>
+                </div>
+
+                <!-- Painters Card (Swapped from CPAs) -->
+                <div class="work-card">
+                    <img src="../../assets/niche_images/08_painter_estimate_1769473657624.png" alt="Painters"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="work-overlay">
+                        <h3>Painters</h3>
+                        <p style="font-size: 0.9rem; opacity: 0.8;">Schedule estimates automatically.</p>
+                    </div>
+                    <a href="../niches/painters.html" style="position: absolute; inset: 0;"></a>
+                </div>
+
+                <!-- Window Tinting Card (Swapped from Property Managers) -->
+                <div class="work-card">
+                    <img src="../../assets/niche_images/24_window_tint_upsell_1769473921648.png" alt="Window Tinting"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="work-overlay">
+                        <h3>Window Tinting</h3>
+                        <p style="font-size: 0.9rem; opacity: 0.8;">Book appointments 24/7.</p>
+                    </div>
+                    <a href="../niches/window-tinting-and-auto-detail.html" style="position: absolute; inset: 0;"></a>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="../industries.html" class="btn btn-secondary">View All Industries</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+        <!-- FAQ Carousel Section -->
+    <section class="faq-carousel-section">
+        <div class="faq-header-container">
+            <div>
+                <span class="subtitle">Support</span>
+                <h2 style="font-weight: 300;">Frequently<br><span class="highlight-merriweather">Asked Questions</span></h2>
+            </div>
+            
+            <div class="faq-nav-group">
+                <button class="faq-nav-btn prev" aria-label="Previous">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+                </button>
+                <button class="faq-nav-btn next" aria-label="Next">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="faq-carousel-wrapper">
+            <div class="faq-track">
+                <div class="faq-card">
+                    <h3 class="faq-question">What does growth consulting actually include?</h3>
+                    <div class="faq-answer">
+                        <p>We analyze your business model, identify revenue bottlenecks, develop growth strategies, optimize operations, implement technology solutions, and provide ongoing advisory to accelerate profitable growth.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h3 class="faq-question">How is this different from generic business consulting?</h3>
+                    <div class="faq-answer">
+                        <p>We specialize in technology-enabled growth for service businesses. We don't just recommend strategies—we implement automation, AI, and custom tools that create measurable results.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h3 class="faq-question">What size businesses do you work with?</h3>
+                    <div class="faq-answer">
+                        <p>We work with established service businesses doing $500k-$50M annually. You need sufficient revenue to justify technology investment but small enough to benefit from operational improvements.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h3 class="faq-question">How long do consulting engagements last?</h3>
+                    <div class="faq-answer">
+                        <p>Initial assessments take 2-4 weeks. Growth strategy implementation ranges from 3-12 months depending on scope. Many clients retain us for ongoing advisory after initial projects.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h3 class="faq-question">What results can I expect?</h3>
+                    <div class="faq-answer">
+                        <p>Clients typically see 20-40% revenue growth, 15-30% margin improvement, and 50-80% reduction in administrative overhead within the first year. Results vary by starting point and implementation commitment.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h3 class="faq-question">Do you work with our existing team or replace them?</h3>
+                    <div class="faq-answer">
+                        <p>We work alongside your team, providing training and tools that make them more effective. We augment capabilities, not replace people. Your team drives execution with our guidance.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h3 class="faq-question">What industries do you have experience in?</h3>
+                    <div class="faq-answer">
+                        <p>We've worked with home services, healthcare, professional services, real estate, hospitality, and B2B service companies. Industry-specific experience helps us deliver faster results.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h3 class="faq-question">How much does growth consulting cost?</h3>
+                    <div class="faq-answer">
+                        <p>Engagements range from $5k for assessments to $50k+ for comprehensive implementations. We provide ROI projections showing how the investment pays for itself through increased revenue and efficiency.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="service-cta">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Stop Working IN Your Business.</h2>
+            <p
+                style="font-size: 1.2rem; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; opacity: 0.9;">
+                Start working ON it. Let us build the machine that runs without you.
+            </p>
+            <a href="../../index.html#contact" class="btn btn-primary shiny-button btn-lg"
+                style="background: var(--service-accent); color: #000; font-weight: 800; border: none;">
+                Book Your Efficiency Audit
+            </a>
+            <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">100% Satisfaction Guarantee.</p>
+        </div>
+    </section>
+
+    <!-- Footer link -->
+        <!-- Unified Contact Section -->
+        <!-- Unified Contact Section -->
+    <section class="unified-contact-section" id="contact">
+        <div class="unified-contact-container">
+            <!-- Left Content -->
+            <div class="contact-left-content">
+                <div class="contact-progress-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot empty"></span>
+                    <span class="dot empty"></span>
+                    <span class="dot empty"></span>
+                </div>
+
+                <h2>Ready to transform your business?</h2>
+                <p>Let's discuss how our solutions can help you automate workflows, boost efficiency, and drive growth for your business.</p>
+
+                <a href="#" class="contact-learn-btn">Learn More</a>
+
+                <!-- Features -->
+                <div class="contact-features">
+                    <div class="contact-feature">
+                        <div class="contact-feature-icon">
+                            <i data-lucide="history" size="24"></i>
+                        </div>
+                        <h4>Customer History</h4>
+                        <p>Analyze customer behavior across product lines</p>
+                    </div>
+
+                    <div class="contact-feature">
+                        <div class="contact-feature-icon">
+                            <i data-lucide="bar-chart-3" size="24"></i>
+                        </div>
+                        <h4>Actionable Insights</h4>
+                        <p>Employ predictive analytics to optimize sales pipelines</p>
+                    </div>
+
+                    <div class="contact-feature">
+                        <div class="contact-feature-icon">
+                            <i data-lucide="layers" size="24"></i>
+                        </div>
+                        <h4>Identify Patterns</h4>
+                        <p>Utilize live data to improve conversion rates</p>
+                    </div>
+
+                    <div class="contact-feature">
+                        <div class="contact-feature-icon">
+                            <i data-lucide="target" size="24"></i>
+                        </div>
+                        <h4>Predictive Analysis</h4>
+                        <p>Employ real-time data to refine marketing strategies</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Form -->
+            <div class="contact-form-wrapper">
+                <form id="unified-contact-form" action="#" method="POST">
+                    <div class="contact-form-row">
+                        <div class="contact-form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="James..." required>
+                        </div>
+
+                        <div class="contact-form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Smith..." required>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-row">
+                        <div class="contact-form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="robertapouros@gmail.com" required>
+                        </div>
+
+                        <div class="contact-form-group">
+                            <label for="country">Country</label>
+                            <select id="country" name="country" required>
+                                <option value="USA">🇺🇸 USA</option>
+                                <option value="Canada">🇨🇦 Canada</option>
+                                <option value="UK">🇬🇧 United Kingdom</option>
+                                <option value="Australia">🇦🇺 Australia</option>
+                                <option value="Other">🌍 Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-group full-width">
+                        <label for="role">Your Role</label>
+                        <select id="role" name="role" required>
+                            <option value="">Select your role</option>
+                            <option value="Business Owner">Business Owner</option>
+                            <option value="Manager">Manager</option>
+                            <option value="Director">Director</option>
+                            <option value="C-Level">C-Level Executive</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="contact-form-group full-width">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Enter message..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="contact-submit-btn">Contact Us</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Brand -->
+                <div class="footer-col" style="flex: 2;">
+                    <a href="../../index.html" class="footer-logo">
+                        <img src="../../images/Innovat3-logos/innovate-logo-white-transparent.png"
+                            alt="Innovate Solutions" class="logo-full" style="height: 30px;">
+                    </a>
+                    <p>Modernizing Miami one automated workflow at a time.</p>
+                </div>
+
+                <!-- Column 2: Services -->
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="../services/voice-ai.html">Voice AI Agents</a>
+                    <a href="../services/custom-apps.html">Custom Apps</a>
+                    <a href="../services/review-automation.html">Review Management</a>
+                    <a href="../services/private-ai-infra.html">Private AI</a>
+                    <a href="../services/lead-database.html">Lead Capture</a>
+                    <a href="../services/data-intelligence.html">Data Intelligence</a>
+                    <a href="../services/workflow-automation.html">Workflow Automation</a>
+                    <a href="../services/consulting.html">Growth Consulting</a>
+                </div>
+
+                <!-- Column 3: Industries -->
+                <div class="footer-col">
+                    <h4>Industries</h4>
+                    <a href="../niches/general-contractors.html">Home Services</a>
+                    <a href="../niches/family-practice-doctors.html">Medical & Health</a>
+                    <a href="../niches/attorneys-and-law-firms.html">Legal & Prof.</a>
+                    <a href="../niches/hair-salons-and-stylists.html">Beauty & Wellness</a>
+                    <a href="../niches/restaurants.html">Retail & Hospitality</a>
+                    <a href="../niches/auto-mechanics-and-repair-shops.html">Automotive</a>
+                    <a href="../niches/real-estate-brokers.html">Real Estate</a>
+                    <a href="../../index.html#niches"
+                        style="color: var(--primary-color); font-weight: 600; margin-top: 8px;">View All Industries
+                        &rarr;</a>
+                </div>
+
+                <!-- Column 4: Resources -->
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="../blog.html">Blog</a>
+                <a href="../../index.html#process">Process</a>
+                    <a href="../../index.html#about">About</a>
+                    <a href="../../index.html#contact">Contact</a>
+                    <a href="mailto:hello@innovat3solutions.com">hello@innovat3solutions.com</a>
+                    <p style="margin-top: 10px; opacity: 0.6;">Miami, FL</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Innovate Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/count-up.js"></script>
+    <script src="../../js/faq-carousel.js"></script>
+    <!-- Interactive Script for Split Layout -->
+    <script>
+        function showSlide(index) {
+            // Remove active class from all slides and items
+            document.querySelectorAll('.visual-slide').forEach(slide => slide.classList.remove('active'));
+            document.querySelectorAll('.feature-item').forEach(item => item.classList.remove('active'));
+
+            // Add active class to target
+            document.getElementById('slide-' + index).classList.add('active');
+            document.querySelectorAll('.feature-item')[index].classList.add('active');
+        }
+
+        function scrollTestimonials(direction) {
+            const container = document.getElementById('testimonial-scroll');
+            const cardWidth = 350 + 30; // card min-width + gap
+            container.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+        }
+    </script>
+
+    <!-- Animated Grid Script -->
+    <script src="../../js/animated-grid.js"></script>
+    <script src="../../js/count-up.js"></script>
+    <script>
+        // Init Grid Background
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof initAnimatedGrid === 'function') {
+                initAnimatedGrid('hero-grid-container', {
+                    width: 40,
+                    height: 40,
+                    x: -1,
+                    y: -1,
+                    numSquares: 20, // Keep it subtle
+                    maxOpacity: 0.1, // Very subtle
+                    duration: 4
+                });
+            }
+        });
+    </script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

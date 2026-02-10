@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Innovat3 Solutions | Future of Automation</title>
+
+    <!-- Base styles and Favicon -->
+    <link rel="icon" type="image/png" href="../images/Innovat3-logos/innovate-favicon.png">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Page-specific override for body background to ensure dark mode theme */
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+    </style>
+</head>
+
+<body class="blog-futuristic-body">
+
+    <!-- Navigation (Light/Dark handling via styles.css, mostly light by default but we want dark here? 
+         The styles.css assumes a light nav usually. For a dark page, we might need a dark nav override.
+         For now, keeping standard nav structure.) -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                <img src="../images/Innovat3-logos/innovate-logo-black-transparent.png" alt="Innovate Solutions"
+                    class="logo-full">
+            </a>
+
+            <div class="nav-links">
+                <div class="nav-item dropdown">
+                    <a href="../index.html#services" class="dropdown-trigger">Services <span
+                            class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="services/voice-ai.html">Voice AI Agents</a>
+                        <a href="services/custom-apps.html">Custom Apps</a>
+                        <a href="services/review-automation.html">Review Management</a>
+                        <a href="services/private-ai-infra.html">Private AI</a>
+                        <a href="services/lead-database.html">Lead Capture</a>
+                        <a href="services/data-intelligence.html">Data Intelligence</a>
+                        <a href="services/workflow-automation.html">Workflow Automations</a>
+                        <a href="services/consulting.html">Growth Consulting</a>
+                        <a href="services/web-development.html">Web Development</a>
+                    </div>
+                </div>
+                <!-- Updated Industries Dropdown structure -->
+                <div class="nav-item dropdown">
+                    <a href="../index.html#niches" class="dropdown-trigger">Industries <span
+                            class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu niche-dropdown-menu">
+                        <div class="niche-dropdown-grid">
+                            <!-- Column 1: Home Services -->
+                            <div class="niche-col">
+                                <h4>Home & Property</h4>
+                                <a href="niches/pool-cleaners-and-maintenance.html">Pool Cleaners</a>
+                                <a href="niches/pool-contractors-and-construction.html">Pool Construction</a>
+                                <a href="niches/landscaping-and-lawn-care.html">Landscaping</a>
+                                <a href="niches/hvac-services.html">HVAC Services</a>
+                                <a href="niches/general-contractors.html">General Contractors</a>
+                                <a href="niches/window-installers.html">Window Installers</a>
+                                <a href="niches/plumbers.html">Plumbers</a>
+                                <a href="niches/painters.html">Painters</a>
+                                <a href="niches/electricians.html">Electricians</a>
+                                <a href="niches/property-management.html">Property Management</a>
+                            </div>
+
+                            <!-- Column 2: Health & Beauty -->
+                            <div class="niche-col">
+                                <h4>Health & Medical</h4>
+                                <a href="niches/dentists-and-orthodontists.html">Dentists</a>
+                                <a href="niches/family-practice-doctors.html">Family Practice</a>
+                                <a href="niches/veterinarians.html">Veterinarians</a>
+                                <a href="niches/med-spas-and-laser-facilities.html">Med Spas</a>
+
+                                <h4 class="mt-sm">Beauty & Care</h4>
+                                <a href="niches/hair-salons-and-stylists.html">Hair Salons</a>
+                                <a href="niches/barbershops.html">Barbershops</a>
+                                <a href="niches/nail-salons.html">Nail Salons</a>
+                                <a href="niches/pet-groomers.html">Pet Groomers</a>
+                            </div>
+
+                            <!-- Column 3: Professional & Other -->
+                            <div class="niche-col">
+                                <h4>Professional Services</h4>
+                                <a href="niches/attorneys-and-law-firms.html">Attorneys</a>
+                                <a href="niches/accountants-and-cpas.html">Accountants & CPAs</a>
+                                <a href="niches/financial-managers-and-advisors.html">Financial Advisors</a>
+                                <a href="niches/real-estate-brokers.html">Real Estate Brokers</a>
+
+                                <h4 class="mt-sm">Retail & Auto</h4>
+                                <a href="niches/auto-mechanics-and-repair-shops.html">Auto Mechanics</a>
+                                <a href="niches/window-tinting-and-auto-detail.html">Auto Detail/Tint</a>
+                                <a href="niches/restaurants.html">Restaurants</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="../index.html#process">Process</a>
+                <a href="../index.html#about">About</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="../index.html#contact" class="btn btn-primary shiny-button">Get Started</a>
+            </div>
+
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Futuristic Hero -->
+    <section class="blog-hero-section">
+        <div class="blog-hero-bg"></div>
+        <div class="blog-hero-content">
+            <span class="blog-hero-badge">Innovat3 Intelligence</span>
+            <h1 class="blog-hero-title">The Insight Engine</h1>
+            <p class="blog-hero-subtitle">Exploring the frontier of AI automation, digital transformation, and
+                industry-specific growth strategies.</p>
+        </div>
+    </section>
+
+    <!-- Filter Pills -->
+    <div class="blog-filter-container">
+        <button class="filter-btn active" data-filter="all">All Insights</button>
+        <button class="filter-btn" data-filter="technology">Technology & AI</button>
+        <button class="filter-btn" data-filter="home-services">Home Services</button>
+        <button class="filter-btn" data-filter="health">Health & Medical</button>
+        <button class="filter-btn" data-filter="professional">Professional</button>
+        <button class="filter-btn" data-filter="retail">Retail & Auto</button>
+    </div>
+
+    <!-- Bento Grid Content -->
+    <div class="blog-bento-grid">
+
+        <!-- Pool Cleaners & Maintenance - Voice AI -->
+        <a href="../blog/case-studies/pool-cleaners-and-maintenance-voice-ai-case-study.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_voice_ai.png" 
+                     alt="Pool Cleaners & Maintenance Voice AI" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-tech">Voice AI</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Pool Cleaners & Maintenance Doubles Bookings with Voice AI</h3>
+                <p class="card-excerpt">How 24/7 AI voice agents eliminated missed calls and increased customer bookings.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Pool Cleaners & Maintenance - Automation -->
+        <a href="../blog/case-studies/pool-cleaners-and-maintenance-automation-success.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_automation.png" 
+                     alt="Pool Cleaners & Maintenance Automation" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-industry">Automation</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Pool Cleaners & Maintenance Saves Time with Automation</h3>
+                <p class="card-excerpt">Automated workflows streamline operations and free up staff for high-value work.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Pool Cleaners & Maintenance - Reviews -->
+        <a href="../blog/case-studies/pool-cleaners-and-maintenance-review-management.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_reviews.png" 
+                     alt="Pool Cleaners & Maintenance Reviews" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-growth">Reviews</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Pool Cleaners & Maintenance Grows Reviews by 300%</h3>
+                <p class="card-excerpt">Automated review collection drives more customer feedback and improves online reputation.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Pool Contractors & Construction - Voice AI -->
+        <a href="../blog/case-studies/pool-contractors-and-construction-voice-ai-case-study.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_voice_ai.png" 
+                     alt="Pool Contractors & Construction Voice AI" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-tech">Voice AI</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Pool Contractors & Construction Doubles Bookings with Voice AI</h3>
+                <p class="card-excerpt">How 24/7 AI voice agents eliminated missed calls and increased customer bookings.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Pool Contractors & Construction - Automation -->
+        <a href="../blog/case-studies/pool-contractors-and-construction-automation-success.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_automation.png" 
+                     alt="Pool Contractors & Construction Automation" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-industry">Automation</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Pool Contractors & Construction Saves Time with Automation</h3>
+                <p class="card-excerpt">Automated workflows streamline operations and free up staff for high-value work.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Pool Contractors & Construction - Reviews -->
+        <a href="../blog/case-studies/pool-contractors-and-construction-review-management.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_reviews.png" 
+                     alt="Pool Contractors & Construction Reviews" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-growth">Reviews</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Pool Contractors & Construction Grows Reviews by 300%</h3>
+                <p class="card-excerpt">Automated review collection drives more customer feedback and improves online reputation.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Landscaping & Lawn Care - Voice AI -->
+        <a href="../blog/case-studies/landscaping-and-lawn-care-voice-ai-case-study.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_voice_ai.png" 
+                     alt="Landscaping & Lawn Care Voice AI" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-tech">Voice AI</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Landscaping & Lawn Care Doubles Bookings with Voice AI</h3>
+                <p class="card-excerpt">How 24/7 AI voice agents eliminated missed calls and increased customer bookings.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Landscaping & Lawn Care - Automation -->
+        <a href="../blog/case-studies/landscaping-and-lawn-care-automation-success.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_automation.png" 
+                     alt="Landscaping & Lawn Care Automation" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-industry">Automation</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Landscaping & Lawn Care Saves Time with Automation</h3>
+                <p class="card-excerpt">Automated workflows streamline operations and free up staff for high-value work.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Landscaping & Lawn Care - Reviews -->
+        <a href="../blog/case-studies/landscaping-and-lawn-care-review-management.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_reviews.png" 
+                     alt="Landscaping & Lawn Care Reviews" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-growth">Reviews</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Landscaping & Lawn Care Grows Reviews by 300%</h3>
+                <p class="card-excerpt">Automated review collection drives more customer feedback and improves online reputation.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- HVAC Services - Voice AI -->
+        <a href="../blog/case-studies/hvac-services-voice-ai-case-study.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_voice_ai.png" 
+                     alt="HVAC Services Voice AI" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-tech">Voice AI</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">HVAC Services Doubles Bookings with Voice AI</h3>
+                <p class="card-excerpt">How 24/7 AI voice agents eliminated missed calls and increased customer bookings.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- HVAC Services - Automation -->
+        <a href="../blog/case-studies/hvac-services-automation-success.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_automation.png" 
+                     alt="HVAC Services Automation" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-industry">Automation</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">HVAC Services Saves Time with Automation</h3>
+                <p class="card-excerpt">Automated workflows streamline operations and free up staff for high-value work.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- HVAC Services - Reviews -->
+        <a href="../blog/case-studies/hvac-services-review-management.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_reviews.png" 
+                     alt="HVAC Services Reviews" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-growth">Reviews</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">HVAC Services Grows Reviews by 300%</h3>
+                <p class="card-excerpt">Automated review collection drives more customer feedback and improves online reputation.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- General Contractors - Voice AI -->
+        <a href="../blog/case-studies/general-contractors-voice-ai-case-study.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_voice_ai.png" 
+                     alt="General Contractors Voice AI" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-tech">Voice AI</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">General Contractors Doubles Bookings with Voice AI</h3>
+                <p class="card-excerpt">How 24/7 AI voice agents eliminated missed calls and increased customer bookings.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- General Contractors - Automation -->
+        <a href="../blog/case-studies/general-contractors-automation-success.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_automation.png" 
+                     alt="General Contractors Automation" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-industry">Automation</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">General Contractors Saves Time with Automation</h3>
+                <p class="card-excerpt">Automated workflows streamline operations and free up staff for high-value work.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- General Contractors - Reviews -->
+        <a href="../blog/case-studies/general-contractors-review-management.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_reviews.png" 
+                     alt="General Contractors Reviews" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-growth">Reviews</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">General Contractors Grows Reviews by 300%</h3>
+                <p class="card-excerpt">Automated review collection drives more customer feedback and improves online reputation.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Window Installers - Voice AI -->
+        <a href="../blog/case-studies/window-installers-voice-ai-case-study.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_voice_ai.png" 
+                     alt="Window Installers Voice AI" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-tech">Voice AI</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Window Installers Doubles Bookings with Voice AI</h3>
+                <p class="card-excerpt">How 24/7 AI voice agents eliminated missed calls and increased customer bookings.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Window Installers - Automation -->
+        <a href="../blog/case-studies/window-installers-automation-success.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_automation.png" 
+                     alt="Window Installers Automation" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-industry">Automation</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Window Installers Saves Time with Automation</h3>
+                <p class="card-excerpt">Automated workflows streamline operations and free up staff for high-value work.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Window Installers - Reviews -->
+        <a href="../blog/case-studies/window-installers-review-management.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_reviews.png" 
+                     alt="Window Installers Reviews" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-growth">Reviews</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Window Installers Grows Reviews by 300%</h3>
+                <p class="card-excerpt">Automated review collection drives more customer feedback and improves online reputation.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Plumbers - Voice AI -->
+        <a href="../blog/case-studies/plumbers-voice-ai-case-study.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_voice_ai.png" 
+                     alt="Plumbers Voice AI" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-tech">Voice AI</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Plumbers Doubles Bookings with Voice AI</h3>
+                <p class="card-excerpt">How 24/7 AI voice agents eliminated missed calls and increased customer bookings.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Plumbers - Automation -->
+        <a href="../blog/case-studies/plumbers-automation-success.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_automation.png" 
+                     alt="Plumbers Automation" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-industry">Automation</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Plumbers Saves Time with Automation</h3>
+                <p class="card-excerpt">Automated workflows streamline operations and free up staff for high-value work.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Plumbers - Reviews -->
+        <a href="../blog/case-studies/plumbers-review-management.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_reviews.png" 
+                     alt="Plumbers Reviews" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-growth">Reviews</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Plumbers Grows Reviews by 300%</h3>
+                <p class="card-excerpt">Automated review collection drives more customer feedback and improves online reputation.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Painters - Voice AI -->
+        <a href="../blog/case-studies/painters-voice-ai-case-study.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_voice_ai.png" 
+                     alt="Painters Voice AI" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-tech">Voice AI</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Painters Doubles Bookings with Voice AI</h3>
+                <p class="card-excerpt">How 24/7 AI voice agents eliminated missed calls and increased customer bookings.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Painters - Automation -->
+        <a href="../blog/case-studies/painters-automation-success.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_automation.png" 
+                     alt="Painters Automation" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-industry">Automation</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Painters Saves Time with Automation</h3>
+                <p class="card-excerpt">Automated workflows streamline operations and free up staff for high-value work.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Painters - Reviews -->
+        <a href="../blog/case-studies/painters-review-management.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_reviews.png" 
+                     alt="Painters Reviews" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-growth">Reviews</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Painters Grows Reviews by 300%</h3>
+                <p class="card-excerpt">Automated review collection drives more customer feedback and improves online reputation.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Electricians - Voice AI -->
+        <a href="../blog/case-studies/electricians-voice-ai-case-study.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_voice_ai.png" 
+                     alt="Electricians Voice AI" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-tech">Voice AI</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Electricians Doubles Bookings with Voice AI</h3>
+                <p class="card-excerpt">How 24/7 AI voice agents eliminated missed calls and increased customer bookings.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Electricians - Automation -->
+        <a href="../blog/case-studies/electricians-automation-success.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_automation.png" 
+                     alt="Electricians Automation" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-industry">Automation</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Electricians Saves Time with Automation</h3>
+                <p class="card-excerpt">Automated workflows streamline operations and free up staff for high-value work.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Electricians - Reviews -->
+        <a href="../blog/case-studies/electricians-review-management.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_reviews.png" 
+                     alt="Electricians Reviews" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-growth">Reviews</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Electricians Grows Reviews by 300%</h3>
+                <p class="card-excerpt">Automated review collection drives more customer feedback and improves online reputation.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Property Management - Voice AI -->
+        <a href="../blog/case-studies/property-management-voice-ai-case-study.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_voice_ai.png" 
+                     alt="Property Management Voice AI" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-tech">Voice AI</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Property Management Doubles Bookings with Voice AI</h3>
+                <p class="card-excerpt">How 24/7 AI voice agents eliminated missed calls and increased customer bookings.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Property Management - Automation -->
+        <a href="../blog/case-studies/property-management-automation-success.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_automation.png" 
+                     alt="Property Management Automation" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-industry">Automation</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Property Management Saves Time with Automation</h3>
+                <p class="card-excerpt">Automated workflows streamline operations and free up staff for high-value work.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Property Management - Reviews -->
+        <a href="../blog/case-studies/property-management-review-management.html" class="blog-card" data-category="home-services">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/home_services_reviews.png" 
+                     alt="Property Management Reviews" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-growth">Reviews</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Property Management Grows Reviews by 300%</h3>
+                <p class="card-excerpt">Automated review collection drives more customer feedback and improves online reputation.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Dentists & Orthodontists - Voice AI -->
+        <a href="../blog/case-studies/dentists-and-orthodontists-voice-ai-case-study.html" class="blog-card" data-category="health">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/health_voice_ai.png" 
+                     alt="Dentists & Orthodontists Voice AI" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-tech">Voice AI</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Dentists & Orthodontists Doubles Bookings with Voice AI</h3>
+                <p class="card-excerpt">How 24/7 AI voice agents eliminated missed calls and increased customer bookings.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Dentists & Orthodontists - Automation -->
+        <a href="../blog/case-studies/dentists-and-orthodontists-automation-success.html" class="blog-card" data-category="health">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/health_automation.png" 
+                     alt="Dentists & Orthodontists Automation" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-industry">Automation</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Dentists & Orthodontists Saves Time with Automation</h3>
+                <p class="card-excerpt">Automated workflows streamline operations and free up staff for high-value work.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Dentists & Orthodontists - Reviews -->
+        <a href="../blog/case-studies/dentists-and-orthodontists-review-management.html" class="blog-card" data-category="health">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/health_reviews.png" 
+                     alt="Dentists & Orthodontists Reviews" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-growth">Reviews</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Dentists & Orthodontists Grows Reviews by 300%</h3>
+                <p class="card-excerpt">Automated review collection drives more customer feedback and improves online reputation.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Family Practice Doctors - Voice AI -->
+        <a href="../blog/case-studies/family-practice-doctors-voice-ai-case-study.html" class="blog-card" data-category="health">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/health_voice_ai.png" 
+                     alt="Family Practice Doctors Voice AI" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-tech">Voice AI</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Family Practice Doctors Doubles Bookings with Voice AI</h3>
+                <p class="card-excerpt">How 24/7 AI voice agents eliminated missed calls and increased customer bookings.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Family Practice Doctors - Automation -->
+        <a href="../blog/case-studies/family-practice-doctors-automation-success.html" class="blog-card" data-category="health">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/health_automation.png" 
+                     alt="Family Practice Doctors Automation" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-industry">Automation</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Family Practice Doctors Saves Time with Automation</h3>
+                <p class="card-excerpt">Automated workflows streamline operations and free up staff for high-value work.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Family Practice Doctors - Reviews -->
+        <a href="../blog/case-studies/family-practice-doctors-review-management.html" class="blog-card" data-category="health">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/health_reviews.png" 
+                     alt="Family Practice Doctors Reviews" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-growth">Reviews</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Family Practice Doctors Grows Reviews by 300%</h3>
+                <p class="card-excerpt">Automated review collection drives more customer feedback and improves online reputation.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Veterinarians - Voice AI -->
+        <a href="../blog/case-studies/veterinarians-voice-ai-case-study.html" class="blog-card" data-category="health">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/health_voice_ai.png" 
+                     alt="Veterinarians Voice AI" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-tech">Voice AI</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Veterinarians Doubles Bookings with Voice AI</h3>
+                <p class="card-excerpt">How 24/7 AI voice agents eliminated missed calls and increased customer bookings.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Veterinarians - Automation -->
+        <a href="../blog/case-studies/veterinarians-automation-success.html" class="blog-card" data-category="health">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/health_automation.png" 
+                     alt="Veterinarians Automation" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-industry">Automation</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Veterinarians Saves Time with Automation</h3>
+                <p class="card-excerpt">Automated workflows streamline operations and free up staff for high-value work.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Veterinarians - Reviews -->
+        <a href="../blog/case-studies/veterinarians-review-management.html" class="blog-card" data-category="health">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/health_reviews.png" 
+                     alt="Veterinarians Reviews" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-growth">Reviews</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Veterinarians Grows Reviews by 300%</h3>
+                <p class="card-excerpt">Automated review collection drives more customer feedback and improves online reputation.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Med Spas & Laser Facilities - Voice AI -->
+        <a href="../blog/case-studies/med-spas-and-laser-facilities-voice-ai-case-study.html" class="blog-card" data-category="health">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/health_voice_ai.png" 
+                     alt="Med Spas & Laser Facilities Voice AI" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-tech">Voice AI</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Med Spas & Laser Facilities Doubles Bookings with Voice AI</h3>
+                <p class="card-excerpt">How 24/7 AI voice agents eliminated missed calls and increased customer bookings.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Med Spas & Laser Facilities - Automation -->
+        <a href="../blog/case-studies/med-spas-and-laser-facilities-automation-success.html" class="blog-card" data-category="health">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/health_automation.png" 
+                     alt="Med Spas & Laser Facilities Automation" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-industry">Automation</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Med Spas & Laser Facilities Saves Time with Automation</h3>
+                <p class="card-excerpt">Automated workflows streamline operations and free up staff for high-value work.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Med Spas & Laser Facilities - Reviews -->
+        <a href="../blog/case-studies/med-spas-and-laser-facilities-review-management.html" class="blog-card" data-category="health">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/health_reviews.png" 
+                     alt="Med Spas & Laser Facilities Reviews" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-growth">Reviews</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Med Spas & Laser Facilities Grows Reviews by 300%</h3>
+                <p class="card-excerpt">Automated review collection drives more customer feedback and improves online reputation.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Hair Salons & Stylists - Voice AI -->
+        <a href="../blog/case-studies/hair-salons-and-stylists-voice-ai-case-study.html" class="blog-card" data-category="health">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/health_voice_ai.png" 
+                     alt="Hair Salons & Stylists Voice AI" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-tech">Voice AI</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Hair Salons & Stylists Doubles Bookings with Voice AI</h3>
+                <p class="card-excerpt">How 24/7 AI voice agents eliminated missed calls and increased customer bookings.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Hair Salons & Stylists - Automation -->
+        <a href="../blog/case-studies/hair-salons-and-stylists-automation-success.html" class="blog-card" data-category="health">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/health_automation.png" 
+                     alt="Hair Salons & Stylists Automation" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-industry">Automation</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Hair Salons & Stylists Saves Time with Automation</h3>
+                <p class="card-excerpt">Automated workflows streamline operations and free up staff for high-value work.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Hair Salons & Stylists - Reviews -->
+        <a href="../blog/case-studies/hair-salons-and-stylists-review-management.html" class="blog-card" data-category="health">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/health_reviews.png" 
+                     alt="Hair Salons & Stylists Reviews" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-growth">Reviews</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Hair Salons & Stylists Grows Reviews by 300%</h3>
+                <p class="card-excerpt">Automated review collection drives more customer feedback and improves online reputation.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Barbershops - Voice AI -->
+        <a href="../blog/case-studies/barbershops-voice-ai-case-study.html" class="blog-card" data-category="health">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/health_voice_ai.png" 
+                     alt="Barbershops Voice AI" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-tech">Voice AI</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Barbershops Doubles Bookings with Voice AI</h3>
+                <p class="card-excerpt">How 24/7 AI voice agents eliminated missed calls and increased customer bookings.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Barbershops - Automation -->
+        <a href="../blog/case-studies/barbershops-automation-success.html" class="blog-card" data-category="health">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/health_automation.png" 
+                     alt="Barbershops Automation" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-industry">Automation</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Barbershops Saves Time with Automation</h3>
+                <p class="card-excerpt">Automated workflows streamline operations and free up staff for high-value work.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Barbershops - Reviews -->
+        <a href="../blog/case-studies/barbershops-review-management.html" class="blog-card" data-category="health">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/health_reviews.png" 
+                     alt="Barbershops Reviews" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-growth">Reviews</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Barbershops Grows Reviews by 300%</h3>
+                <p class="card-excerpt">Automated review collection drives more customer feedback and improves online reputation.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Nail Salons - Voice AI -->
+        <a href="../blog/case-studies/nail-salons-voice-ai-case-study.html" class="blog-card" data-category="health">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/health_voice_ai.png" 
+                     alt="Nail Salons Voice AI" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-tech">Voice AI</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Nail Salons Doubles Bookings with Voice AI</h3>
+                <p class="card-excerpt">How 24/7 AI voice agents eliminated missed calls and increased customer bookings.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Nail Salons - Automation -->
+        <a href="../blog/case-studies/nail-salons-automation-success.html" class="blog-card" data-category="health">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/health_automation.png" 
+                     alt="Nail Salons Automation" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-industry">Automation</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Nail Salons Saves Time with Automation</h3>
+                <p class="card-excerpt">Automated workflows streamline operations and free up staff for high-value work.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Nail Salons - Reviews -->
+        <a href="../blog/case-studies/nail-salons-review-management.html" class="blog-card" data-category="health">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/health_reviews.png" 
+                     alt="Nail Salons Reviews" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-growth">Reviews</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Nail Salons Grows Reviews by 300%</h3>
+                <p class="card-excerpt">Automated review collection drives more customer feedback and improves online reputation.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Pet Groomers - Voice AI -->
+        <a href="../blog/case-studies/pet-groomers-voice-ai-case-study.html" class="blog-card" data-category="health">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/health_voice_ai.png" 
+                     alt="Pet Groomers Voice AI" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-tech">Voice AI</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Pet Groomers Doubles Bookings with Voice AI</h3>
+                <p class="card-excerpt">How 24/7 AI voice agents eliminated missed calls and increased customer bookings.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Pet Groomers - Automation -->
+        <a href="../blog/case-studies/pet-groomers-automation-success.html" class="blog-card" data-category="health">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/health_automation.png" 
+                     alt="Pet Groomers Automation" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-industry">Automation</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Pet Groomers Saves Time with Automation</h3>
+                <p class="card-excerpt">Automated workflows streamline operations and free up staff for high-value work.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Pet Groomers - Reviews -->
+        <a href="../blog/case-studies/pet-groomers-review-management.html" class="blog-card" data-category="health">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/health_reviews.png" 
+                     alt="Pet Groomers Reviews" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-growth">Reviews</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Pet Groomers Grows Reviews by 300%</h3>
+                <p class="card-excerpt">Automated review collection drives more customer feedback and improves online reputation.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Attorneys & Law Firms - Voice AI -->
+        <a href="../blog/case-studies/attorneys-and-law-firms-voice-ai-case-study.html" class="blog-card" data-category="professional">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/professional_voice_ai.png" 
+                     alt="Attorneys & Law Firms Voice AI" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-tech">Voice AI</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Attorneys & Law Firms Doubles Bookings with Voice AI</h3>
+                <p class="card-excerpt">How 24/7 AI voice agents eliminated missed calls and increased customer bookings.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Attorneys & Law Firms - Automation -->
+        <a href="../blog/case-studies/attorneys-and-law-firms-automation-success.html" class="blog-card" data-category="professional">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/professional_automation.png" 
+                     alt="Attorneys & Law Firms Automation" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-industry">Automation</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Attorneys & Law Firms Saves Time with Automation</h3>
+                <p class="card-excerpt">Automated workflows streamline operations and free up staff for high-value work.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Attorneys & Law Firms - Reviews -->
+        <a href="../blog/case-studies/attorneys-and-law-firms-review-management.html" class="blog-card" data-category="professional">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/professional_reviews.png" 
+                     alt="Attorneys & Law Firms Reviews" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-growth">Reviews</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Attorneys & Law Firms Grows Reviews by 300%</h3>
+                <p class="card-excerpt">Automated review collection drives more customer feedback and improves online reputation.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Accountants & CPAs - Voice AI -->
+        <a href="../blog/case-studies/accountants-and-cpas-voice-ai-case-study.html" class="blog-card" data-category="professional">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/professional_voice_ai.png" 
+                     alt="Accountants & CPAs Voice AI" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-tech">Voice AI</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Accountants & CPAs Doubles Bookings with Voice AI</h3>
+                <p class="card-excerpt">How 24/7 AI voice agents eliminated missed calls and increased customer bookings.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Accountants & CPAs - Automation -->
+        <a href="../blog/case-studies/accountants-and-cpas-automation-success.html" class="blog-card" data-category="professional">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/professional_automation.png" 
+                     alt="Accountants & CPAs Automation" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-industry">Automation</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Accountants & CPAs Saves Time with Automation</h3>
+                <p class="card-excerpt">Automated workflows streamline operations and free up staff for high-value work.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Accountants & CPAs - Reviews -->
+        <a href="../blog/case-studies/accountants-and-cpas-review-management.html" class="blog-card" data-category="professional">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/professional_reviews.png" 
+                     alt="Accountants & CPAs Reviews" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-growth">Reviews</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Accountants & CPAs Grows Reviews by 300%</h3>
+                <p class="card-excerpt">Automated review collection drives more customer feedback and improves online reputation.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Financial Managers & Advisors - Voice AI -->
+        <a href="../blog/case-studies/financial-managers-and-advisors-voice-ai-case-study.html" class="blog-card" data-category="professional">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/professional_voice_ai.png" 
+                     alt="Financial Managers & Advisors Voice AI" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-tech">Voice AI</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Financial Managers & Advisors Doubles Bookings with Voice AI</h3>
+                <p class="card-excerpt">How 24/7 AI voice agents eliminated missed calls and increased customer bookings.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Financial Managers & Advisors - Automation -->
+        <a href="../blog/case-studies/financial-managers-and-advisors-automation-success.html" class="blog-card" data-category="professional">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/professional_automation.png" 
+                     alt="Financial Managers & Advisors Automation" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-industry">Automation</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Financial Managers & Advisors Saves Time with Automation</h3>
+                <p class="card-excerpt">Automated workflows streamline operations and free up staff for high-value work.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Financial Managers & Advisors - Reviews -->
+        <a href="../blog/case-studies/financial-managers-and-advisors-review-management.html" class="blog-card" data-category="professional">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/professional_reviews.png" 
+                     alt="Financial Managers & Advisors Reviews" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-growth">Reviews</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Financial Managers & Advisors Grows Reviews by 300%</h3>
+                <p class="card-excerpt">Automated review collection drives more customer feedback and improves online reputation.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Real Estate Brokers - Voice AI -->
+        <a href="../blog/case-studies/real-estate-brokers-voice-ai-case-study.html" class="blog-card" data-category="professional">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/professional_voice_ai.png" 
+                     alt="Real Estate Brokers Voice AI" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-tech">Voice AI</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Real Estate Brokers Doubles Bookings with Voice AI</h3>
+                <p class="card-excerpt">How 24/7 AI voice agents eliminated missed calls and increased customer bookings.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Real Estate Brokers - Automation -->
+        <a href="../blog/case-studies/real-estate-brokers-automation-success.html" class="blog-card" data-category="professional">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/professional_automation.png" 
+                     alt="Real Estate Brokers Automation" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-industry">Automation</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Real Estate Brokers Saves Time with Automation</h3>
+                <p class="card-excerpt">Automated workflows streamline operations and free up staff for high-value work.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Real Estate Brokers - Reviews -->
+        <a href="../blog/case-studies/real-estate-brokers-review-management.html" class="blog-card" data-category="professional">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/professional_reviews.png" 
+                     alt="Real Estate Brokers Reviews" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-growth">Reviews</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Real Estate Brokers Grows Reviews by 300%</h3>
+                <p class="card-excerpt">Automated review collection drives more customer feedback and improves online reputation.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Auto Mechanics & Repair Shops - Voice AI -->
+        <a href="../blog/case-studies/auto-mechanics-and-repair-shops-voice-ai-case-study.html" class="blog-card" data-category="retail">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/retail_voice_ai.png" 
+                     alt="Auto Mechanics & Repair Shops Voice AI" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-tech">Voice AI</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Auto Mechanics & Repair Shops Doubles Bookings with Voice AI</h3>
+                <p class="card-excerpt">How 24/7 AI voice agents eliminated missed calls and increased customer bookings.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Auto Mechanics & Repair Shops - Automation -->
+        <a href="../blog/case-studies/auto-mechanics-and-repair-shops-automation-success.html" class="blog-card" data-category="retail">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/retail_automation.png" 
+                     alt="Auto Mechanics & Repair Shops Automation" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-industry">Automation</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Auto Mechanics & Repair Shops Saves Time with Automation</h3>
+                <p class="card-excerpt">Automated workflows streamline operations and free up staff for high-value work.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Auto Mechanics & Repair Shops - Reviews -->
+        <a href="../blog/case-studies/auto-mechanics-and-repair-shops-review-management.html" class="blog-card" data-category="retail">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/retail_reviews.png" 
+                     alt="Auto Mechanics & Repair Shops Reviews" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-growth">Reviews</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Auto Mechanics & Repair Shops Grows Reviews by 300%</h3>
+                <p class="card-excerpt">Automated review collection drives more customer feedback and improves online reputation.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Window Tinting & Auto Detail - Voice AI -->
+        <a href="../blog/case-studies/window-tinting-and-auto-detail-voice-ai-case-study.html" class="blog-card" data-category="retail">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/retail_voice_ai.png" 
+                     alt="Window Tinting & Auto Detail Voice AI" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-tech">Voice AI</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Window Tinting & Auto Detail Doubles Bookings with Voice AI</h3>
+                <p class="card-excerpt">How 24/7 AI voice agents eliminated missed calls and increased customer bookings.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Window Tinting & Auto Detail - Automation -->
+        <a href="../blog/case-studies/window-tinting-and-auto-detail-automation-success.html" class="blog-card" data-category="retail">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/retail_automation.png" 
+                     alt="Window Tinting & Auto Detail Automation" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-industry">Automation</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Window Tinting & Auto Detail Saves Time with Automation</h3>
+                <p class="card-excerpt">Automated workflows streamline operations and free up staff for high-value work.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Window Tinting & Auto Detail - Reviews -->
+        <a href="../blog/case-studies/window-tinting-and-auto-detail-review-management.html" class="blog-card" data-category="retail">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/retail_reviews.png" 
+                     alt="Window Tinting & Auto Detail Reviews" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-growth">Reviews</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Window Tinting & Auto Detail Grows Reviews by 300%</h3>
+                <p class="card-excerpt">Automated review collection drives more customer feedback and improves online reputation.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Restaurants - Voice AI -->
+        <a href="../blog/case-studies/restaurants-voice-ai-case-study.html" class="blog-card" data-category="retail">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/retail_voice_ai.png" 
+                     alt="Restaurants Voice AI" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-tech">Voice AI</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Restaurants Doubles Bookings with Voice AI</h3>
+                <p class="card-excerpt">How 24/7 AI voice agents eliminated missed calls and increased customer bookings.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Restaurants - Automation -->
+        <a href="../blog/case-studies/restaurants-automation-success.html" class="blog-card" data-category="retail">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/retail_automation.png" 
+                     alt="Restaurants Automation" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-industry">Automation</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Restaurants Saves Time with Automation</h3>
+                <p class="card-excerpt">Automated workflows streamline operations and free up staff for high-value work.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+        <!-- Restaurants - Reviews -->
+        <a href="../blog/case-studies/restaurants-review-management.html" class="blog-card" data-category="retail">
+            <div class="card-image-wrapper">
+                <img src="../assets/blog_images/retail_reviews.png" 
+                     alt="Restaurants Reviews" class="card-image">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-tag tag-growth">Reviews</span>
+                    <span class="card-date">Feb 04, 2026</span>
+                </div>
+                <h3 class="card-title">Restaurants Grows Reviews by 300%</h3>
+                <p class="card-excerpt">Automated review collection drives more customer feedback and improves online reputation.</p>
+                <div class="card-footer">
+                    <span class="author-name">Innovat3 Team</span>
+                    <i data-lucide="arrow-right" class="card-arrow"></i>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Generated Footer -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="../index.html" class="footer-logo">Innovat3</a>
+                    <p>Empowering businesses with AI-driven automation and growth solutions.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="../index.html#process">Process</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../index.html#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Innovate Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+    <script>
+        lucide.createIcons();
+        
+        // Simple Filter Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.blog-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                cards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    if (filter === 'all' || category === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

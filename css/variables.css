@@ -1,0 +1,94 @@
+:root {
+  /* Brand Colors */
+  --color-primary: #84CC16;
+  /* Lime Green */
+  --color-primary-hover: #65a30d;
+  --color-accent: #94A3B8;
+  /* Slate Grey */
+  --color-dark: #0f172a;
+  /* Slate 900 for text/dark mode */
+  --color-light: #f8fafc;
+  /* Slate 50 */
+  --color-white: #ffffff;
+  --color-bg: #ffffff;
+  --color-text: #1e293b;
+  /* Slate 800 */
+  --color-text-muted: #64748b;
+  /* Slate 500 */
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #84CC16 0%, #a3e635 100%);
+  --gradient-dark: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  --gradient-glass: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.3) 100%);
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
+  --spacing-2xl: 96px;
+
+  /* Typography - Brand Guidelines */
+  --font-primary: 'Inter', sans-serif;
+
+  --text-h1: 64px;
+  --line-h1: 76px;
+
+  --text-h2: 60px;
+  --line-h2: 72px;
+
+  --text-h3: 50px;
+  --line-h3: 56px;
+
+  --text-h4: 32px;
+  --line-h4: 40px;
+
+  --text-h5: 24px;
+  --line-h5: 28px;
+
+  --text-body-1: 16px;
+  --line-body-1: 24px;
+
+  --text-body-2: 14px;
+  --line-body-2: 22px;
+
+  --text-caption: 12px;
+  --line-caption: 18px;
+
+  /* Fallback/System sizes mapping */
+  --text-6xl: var(--text-h1);
+  --text-5xl: var(--text-h2);
+  --text-4xl: var(--text-h3);
+  --text-3xl: var(--text-h4);
+  --text-2xl: var(--text-h5);
+  --text-xl: 20px;
+  /* Gap filler */
+  --text-lg: 18px;
+  /* Gap filler */
+  --text-base: var(--text-body-1);
+  --text-sm: var(--text-body-2);
+  --text-xs: var(--text-caption);
+
+  /* Effects */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.5);
+  --glass-backdrop: blur(12px);
+}
+
+/* Dark Mode Support (Future proofing) */
+@media (prefers-color-scheme: dark) {
+  /* Commented out to force Light Mode per user previous preferences, 
+     but keeping variables ready if needed. The brand identity specifies White Background. */
+  /* :root {
+    --color-bg: #0f172a;
+    --color-text: #f8fafc;
+  } */
+}

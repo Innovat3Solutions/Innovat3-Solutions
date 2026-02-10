@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Lead Generation & Database | Innovat3 Solutions</title>
+    <!-- Base styles and Favicon -->
+    <link rel="icon" type="image/png" href="../../images/Innovat3-logos/innovate-favicon.png">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Specific page overrides */
+        .page-header {
+            padding: 180px 0 80px;
+            background: radial-gradient(circle at top right, #f8fafc, #ffffff);
+            text-align: center;
+        }
+
+        .pain-point-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .pain-card {
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid #f1f5f9;
+            background: white;
+            transition: transform 0.2s;
+        }
+
+        .pain-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .solution-section {
+            background: var(--color-dark);
+            color: white;
+            padding: 80px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Nav -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="../../index.html" class="logo">
+                <img src="../../images/Innovat3-logos/innovate-logo-black-transparent.png" alt="Innovate Solutions"
+                    class="logo-full">
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html#services">Services</a>
+                <a href="../../pages/industries.html">Industries</a>
+            </div>
+            <div class="nav-actions">
+                <a href="../../index.html#contact" class="btn btn-primary shiny-button">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <div class="badge">Service Spotlight</div>
+            <h1>Lead Database & Generation</h1>
+            <p class="hero-sub">Stop chasing bad lists. Get qualified, ready-to-buy leads delivered instantly to your
+                phone.</p>
+            <div style="margin-top: 2rem;">
+                <p style="max-width: 600px; margin: 0 auto; color: var(--color-slate);">
+                    We are experts in "Speed-to-Lead" technology that connects you with prospects within seconds of
+                    their inquiry.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Problem Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center">The Race Against Time</h2>
+            <div class="pain-point-grid">
+                <div class="pain-card">
+                    <h3>The 5-Minute Death Sentence</h3>
+                    <p><strong>Scenario:</strong> A lead fills out a form on Angi/HomeAdvisor. It goes to 5 contractors.
+                    </p>
+                    <p><strong>Outcome:</strong> If you don't call in 5 minutes, your odds of closing drop by 21x. 78%
+                        of deals go to the first responder.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>The Estimating Lag</h3>
+                    <p><strong>Scenario:</strong> You drive 45 minutes to give a free estimate, only to find out they
+                        were just curious about price.</p>
+                    <p><strong>Outcome:</strong> You waste gas, time, and morale on "tire-kickers" instead of
+                        pre-qualified buyers.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>The Data Drought</h3>
+                    <p><strong>Scenario:</strong> You want to run a cold email campaign, but you have no innovative way
+                        to find local businesses in your niche.</p>
+                    <p><strong>Outcome:</strong> You rely on expensive, outdated lists that bounce 40% of the time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution / Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="text-center" style="max-width: 700px; margin: 0 auto;">
+                <div class="google-review-badge">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google"
+                        class="g-icon">
+                    <div class="stars">★★★★★</div>
+                    <span class="review-score">5.0</span>
+                    <span class="review-count">(Growth Engines)</span>
+                </div>
+                <h2>Stop Buying Dead Lists</h2>
+                <p class="text-muted">We provide real-time, verified lead data and the automation to reach them
+                    instantly.</p>
+            </div>
+
+            <div class="feature-grid">
+                <!-- Card 1 -->
+                <div class="feature-card shine-border">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Instant SMS Alerts</h3>
+                    <p>The moment a lead clicks "Submit", your phone buzzes. Call them within 60 seconds to increase
+                        conversion by 391%.</p>
+                    <div class="feature-visual">
+                        <div class="demo-chat-bubble ai" style="width:100%; font-size:11px;">
+                            🔥 <strong>New Lead:</strong> John Doe (Kitchen Remodel). Tap to call.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="feature-card shine-border">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                        </svg>
+                    </div>
+                    <h3>Intent Filtering</h3>
+                    <p>We add qualifying questions ("What is your budget?") to forms. You only get notified for serious
+                        buyers, not tire-kickers.</p>
+                    <div class="feature-visual">
+                        <div style="font-size:11px; text-align:center;">
+                            <div style="background:#f1f5f9; padding:4px; margin-bottom:4px; border-radius:4px;">Budget:
+                                &lt; $1k (Ignored)</div>
+                            <div style="background:#dcfce7; color:#166534; padding:4px; border-radius:4px;">Budget:
+                                $20k+ (Alert Sent)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="feature-card shine-border">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>B2B Enrichment</h3>
+                    <p>Need to target CEOs of local businesses? We can pull verified emails, LinkedIn profiles, and
+                        revenue data for outreach.</p>
+                    <div class="feature-visual">
+                        <div style="font-size:10px; color:#64748b;">
+                            Verify: ceo@apple.com... <span style="color:#22c55e;">Valid</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 60px; text-align: center;">
+                <a href="#contact" class="btn btn-primary shiny-button btn-lg">Get 100 Free Leads</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="section">
+        <div class="container text-center">
+            <h2>Industries That Use This</h2>
+            <p style="margin-bottom: 40px;">Speed matters most for these sectors:</p>
+
+            <div class="pain-point-grid" style="margin-bottom: 60px;">
+                <a href="../niches/general-contractors.html" style="text-decoration: none; color: inherit;">
+                    <div class="pain-card" style="text-align: center; border-color: var(--color-primary);">
+                        <h4>General Contractors</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-slate);">Beat the 5-vendor competition.</p>
+                    </div>
+                </a>
+                <a href="../niches/window-installers.html" style="text-decoration: none; color: inherit;">
+                    <div class="pain-card" style="text-align: center; border-color: var(--color-primary);">
+                        <h4>Window Installers</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-slate);">Stop driving for free estimates.</p>
+                    </div>
+                </a>
+                <a href="../niches/financial-managers-and-advisors.html" style="text-decoration: none; color: inherit;">
+                    <div class="pain-card" style="text-align: center; border-color: var(--color-primary);">
+                        <h4>Financial Advisors</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-slate);">Find high-net-worth prospects.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div style="background: #f8fafc; padding: 40px; border-radius: 16px;">
+                <h3>Don't see your industry?</h3>
+                <p>We have specialized solutions for 25+ business niches.</p>
+                <a href="../industries.html" class="btn btn-primary shiny-button"
+                    style="margin-top: 20px; display: inline-block;">View All Industries</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: FAQ Section -->
+    <section class="section">
+        <div class="container" style="max-width: 800px;">
+            <h2 class="text-center">Frequently Asked Questions</h2>
+            <div class="faq-accordion" style="margin-top: 40px;">
+                <details
+                    style="padding: 20px; background: white; border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 16px; cursor: pointer;">
+                    <summary
+                        style="font-weight: 600; font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        Where do leads come from?
+                        <span style="color: var(--color-primary); font-size: 1.5rem;">+</span>
+                    </summary>
+                    <p style="margin-top: 12px; color: var(--color-slate);">We aggregate data from over 50 verified
+                        sources, including public records, LinkedIn, and intent-based web signals, ensuring you get
+                        fresh, active prospects.</p>
+                </details>
+
+                <details
+                    style="padding: 20px; background: white; border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 16px; cursor: pointer;">
+                    <summary
+                        style="font-weight: 600; font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        Are the numbers scrubbed?
+                        <span style="color: var(--color-primary); font-size: 1.5rem;">+</span>
+                    </summary>
+                    <p style="margin-top: 12px; color: var(--color-slate);">Yes. We automatically check numbers against
+                        government DNC (Do Not Call) registries and verify line connectivity before delivering them to
+                        you.</p>
+                </details>
+
+                <details
+                    style="padding: 20px; background: white; border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 16px; cursor: pointer;">
+                    <summary
+                        style="font-weight: 600; font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        Can I export to Excel?
+                        <span style="color: var(--color-primary); font-size: 1.5rem;">+</span>
+                    </summary>
+                    <p style="margin-top: 12px; color: var(--color-slate);">Yes, you can export your lists as CSV files
+                        or, for better efficiency, we can push the data directly into your CRM via API.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Enhanced CTA Section -->
+    <section
+        style="padding: 80px 0; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Stop Cold Calling. Start Closing.</h2>
+            <p
+                style="font-size: 1.2rem; color: #cbd5e1; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Get pre-qualified, waiting-to-buy leads delivered straight to your phone.
+            </p>
+            <a href="../../index.html#contact" class="btn btn-primary shiny-button btn-lg"
+                style="background: var(--color-primary); color: #0f172a; font-weight: 800; border: none;">
+                Build My Lead List
+            </a>
+            <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">Free sample list available.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2026 Innovate Solutions</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

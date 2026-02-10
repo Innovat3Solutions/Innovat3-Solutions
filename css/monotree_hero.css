@@ -1,0 +1,165 @@
+/* =========================================
+   MONOTREE SERVICE HERO STANDARD (V2)
+   ========================================= */
+
+/* Hero Container */
+.niche-hero {
+    position: relative;
+    padding: 160px 0 100px;
+    background-color: #ffffff;
+    /* Clean White BG */
+    color: #0f172a;
+    /* Dark Slate Text */
+    overflow: hidden;
+}
+
+.niche-hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* Typography */
+.hero-text h1 {
+    font-size: 3.5rem;
+    /* Large Headline */
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: #0f172a;
+    /* Force Dark Color */
+    font-weight: 800;
+    /* Bold per Monotree spec */
+    letter-spacing: -0.02em;
+}
+
+.hero-text .sub-headline {
+    font-size: 1.125rem;
+    color: #334155;
+    /* Slate 700 */
+    margin-bottom: 2.5rem;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+/* Input Group (Email + Button) */
+.hero-cta-group {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 40px;
+}
+
+.hero-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #f8fafc;
+    color: #0f172a;
+    font-size: 1rem;
+}
+
+.hero-input:focus {
+    outline: none;
+    border-color: #84CC16;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(132, 204, 22, 0.1);
+}
+
+.hero-btn {
+    background-color: #84CC16;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.hero-btn:hover {
+    background-color: #65a30d;
+    transform: translateY(-1px);
+}
+
+/* Isometric Image Wrapper */
+.hero-image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.hero-image-wrapper img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    /* Monotree Isometric Look */
+    transform: rotateY(-5deg) rotateX(5deg);
+    border-radius: 20px;
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: white;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.hero-image-wrapper img:hover {
+    transform: rotateY(0deg) rotateX(0deg) translateY(-10px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* Trust / Stats Row */
+.trust-row {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 2rem;
+    margin-top: 2rem;
+}
+
+.trust-stat-val {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1;
+}
+
+.trust-stat-label {
+    font-size: 0.875rem;
+    color: #64748b;
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .niche-hero-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-cta-group {
+        margin: 0 auto 40px;
+    }
+
+    .trust-row {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .hero-image-wrapper img {
+        transform: none;
+        /* Disable isometric on mobile for clarity */
+    }
+}
