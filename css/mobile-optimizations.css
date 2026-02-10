@@ -145,8 +145,8 @@
     }
 
     /* Hero stats row - center and keep horizontal */
-    .hero-text > div[style*="display: flex"],
-    .hero-text > div[style*="display:flex"] {
+    .hero-text>div[style*="display: flex"],
+    .hero-text>div[style*="display:flex"] {
         justify-content: center !important;
         text-align: center !important;
         flex-direction: row !important;
@@ -167,7 +167,7 @@
     }
 
     /* Individual stat items */
-    .hero-text > div > div {
+    .hero-text>div>div {
         flex: 0 1 auto !important;
         min-width: 0 !important;
     }
@@ -207,9 +207,9 @@
     }
 
     /* Service cards - show 1.15 cards (peek effect) */
-    .services-grid > .service-card,
-    .services-grid > *,
-    .features-grid > * {
+    .services-grid>.service-card,
+    .services-grid>*,
+    .features-grid>* {
         flex: 0 0 85% !important;
         min-width: 85% !important;
         max-width: 85% !important;
@@ -254,8 +254,8 @@
         height: 0 !important;
     }
 
-    .pillars-grid > .pillar-card,
-    .pillars-grid > *,
+    .pillars-grid>.pillar-card,
+    .pillars-grid>*,
     .pillars-grid .pillar-card {
         flex: 0 0 90% !important;
         min-width: 90% !important;
@@ -291,8 +291,8 @@
         display: none !important;
     }
 
-    .case-grid > *,
-    .work-grid > * {
+    .case-grid>*,
+    .work-grid>* {
         flex: 0 0 90% !important;
         min-width: 90% !important;
         scroll-snap-align: start !important;
@@ -338,11 +338,11 @@
     }
 
     .stat-card,
-    .benefits-grid > *,
-    .roi-grid > *,
-    .feature-cards-grid > *,
-    .pain-point-grid > *,
-    .feature-grid > * {
+    .benefits-grid>*,
+    .roi-grid>*,
+    .feature-cards-grid>*,
+    .pain-point-grid>*,
+    .feature-grid>* {
         position: relative !important;
         transform: none !important;
         margin: 0 !important;
@@ -401,7 +401,7 @@
     }
 
     .testimonial-card,
-    .testimonials-grid > * {
+    .testimonials-grid>* {
         flex: 0 0 90% !important;
         min-width: 90% !important;
         scroll-snap-align: start !important;
@@ -541,11 +541,22 @@
         font-size: 2.5rem !important;
     }
 
+    /* Reduce whitespace between Industries and Stats */
+    section#niches {
+        padding-bottom: 20px !important;
+    }
+
+    .tech-stats-section {
+        padding-top: 20px !important;
+    }
+
     /* ============================
        16. ENSURE TOUCH TARGETS
        ============================ */
 
-    a, button, .clickable {
+    a,
+    button,
+    .clickable {
         min-height: 44px !important;
         min-width: 44px !important;
     }
@@ -563,7 +574,9 @@
        18. PREVENT ZOOM ON INPUT FOCUS
        ============================ */
 
-    input, select, textarea {
+    input,
+    select,
+    textarea {
         font-size: 16px !important;
     }
 
@@ -608,12 +621,12 @@
     }
 
     /* Hero stat overlay card - hide on mobile for cleaner look */
-    .hero-image-wrapper > div[style*="background: white"][style*="padding: 1.5rem"] {
+    .hero-image-wrapper>div[style*="background: white"][style*="padding: 1.5rem"] {
         display: none !important;
     }
 
     /* Trust logos section in hero */
-    .hero-text > div[style*="opacity: 0.4"] {
+    .hero-text>div[style*="opacity: 0.4"] {
         display: none !important;
     }
 

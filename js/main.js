@@ -293,8 +293,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     dropdownTriggers.forEach(trigger => {
         trigger.addEventListener('click', (e) => {
-            // Skip on mobile - handled by the mobile-specific handler above
-            if (window.innerWidth <= 767) {
+            // Skip on mobile ONLY for nav dropdowns (handled by mobile menu logic)
+            // Allow niche-dropdown-trigger to work anywhere
+            if (window.innerWidth <= 767 && !trigger.classList.contains('niche-dropdown-trigger')) {
                 return;
             }
 

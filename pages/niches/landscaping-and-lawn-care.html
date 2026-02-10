@@ -925,128 +925,128 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>    <!-- Unified Contact Section -->
+    <section class="unified-contact-section" id="contact">
+        <div class="unified-contact-container">
+            <!-- Left Content -->
+            <div class="contact-left-content">
+                <div class="contact-progress-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot empty"></span>
+                    <span class="dot empty"></span>
+                    <span class="dot empty"></span>
+                </div>
 
+                <h2>Manage customers across the Lifetime of the product cycle</h2>
+                <p>Build rich, unified profiles with purchase history, preferences, support interactions, and more so
+                    you can personalize experiences and boost retention at every touchpoint.</p>
 
-    <!-- 6. FINAL CTA (Consultation Section) -->
-    <section id="contact" class="consultation-section">
+                <a href="#" class="contact-learn-btn">Learn More</a>
 
-        <!-- Background Elements -->
-        <svg aria-hidden="true"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; opacity: 0.1;"
-            xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
-                    <path d="M0 40L40 0H20L0 20M40 40V20L20 40" stroke="white" stroke-width="1" fill="none" />
-                </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#grid-pattern)" />
-        </svg>
-
-        <div class="container consultation-grid">
-
-            <!-- Left: Value Proposition -->
-            <div class="consult-content">
-                <div class="badge"
-                    style="background: rgba(132, 204, 22, 0.2); color: var(--color-primary); border: 1px solid var(--color-primary); margin-bottom: 1.5rem;">
-                    Free Strategy Session</div>
-                <h2>Ready to dominate your market?</h2>
-                <p class="sub-head">
-                    Join the top Landscaping & Lawn Care businesses leveraging INNOVAT3 SOLUTIONS to scale faster.
-                </p>
-
-                <div class="value-props">
-                    <div class="prop-item">
-                        <div class="prop-icon"><i data-lucide="bar-chart-2"></i></div>
-                        <div class="prop-text">Free Market Analysis & ROI Audit</div>
+                <!-- Features -->
+                <div class="contact-features">
+                    <div class="contact-feature">
+                        <div class="contact-feature-icon">
+                            <i data-lucide="history" size="24"></i>
+                        </div>
+                        <h4>Customer History</h4>
+                        <p>Analyze customer behavior across product lines</p>
                     </div>
-                    <div class="prop-item">
-                        <div class="prop-icon"><i data-lucide="map"></i></div>
-                        <div class="prop-text">Customized AI Implementation Roadmap</div>
+
+                    <div class="contact-feature">
+                        <div class="contact-feature-icon">
+                            <i data-lucide="bar-chart-3" size="24"></i>
+                        </div>
+                        <h4>Actionable Insights</h4>
+                        <p>Employ predictive analytics to optimize sales pipelines</p>
                     </div>
-                    <div class="prop-item">
-                        <div class="prop-icon"><i data-lucide="unlock"></i></div>
-                        <div class="prop-text">No Commitment, Just Value</div>
+
+                    <div class="contact-feature">
+                        <div class="contact-feature-icon">
+                            <i data-lucide="layers" size="24"></i>
+                        </div>
+                        <h4>Identify Patterns</h4>
+                        <p>Utilize live data to improve conversion rates</p>
+                    </div>
+
+                    <div class="contact-feature">
+                        <div class="contact-feature-icon">
+                            <i data-lucide="target" size="24"></i>
+                        </div>
+                        <h4>Predictive Analysis</h4>
+                        <p>Employ real-time data to refine marketing strategies</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Right: Lead Capture Form -->
-            <!-- Right: Lead Capture Form -->
-            <div class="glass-form-wrapper" id="multiStepForm">
-                <div class="glass-form-header">
-                    <div
-                        style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
-                        <div>
-                            <h3>Get Your Free Consultation</h3>
-                            <p style="font-size: 0.85rem; opacity: 0.8;">Takes less than 3 minutes.</p>
+            <!-- Right Form -->
+            <div class="contact-form-wrapper">
+                <form id="unified-contact-form" action="#" method="POST">
+                    <div class="contact-form-row">
+                        <div class="contact-form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="James..." required>
                         </div>
-                        <div class="step-indicator" id="stepIndicator">1/3</div>
-                    </div>
 
-                    <!-- Progress Bar -->
-                    <div class="progress-container">
-                        <div class="progress-bar" id="progressBar" style="width: 33%;"></div>
-                    </div>
-                </div>
-
-                <form id="consultationForm" action="#" method="POST">
-
-                    <!-- Step 1: Intro -->
-                    <div class="form-step active" id="step1">
-                        <div class="form-group">
-                            <label>First Name</label>
-                            <input type="text" class="form-input" id="firstName" placeholder="Jane" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Company Name</label>
-                            <input type="text" class="form-input" id="companyName" placeholder="Acme Inc." required>
-                        </div>
-                        <button type="button" class="submit-btn shiny-button next-btn">Next <i data-lucide="arrow-right"
-                                size="16" style="margin-left:8px;"></i></button>
-                    </div>
-
-                    <!-- Step 2: Contact -->
-                    <div class="form-step" id="step2">
-                        <div class="form-group">
-                            <label>Work Email</label>
-                            <input type="email" class="form-input" id="email" placeholder="jane@company.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Phone Number</label>
-                            <input type="tel" class="form-input" id="phone" placeholder="(555) 123-4567" required>
-                        </div>
-                        <div class="button-group">
-                            <button type="button" class="btn-secondary prev-btn">Back</button>
-                            <button type="button" class="submit-btn shiny-button next-btn">Next <i
-                                    data-lucide="arrow-right" size="16" style="margin-left:8px;"></i></button>
+                        <div class="contact-form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Smith..." required>
                         </div>
                     </div>
 
-                    <!-- Step 3: Details -->
-                    <div class="form-step" id="step3">
-                        <div class="form-group">
-                            <label>How can we help?</label>
-                            <textarea class="form-input" id="message"
-                                placeholder="Tell us about your current challenges..."
-                                style="min-height: 100px;"></textarea>
+                    <div class="contact-form-row">
+                        <div class="contact-form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="robertapouros@gmail.com" required>
                         </div>
-                        <div class="button-group">
-                            <button type="button" class="btn-secondary prev-btn">Back</button>
-                            <button type="submit" class="submit-btn shiny-button">Book Strategy Call</button>
+
+                        <div class="contact-form-group">
+                            <label for="country">Country</label>
+                            <select id="country" name="country" required>
+                                <option value="USA">🇺🇸 USA</option>
+                                <option value="Canada">🇨🇦 Canada</option>
+                                <option value="UK">🇬🇧 United Kingdom</option>
+                                <option value="Australia">🇦🇺 Australia</option>
+                                <option value="Other">🌍 Other</option>
+                            </select>
                         </div>
                     </div>
 
-                    <div class="form-footer">
-                        <p>We respect your privacy. <a href="#">Read our policy</a>.</p>
+                    <div class="contact-form-group full-width">
+                        <label for="role">Your Role</label>
+                        <select id="role" name="role" required>
+                            <option value="">Select your role</option>
+                            <option value="Business Owner">Business Owner</option>
+                            <option value="Manager">Manager</option>
+                            <option value="Director">Director</option>
+                            <option value="C-Level">C-Level Executive</option>
+                            <option value="Other">Other</option>
+                        </select>
                     </div>
+
+                    <div class="contact-form-group full-width">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Enter message..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="contact-submit-btn">Contact Us</button>
                 </form>
             </div>
-
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer --><!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
