@@ -59,6 +59,27 @@ document.addEventListener('DOMContentLoaded', () => {
                     requestAnimationFrame(updateCounter);
                 });
 
+                // 4. Animate Clock
+                const clocks = entry.target.querySelectorAll('.clock-hand');
+                clocks.forEach(hand => {
+                    setTimeout(() => {
+                        hand.style.transform = "rotate(360deg)";
+                    }, 200);
+                });
+
+                // 5. Animate Line Chart
+                const chartLines = entry.target.querySelectorAll('.chart-line');
+                chartLines.forEach(line => {
+                    setTimeout(() => {
+                        line.style.strokeDashoffset = "0";
+                    }, 200);
+                });
+
+                const chartDots = entry.target.querySelectorAll('.chart-dot');
+                chartDots.forEach(dot => {
+                    dot.classList.add('visible');
+                });
+
                 // Stop observing after animation triggers
                 observer.unobserve(entry.target);
             }

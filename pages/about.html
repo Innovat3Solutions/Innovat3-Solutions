@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Innovat3 Solutions | Building Smarter Business Systems</title>
+    <title>About INNOVAT3 Solutions | Building Smarter Business Systems</title>
 
     <!-- Base styles and Favicon -->
     <link rel="icon" type="image/png" href="../images/Innovat3-logos/innovate-favicon.png">
     <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/components/tech-stats.css">
     <link rel="stylesheet" href="../css/styles.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -108,7 +109,7 @@
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <a href="../index.html" class="logo">
-                <img src="../images/Innovat3-logos/innovate-logo-black-transparent.png" alt="Innovate Solutions"
+                <img src="../images/Innovat3-logos/innovate-logo-black-transparent.png" alt="INNOVAT3 Solutions"
                     class="logo-full">
             </a>
 
@@ -199,8 +200,8 @@
     <!-- Header Section -->
     <header class="header-bg">
         <div class="container">
-            <h1 class="header-title">About Innovat3 Solutions</h1>
-            <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto; color: #cbd5e1;">Briding the gap between
+            <h1 class="header-title">About INNOVAT3 Solutions</h1>
+            <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto; color: #cbd5e1;">Bridging the gap between
                 business and technology.</p>
         </div>
     </header>
@@ -210,26 +211,115 @@
         <div class="container text-content text-center">
             <span class="subtitle">Who We Are</span>
             <h2 style="margin-bottom: 30px;">Professional Grade Systems for Growing Businesses</h2>
-            <p>Innovat3 Solutions exists to give small and growing businesses access to enterprise-level technology and
+            <p>INNOVAT3 Solutions exists to give small and growing businesses access to enterprise-level technology and
                 automation—without the complexity or cost traditionally required to get there.</p>
-            <p style="margin-top: 20px;">Founded in 2023 by Juan De Los Santos, Innovat3 Solutions was built to bridge
+            <p style="margin-top: 20px;">Founded in 2023 by Juan De Los Santos, INNOVAT3 Solutions was built to bridge
                 the gap between small businesses and powerful, scalable systems that drive real growth.</p>
             <p style="margin-top: 20px; font-weight: 600;">We believe technology should work for your business, not slow
                 it down.</p>
         </div>
     </section>
 
+    <!-- Tech Stats / Impact Section -->
+    <section class="tech-stats-section" style="background-color: #f8fafc; padding: 80px 0;">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 50px;">
+                <span class="subtitle">Our Impact</span>
+                <h2>Proven Results</h2>
+                <p style="max-width: 600px; margin: 10px auto; color: #64748b;">We measure our success by the growth of
+                    our clients.</p>
+            </div>
+            <div class="stats-grid">
+
+                <!-- Card 1: Retention (Circle) -->
+                <div class="stat-card">
+                    <div class="stat-visual">
+                        <svg viewBox="0 0 36 36" class="circle-chart">
+                            <path class="circle-bg" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path class="circle" stroke-dasharray="0, 100" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <text x="18" y="20.35" class="percentage">98%</text>
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Retention Rate</h3>
+                        <p style="color: #64748b; font-size: 14px;">Clients stick with automation</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Active (Pulse) -->
+                <div class="stat-card">
+                    <div class="stat-visual">
+                        <div class="pulse-container">
+                            <div class="pulse-dot"></div>
+                            <div class="pulse-dot"></div>
+                        </div>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Active Monitoring</h3>
+                        <p style="color: #64748b; font-size: 14px;">24/7 System Uptime</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Rapid Launch (Animated Clock) -->
+                <div class="stat-card">
+                    <div class="stat-visual">
+                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" class="animated-clock"
+                            style="shape-rendering: geometricPrecision;">
+                            <circle cx="40" cy="40" r="32" stroke="#e2e8f0" stroke-width="3" fill="none"></circle>
+                            <circle cx="40" cy="40" r="32" stroke="#84CC16" stroke-width="3" fill="none"></circle>
+                            <polyline points="40 20 40 40 52 46" class="clock-hand" stroke="#84CC16" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round"></polyline>
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Rapid Launch</h3>
+                        <p style="color: #64748b; font-size: 14px;">Live in &lt; 48 Hours</p>
+                    </div>
+                </div>
+
+                <!-- Card 4: ROI (Trending Chart) -->
+                <div class="stat-card">
+                    <div class="stat-visual">
+                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" class="animated-chart"
+                            style="shape-rendering: geometricPrecision;">
+                            <!-- Trending line -->
+                            <polyline points="10,60 22,48 34,52 46,36 58,42 70,24" class="chart-line" stroke="#84CC16"
+                                stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+                            </polyline>
+                            <!-- End dot -->
+                            <circle cx="70" cy="24" r="4" fill="#84CC16" class="chart-dot"></circle>
+                            <!-- 300% text -->
+                            <text x="40" y="72" text-anchor="middle" fill="#84CC16" font-size="14" font-weight="700"
+                                font-family="Inter, sans-serif">
+                                <tspan class="counter-anim" data-target="300">300</tspan>%
+                            </text>
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Avg. ROI</h3>
+                        <p style="color: #64748b; font-size: 14px;">First 90 days</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Our Story -->
-    <section class="section-padding" style="background-color: #f8fafc;">
+    <section class="section-padding">
         <div class="container">
             <div class="text-content">
                 <h2 class="text-center" style="margin-bottom: 40px;">Our Story</h2>
-                <p>Innovat3 Solutions began with a simple realization:</p>
+                <p>INNOVAT3 Solutions began with a simple realization:</p>
                 <p class="highlight-text"
                     style="font-size: 1.5rem; margin: 20px 0; border-left: 4px solid var(--primary-color); padding-left: 20px;">
                     Small businesses often outwork enterprise companies—but they don’t always have the systems to
                     support that effort.</p>
-                <p>Since launching in 2023, Innovat3 Solutions has grown experience delivering enterprise-grade
+                <p>Since launching in 2023, INNOVAT3 Solutions has grown experience delivering enterprise-level
                     solutions and automations that have generated 7-figure+ results, helping businesses increase
                     efficiency, streamline operations, and unlock scalable growth.</p>
                 <p style="margin-top: 20px;">What started as solving operational problems evolved into building systems
@@ -239,7 +329,7 @@
     </section>
 
     <!-- Mission & Vision -->
-    <section class="section-padding">
+    <section class="section-padding" style="background-color: #f8fafc;">
         <div class="container">
             <div class="founder-grid">
                 <div>
@@ -325,14 +415,14 @@
                     <span class="subtitle">Meet the Founder</span>
                     <h2>Juan De Los Santos</h2>
                     <p style="font-size: 1.1rem; color: #64748b; margin-bottom: 20px;">Founder & Owner</p>
-                    <p style="margin-bottom: 20px; line-height: 1.7;">Innovat3 Solutions was founded by Juan De Los
+                    <p style="margin-bottom: 20px; line-height: 1.7;">INNOVAT3 Solutions was founded by Juan De Los
                         Santos, a systems strategist and business builder focused on helping companies scale through
                         technology and automation.</p>
                     <p style="margin-bottom: 20px; line-height: 1.7;">Juan launched Innovat3 in 2023 with a clear goal:
                         to give small businesses access to the same level of systems and infrastructure used by
                         enterprise organizations—without unnecessary complexity or cost.</p>
                     <p style="line-height: 1.7;">With hands-on experience delivering enterprise-level solutions that
-                        have produced 7-figure outcomes, Juan leads Innovat3 Solutions with a results-driven,
+                        have produced 7-figure outcomes, Juan leads INNOVAT3 Solutions with a results-driven,
                         systems-first mindset.</p>
                 </div>
             </div>
@@ -342,7 +432,7 @@
     <!-- CTA Section -->
     <section class="section-padding" style="background-color: var(--primary-color); color: #000; text-align: center;">
         <div class="container">
-            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Ready to Innovat3?</h2>
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Ready to INNOVAT3?</h2>
             <p style="font-size: 1.25rem; max-width: 700px; margin: 0 auto 40px; opacity: 0.9;">If you’re ready to
                 streamline operations, automate intelligently, and build systems that scale, we’re ready to work with
                 you.</p>
@@ -356,24 +446,62 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-col">
-                    <a href="../index.html" class="footer-logo">Innovat3</a>
+                <!-- Column 1: Brand -->
+                <div class="footer-col" style="flex: 2;">
+                    <a href="../index.html" class="footer-logo">
+                        <img src="../images/Innovat3-logos/innovate-logo-white-transparent.png" alt="INNOVAT3 Solutions"
+                            class="logo-full" style="height: 30px;">
+                    </a>
                     <p>Modernizing Miami one automated workflow at a time.</p>
                 </div>
+
+                <!-- Column 2: Services -->
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="services/voice-ai.html">Voice AI Agents</a>
+                    <a href="services/custom-apps.html">Custom Apps</a>
+                    <a href="services/review-automation.html">Review Management</a>
+                    <a href="services/private-ai-infra.html">Private AI</a>
+                    <a href="services/lead-database.html">Lead Capture</a>
+                    <a href="services/data-intelligence.html">Data Intelligence</a>
+                    <a href="services/workflow-automation.html">Workflow Automation</a>
+                    <a href="services/consulting.html">Growth Consulting</a>
+                    <a href="services/web-development.html">Web Development</a>
+                </div>
+
+                <!-- Column 3: Industries -->
+                <div class="footer-col">
+                    <h4>Industries</h4>
+                    <a href="niches/general-contractors.html">Home Services</a>
+                    <a href="niches/family-practice-doctors.html">Medical & Health</a>
+                    <a href="niches/attorneys-and-law-firms.html">Legal & Prof.</a>
+                    <a href="niches/hair-salons-and-stylists.html">Beauty & Wellness</a>
+                    <a href="niches/restaurants.html">Retail & Hospitality</a>
+                    <a href="niches/auto-mechanics-and-repair-shops.html">Automotive</a>
+                    <a href="niches/real-estate-brokers.html">Real Estate</a>
+                    <a href="../index.html#niches"
+                        style="color: var(--primary-color); font-weight: 600; margin-top: 8px;">View All Industries
+                        &rarr;</a>
+                </div>
+
+                <!-- Column 4: Resources -->
                 <div class="footer-col">
                     <h4>Company</h4>
                     <a href="../index.html#process">Process</a>
                     <a href="about.html">About</a>
                     <a href="../index.html#contact">Contact</a>
+                    <a href="mailto:hello@innovat3solutions.com">hello@innovat3solutions.com</a>
+                    <p style="margin-top: 10px; opacity: 0.6;">Miami, FL</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Innovate Solutions. All rights reserved.</p>
+                <p>&copy; 2026 INNOVAT3 Solutions. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="../js/main.js"></script>
+    <script src="../js/components/tech-stats.js"></script>
     <script>
         lucide.createIcons();
     </script>
