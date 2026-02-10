@@ -274,16 +274,18 @@ document.addEventListener('DOMContentLoaded', () => {
         statsObserver.observe(stat);
     });
 
-    // 9. Niche View All Dropdown Toggle
+    // 9. Niche View All Dropdown Toggle (DESKTOP ONLY)
     // Converted to generic dropdown toggle for click behavior
+    // Mobile is handled separately above (lines 37-56)
     const dropdownTriggers = document.querySelectorAll('.dropdown-trigger, .niche-dropdown-trigger');
 
     dropdownTriggers.forEach(trigger => {
         trigger.addEventListener('click', (e) => {
-            // Check if this is the Industries dropdown specifically or if we want check for all
-            // The user wanted Industries to be click-to-open.
-            // If we want ONLY industries, we should check content or ID.
-            // But let's check if it has a sibling dropdown
+            // Skip on mobile - handled by the mobile-specific handler above
+            if (window.innerWidth <= 767) {
+                return;
+            }
+
             const dropdown = trigger.nextElementSibling;
 
             if (dropdown) {

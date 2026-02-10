@@ -98,6 +98,18 @@ img {
     background-color: #e2e8f0;
 }
 
+.btn-brand {
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+}
+
+.btn-brand:hover {
+    background-color: var(--color-primary-hover);
+    color: var(--color-white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
 .dropdown-menu.active {
     opacity: 1;
     visibility: visible;
@@ -3318,7 +3330,9 @@ textarea.form-input {
         background: #f8fafc;
         border-color: #cbd5e1;
     }
-}/* =========================================
+}
+
+/* =========================================
    MONOTREE SERVICE HERO STANDARD (V2)
    ========================================= */
 
@@ -3483,10 +3497,12 @@ textarea.form-input {
         /* Disable isometric on mobile for clarity */
     }
 }
+
 /* Arc Fan Stats Display */
 .section-stats-arc {
     padding: 100px 0;
-    overflow: hidden; /* Hide potential overflow from rotation */
+    overflow: hidden;
+    /* Hide potential overflow from rotation */
     background: #ffffff;
 }
 
@@ -3495,7 +3511,8 @@ textarea.form-input {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    height: 400px; /* Needed for arc height */
+    height: 400px;
+    /* Needed for arc height */
     margin-bottom: 2rem;
 }
 
@@ -3504,13 +3521,15 @@ textarea.form-input {
     padding: 30px;
     width: 240px;
     height: 260px;
-    border-radius: 4px; /* Slight round, mostly sharp per ref */
-    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    border-radius: 4px;
+    /* Slight round, mostly sharp per ref */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
     position: absolute;
     bottom: 0;
-    transform-origin: 50% 150%; /* Pivot from way below to assist arc */
+    transform-origin: 50% 150%;
+    /* Pivot from way below to assist arc */
     transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.5s ease;
-    border: 1px solid rgba(0,0,0,0.03);
+    border: 1px solid rgba(0, 0, 0, 0.03);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -3520,7 +3539,7 @@ textarea.form-input {
 
 .stat-card:hover {
     z-index: 10;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
 }
 
 .stat-card-number {
@@ -3574,7 +3593,8 @@ textarea.form-input {
 @media (max-width: 992px) {
     .arc-container {
         height: auto;
-        display: grid; /* Changed to grid for better mobile layout */
+        display: grid;
+        /* Changed to grid for better mobile layout */
         grid-template-columns: 1fr 1fr;
         gap: 20px;
         align-items: stretch;
@@ -3596,6 +3616,7 @@ textarea.form-input {
         grid-template-columns: 1fr;
     }
 }
+
 /* =========================================
    Tech Stats Section (Restored)
    ========================================= */
@@ -4025,6 +4046,7 @@ textarea.form-input {
     0% {
         stroke-dasharray: 0, 100;
     }
+
     100% {
         stroke-dasharray: 95, 100;
     }
@@ -4059,6 +4081,7 @@ textarea.form-input {
         font-size: 1.75rem;
     }
 }
+
 /* Unified Contact Section */
 .unified-contact-section {
     padding: 100px 0;
@@ -4155,7 +4178,7 @@ textarea.form-input {
     background: white;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .testimonial-header {
@@ -4235,7 +4258,7 @@ textarea.form-input {
     background: white;
     padding: 48px;
     border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form-row {
@@ -4384,6 +4407,7 @@ textarea.form-input {
 
 /* Responsive heading sizes */
 @media (max-width: 1024px) {
+
     .section h2,
     .section-header h2,
     .niches h2,
@@ -4394,6 +4418,7 @@ textarea.form-input {
 }
 
 @media (max-width: 768px) {
+
     .section h2,
     .section-header h2,
     .niches h2,
@@ -4415,13 +4440,25 @@ textarea.form-input {
 }
 
 @keyframes rotate-clock {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes tick-hand {
-    0%, 100% { transform: rotate(0deg); }
-    50% { transform: rotate(90deg); }
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(90deg);
+    }
 }
 
 /* Animated Chart */
@@ -4440,10 +4477,12 @@ textarea.form-input {
         stroke-dashoffset: 100;
         opacity: 0.3;
     }
+
     50% {
         stroke-dashoffset: 0;
         opacity: 1;
     }
+
     100% {
         stroke-dashoffset: -100;
         opacity: 0.3;
@@ -4451,10 +4490,13 @@ textarea.form-input {
 }
 
 @keyframes pulse-dot {
-    0%, 100% {
+
+    0%,
+    100% {
         r: 2;
         opacity: 1;
     }
+
     50% {
         r: 3;
         opacity: 0.7;
@@ -4476,28 +4518,32 @@ textarea.form-input {
     padding-left: 1rem;
     padding-right: 1rem;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
 }
 
 .mobile-carousel::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
+    display: none;
+    /* Chrome/Safari */
 }
 
-.mobile-carousel > * {
+.mobile-carousel>* {
     scroll-snap-align: start;
-    flex: 0 0 85%; /* Show 1.15 cards to hint at more content */
+    flex: 0 0 85%;
+    /* Show 1.15 cards to hint at more content */
     min-width: 85%;
 }
 
 /* Peek Effect - Show 1.5 cards */
-.mobile-carousel-peek > * {
+.mobile-carousel-peek>* {
     flex: 0 0 75%;
     min-width: 75%;
 }
 
 /* Show 2 cards variation */
-.mobile-carousel-dual > * {
+.mobile-carousel-dual>* {
     flex: 0 0 48%;
     min-width: 48%;
 }
@@ -4543,10 +4589,13 @@ textarea.form-input {
 
 /* Scroll Hint Animation for Carousels */
 @keyframes scroll-hint {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.6;
         transform: translateX(0);
     }
+
     50% {
         opacity: 1;
         transform: translateX(10px);
@@ -4572,6 +4621,7 @@ textarea.form-input {
 
 /* ========== MOBILE (320px - 767px) ========== */
 @media (max-width: 767px) {
+
     /* Base & Container */
     .container {
         padding: 0 var(--spacing-sm);
@@ -4928,7 +4978,8 @@ textarea.form-input {
     /* Service Page Hero - Reduce image prominence */
     .service-page-wrapper .hero-image-wrapper,
     .service-hero .hero-image-wrapper {
-        display: none; /* Hide on mobile for service pages to prioritize content */
+        display: none;
+        /* Hide on mobile for service pages to prioritize content */
     }
 
     .trust-row {
@@ -5290,7 +5341,8 @@ textarea.form-input {
     .video-wrapper,
     .embed-wrapper {
         position: relative;
-        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        padding-bottom: 56.25%;
+        /* 16:9 aspect ratio */
         height: 0;
         overflow: hidden;
         max-width: 100%;
@@ -5331,7 +5383,8 @@ textarea.form-input {
         line-height: 1.4;
     }
 
-    h5, h6 {
+    h5,
+    h6 {
         font-size: 1.1rem;
         line-height: 1.4;
     }
@@ -5438,7 +5491,8 @@ textarea.form-input {
     }
 
     .pillars-grid::before {
-        display: none !important; /* Hide connecting line on mobile */
+        display: none !important;
+        /* Hide connecting line on mobile */
     }
 
     .pillars-grid .pillar-card {
@@ -5465,7 +5519,7 @@ textarea.form-input {
         display: none !important;
     }
 
-    .case-grid > * {
+    .case-grid>* {
         scroll-snap-align: start !important;
         flex: 0 0 85% !important;
         min-width: 85% !important;
@@ -5508,6 +5562,7 @@ textarea.form-input {
 
 /* ========== TABLET (768px - 1024px) ========== */
 @media (min-width: 768px) and (max-width: 1024px) {
+
     /* Container */
     .container {
         padding: 0 var(--spacing-md);
@@ -5765,6 +5820,7 @@ textarea.form-input {
 
 /* ========== TOUCH DEVICE ENHANCEMENTS ========== */
 @media (hover: none) and (pointer: coarse) {
+
     /* Larger touch targets */
     .btn,
     a,
@@ -5811,6 +5867,7 @@ textarea.form-input {
 
 /* ========== SMALL MOBILE (320px - 480px) ========== */
 @media (max-width: 480px) {
+
     /* Extra small screens - further optimizations */
     .container {
         padding: 0 12px;
@@ -5987,6 +6044,7 @@ textarea.form-input {
 
 /* Safe Area for Notched Devices */
 @supports (padding: max(0px)) {
+
     .navbar,
     .footer,
     .container {
@@ -6001,6 +6059,7 @@ textarea.form-input {
 
 /* Reduce Motion for Accessibility */
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
@@ -6025,6 +6084,7 @@ textarea.form-input {
 
 /* High Contrast Mode */
 @media (prefers-contrast: high) {
+
     .btn,
     .service-card,
     .bento-card,
@@ -6039,6 +6099,7 @@ textarea.form-input {
 
 /* ========== PRINT STYLES ========== */
 @media print {
+
     .navbar,
     .footer,
     .hero-cta,
@@ -6072,7 +6133,12 @@ textarea.form-input {
         color: #666;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         page-break-after: avoid;
         page-break-inside: avoid;
     }
