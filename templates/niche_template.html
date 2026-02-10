@@ -459,10 +459,31 @@
             .pillars-grid,
             .stats-grid,
             .expert-wrapper,
-            .services-grid,
-            .case-grid {
+            .services-grid {
                 grid-template-columns: 1fr;
                 flex-direction: column;
+            }
+
+            /* Mobile Carousel for Case Studies */
+            .case-grid {
+                display: flex;
+                overflow-x: auto;
+                gap: 1rem;
+                padding-bottom: 1.5rem;
+                scroll-snap-type: x mandatory;
+                margin: 0 -1rem;
+                /* Bleed to edge */
+                padding: 0 1rem 1.5rem 1rem;
+                /* Content padding */
+                grid-template-columns: none;
+                /* Override grid */
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .case-grid>a {
+                min-width: 85%;
+                scroll-snap-align: center;
+                flex-shrink: 0;
             }
 
             .hero-text h1 {

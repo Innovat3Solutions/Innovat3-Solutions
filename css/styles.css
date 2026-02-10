@@ -4804,7 +4804,7 @@ textarea.form-input {
         display: block;
         width: 25px;
         height: 2px;
-        background: var(--color-dark);
+        background: #64748b;
         transition: all 0.3s ease;
         border-radius: 2px;
     }

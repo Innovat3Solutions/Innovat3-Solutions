@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="../../css/variables.css">
     <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="../../css/faq-carousel.css">
-    <link rel="stylesheet" href="../../css/mobile-optimizations.css">
 
     <!-- Google Fonts -->
     <link
@@ -23,17 +22,43 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-        <style>
-        /* Niche Page Specific Variables */
+    <style>
+        /* Niche Page Specific Overrides based on Design Spec */
         :root {
-            --color-primary: #84CC16;
-            --niche-hero-bg: #ffffff;
-            --niche-accent: #84CC16;
+            --color-primary: {
+                    {
+                    ACCENT_COLOR
+                }
+            }
+
+            ;
+
+            --niche-hero-bg: {
+                    {
+                    HERO_BG_COLOR
+                }
+            }
+
+            ;
+
+            /* Dynamic Hero BG */
+            --niche-accent: {
+                    {
+                    ACCENT_COLOR
+                }
+            }
+
+            ;
+
+            /* Dynamic Accent */
             --niche-text: var(--color-text);
             --niche-card-bg: #ffffff;
             --niche-card-text: #1e293b;
-            --niche-secondary-bg: #f8fafc;
-        }
+
+            --niche-secondary-bg: {
+                    {
+                    LIGHT_BG_COLOR
+                }
             }
 
             ;
@@ -79,7 +104,7 @@
             margin-bottom: 1.5rem;
             color: #0f172a;
             /* Force Dark Color */
-            font-weight: 300;
+            font-weight: 700;
             /* Bold per Monotree spec */
             letter-spacing: -0.02em;
         }
@@ -235,7 +260,7 @@
             font-family: 'Merriweather', serif;
             font-size: 1.35rem;
             margin-bottom: 1rem;
-            font-weight: 300;
+            font-weight: 700;
         }
 
         /* STATS SECTION */
@@ -283,7 +308,7 @@
         .stat-number {
             font-family: 'Playfair Display', serif;
             font-size: 3rem;
-            font-weight: 300;
+            font-weight: 700;
             color: var(--niche-card-text);
             line-height: 1;
             margin-bottom: 0.5rem;
@@ -294,7 +319,7 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
             color: #1e293b;
-            font-weight: 300;
+            font-weight: 700;
             margin-bottom: 1rem;
         }
 
@@ -434,10 +459,31 @@
             .pillars-grid,
             .stats-grid,
             .expert-wrapper,
-            .services-grid,
-            .case-grid {
+            .services-grid {
                 grid-template-columns: 1fr;
                 flex-direction: column;
+            }
+
+            /* Mobile Carousel for Case Studies */
+            .case-grid {
+                display: flex;
+                overflow-x: auto;
+                gap: 1rem;
+                padding-bottom: 1.5rem;
+                scroll-snap-type: x mandatory;
+                margin: 0 -1rem;
+                /* Bleed to edge */
+                padding: 0 1rem 1.5rem 1rem;
+                /* Content padding */
+                grid-template-columns: none;
+                /* Override grid */
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .case-grid>a {
+                min-width: 85%;
+                scroll-snap-align: center;
+                flex-shrink: 0;
             }
 
             .hero-text h1 {
@@ -473,7 +519,6 @@
                         <a href="../services/lead-database.html">Lead Capture</a>
                         <a href="../services/data-intelligence.html">Data Intelligence</a>
                         <a href="../services/workflow-automation.html">Workflow Automations</a>
-                        <a href="../services/web-development.html">Web Development</a>
                         <a href="../services/consulting.html">Growth Consulting</a>
                     </div>
                 </div>
@@ -528,7 +573,6 @@
                         </div>
                     </div>
                 </div>
-                <a href="../blog.html">Blog</a>
                 <a href="../../index.html#process">Process</a>
                 <a href="../../index.html#about">About</a>
             </div>
@@ -548,47 +592,52 @@
 
     <!-- 1. DYNAMIC HERO SECTION -->
     
-    <header class="niche-hero">
+    <header class="niche-hero hero-alva" style="background: #fafafa; padding-top: 140px;">
         <div class="container niche-hero-content">
             <div class="hero-text">
-                <h1 class="font-primary">
-                    Capture Every Potential Case, Instantly
-                    <!-- SVG Scribble Underline -->
-                    <svg style="position: absolute; width: 250px; height: 12px; bottom: -12px; left: 0; color: var(--niche-accent); opacity: 0.6;" viewBox="0 0 100 10" preserveAspectRatio="none">
-                        <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="3" fill="none" />
-                    </svg>
-                </h1>
-                <p class="sub-headline">
-                    Secure Private AI for the legal sector. Automate client intake and document drafting without compromising confidentiality or privilege. Stop burning billable hours on admin work.
-                </p>
-
-                <div class="hero-cta-group">
-                    <input type="email" placeholder="Enter work email" class="hero-input">
-                    <button class="hero-btn">Book a demo</button>
+                <div class="badge-pill" style="background: #18181b; color: white; border: none;">
+                    <span style="background: white; color: black; border-radius: 4px; padding: 2px 6px; font-size: 0.7rem; font-weight: 700; margin-right: 8px;">NEW</span>
+                    Multi-channel automation
                 </div>
-
-                <!-- Trust / Stats Row -->
-                <div style="display: flex; align-items: center; gap: 3rem; border-top: 1px solid #e2e8f0; padding-top: 2rem; margin-top: 2rem;">
-                    <div>
-                        <div style="font-size: 2rem; font-weight: 300; color: #0f172a; line-height: 1;">35% Time on Admin</div>
-                        <div style="font-size: 0.875rem; color: #64748b; font-weight: 500; margin-top: 4px;">Every minute on admin is money burned in legal work. (Solved)</div>
-                    </div>
-                    <!-- Star Rating -->
-                    <div style="display: flex; flex-direction: column; gap: 4px;">
-                        <div style="display: flex; gap: 2px;">
-                            <i data-lucide="star" style="fill: #0f172a; color: #0f172a; width: 16px;"></i>
-                            <i data-lucide="star" style="fill: #0f172a; color: #0f172a; width: 16px;"></i>
-                            <i data-lucide="star" style="fill: #0f172a; color: #0f172a; width: 16px;"></i>
-                            <i data-lucide="star" style="fill: #0f172a; color: #0f172a; width: 16px;"></i>
-                            <i data-lucide="star" style="fill: #0f172a; color: #0f172a; width: 16px;"></i>
-                        </div>
-                        <span style="font-size: 0.875rem; font-weight: 600; color: #0f172a;">4.9/5 Average Rating</span>
-                    </div>
+                <h1 class="hero-h1-alva">
+                    Capture Every Potential Case, Instantly
+                </h1>
+                <p class="sub-headline" style="font-size: 1.1rem; color: #52525b; margin-bottom: 2rem; max-width: 480px;">
+                     Secure Private AI for the legal sector. Automate client intake and document drafting without compromising confidentiality or privilege. Keep your business needs safely organized under one roof.
+                </p>
+                <div class="cta-group" style="display: flex; gap: 1rem;">
+                    <a href="#contact" class="btn btn-primary shiny-button" style="background: #18181b; color: white; border-radius: 99px; padding: 14px 28px;">Try for Free</a>
+                    <a href="#process" class="btn btn-outline" style="border-radius: 99px; padding: 14px 28px; display: flex; align-items: center; gap: 8px;">
+                        See Preview <i data-lucide="play-circle" size="16"></i>
+                    </a>
+                </div>
+                
+                <div style="margin-top: 3rem; opacity: 0.4; filter: grayscale(1);">
+                     <div style="font-size: 0.8rem; font-weight: 600; margin-bottom: 1rem;">TRUSTED BY TEAMS AT</div>
+                     <div style="display: flex; gap: 2rem; align-items: center;">
+                         <!-- Logo Placeholders -->
+                        <div style="font-weight: 800; letter-spacing: -1px; font-size: 1.2rem;">slack</div>
+                        <div style="font-weight: 800; letter-spacing: -1px; font-size: 1.2rem;">zoom</div>
+                        <div style="font-weight: 800; letter-spacing: -1px; font-size: 1.2rem;">airbnb</div>
+                     </div>
                 </div>
             </div>
-
-            <div class="hero-image-wrapper">
-                 <img src="../../images/niche_graphics/attorneys-and-law-firms.png" alt="Attorneys & Law Firms">
+            
+            <div class="hero-image-wrapper" style="background: #f4f4f5; padding: 2rem; border-radius: 24px;">
+                 <img src="../../images/niche_graphics/attorneys-and-law-firms.png" alt="Attorneys & Law Firms" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+                 
+                 <!-- Stat Overlay -->
+                 <div style="background: white; padding: 1.5rem; border-radius: 12px; margin-top: -40px; margin-left: 20px; position: relative; z-index: 2; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); width: 80%;">
+                      <div style="font-size: 0.9rem; color: #71717a;">Total Revenue</div>
+                      <div style="font-size: 2.5rem; font-weight: 700; letter-spacing: -0.05em; margin: 4px 0;">$48,403</div>
+                      <div style="display: flex; gap: 1rem; align-items: flex-end; height: 40px;">
+                          <div style="background: #e4e4e7; width: 20%; height: 60%; border-radius: 4px;"></div>
+                          <div style="background: #e4e4e7; width: 20%; height: 80%; border-radius: 4px;"></div>
+                          <div style="background: #18181b; width: 20%; height: 100%; border-radius: 4px; position: relative;">
+                               <div style="position: absolute; top: -30px; left: 50%; transform: translateX(-50%); background: #18181b; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.7rem;">$30k</div>
+                          </div>
+                      </div>
+                 </div>
             </div>
         </div>
     </header>
@@ -737,68 +786,59 @@
         </div>
     </section>
 
-        <!-- 4. STATS BENTO -->
-    <section class="stats-bento-section">
+    <!-- 4. STATS -->
+    <section class="stats-section">
         <div class="container">
-            <div class="text-center" style="margin-bottom: 60px;">
-                <span class="subtitle">By The Numbers</span>
-                <h2 style="font-weight: 300; font-size: 2.5rem;">Results That <span class="highlight-merriweather">Speak</span> for Themselves</h2>
-                <p style="max-width: 600px; margin: 1rem auto; color: #64748b;">Real metrics from real businesses using our automation solutions.</p>
-            </div>
-                        <div class="stats-bento-grid">
-                                <!-- Client Retention -->
-                <div class="stats-bento-card">
-                    <div class="bento-stat-visual">
-                        <div class="stat-icon-circle">
-                            <i data-lucide="user-check" size="36"></i>
-                        </div>
+            <div class="stats-grid">
+                <!-- Stat 1 -->
+                <div class="stat-item">
+                    <div class="stat-icon-wrapper">
+                        <i data-lucide="users" size="32"></i>
                     </div>
-                    <div class="bento-stat-content">
-                        <div class="stat-number"><span class="counter-anim" data-target="95">0</span>%</div>
-                        <h3>Client Retention</h3>
-                        <p>Automated follow-up keeps clients engaged and coming back.</p>
+                    <div class="stat-number count-up" data-target="95" data-suffix="%">0%</div>
+                    <div class="stat-label">Client Retention</div>
+                    <div class="stat-desc">
+                        Our automated follow-up systems ensure no client floats away, building long-term loyalty without
+                        manual effort.
                     </div>
                 </div>
 
-                <!-- 24/7 Availability -->
-                <div class="stats-bento-card">
-                    <div class="bento-stat-visual">
-                        <div class="stat-icon-circle">
-                            <i data-lucide="clock" size="36"></i>
-                        </div>
+                <!-- Stat 2 -->
+                <div class="stat-item">
+                    <div class="stat-icon-wrapper">
+                        <i data-lucide="clock" size="32"></i>
                     </div>
-                    <div class="bento-stat-content">
-                        <div class="stat-number">24/7</div>
-                        <h3>Always Available</h3>
-                        <p>AI agents capture leads and answer calls around the clock.</p>
-                    </div>
-                </div>
-
-                <!-- Tailored Strategy -->
-                <div class="stats-bento-card">
-                    <div class="bento-stat-visual">
-                        <div class="stat-icon-circle">
-                            <i data-lucide="target" size="36"></i>
-                        </div>
-                    </div>
-                    <div class="bento-stat-content">
-                        <div class="stat-number">100%</div>
-                        <h3>Custom Solutions</h3>
-                        <p>Tailored automation built specifically for your business.</p>
+                    <div class="stat-number count-up" data-target="24" data-suffix="/7">0/0</div>
+                    <div class="stat-label">Availability</div>
+                    <div class="stat-desc">
+                        Voice & Chat agents work while you sleep, capturing leads and scheduling appointments around the
+                        clock.
                     </div>
                 </div>
 
-                <!-- ROI -->
-                <div class="stats-bento-card">
-                    <div class="bento-stat-visual">
-                        <div class="stat-icon-circle">
-                            <i data-lucide="trending-up" size="36"></i>
-                        </div>
+                <!-- Stat 3 -->
+                <div class="stat-item">
+                    <div class="stat-icon-wrapper">
+                        <i data-lucide="layers" size="32"></i>
                     </div>
-                    <div class="bento-stat-content">
-                        <div class="stat-number"><span class="counter-anim" data-target="10">0</span>x</div>
-                        <h3>Average ROI</h3>
-                        <p>Typical return on investment within the first year.</p>
+                    <div class="stat-number count-up" data-target="100" data-suffix="%">0%</div>
+                    <div class="stat-label">Tailored Strategy</div>
+                    <div class="stat-desc">
+                        We don't rush. We map every step of your specific workflow to ensure a perfect, custom-fit
+                        automation infrastructure.
+                    </div>
+                </div>
+
+                <!-- Stat 4 -->
+                <div class="stat-item">
+                    <div class="stat-icon-wrapper">
+                        <i data-lucide="trending-up" size="32"></i>
+                    </div>
+                    <div class="stat-number count-up" data-target="10" data-suffix="x">0x</div>
+                    <div class="stat-label">ROI Average</div>
+                    <div class="stat-desc">
+                        By eliminating admin waste and capturing more leads, our clients typically see a 10x return on
+                        their technology investment.
                     </div>
                 </div>
             </div>
@@ -816,55 +856,58 @@
             </div>
 
             <div class="case-grid">
-
-                <a href="../../blog/case-studies/attorneys-and-law-firms-voice-ai-case-study.html" style="text-decoration: none; color: inherit;">
-                    <div class="case-card">
-                        <div class="case-img" style="background-image: url('../../blog/images/voice-ai/hero-voice-ai-professional.png'); background-size: cover; background-position: center;">
-                             <div class="case-tag">Voice AI</div>
-                        </div>
-                        <div class="case-content">
-                            <div class="case-meta">
-                                <i data-lucide="calendar" size="14"></i> 2025 Study
-                            </div>
-                            <h4 style="font-weight: 300; font-size: 1.1rem; margin-bottom: 0.25rem;">Contractor Doubles Leads</h4>
-                            <div style="font-weight: 800; color: #84cc16; font-size: 0.9rem; margin-bottom: 0.5rem;">280% ROI in Year 1</div>
-                            <p style="font-size: 0.95rem; color: #64748b; margin-top: auto; line-height: 1.5;">Automated lead response systems allowed a general contractor to secure jobs before competitors responded.</p>
-                        </div>
+                
+                <div class="case-card">
+                    <div class="case-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('../../images/stock/stock_business.jpg');">
+                         <!-- Fallback icon if no image -->
+                         <i data-lucide="scale" size="48" style="opacity: 0.8;"></i>
+                         <div class="case-tag">Legal</div>
                     </div>
-                </a>
-
-                <a href="../../blog/case-studies/attorneys-and-law-firms-automation-success.html" style="text-decoration: none; color: inherit;">
-                    <div class="case-card">
-                        <div class="case-img" style="background-image: url('../../blog/images/automation/hero-automation-professional.png'); background-size: cover; background-position: center;">
-                             <div class="case-tag">Automation</div>
+                    <div class="case-content">
+                        <div class="case-meta">
+                            <i data-lucide="calendar" size="14"></i> 2025 Study
                         </div>
-                        <div class="case-content">
-                            <div class="case-meta">
-                                <i data-lucide="calendar" size="14"></i> 2025 Study
-                            </div>
-                            <h4 style="font-weight: 300; font-size: 1.1rem; margin-bottom: 0.25rem;">Major Retailer Saves $20k/Mo</h4>
-                            <div style="font-weight: 800; color: #84cc16; font-size: 0.9rem; margin-bottom: 0.5rem;">20% Increase in Conversions</div>
-                            <p style="font-size: 0.95rem; color: #64748b; margin-top: auto; line-height: 1.5;">How AI voice agents eliminated missed calls and converted 20% more inquiries into bookings.</p>
-                        </div>
+                        <h4 style="font-weight: 700; font-size: 1.1rem; margin-bottom: 0.25rem;">Law Firm 11x ROI</h4>
+                        <div style="font-weight: 800; color: #84cc16; font-size: 0.9rem; margin-bottom: 0.5rem;">$85k Added Monthly Revenue</div>
+                        <p style="font-size: 0.95rem; color: #64748b; margin-top: auto; line-height: 1.5;">A regional firm used AI intake to capture leads instantly, resulting in 180% more qualified cases.</p>
+                        <a href="#" class="case-link" style="margin-top: 1rem;">Read Analysis <i data-lucide="arrow-right" size="16"></i></a>
                     </div>
-                </a>
-
-                <a href="../../blog/case-studies/attorneys-and-law-firms-review-management.html" style="text-decoration: none; color: inherit;">
-                    <div class="case-card">
-                        <div class="case-img" style="background-image: url('../../blog/images/review-management/hero-review-management-professional.png'); background-size: cover; background-position: center;">
-                             <div class="case-tag">Review Management</div>
-                        </div>
-                        <div class="case-content">
-                            <div class="case-meta">
-                                <i data-lucide="calendar" size="14"></i> 2025 Study
-                            </div>
-                            <h4 style="font-weight: 300; font-size: 1.1rem; margin-bottom: 0.25rem;">Dental Practice Adds $127k</h4>
-                            <div style="font-weight: 800; color: #84cc16; font-size: 0.9rem; margin-bottom: 0.5rem;">4.3 to 4.7 Star Rating</div>
-                            <p style="font-size: 0.95rem; color: #64748b; margin-top: auto; line-height: 1.5;">Automated review requests boosted local SEO, driving 18% more new patient inquiries.</p>
-                        </div>
+                </div>
+                
+                <div class="case-card">
+                    <div class="case-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('../../images/stock/stock_business.jpg');">
+                         <!-- Fallback icon if no image -->
+                         <i data-lucide="star" size="48" style="opacity: 0.8;"></i>
+                         <div class="case-tag">Healthcare</div>
                     </div>
-                </a>
-
+                    <div class="case-content">
+                        <div class="case-meta">
+                            <i data-lucide="calendar" size="14"></i> 2025 Study
+                        </div>
+                        <h4 style="font-weight: 700; font-size: 1.1rem; margin-bottom: 0.25rem;">Dental Practice Adds $127k</h4>
+                        <div style="font-weight: 800; color: #84cc16; font-size: 0.9rem; margin-bottom: 0.5rem;">4.3 to 4.7 Star Rating</div>
+                        <p style="font-size: 0.95rem; color: #64748b; margin-top: auto; line-height: 1.5;">Automated review requests boosted local SEO, driving 18% more new patient inquiries.</p>
+                        <a href="#" class="case-link" style="margin-top: 1rem;">Read Analysis <i data-lucide="arrow-right" size="16"></i></a>
+                    </div>
+                </div>
+                
+                <div class="case-card">
+                    <div class="case-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('../../images/stock/stock_business.jpg');">
+                         <!-- Fallback icon if no image -->
+                         <i data-lucide="hard-hat" size="48" style="opacity: 0.8;"></i>
+                         <div class="case-tag">Home Services</div>
+                    </div>
+                    <div class="case-content">
+                        <div class="case-meta">
+                            <i data-lucide="calendar" size="14"></i> 2025 Study
+                        </div>
+                        <h4 style="font-weight: 700; font-size: 1.1rem; margin-bottom: 0.25rem;">Contractor Doubles Leads</h4>
+                        <div style="font-weight: 800; color: #84cc16; font-size: 0.9rem; margin-bottom: 0.5rem;">280% ROI in Year 1</div>
+                        <p style="font-size: 0.95rem; color: #64748b; margin-top: auto; line-height: 1.5;">Automated lead response systems allowed a general contractor to secure jobs before competitors responded.</p>
+                        <a href="#" class="case-link" style="margin-top: 1rem;">Read Analysis <i data-lucide="arrow-right" size="16"></i></a>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </section>
@@ -875,7 +918,7 @@
         <div class="faq-header-container">
             <div>
                 <span class="subtitle" style="text-transform: uppercase; letter-spacing: 1px; font-size: 0.8rem; margin-bottom: 0.5rem; display: block; opacity: 0.7;">Support</span>
-                <h2 style="font-weight: 300;">Frequently<br><span class="highlight-merriweather">Asked Questions</span></h2>
+                <h2 style="font-weight: 300; font-size: 2.5rem; line-height: 1.2;">Frequently<br><span class="serif-title" style="font-style: italic;">Asked Questions</span></h2>
             </div>
             
             <div class="faq-nav-group">
@@ -890,52 +933,35 @@
 
         <div class="faq-carousel-wrapper">
             <div class="faq-track">
+
                 <div class="faq-card">
-                    <h3 class="faq-question">Can potential clients schedule consultations?</h3>
+                    <h3 class="faq-question">Is client data kept private?</h3>
                     <div class="faq-answer">
-                        <p>Yes. The AI asks about legal issue type (family law, estate, injury, etc.) and books consultations with appropriate attorneys.</p>
+                        <p>Yes. We deploy Private AI models that do not train on your data and run in secure environments.</p>
                     </div>
                 </div>
                 <div class="faq-card">
-                    <h3 class="faq-question">Does it pre-qualify legal matters?</h3>
+                    <h3 class="faq-question">Can it draft documents?</h3>
                     <div class="faq-answer">
-                        <p>Absolutely. The system collects case details, jurisdiction, and urgency to determine fit before scheduling.</p>
+                        <p>Yes, it can generate first drafts of common legal documents based on intake data.</p>
                     </div>
                 </div>
                 <div class="faq-card">
-                    <h3 class="faq-question">Can clients schedule document review appointments?</h3>
+                    <h3 class="faq-question">Does it integrate with Clio/MyCase?</h3>
                     <div class="faq-answer">
-                        <p>Yes. The AI books contract review, will review, or other document consultations and requests documents be sent in advance.</p>
+                        <p>We build custom integrations for major legal practice management software.</p>
                     </div>
                 </div>
                 <div class="faq-card">
-                    <h3 class="faq-question">What about court deadline coordination?</h3>
+                    <h3 class="faq-question">How long does the setup process take?</h3>
                     <div class="faq-answer">
-                        <p>The system sends reminders about filing deadlines, court dates, and discovery timelines to keep cases on track.</p>
+                        <p>Most agencies are live within 7-14 days. We handle all the technical setup, training, and integration with your CRM and existing tools.</p>
                     </div>
                 </div>
                 <div class="faq-card">
-                    <h3 class="faq-question">Can it handle conflict checks?</h3>
+                    <h3 class="faq-question">Is there a long-term contract?</h3>
                     <div class="faq-answer">
-                        <p>Yes. The AI collects opposing party information so your team can run conflict checks before scheduling consultations.</p>
-                    </div>
-                </div>
-                <div class="faq-card">
-                    <h3 class="faq-question">Does it schedule follow-up case meetings?</h3>
-                    <div class="faq-answer">
-                        <p>The system books case update meetings, settlement discussions, and trial preparation sessions based on case phase.</p>
-                    </div>
-                </div>
-                <div class="faq-card">
-                    <h3 class="faq-question">Can clients request emergency legal help?</h3>
-                    <div class="faq-answer">
-                        <p>Yes. The AI identifies urgent matters (arrests, restraining orders, emergency custody) and prioritizes emergency scheduling.</p>
-                    </div>
-                </div>
-                <div class="faq-card">
-                    <h3 class="faq-question">How does it coordinate retainer agreements?</h3>
-                    <div class="faq-answer">
-                        <p>The system sends engagement letters and retainer invoices after consultations, tracking when signed agreements are returned.</p>
+                        <p>We offer flexible month-to-month options as well as discounted annual plans. We believe our results should keep you, not a standardized contract.</p>
                     </div>
                 </div>
             </div>
@@ -943,133 +969,191 @@
     </section>
 
 
-    
+    <!-- 6. FINAL CTA (Consultation Section) -->
+    <section id="contact" class="consultation-section">
 
-    <!-- Footer -->
-    <!-- Footer -->
-        <!-- Unified Contact Section -->
-        <!-- Unified Contact Section -->
-    <section class="unified-contact-section" id="contact">
-        <div class="unified-contact-container">
-            <!-- Left Content -->
-            <div class="contact-left-content">
-                <div class="contact-progress-dots">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot empty"></span>
-                    <span class="dot empty"></span>
-                    <span class="dot empty"></span>
-                </div>
+        <!-- Background Elements -->
+        <svg aria-hidden="true"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; opacity: 0.1;"
+            xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M0 40L40 0H20L0 20M40 40V20L20 40" stroke="white" stroke-width="1" fill="none" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid-pattern)" />
+        </svg>
 
-                <h2>See these results in your business</h2>
-                <p>Join hundreds of businesses who've transformed their operations with automation. Let's create a custom solution for your specific needs.</p>
+        <div class="container consultation-grid">
 
-                <a href="#" class="contact-learn-btn">Learn More</a>
+            <!-- Left: Value Proposition -->
+            <div class="consult-content">
+                <div class="badge"
+                    style="background: rgba(132, 204, 22, 0.2); color: var(--color-primary); border: 1px solid var(--color-primary); margin-bottom: 1.5rem;">
+                    Free Strategy Session</div>
+                <h2>Ready to dominate your market?</h2>
+                <p class="sub-head">
+                    Join the top Attorneys & Law Firms businesses leveraging INNOVAT3 SOLUTIONS to scale faster.
+                </p>
 
-                <!-- Features -->
-                <div class="contact-features">
-                    <div class="contact-feature">
-                        <div class="contact-feature-icon">
-                            <i data-lucide="history" size="24"></i>
-                        </div>
-                        <h4>Customer History</h4>
-                        <p>Analyze customer behavior across product lines</p>
+                <div class="value-props">
+                    <div class="prop-item">
+                        <div class="prop-icon"><i data-lucide="bar-chart-2"></i></div>
+                        <div class="prop-text">Free Market Analysis & ROI Audit</div>
                     </div>
-
-                    <div class="contact-feature">
-                        <div class="contact-feature-icon">
-                            <i data-lucide="bar-chart-3" size="24"></i>
-                        </div>
-                        <h4>Actionable Insights</h4>
-                        <p>Employ predictive analytics to optimize sales pipelines</p>
+                    <div class="prop-item">
+                        <div class="prop-icon"><i data-lucide="map"></i></div>
+                        <div class="prop-text">Customized AI Implementation Roadmap</div>
                     </div>
-
-                    <div class="contact-feature">
-                        <div class="contact-feature-icon">
-                            <i data-lucide="layers" size="24"></i>
-                        </div>
-                        <h4>Identify Patterns</h4>
-                        <p>Utilize live data to improve conversion rates</p>
-                    </div>
-
-                    <div class="contact-feature">
-                        <div class="contact-feature-icon">
-                            <i data-lucide="target" size="24"></i>
-                        </div>
-                        <h4>Predictive Analysis</h4>
-                        <p>Employ real-time data to refine marketing strategies</p>
+                    <div class="prop-item">
+                        <div class="prop-icon"><i data-lucide="unlock"></i></div>
+                        <div class="prop-text">No Commitment, Just Value</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Right Form -->
-            <div class="contact-form-wrapper">
-                <form id="unified-contact-form" action="#" method="POST">
-                    <div class="contact-form-row">
-                        <div class="contact-form-group">
-                            <label for="firstName">First Name</label>
-                            <input type="text" id="firstName" name="firstName" placeholder="James..." required>
+            <!-- Right: Lead Capture Form -->
+            <!-- Right: Lead Capture Form -->
+            <div class="glass-form-wrapper" id="multiStepForm">
+                <div class="glass-form-header">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                        <div>
+                            <h3>Get Your Free Consultation</h3>
+                            <p style="font-size: 0.85rem; opacity: 0.8;">Takes less than 3 minutes.</p>
                         </div>
+                        <div class="step-indicator" id="stepIndicator">1/3</div>
+                    </div>
 
-                        <div class="contact-form-group">
-                            <label for="lastName">Last Name</label>
-                            <input type="text" id="lastName" name="lastName" placeholder="Smith..." required>
+                    <!-- Progress Bar -->
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progressBar" style="width: 33%;"></div>
+                    </div>
+                </div>
+
+                <form id="consultationForm" action="#" method="POST">
+
+                    <!-- Step 1: Intro -->
+                    <div class="form-step active" id="step1">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" class="form-input" id="firstName" placeholder="Jane" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Company Name</label>
+                            <input type="text" class="form-input" id="companyName" placeholder="Acme Inc." required>
+                        </div>
+                        <button type="button" class="submit-btn shiny-button next-btn">Next <i data-lucide="arrow-right"
+                                size="16" style="margin-left:8px;"></i></button>
+                    </div>
+
+                    <!-- Step 2: Contact -->
+                    <div class="form-step" id="step2">
+                        <div class="form-group">
+                            <label>Work Email</label>
+                            <input type="email" class="form-input" id="email" placeholder="jane@company.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" class="form-input" id="phone" placeholder="(555) 123-4567" required>
+                        </div>
+                        <div class="button-group">
+                            <button type="button" class="btn-secondary prev-btn">Back</button>
+                            <button type="button" class="submit-btn shiny-button next-btn">Next <i
+                                    data-lucide="arrow-right" size="16" style="margin-left:8px;"></i></button>
                         </div>
                     </div>
 
-                    <div class="contact-form-row">
-                        <div class="contact-form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="robertapouros@gmail.com" required>
+                    <!-- Step 3: Details -->
+                    <div class="form-step" id="step3">
+                        <div class="form-group">
+                            <label>How can we help?</label>
+                            <textarea class="form-input" id="message"
+                                placeholder="Tell us about your current challenges..."
+                                style="min-height: 100px;"></textarea>
                         </div>
-
-                        <div class="contact-form-group">
-                            <label for="country">Country</label>
-                            <select id="country" name="country" required>
-                                <option value="USA">🇺🇸 USA</option>
-                                <option value="Canada">🇨🇦 Canada</option>
-                                <option value="UK">🇬🇧 United Kingdom</option>
-                                <option value="Australia">🇦🇺 Australia</option>
-                                <option value="Other">🌍 Other</option>
-                            </select>
+                        <div class="button-group">
+                            <button type="button" class="btn-secondary prev-btn">Back</button>
+                            <button type="submit" class="submit-btn shiny-button">Book Strategy Call</button>
                         </div>
                     </div>
 
-                    <div class="contact-form-group full-width">
-                        <label for="role">Your Role</label>
-                        <select id="role" name="role" required>
-                            <option value="">Select your role</option>
-                            <option value="Business Owner">Business Owner</option>
-                            <option value="Manager">Manager</option>
-                            <option value="Director">Director</option>
-                            <option value="C-Level">C-Level Executive</option>
-                            <option value="Other">Other</option>
-                        </select>
+                    <div class="form-footer">
+                        <p>We respect your privacy. <a href="#">Read our policy</a>.</p>
                     </div>
-
-                    <div class="contact-form-group full-width">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Enter message..." required></textarea>
-                    </div>
-
-                    <button type="submit" class="contact-submit-btn">Contact Us</button>
                 </form>
             </div>
+
         </div>
     </section>
 
+    <!-- 7. RELEVANT FAQs -->
+    <section class="faq-section" style="padding: 80px 0; background: #f1f5f9; color: var(--niche-card-text);">
+        <div class="container">
+            <h2 class="serif-title" style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Common Questions
+                for Attorneys & Law Firms</h2>
+            <div class="faq-grid" style="max-width: 800px; margin: 0 auto; display: grid; gap: 1.5rem;">
+                <!-- FAQ Items will be injected here -->
+                
+    <section class="faq-carousel-section">
+        <div class="faq-header-container">
+            <div>
+                <span class="subtitle" style="text-transform: uppercase; letter-spacing: 1px; font-size: 0.8rem; margin-bottom: 0.5rem; display: block; opacity: 0.7;">Support</span>
+                <h2 style="font-weight: 300; font-size: 2.5rem; line-height: 1.2;">Frequently<br><span class="serif-title" style="font-style: italic;">Asked Questions</span></h2>
+            </div>
+            
+            <div class="faq-nav-group">
+                <button class="faq-nav-btn prev" aria-label="Previous">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+                </button>
+                <button class="faq-nav-btn next" aria-label="Next">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+        </div>
 
+        <div class="faq-carousel-wrapper">
+            <div class="faq-track">
 
+                <div class="faq-card">
+                    <h3 class="faq-question">Is client data kept private?</h3>
+                    <div class="faq-answer">
+                        <p>Yes. We deploy Private AI models that do not train on your data and run in secure environments.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h3 class="faq-question">Can it draft documents?</h3>
+                    <div class="faq-answer">
+                        <p>Yes, it can generate first drafts of common legal documents based on intake data.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h3 class="faq-question">Does it integrate with Clio/MyCase?</h3>
+                    <div class="faq-answer">
+                        <p>We build custom integrations for major legal practice management software.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h3 class="faq-question">How long does the setup process take?</h3>
+                    <div class="faq-answer">
+                        <p>Most agencies are live within 7-14 days. We handle all the technical setup, training, and integration with your CRM and existing tools.</p>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <h3 class="faq-question">Is there a long-term contract?</h3>
+                    <div class="faq-answer">
+                        <p>We offer flexible month-to-month options as well as discounted annual plans. We believe our results should keep you, not a standardized contract.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -1128,7 +1212,6 @@
 
     <script src="../../js/main.js"></script>
     <script src="../../js/count-up.js"></script>
-    <script src="../../js/components/tech-stats.js"></script>
     <script>
         lucide.createIcons();
     </script>
