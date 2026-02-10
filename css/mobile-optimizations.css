@@ -61,6 +61,13 @@
         margin: 0 !important;
     }
 
+    /* Service Pages - Extra top padding for hero */
+    .service-page-wrapper .niche-hero,
+    .service-page-wrapper header.niche-hero {
+        padding-top: 130px !important;
+        overflow: visible !important;
+    }
+
     /* Industry Pages - Reduce hero image height to 150px max */
     .niche-hero .hero-image-wrapper {
         max-height: 150px;
@@ -71,11 +78,6 @@
         max-height: 150px;
         object-fit: cover;
         width: 100%;
-    }
-
-    /* Ensure hero content is mobile-friendly */
-    .niche-hero {
-        padding: 100px 0 60px !important;
     }
 
     .niche-hero-content {
