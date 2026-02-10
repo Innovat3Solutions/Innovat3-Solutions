@@ -270,6 +270,183 @@
             }
         }
 
+        /* Mission & Vision Section */
+        .mission-vision-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mission-vision-section::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(132, 204, 22, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .mission-vision-section::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(34, 211, 238, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .mv-header {
+            margin-bottom: 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .mv-header .subtitle {
+            color: var(--color-primary);
+        }
+
+        .mv-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .mv-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .mv-card {
+            position: relative;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 48px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+        }
+
+        .mv-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(132, 204, 22, 0.3);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .mv-card-glow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .mv-card:hover .mv-card-glow {
+            opacity: 1;
+        }
+
+        .mv-card-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .mv-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--color-primary), #22d3ee);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0f172a;
+            margin-bottom: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .mv-card:hover .mv-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .mv-label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+        }
+
+        .mv-card h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .mv-card p {
+            font-size: 1.05rem;
+            color: #94a3b8;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .mv-card p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .mv-highlight {
+            color: #cbd5e1 !important;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        .mv-decoration {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 150px;
+            height: 150px;
+            color: var(--color-primary);
+            opacity: 0.15;
+            transition: opacity 0.3s ease;
+        }
+
+        .mv-card:hover .mv-decoration {
+            opacity: 0.25;
+        }
+
+        @media (max-width: 900px) {
+            .mv-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .mv-card {
+                padding: 36px;
+            }
+
+            .mv-title {
+                font-size: 2.25rem;
+            }
+
+            .mv-card h3 {
+                font-size: 1.5rem;
+            }
+        }
+
         .founder-section {
             background-color: #f8fafc;
             padding: 80px 0;
@@ -608,26 +785,60 @@
     </section>
 
     <!-- Mission & Vision -->
-    <section class="section-padding" style="background-color: #f8fafc;">
+    <section class="mission-vision-section" id="mission-vision">
         <div class="container">
-            <div class="founder-grid">
-                <div>
-                    <span class="subtitle">Our Mission</span>
-                    <h3>Bridging the Gap</h3>
-                    <p style="margin-top: 20px; font-size: 1.1rem; line-height: 1.6;">Our mission is to make
-                        enterprise-level solutions accessible to small businesses.</p>
-                    <p style="margin-top: 20px; font-size: 1.1rem; line-height: 1.6;">We help eliminate inefficiencies,
-                        replace manual processes, and implement systems that support long-term scaling—so business
-                        owners can focus on growth, not operations.</p>
+            <div class="mv-header text-center">
+                <span class="subtitle">Our Purpose</span>
+                <h2 class="mv-title">Mission & Vision</h2>
+                <p style="max-width: 600px; margin: 0 auto; color: #94a3b8;">The driving force behind everything we
+                    build.</p>
+            </div>
+
+            <div class="mv-cards">
+                <!-- Mission Card -->
+                <div class="mv-card mission-card">
+                    <div class="mv-card-glow"></div>
+                    <div class="mv-card-content">
+                        <div class="mv-icon">
+                            <i data-lucide="compass" size="28"></i>
+                        </div>
+                        <div class="mv-label">Our Mission</div>
+                        <h3>Bridging the Gap</h3>
+                        <p>Our mission is to make enterprise-level solutions accessible to small businesses.</p>
+                        <p>We help eliminate inefficiencies, replace manual processes, and implement systems that
+                            support long-term scaling—so business owners can focus on growth, not operations.</p>
+                        <div class="mv-decoration">
+                            <svg viewBox="0 0 100 100" fill="none">
+                                <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="0.5" opacity="0.3" />
+                                <circle cx="50" cy="50" r="30" stroke="currentColor" stroke-width="0.5" opacity="0.2" />
+                                <circle cx="50" cy="50" r="20" stroke="currentColor" stroke-width="0.5" opacity="0.1" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <span class="subtitle">Our Vision</span>
-                    <h3>Smarter Systems</h3>
-                    <p style="margin-top: 20px; font-size: 1.1rem; line-height: 1.6;">We envision a future where small
-                        businesses operate with the same efficiency, intelligence, and scalability as large enterprises.
-                    </p>
-                    <p style="margin-top: 20px; font-size: 1.1rem; line-height: 1.6;">Not by working harder—but by
-                        building smarter systems.</p>
+
+                <!-- Vision Card -->
+                <div class="mv-card vision-card">
+                    <div class="mv-card-glow"></div>
+                    <div class="mv-card-content">
+                        <div class="mv-icon">
+                            <i data-lucide="eye" size="28"></i>
+                        </div>
+                        <div class="mv-label">Our Vision</div>
+                        <h3>Smarter Systems</h3>
+                        <p>We envision a future where small businesses operate with the same efficiency, intelligence,
+                            and scalability as large enterprises.</p>
+                        <p class="mv-highlight">Not by working harder—but by building smarter systems.</p>
+                        <div class="mv-decoration">
+                            <svg viewBox="0 0 100 100" fill="none">
+                                <path d="M10 50 Q 50 10, 90 50 Q 50 90, 10 50" stroke="currentColor" stroke-width="0.5"
+                                    opacity="0.3" />
+                                <path d="M20 50 Q 50 20, 80 50 Q 50 80, 20 50" stroke="currentColor" stroke-width="0.5"
+                                    opacity="0.2" />
+                                <circle cx="50" cy="50" r="8" stroke="currentColor" stroke-width="0.5" opacity="0.4" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
