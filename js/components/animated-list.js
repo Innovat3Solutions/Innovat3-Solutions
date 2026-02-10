@@ -1,44 +1,57 @@
-document.addEventListener('DOMContentLoaded', () => {
+/**
+ * Animated List Component
+ * Inspired by Magic UI's AnimatedList
+ * Creates a staggered spring animation effect for list items
+ */
 
-    // Select all containers marked for animation
+document.addEventListener('DOMContentLoaded', () => {
     const animatedContainers = document.querySelectorAll('.animated-list-container');
 
     if (animatedContainers.length === 0) return;
 
     const observerOptions = {
         root: null,
-        rootMargin: '0px',
-        threshold: 0.15 // Trigger when 15% of the container is visible
+        rootMargin: '0px 0px -50px 0px', // Trigger slightly before fully in view
+        threshold: 0.1
     };
 
     const animateList = (entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const container = entry.target;
-                container.classList.add('visible');
 
-                // Find all direct children marked as animated items, or default to all direct children if none marked
+                // Get all items to animate
                 let items = container.querySelectorAll('.animated-item');
 
-                // If no specific items marked, assume all direct children
+                // Fallback to direct children if no items marked
                 if (items.length === 0) {
                     items = Array.from(container.children);
+                    items.forEach(item => item.classList.add('animated-item'));
                 }
 
+                // Stagger delay configuration
+                const baseDelay = 100; // ms between each item
+                const maxDelay = 800;  // Maximum total delay
+
                 items.forEach((item, index) => {
-                    // Stagger delay: 150ms between each item
+                    // Calculate delay with diminishing returns for many items
+                    const delay = Math.min(index * baseDelay, maxDelay);
+
                     setTimeout(() => {
                         item.classList.add('visible');
-                        item.classList.add('animated-item'); // Ensure class exists if fallback used
-                    }, index * 150);
+                    }, delay);
                 });
 
-                // Stop observing after firing
+                // Stop observing after animation triggered
                 observer.unobserve(container);
             }
         });
     };
 
     const observer = new IntersectionObserver(animateList, observerOptions);
-    animatedContainers.forEach(container => observer.observe(container));
+
+    // Observe all containers
+    animatedContainers.forEach(container => {
+        observer.observe(container);
+    });
 });
